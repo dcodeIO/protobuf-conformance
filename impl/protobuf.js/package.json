@@ -6,7 +6,7 @@
     "maximumEdition": "2024",
     "javascript": true,
     "typescript": true,
-    "standardPlugin": false
+    "standardPlugin": true
   },
   "private": true,
   "type": "module",
@@ -18,11 +18,12 @@
   },
   "dependencies": {
     "long": "^5.3.2",
-    "protobufjs": "^8.0.0",
-    "protobufjs-cli": "^2.0.1"
+    "protobufjs": "^8.6.0",
+    "protobufjs-cli": "^2.5.1"
   },
   "devDependencies": {
-    "typescript": "^6.0.2",
-    "tsx": "^4.21.0"
+    "@types/node": "^20.19.41",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
   }
 }
