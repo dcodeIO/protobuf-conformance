@@ -58,7 +58,7 @@ export namespace conformance {
         /** Reflection-backed declarations are not constructable. Use TestStatus.create(...) instead. */
         private constructor();
 
-        /** Unknown fields preserved while decoding */
+        /** Unknown fields preserved while decoding when enabled */
         $unknowns?: Uint8Array[];
 
         /** TestStatus name. */
@@ -163,7 +163,7 @@ export namespace conformance {
             /** TestStatus matchedName */
             matchedName?: (string|null);
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
         }
 
@@ -184,7 +184,7 @@ export namespace conformance {
         /** Reflection-backed declarations are not constructable. Use FailureSet.create(...) instead. */
         private constructor();
 
-        /** Unknown fields preserved while decoding */
+        /** Unknown fields preserved while decoding when enabled */
         $unknowns?: Uint8Array[];
 
         /** FailureSet test. */
@@ -277,7 +277,7 @@ export namespace conformance {
             /** FailureSet test */
             test?: (conformance.TestStatus.$Properties[]|null);
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
         }
 
@@ -298,7 +298,7 @@ export namespace conformance {
         /** Reflection-backed declarations are not constructable. Use ConformanceRequest.create(...) instead. */
         private constructor();
 
-        /** Unknown fields preserved while decoding */
+        /** Unknown fields preserved while decoding when enabled */
         $unknowns?: Uint8Array[];
 
         /** ConformanceRequest protobufPayload. */
@@ -445,25 +445,25 @@ export namespace conformance {
             /** ConformanceRequest payload */
             payload?: ("protobufPayload"|"jsonPayload"|"jspbPayload"|"textPayload");
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
         }
 
         /** Narrowed shape of a ConformanceRequest. */
         type $Shape = {
-  protobufPayload?: Uint8Array|null;
-  jsonPayload?: string|null;
-  jspbPayload?: string|null;
-  textPayload?: string|null;
-  requestedOutputFormat?: conformance.WireFormat|null;
-  messageType?: string|null;
-  testCategory?: conformance.TestCategory|null;
-  jspbEncodingOptions?: conformance.JspbEncodingConfig.$Shape|null;
-  printUnknownFields?: boolean|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ payload?: undefined; protobufPayload?: null; jsonPayload?: null; jspbPayload?: null; textPayload?: null }|{ payload?: "protobufPayload"; protobufPayload: Uint8Array; jsonPayload?: null; jspbPayload?: null; textPayload?: null }|{ payload?: "jsonPayload"; protobufPayload?: null; jsonPayload: string; jspbPayload?: null; textPayload?: null }|{ payload?: "jspbPayload"; protobufPayload?: null; jsonPayload?: null; jspbPayload: string; textPayload?: null }|{ payload?: "textPayload"; protobufPayload?: null; jsonPayload?: null; jspbPayload?: null; textPayload: string })
-);
+          protobufPayload?: Uint8Array|null;
+          jsonPayload?: string|null;
+          jspbPayload?: string|null;
+          textPayload?: string|null;
+          requestedOutputFormat?: conformance.WireFormat|null;
+          messageType?: string|null;
+          testCategory?: conformance.TestCategory|null;
+          jspbEncodingOptions?: conformance.JspbEncodingConfig.$Shape|null;
+          printUnknownFields?: boolean|null;
+          $unknowns?: Uint8Array[];
+        } & (
+          ({ payload?: undefined; protobufPayload?: null; jsonPayload?: null; jspbPayload?: null; textPayload?: null }|{ payload?: "protobufPayload"; protobufPayload: Uint8Array; jsonPayload?: null; jspbPayload?: null; textPayload?: null }|{ payload?: "jsonPayload"; protobufPayload?: null; jsonPayload: string; jspbPayload?: null; textPayload?: null }|{ payload?: "jspbPayload"; protobufPayload?: null; jsonPayload?: null; jspbPayload: string; textPayload?: null }|{ payload?: "textPayload"; protobufPayload?: null; jsonPayload?: null; jspbPayload?: null; textPayload: string })
+        );
     }
 
     /**
@@ -479,7 +479,7 @@ export namespace conformance {
         /** Reflection-backed declarations are not constructable. Use ConformanceResponse.create(...) instead. */
         private constructor();
 
-        /** Unknown fields preserved while decoding */
+        /** Unknown fields preserved while decoding when enabled */
         $unknowns?: Uint8Array[];
 
         /** ConformanceResponse parseError. */
@@ -626,25 +626,25 @@ export namespace conformance {
             /** ConformanceResponse result */
             result?: ("parseError"|"serializeError"|"timeoutError"|"runtimeError"|"protobufPayload"|"jsonPayload"|"skipped"|"jspbPayload"|"textPayload");
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
         }
 
         /** Narrowed shape of a ConformanceResponse. */
         type $Shape = {
-  parseError?: string|null;
-  serializeError?: string|null;
-  timeoutError?: string|null;
-  runtimeError?: string|null;
-  protobufPayload?: Uint8Array|null;
-  jsonPayload?: string|null;
-  skipped?: string|null;
-  jspbPayload?: string|null;
-  textPayload?: string|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ result?: undefined; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "parseError"; parseError: string; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "serializeError"; parseError?: null; serializeError: string; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "timeoutError"; parseError?: null; serializeError?: null; timeoutError: string; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "runtimeError"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError: string; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "protobufPayload"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload: Uint8Array; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "jsonPayload"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload: string; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "skipped"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped: string; jspbPayload?: null; textPayload?: null }|{ result?: "jspbPayload"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload: string; textPayload?: null }|{ result?: "textPayload"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload: string })
-);
+          parseError?: string|null;
+          serializeError?: string|null;
+          timeoutError?: string|null;
+          runtimeError?: string|null;
+          protobufPayload?: Uint8Array|null;
+          jsonPayload?: string|null;
+          skipped?: string|null;
+          jspbPayload?: string|null;
+          textPayload?: string|null;
+          $unknowns?: Uint8Array[];
+        } & (
+          ({ result?: undefined; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "parseError"; parseError: string; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "serializeError"; parseError?: null; serializeError: string; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "timeoutError"; parseError?: null; serializeError?: null; timeoutError: string; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "runtimeError"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError: string; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "protobufPayload"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload: Uint8Array; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "jsonPayload"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload: string; skipped?: null; jspbPayload?: null; textPayload?: null }|{ result?: "skipped"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped: string; jspbPayload?: null; textPayload?: null }|{ result?: "jspbPayload"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload: string; textPayload?: null }|{ result?: "textPayload"; parseError?: null; serializeError?: null; timeoutError?: null; runtimeError?: null; protobufPayload?: null; jsonPayload?: null; skipped?: null; jspbPayload?: null; textPayload: string })
+        );
     }
 
     /**
@@ -660,7 +660,7 @@ export namespace conformance {
         /** Reflection-backed declarations are not constructable. Use JspbEncodingConfig.create(...) instead. */
         private constructor();
 
-        /** Unknown fields preserved while decoding */
+        /** Unknown fields preserved while decoding when enabled */
         $unknowns?: Uint8Array[];
 
         /** JspbEncodingConfig useJspbArrayAnyFormat. */
@@ -753,7 +753,7 @@ export namespace conformance {
             /** JspbEncodingConfig useJspbArrayAnyFormat */
             useJspbArrayAnyFormat?: (boolean|null);
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
         }
 
@@ -787,7 +787,7 @@ export namespace protobuf_test_messages {
             /** TestAllTypesProto2 .protobuf_test_messages.proto2.groupField */
             ".protobuf_test_messages.proto2.groupField"?: (protobuf_test_messages.proto2.GroupField.$Properties|null);
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** TestAllTypesProto2 optionalInt32. */
@@ -1708,155 +1708,155 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto2 oneofField */
                 oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum");
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
             /** Narrowed shape of a TestAllTypesProto2. */
             type $Shape = {
-  optionalInt32?: number|null;
-  optionalInt64?: number|Long|null;
-  optionalUint32?: number|null;
-  optionalUint64?: number|Long|null;
-  optionalSint32?: number|null;
-  optionalSint64?: number|Long|null;
-  optionalFixed32?: number|null;
-  optionalFixed64?: number|Long|null;
-  optionalSfixed32?: number|null;
-  optionalSfixed64?: number|Long|null;
-  optionalFloat?: number|null;
-  optionalDouble?: number|null;
-  optionalBool?: boolean|null;
-  optionalString?: string|null;
-  optionalBytes?: Uint8Array|null;
-  optionalNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
-  optionalForeignMessage?: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape|null;
-  optionalNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null;
-  optionalForeignEnum?: protobuf_test_messages.proto2.ForeignEnumProto2|null;
-  optionalStringPiece?: string|null;
-  optionalCord?: string|null;
-  recursiveMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape|null;
-  repeatedInt32?: number[]|null;
-  repeatedInt64?: number|Long[]|null;
-  repeatedUint32?: number[]|null;
-  repeatedUint64?: number|Long[]|null;
-  repeatedSint32?: number[]|null;
-  repeatedSint64?: number|Long[]|null;
-  repeatedFixed32?: number[]|null;
-  repeatedFixed64?: number|Long[]|null;
-  repeatedSfixed32?: number[]|null;
-  repeatedSfixed64?: number|Long[]|null;
-  repeatedFloat?: number[]|null;
-  repeatedDouble?: number[]|null;
-  repeatedBool?: boolean[]|null;
-  repeatedString?: string[]|null;
-  repeatedBytes?: Uint8Array[]|null;
-  repeatedNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape[]|null;
-  repeatedForeignMessage?: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape[]|null;
-  repeatedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
-  repeatedForeignEnum?: protobuf_test_messages.proto2.ForeignEnumProto2[]|null;
-  repeatedStringPiece?: string[]|null;
-  repeatedCord?: string[]|null;
-  packedInt32?: number[]|null;
-  packedInt64?: number|Long[]|null;
-  packedUint32?: number[]|null;
-  packedUint64?: number|Long[]|null;
-  packedSint32?: number[]|null;
-  packedSint64?: number|Long[]|null;
-  packedFixed32?: number[]|null;
-  packedFixed64?: number|Long[]|null;
-  packedSfixed32?: number[]|null;
-  packedSfixed64?: number|Long[]|null;
-  packedFloat?: number[]|null;
-  packedDouble?: number[]|null;
-  packedBool?: boolean[]|null;
-  packedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
-  unpackedInt32?: number[]|null;
-  unpackedInt64?: number|Long[]|null;
-  unpackedUint32?: number[]|null;
-  unpackedUint64?: number|Long[]|null;
-  unpackedSint32?: number[]|null;
-  unpackedSint64?: number|Long[]|null;
-  unpackedFixed32?: number[]|null;
-  unpackedFixed64?: number|Long[]|null;
-  unpackedSfixed32?: number[]|null;
-  unpackedSfixed64?: number|Long[]|null;
-  unpackedFloat?: number[]|null;
-  unpackedDouble?: number[]|null;
-  unpackedBool?: boolean[]|null;
-  unpackedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
-  mapInt32Int32?: { [k: string]: number }|null;
-  mapInt64Int64?: { [k: string]: number|Long }|null;
-  mapUint32Uint32?: { [k: string]: number }|null;
-  mapUint64Uint64?: { [k: string]: number|Long }|null;
-  mapSint32Sint32?: { [k: string]: number }|null;
-  mapSint64Sint64?: { [k: string]: number|Long }|null;
-  mapFixed32Fixed32?: { [k: string]: number }|null;
-  mapFixed64Fixed64?: { [k: string]: number|Long }|null;
-  mapSfixed32Sfixed32?: { [k: string]: number }|null;
-  mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
-  mapInt32Bool?: { [k: string]: boolean }|null;
-  mapInt32Float?: { [k: string]: number }|null;
-  mapInt32Double?: { [k: string]: number }|null;
-  mapInt32NestedMessage?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
-  mapBoolBool?: { [k: string]: boolean }|null;
-  mapStringString?: { [k: string]: string }|null;
-  mapStringBytes?: { [k: string]: Uint8Array }|null;
-  mapStringNestedMessage?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
-  mapStringForeignMessage?: { [k: string]: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape }|null;
-  mapStringNestedEnum?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum }|null;
-  mapStringForeignEnum?: { [k: string]: protobuf_test_messages.proto2.ForeignEnumProto2 }|null;
-  oneofUint32?: number|null;
-  oneofNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
-  oneofString?: string|null;
-  oneofBytes?: Uint8Array|null;
-  oneofBool?: boolean|null;
-  oneofUint64?: number|Long|null;
-  oneofFloat?: number|null;
-  oneofDouble?: number|null;
-  oneofEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null;
-  data?: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape|null;
-  multiWordGroupField?: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape|null;
-  defaultInt32?: number|null;
-  defaultInt64?: number|Long|null;
-  defaultUint32?: number|null;
-  defaultUint64?: number|Long|null;
-  defaultSint32?: number|null;
-  defaultSint64?: number|Long|null;
-  defaultFixed32?: number|null;
-  defaultFixed64?: number|Long|null;
-  defaultSfixed32?: number|null;
-  defaultSfixed64?: number|Long|null;
-  defaultFloat?: number|null;
-  defaultDouble?: number|null;
-  defaultBool?: boolean|null;
-  defaultString?: string|null;
-  defaultBytes?: Uint8Array|null;
-  fieldname1?: number|null;
-  fieldName2?: number|null;
-  _fieldName3?: number|null;
-  field_Name4_?: number|null;
-  field0name5?: number|null;
-  field_0Name6?: number|null;
-  fieldName7?: number|null;
-  FieldName8?: number|null;
-  field_Name9?: number|null;
-  Field_Name10?: number|null;
-  FIELD_NAME11?: number|null;
-  FIELDName12?: number|null;
-  _FieldName13?: number|null;
-  __FieldName14?: number|null;
-  field_Name15?: number|null;
-  field__Name16?: number|null;
-  fieldName17__?: number|null;
-  FieldName18__?: number|null;
-  messageSetCorrect?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape|null;
-  ".protobuf_test_messages.proto2.extensionInt32"?: number|null;
-  ".protobuf_test_messages.proto2.groupField"?: protobuf_test_messages.proto2.GroupField.$Shape|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum })
-);
+              optionalInt32?: number|null;
+              optionalInt64?: number|Long|null;
+              optionalUint32?: number|null;
+              optionalUint64?: number|Long|null;
+              optionalSint32?: number|null;
+              optionalSint64?: number|Long|null;
+              optionalFixed32?: number|null;
+              optionalFixed64?: number|Long|null;
+              optionalSfixed32?: number|null;
+              optionalSfixed64?: number|Long|null;
+              optionalFloat?: number|null;
+              optionalDouble?: number|null;
+              optionalBool?: boolean|null;
+              optionalString?: string|null;
+              optionalBytes?: Uint8Array|null;
+              optionalNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
+              optionalForeignMessage?: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape|null;
+              optionalNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null;
+              optionalForeignEnum?: protobuf_test_messages.proto2.ForeignEnumProto2|null;
+              optionalStringPiece?: string|null;
+              optionalCord?: string|null;
+              recursiveMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape|null;
+              repeatedInt32?: number[]|null;
+              repeatedInt64?: number|Long[]|null;
+              repeatedUint32?: number[]|null;
+              repeatedUint64?: number|Long[]|null;
+              repeatedSint32?: number[]|null;
+              repeatedSint64?: number|Long[]|null;
+              repeatedFixed32?: number[]|null;
+              repeatedFixed64?: number|Long[]|null;
+              repeatedSfixed32?: number[]|null;
+              repeatedSfixed64?: number|Long[]|null;
+              repeatedFloat?: number[]|null;
+              repeatedDouble?: number[]|null;
+              repeatedBool?: boolean[]|null;
+              repeatedString?: string[]|null;
+              repeatedBytes?: Uint8Array[]|null;
+              repeatedNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape[]|null;
+              repeatedForeignMessage?: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape[]|null;
+              repeatedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
+              repeatedForeignEnum?: protobuf_test_messages.proto2.ForeignEnumProto2[]|null;
+              repeatedStringPiece?: string[]|null;
+              repeatedCord?: string[]|null;
+              packedInt32?: number[]|null;
+              packedInt64?: number|Long[]|null;
+              packedUint32?: number[]|null;
+              packedUint64?: number|Long[]|null;
+              packedSint32?: number[]|null;
+              packedSint64?: number|Long[]|null;
+              packedFixed32?: number[]|null;
+              packedFixed64?: number|Long[]|null;
+              packedSfixed32?: number[]|null;
+              packedSfixed64?: number|Long[]|null;
+              packedFloat?: number[]|null;
+              packedDouble?: number[]|null;
+              packedBool?: boolean[]|null;
+              packedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
+              unpackedInt32?: number[]|null;
+              unpackedInt64?: number|Long[]|null;
+              unpackedUint32?: number[]|null;
+              unpackedUint64?: number|Long[]|null;
+              unpackedSint32?: number[]|null;
+              unpackedSint64?: number|Long[]|null;
+              unpackedFixed32?: number[]|null;
+              unpackedFixed64?: number|Long[]|null;
+              unpackedSfixed32?: number[]|null;
+              unpackedSfixed64?: number|Long[]|null;
+              unpackedFloat?: number[]|null;
+              unpackedDouble?: number[]|null;
+              unpackedBool?: boolean[]|null;
+              unpackedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
+              mapInt32Int32?: { [k: string]: number }|null;
+              mapInt64Int64?: { [k: string]: number|Long }|null;
+              mapUint32Uint32?: { [k: string]: number }|null;
+              mapUint64Uint64?: { [k: string]: number|Long }|null;
+              mapSint32Sint32?: { [k: string]: number }|null;
+              mapSint64Sint64?: { [k: string]: number|Long }|null;
+              mapFixed32Fixed32?: { [k: string]: number }|null;
+              mapFixed64Fixed64?: { [k: string]: number|Long }|null;
+              mapSfixed32Sfixed32?: { [k: string]: number }|null;
+              mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
+              mapInt32Bool?: { [k: string]: boolean }|null;
+              mapInt32Float?: { [k: string]: number }|null;
+              mapInt32Double?: { [k: string]: number }|null;
+              mapInt32NestedMessage?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
+              mapBoolBool?: { [k: string]: boolean }|null;
+              mapStringString?: { [k: string]: string }|null;
+              mapStringBytes?: { [k: string]: Uint8Array }|null;
+              mapStringNestedMessage?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
+              mapStringForeignMessage?: { [k: string]: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape }|null;
+              mapStringNestedEnum?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum }|null;
+              mapStringForeignEnum?: { [k: string]: protobuf_test_messages.proto2.ForeignEnumProto2 }|null;
+              oneofUint32?: number|null;
+              oneofNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
+              oneofString?: string|null;
+              oneofBytes?: Uint8Array|null;
+              oneofBool?: boolean|null;
+              oneofUint64?: number|Long|null;
+              oneofFloat?: number|null;
+              oneofDouble?: number|null;
+              oneofEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null;
+              data?: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape|null;
+              multiWordGroupField?: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape|null;
+              defaultInt32?: number|null;
+              defaultInt64?: number|Long|null;
+              defaultUint32?: number|null;
+              defaultUint64?: number|Long|null;
+              defaultSint32?: number|null;
+              defaultSint64?: number|Long|null;
+              defaultFixed32?: number|null;
+              defaultFixed64?: number|Long|null;
+              defaultSfixed32?: number|null;
+              defaultSfixed64?: number|Long|null;
+              defaultFloat?: number|null;
+              defaultDouble?: number|null;
+              defaultBool?: boolean|null;
+              defaultString?: string|null;
+              defaultBytes?: Uint8Array|null;
+              fieldname1?: number|null;
+              fieldName2?: number|null;
+              _fieldName3?: number|null;
+              field_Name4_?: number|null;
+              field0name5?: number|null;
+              field_0Name6?: number|null;
+              fieldName7?: number|null;
+              FieldName8?: number|null;
+              field_Name9?: number|null;
+              Field_Name10?: number|null;
+              FIELD_NAME11?: number|null;
+              FIELDName12?: number|null;
+              _FieldName13?: number|null;
+              __FieldName14?: number|null;
+              field_Name15?: number|null;
+              field__Name16?: number|null;
+              fieldName17__?: number|null;
+              FieldName18__?: number|null;
+              messageSetCorrect?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape|null;
+              ".protobuf_test_messages.proto2.extensionInt32"?: number|null;
+              ".protobuf_test_messages.proto2.groupField"?: protobuf_test_messages.proto2.GroupField.$Shape|null;
+              $unknowns?: Uint8Array[];
+            } & (
+              ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum })
+            );
 
             /**
              * Properties of a NestedMessage.
@@ -1871,7 +1871,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** NestedMessage a. */
@@ -1970,16 +1970,16 @@ export namespace protobuf_test_messages {
                     /** NestedMessage corecursive */
                     corecursive?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
                 /** Shape of a NestedMessage. */
                 type $Shape = {
-  a?: number|null;
-  corecursive?: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape|null;
-  $unknowns?: Uint8Array[];
-};
+                  a?: number|null;
+                  corecursive?: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                };
             }
 
             /** NestedEnum enum. */
@@ -2011,7 +2011,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use Data.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** Data groupInt32. */
@@ -2110,7 +2110,7 @@ export namespace protobuf_test_messages {
                     /** Data groupUint32 */
                     groupUint32?: (number|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -2131,7 +2131,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use MultiWordGroupField.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** MultiWordGroupField groupInt32. */
@@ -2230,7 +2230,7 @@ export namespace protobuf_test_messages {
                     /** MultiWordGroupField groupUint32 */
                     groupUint32?: (number|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -2260,7 +2260,7 @@ export namespace protobuf_test_messages {
                 /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
                 ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -2356,17 +2356,17 @@ export namespace protobuf_test_messages {
                     /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
                     ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
                 /** Shape of a MessageSetCorrect. */
                 type $Shape = {
-  ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape|null;
-  ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape|null;
-  ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape|null;
-  $unknowns?: Uint8Array[];
-};
+                  ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape|null;
+                  ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape|null;
+                  ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                };
             }
 
             /**
@@ -2382,7 +2382,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension1.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** MessageSetCorrectExtension1 str. */
@@ -2475,7 +2475,7 @@ export namespace protobuf_test_messages {
                     /** MessageSetCorrectExtension1 str */
                     str?: (string|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -2496,7 +2496,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension2.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** MessageSetCorrectExtension2 i. */
@@ -2589,7 +2589,7 @@ export namespace protobuf_test_messages {
                     /** MessageSetCorrectExtension2 i */
                     i?: (number|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -2610,7 +2610,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use ExtensionWithOneof.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** ExtensionWithOneof a. */
@@ -2715,18 +2715,18 @@ export namespace protobuf_test_messages {
                     /** ExtensionWithOneof oneofField */
                     oneofField?: ("a"|"b");
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
                 /** Narrowed shape of an ExtensionWithOneof. */
                 type $Shape = {
-  a?: number|null;
-  b?: number|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ oneofField?: undefined; a?: null; b?: null }|{ oneofField?: "a"; a: number; b?: null }|{ oneofField?: "b"; a?: null; b: number })
-);
+                  a?: number|null;
+                  b?: number|null;
+                  $unknowns?: Uint8Array[];
+                } & (
+                  ({ oneofField?: undefined; a?: null; b?: null }|{ oneofField?: "a"; a: number; b?: null }|{ oneofField?: "b"; a?: null; b: number })
+                );
             }
         }
 
@@ -2743,7 +2743,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use ForeignMessageProto2.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** ForeignMessageProto2 c. */
@@ -2836,7 +2836,7 @@ export namespace protobuf_test_messages {
                 /** ForeignMessageProto2 c */
                 c?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -2870,7 +2870,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use GroupField.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** GroupField groupInt32. */
@@ -2969,7 +2969,7 @@ export namespace protobuf_test_messages {
                 /** GroupField groupUint32 */
                 groupUint32?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -2990,7 +2990,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use UnknownToTestAllTypes.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** UnknownToTestAllTypes optionalInt32. */
@@ -3113,7 +3113,7 @@ export namespace protobuf_test_messages {
                 /** UnknownToTestAllTypes repeatedInt32 */
                 repeatedInt32?: (number[]|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -3133,7 +3133,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use OptionalGroup.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** OptionalGroup a. */
@@ -3226,7 +3226,7 @@ export namespace protobuf_test_messages {
                     /** OptionalGroup a */
                     a?: (number|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -3248,7 +3248,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use NullHypothesisProto2.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /**
@@ -3335,7 +3335,7 @@ export namespace protobuf_test_messages {
             /** Properties of a NullHypothesisProto2. */
             interface $Properties {
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -3356,7 +3356,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use EnumOnlyProto2.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /**
@@ -3443,7 +3443,7 @@ export namespace protobuf_test_messages {
             /** Properties of an EnumOnlyProto2. */
             interface $Properties {
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -3474,7 +3474,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use OneStringProto2.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** OneStringProto2 data. */
@@ -3567,7 +3567,7 @@ export namespace protobuf_test_messages {
                 /** OneStringProto2 data */
                 data?: (string|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -3588,7 +3588,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use ProtoWithKeywords.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** ProtoWithKeywords inline. */
@@ -3693,7 +3693,7 @@ export namespace protobuf_test_messages {
                 /** ProtoWithKeywords requires */
                 requires?: (string[]|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -3714,7 +3714,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use TestAllRequiredTypesProto2.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** TestAllRequiredTypesProto2 requiredInt32. */
@@ -4035,7 +4035,7 @@ export namespace protobuf_test_messages {
                 /** TestAllRequiredTypesProto2 defaultBytes */
                 defaultBytes: Uint8Array;
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -4055,7 +4055,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** NestedMessage a. */
@@ -4160,7 +4160,7 @@ export namespace protobuf_test_messages {
                     /** NestedMessage optionalCorecursive */
                     optionalCorecursive?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -4197,7 +4197,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use Data.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** Data groupInt32. */
@@ -4296,7 +4296,7 @@ export namespace protobuf_test_messages {
                     /** Data groupUint32 */
                     groupUint32: number;
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -4323,7 +4323,7 @@ export namespace protobuf_test_messages {
                 /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
                 ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -4416,7 +4416,7 @@ export namespace protobuf_test_messages {
                     /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
                     ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -4437,7 +4437,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension1.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** MessageSetCorrectExtension1 str. */
@@ -4530,7 +4530,7 @@ export namespace protobuf_test_messages {
                     /** MessageSetCorrectExtension1 str */
                     str: string;
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -4551,7 +4551,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension2.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** MessageSetCorrectExtension2 i. */
@@ -4644,7 +4644,7 @@ export namespace protobuf_test_messages {
                     /** MessageSetCorrectExtension2 i */
                     i: number;
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -4666,7 +4666,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use TestLargeOneof.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** TestLargeOneof a1. */
@@ -4789,21 +4789,21 @@ export namespace protobuf_test_messages {
                 /** TestLargeOneof largeOneof */
                 largeOneof?: ("a1"|"a2"|"a3"|"a4"|"a5");
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
             /** Narrowed shape of a TestLargeOneof. */
             type $Shape = {
-  a1?: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape|null;
-  a2?: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape|null;
-  a3?: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape|null;
-  a4?: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape|null;
-  a5?: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ largeOneof?: undefined; a1?: null; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a1"; a1: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a2"; a1?: null; a2: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a3"; a1?: null; a2?: null; a3: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape; a4?: null; a5?: null }|{ largeOneof?: "a4"; a1?: null; a2?: null; a3?: null; a4: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape; a5?: null }|{ largeOneof?: "a5"; a1?: null; a2?: null; a3?: null; a4?: null; a5: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape })
-);
+              a1?: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape|null;
+              a2?: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape|null;
+              a3?: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape|null;
+              a4?: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape|null;
+              a5?: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape|null;
+              $unknowns?: Uint8Array[];
+            } & (
+              ({ largeOneof?: undefined; a1?: null; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a1"; a1: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a2"; a1?: null; a2: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a3"; a1?: null; a2?: null; a3: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape; a4?: null; a5?: null }|{ largeOneof?: "a4"; a1?: null; a2?: null; a3?: null; a4: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape; a5?: null }|{ largeOneof?: "a5"; a1?: null; a2?: null; a3?: null; a4?: null; a5: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape })
+            );
 
             /**
              * Properties of a A1.
@@ -4818,7 +4818,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use A1.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -4905,7 +4905,7 @@ export namespace protobuf_test_messages {
                 /** Properties of a A1. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -4926,7 +4926,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use A2.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -5013,7 +5013,7 @@ export namespace protobuf_test_messages {
                 /** Properties of a A2. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -5034,7 +5034,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use A3.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -5121,7 +5121,7 @@ export namespace protobuf_test_messages {
                 /** Properties of a A3. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -5142,7 +5142,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use A4.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -5229,7 +5229,7 @@ export namespace protobuf_test_messages {
                 /** Properties of a A4. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -5250,7 +5250,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use A5.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -5337,7 +5337,7 @@ export namespace protobuf_test_messages {
                 /** Properties of a A5. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -5363,7 +5363,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use TestAllTypesProto3.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** TestAllTypesProto3 optionalInt32. */
@@ -6362,167 +6362,167 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto3 oneofField */
                 oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum"|"oneofNullValue");
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
             /** Narrowed shape of a TestAllTypesProto3. */
             type $Shape = {
-  optionalInt32?: number|null;
-  optionalInt64?: number|Long|null;
-  optionalUint32?: number|null;
-  optionalUint64?: number|Long|null;
-  optionalSint32?: number|null;
-  optionalSint64?: number|Long|null;
-  optionalFixed32?: number|null;
-  optionalFixed64?: number|Long|null;
-  optionalSfixed32?: number|null;
-  optionalSfixed64?: number|Long|null;
-  optionalFloat?: number|null;
-  optionalDouble?: number|null;
-  optionalBool?: boolean|null;
-  optionalString?: string|null;
-  optionalBytes?: Uint8Array|null;
-  optionalNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
-  optionalForeignMessage?: protobuf_test_messages.proto3.ForeignMessage.$Shape|null;
-  optionalNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null;
-  optionalForeignEnum?: protobuf_test_messages.proto3.ForeignEnum|null;
-  optionalAliasedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum|null;
-  optionalStringPiece?: string|null;
-  optionalCord?: string|null;
-  recursiveMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape|null;
-  repeatedInt32?: number[]|null;
-  repeatedInt64?: number|Long[]|null;
-  repeatedUint32?: number[]|null;
-  repeatedUint64?: number|Long[]|null;
-  repeatedSint32?: number[]|null;
-  repeatedSint64?: number|Long[]|null;
-  repeatedFixed32?: number[]|null;
-  repeatedFixed64?: number|Long[]|null;
-  repeatedSfixed32?: number[]|null;
-  repeatedSfixed64?: number|Long[]|null;
-  repeatedFloat?: number[]|null;
-  repeatedDouble?: number[]|null;
-  repeatedBool?: boolean[]|null;
-  repeatedString?: string[]|null;
-  repeatedBytes?: Uint8Array[]|null;
-  repeatedNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape[]|null;
-  repeatedForeignMessage?: protobuf_test_messages.proto3.ForeignMessage.$Shape[]|null;
-  repeatedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
-  repeatedForeignEnum?: protobuf_test_messages.proto3.ForeignEnum[]|null;
-  repeatedStringPiece?: string[]|null;
-  repeatedCord?: string[]|null;
-  packedInt32?: number[]|null;
-  packedInt64?: number|Long[]|null;
-  packedUint32?: number[]|null;
-  packedUint64?: number|Long[]|null;
-  packedSint32?: number[]|null;
-  packedSint64?: number|Long[]|null;
-  packedFixed32?: number[]|null;
-  packedFixed64?: number|Long[]|null;
-  packedSfixed32?: number[]|null;
-  packedSfixed64?: number|Long[]|null;
-  packedFloat?: number[]|null;
-  packedDouble?: number[]|null;
-  packedBool?: boolean[]|null;
-  packedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
-  unpackedInt32?: number[]|null;
-  unpackedInt64?: number|Long[]|null;
-  unpackedUint32?: number[]|null;
-  unpackedUint64?: number|Long[]|null;
-  unpackedSint32?: number[]|null;
-  unpackedSint64?: number|Long[]|null;
-  unpackedFixed32?: number[]|null;
-  unpackedFixed64?: number|Long[]|null;
-  unpackedSfixed32?: number[]|null;
-  unpackedSfixed64?: number|Long[]|null;
-  unpackedFloat?: number[]|null;
-  unpackedDouble?: number[]|null;
-  unpackedBool?: boolean[]|null;
-  unpackedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
-  mapInt32Int32?: { [k: string]: number }|null;
-  mapInt64Int64?: { [k: string]: number|Long }|null;
-  mapUint32Uint32?: { [k: string]: number }|null;
-  mapUint64Uint64?: { [k: string]: number|Long }|null;
-  mapSint32Sint32?: { [k: string]: number }|null;
-  mapSint64Sint64?: { [k: string]: number|Long }|null;
-  mapFixed32Fixed32?: { [k: string]: number }|null;
-  mapFixed64Fixed64?: { [k: string]: number|Long }|null;
-  mapSfixed32Sfixed32?: { [k: string]: number }|null;
-  mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
-  mapInt32Float?: { [k: string]: number }|null;
-  mapInt32Double?: { [k: string]: number }|null;
-  mapBoolBool?: { [k: string]: boolean }|null;
-  mapStringString?: { [k: string]: string }|null;
-  mapStringBytes?: { [k: string]: Uint8Array }|null;
-  mapStringNestedMessage?: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape }|null;
-  mapStringForeignMessage?: { [k: string]: protobuf_test_messages.proto3.ForeignMessage.$Shape }|null;
-  mapStringNestedEnum?: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum }|null;
-  mapStringForeignEnum?: { [k: string]: protobuf_test_messages.proto3.ForeignEnum }|null;
-  oneofUint32?: number|null;
-  oneofNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
-  oneofString?: string|null;
-  oneofBytes?: Uint8Array|null;
-  oneofBool?: boolean|null;
-  oneofUint64?: number|Long|null;
-  oneofFloat?: number|null;
-  oneofDouble?: number|null;
-  oneofEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null;
-  oneofNullValue?: google.protobuf.NullValue|null;
-  optionalBoolWrapper?: google.protobuf.BoolValue.$Shape|null;
-  optionalInt32Wrapper?: google.protobuf.Int32Value.$Shape|null;
-  optionalInt64Wrapper?: google.protobuf.Int64Value.$Shape|null;
-  optionalUint32Wrapper?: google.protobuf.UInt32Value.$Shape|null;
-  optionalUint64Wrapper?: google.protobuf.UInt64Value.$Shape|null;
-  optionalFloatWrapper?: google.protobuf.FloatValue.$Shape|null;
-  optionalDoubleWrapper?: google.protobuf.DoubleValue.$Shape|null;
-  optionalStringWrapper?: google.protobuf.StringValue.$Shape|null;
-  optionalBytesWrapper?: google.protobuf.BytesValue.$Shape|null;
-  repeatedBoolWrapper?: google.protobuf.BoolValue.$Shape[]|null;
-  repeatedInt32Wrapper?: google.protobuf.Int32Value.$Shape[]|null;
-  repeatedInt64Wrapper?: google.protobuf.Int64Value.$Shape[]|null;
-  repeatedUint32Wrapper?: google.protobuf.UInt32Value.$Shape[]|null;
-  repeatedUint64Wrapper?: google.protobuf.UInt64Value.$Shape[]|null;
-  repeatedFloatWrapper?: google.protobuf.FloatValue.$Shape[]|null;
-  repeatedDoubleWrapper?: google.protobuf.DoubleValue.$Shape[]|null;
-  repeatedStringWrapper?: google.protobuf.StringValue.$Shape[]|null;
-  repeatedBytesWrapper?: google.protobuf.BytesValue.$Shape[]|null;
-  optionalDuration?: google.protobuf.Duration.$Shape|null;
-  optionalTimestamp?: google.protobuf.Timestamp.$Shape|null;
-  optionalFieldMask?: google.protobuf.FieldMask.$Shape|null;
-  optionalStruct?: google.protobuf.Struct.$Shape|null;
-  optionalAny?: google.protobuf.Any.$Shape|null;
-  optionalValue?: google.protobuf.Value.$Shape|null;
-  optionalNullValue?: google.protobuf.NullValue|null;
-  repeatedDuration?: google.protobuf.Duration.$Shape[]|null;
-  repeatedTimestamp?: google.protobuf.Timestamp.$Shape[]|null;
-  repeatedFieldmask?: google.protobuf.FieldMask.$Shape[]|null;
-  repeatedStruct?: google.protobuf.Struct.$Shape[]|null;
-  repeatedAny?: google.protobuf.Any.$Shape[]|null;
-  repeatedValue?: google.protobuf.Value.$Shape[]|null;
-  repeatedListValue?: google.protobuf.ListValue.$Shape[]|null;
-  fieldname1?: number|null;
-  fieldName2?: number|null;
-  _fieldName3?: number|null;
-  field_Name4_?: number|null;
-  field0name5?: number|null;
-  field_0Name6?: number|null;
-  fieldName7?: number|null;
-  FieldName8?: number|null;
-  field_Name9?: number|null;
-  Field_Name10?: number|null;
-  FIELD_NAME11?: number|null;
-  FIELDName12?: number|null;
-  _FieldName13?: number|null;
-  __FieldName14?: number|null;
-  field_Name15?: number|null;
-  field__Name16?: number|null;
-  fieldName17__?: number|null;
-  FieldName18__?: number|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum; oneofNullValue?: null }|{ oneofField?: "oneofNullValue"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue: google.protobuf.NullValue })
-);
+              optionalInt32?: number|null;
+              optionalInt64?: number|Long|null;
+              optionalUint32?: number|null;
+              optionalUint64?: number|Long|null;
+              optionalSint32?: number|null;
+              optionalSint64?: number|Long|null;
+              optionalFixed32?: number|null;
+              optionalFixed64?: number|Long|null;
+              optionalSfixed32?: number|null;
+              optionalSfixed64?: number|Long|null;
+              optionalFloat?: number|null;
+              optionalDouble?: number|null;
+              optionalBool?: boolean|null;
+              optionalString?: string|null;
+              optionalBytes?: Uint8Array|null;
+              optionalNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
+              optionalForeignMessage?: protobuf_test_messages.proto3.ForeignMessage.$Shape|null;
+              optionalNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null;
+              optionalForeignEnum?: protobuf_test_messages.proto3.ForeignEnum|null;
+              optionalAliasedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum|null;
+              optionalStringPiece?: string|null;
+              optionalCord?: string|null;
+              recursiveMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape|null;
+              repeatedInt32?: number[]|null;
+              repeatedInt64?: number|Long[]|null;
+              repeatedUint32?: number[]|null;
+              repeatedUint64?: number|Long[]|null;
+              repeatedSint32?: number[]|null;
+              repeatedSint64?: number|Long[]|null;
+              repeatedFixed32?: number[]|null;
+              repeatedFixed64?: number|Long[]|null;
+              repeatedSfixed32?: number[]|null;
+              repeatedSfixed64?: number|Long[]|null;
+              repeatedFloat?: number[]|null;
+              repeatedDouble?: number[]|null;
+              repeatedBool?: boolean[]|null;
+              repeatedString?: string[]|null;
+              repeatedBytes?: Uint8Array[]|null;
+              repeatedNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape[]|null;
+              repeatedForeignMessage?: protobuf_test_messages.proto3.ForeignMessage.$Shape[]|null;
+              repeatedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
+              repeatedForeignEnum?: protobuf_test_messages.proto3.ForeignEnum[]|null;
+              repeatedStringPiece?: string[]|null;
+              repeatedCord?: string[]|null;
+              packedInt32?: number[]|null;
+              packedInt64?: number|Long[]|null;
+              packedUint32?: number[]|null;
+              packedUint64?: number|Long[]|null;
+              packedSint32?: number[]|null;
+              packedSint64?: number|Long[]|null;
+              packedFixed32?: number[]|null;
+              packedFixed64?: number|Long[]|null;
+              packedSfixed32?: number[]|null;
+              packedSfixed64?: number|Long[]|null;
+              packedFloat?: number[]|null;
+              packedDouble?: number[]|null;
+              packedBool?: boolean[]|null;
+              packedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
+              unpackedInt32?: number[]|null;
+              unpackedInt64?: number|Long[]|null;
+              unpackedUint32?: number[]|null;
+              unpackedUint64?: number|Long[]|null;
+              unpackedSint32?: number[]|null;
+              unpackedSint64?: number|Long[]|null;
+              unpackedFixed32?: number[]|null;
+              unpackedFixed64?: number|Long[]|null;
+              unpackedSfixed32?: number[]|null;
+              unpackedSfixed64?: number|Long[]|null;
+              unpackedFloat?: number[]|null;
+              unpackedDouble?: number[]|null;
+              unpackedBool?: boolean[]|null;
+              unpackedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
+              mapInt32Int32?: { [k: string]: number }|null;
+              mapInt64Int64?: { [k: string]: number|Long }|null;
+              mapUint32Uint32?: { [k: string]: number }|null;
+              mapUint64Uint64?: { [k: string]: number|Long }|null;
+              mapSint32Sint32?: { [k: string]: number }|null;
+              mapSint64Sint64?: { [k: string]: number|Long }|null;
+              mapFixed32Fixed32?: { [k: string]: number }|null;
+              mapFixed64Fixed64?: { [k: string]: number|Long }|null;
+              mapSfixed32Sfixed32?: { [k: string]: number }|null;
+              mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
+              mapInt32Float?: { [k: string]: number }|null;
+              mapInt32Double?: { [k: string]: number }|null;
+              mapBoolBool?: { [k: string]: boolean }|null;
+              mapStringString?: { [k: string]: string }|null;
+              mapStringBytes?: { [k: string]: Uint8Array }|null;
+              mapStringNestedMessage?: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape }|null;
+              mapStringForeignMessage?: { [k: string]: protobuf_test_messages.proto3.ForeignMessage.$Shape }|null;
+              mapStringNestedEnum?: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum }|null;
+              mapStringForeignEnum?: { [k: string]: protobuf_test_messages.proto3.ForeignEnum }|null;
+              oneofUint32?: number|null;
+              oneofNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
+              oneofString?: string|null;
+              oneofBytes?: Uint8Array|null;
+              oneofBool?: boolean|null;
+              oneofUint64?: number|Long|null;
+              oneofFloat?: number|null;
+              oneofDouble?: number|null;
+              oneofEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null;
+              oneofNullValue?: google.protobuf.NullValue|null;
+              optionalBoolWrapper?: google.protobuf.BoolValue.$Shape|null;
+              optionalInt32Wrapper?: google.protobuf.Int32Value.$Shape|null;
+              optionalInt64Wrapper?: google.protobuf.Int64Value.$Shape|null;
+              optionalUint32Wrapper?: google.protobuf.UInt32Value.$Shape|null;
+              optionalUint64Wrapper?: google.protobuf.UInt64Value.$Shape|null;
+              optionalFloatWrapper?: google.protobuf.FloatValue.$Shape|null;
+              optionalDoubleWrapper?: google.protobuf.DoubleValue.$Shape|null;
+              optionalStringWrapper?: google.protobuf.StringValue.$Shape|null;
+              optionalBytesWrapper?: google.protobuf.BytesValue.$Shape|null;
+              repeatedBoolWrapper?: google.protobuf.BoolValue.$Shape[]|null;
+              repeatedInt32Wrapper?: google.protobuf.Int32Value.$Shape[]|null;
+              repeatedInt64Wrapper?: google.protobuf.Int64Value.$Shape[]|null;
+              repeatedUint32Wrapper?: google.protobuf.UInt32Value.$Shape[]|null;
+              repeatedUint64Wrapper?: google.protobuf.UInt64Value.$Shape[]|null;
+              repeatedFloatWrapper?: google.protobuf.FloatValue.$Shape[]|null;
+              repeatedDoubleWrapper?: google.protobuf.DoubleValue.$Shape[]|null;
+              repeatedStringWrapper?: google.protobuf.StringValue.$Shape[]|null;
+              repeatedBytesWrapper?: google.protobuf.BytesValue.$Shape[]|null;
+              optionalDuration?: google.protobuf.Duration.$Shape|null;
+              optionalTimestamp?: google.protobuf.Timestamp.$Shape|null;
+              optionalFieldMask?: google.protobuf.FieldMask.$Shape|null;
+              optionalStruct?: google.protobuf.Struct.$Shape|null;
+              optionalAny?: google.protobuf.Any.$Shape|null;
+              optionalValue?: google.protobuf.Value.$Shape|null;
+              optionalNullValue?: google.protobuf.NullValue|null;
+              repeatedDuration?: google.protobuf.Duration.$Shape[]|null;
+              repeatedTimestamp?: google.protobuf.Timestamp.$Shape[]|null;
+              repeatedFieldmask?: google.protobuf.FieldMask.$Shape[]|null;
+              repeatedStruct?: google.protobuf.Struct.$Shape[]|null;
+              repeatedAny?: google.protobuf.Any.$Shape[]|null;
+              repeatedValue?: google.protobuf.Value.$Shape[]|null;
+              repeatedListValue?: google.protobuf.ListValue.$Shape[]|null;
+              fieldname1?: number|null;
+              fieldName2?: number|null;
+              _fieldName3?: number|null;
+              field_Name4_?: number|null;
+              field0name5?: number|null;
+              field_0Name6?: number|null;
+              fieldName7?: number|null;
+              FieldName8?: number|null;
+              field_Name9?: number|null;
+              Field_Name10?: number|null;
+              FIELD_NAME11?: number|null;
+              FIELDName12?: number|null;
+              _FieldName13?: number|null;
+              __FieldName14?: number|null;
+              field_Name15?: number|null;
+              field__Name16?: number|null;
+              fieldName17__?: number|null;
+              FieldName18__?: number|null;
+              $unknowns?: Uint8Array[];
+            } & (
+              ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum; oneofNullValue?: null }|{ oneofField?: "oneofNullValue"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue: google.protobuf.NullValue })
+            );
 
             /**
              * Properties of a NestedMessage.
@@ -6537,7 +6537,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** NestedMessage a. */
@@ -6636,16 +6636,16 @@ export namespace protobuf_test_messages {
                     /** NestedMessage corecursive */
                     corecursive?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
                 /** Shape of a NestedMessage. */
                 type $Shape = {
-  a?: number|null;
-  corecursive?: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape|null;
-  $unknowns?: Uint8Array[];
-};
+                  a?: number|null;
+                  corecursive?: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                };
             }
 
             /** NestedEnum enum. */
@@ -6700,7 +6700,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use ForeignMessage.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** ForeignMessage c. */
@@ -6793,7 +6793,7 @@ export namespace protobuf_test_messages {
                 /** ForeignMessage c */
                 c?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -6827,7 +6827,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use NullHypothesisProto3.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /**
@@ -6914,7 +6914,7 @@ export namespace protobuf_test_messages {
             /** Properties of a NullHypothesisProto3. */
             interface $Properties {
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -6935,7 +6935,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use EnumOnlyProto3.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /**
@@ -7022,7 +7022,7 @@ export namespace protobuf_test_messages {
             /** Properties of an EnumOnlyProto3. */
             interface $Properties {
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -7057,7 +7057,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use ComplexMessage.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** ComplexMessage d. */
@@ -7150,7 +7150,7 @@ export namespace protobuf_test_messages {
                 /** ComplexMessage d */
                 d?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -7180,7 +7180,7 @@ export namespace protobuf_test_messages {
             /** TestAllTypesEdition2023 .protobuf_test_messages.editions.delimitedExt */
             ".protobuf_test_messages.editions.delimitedExt"?: (protobuf_test_messages.editions.GroupLikeType.$Properties|null);
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** TestAllTypesEdition2023 optionalInt32. */
@@ -7888,120 +7888,120 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesEdition2023 oneofField */
                 oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum");
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
             /** Narrowed shape of a TestAllTypesEdition2023. */
             type $Shape = {
-  optionalInt32?: number|null;
-  optionalInt64?: number|Long|null;
-  optionalUint32?: number|null;
-  optionalUint64?: number|Long|null;
-  optionalSint32?: number|null;
-  optionalSint64?: number|Long|null;
-  optionalFixed32?: number|null;
-  optionalFixed64?: number|Long|null;
-  optionalSfixed32?: number|null;
-  optionalSfixed64?: number|Long|null;
-  optionalFloat?: number|null;
-  optionalDouble?: number|null;
-  optionalBool?: boolean|null;
-  optionalString?: string|null;
-  optionalBytes?: Uint8Array|null;
-  optionalNestedMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape|null;
-  optionalForeignMessage?: protobuf_test_messages.editions.ForeignMessageEdition2023.$Shape|null;
-  optionalNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum|null;
-  optionalForeignEnum?: protobuf_test_messages.editions.ForeignEnumEdition2023|null;
-  optionalStringPiece?: string|null;
-  optionalCord?: string|null;
-  recursiveMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.$Shape|null;
-  repeatedInt32?: number[]|null;
-  repeatedInt64?: number|Long[]|null;
-  repeatedUint32?: number[]|null;
-  repeatedUint64?: number|Long[]|null;
-  repeatedSint32?: number[]|null;
-  repeatedSint64?: number|Long[]|null;
-  repeatedFixed32?: number[]|null;
-  repeatedFixed64?: number|Long[]|null;
-  repeatedSfixed32?: number[]|null;
-  repeatedSfixed64?: number|Long[]|null;
-  repeatedFloat?: number[]|null;
-  repeatedDouble?: number[]|null;
-  repeatedBool?: boolean[]|null;
-  repeatedString?: string[]|null;
-  repeatedBytes?: Uint8Array[]|null;
-  repeatedNestedMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape[]|null;
-  repeatedForeignMessage?: protobuf_test_messages.editions.ForeignMessageEdition2023.$Shape[]|null;
-  repeatedNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum[]|null;
-  repeatedForeignEnum?: protobuf_test_messages.editions.ForeignEnumEdition2023[]|null;
-  repeatedStringPiece?: string[]|null;
-  repeatedCord?: string[]|null;
-  packedInt32?: number[]|null;
-  packedInt64?: number|Long[]|null;
-  packedUint32?: number[]|null;
-  packedUint64?: number|Long[]|null;
-  packedSint32?: number[]|null;
-  packedSint64?: number|Long[]|null;
-  packedFixed32?: number[]|null;
-  packedFixed64?: number|Long[]|null;
-  packedSfixed32?: number[]|null;
-  packedSfixed64?: number|Long[]|null;
-  packedFloat?: number[]|null;
-  packedDouble?: number[]|null;
-  packedBool?: boolean[]|null;
-  packedNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum[]|null;
-  unpackedInt32?: number[]|null;
-  unpackedInt64?: number|Long[]|null;
-  unpackedUint32?: number[]|null;
-  unpackedUint64?: number|Long[]|null;
-  unpackedSint32?: number[]|null;
-  unpackedSint64?: number|Long[]|null;
-  unpackedFixed32?: number[]|null;
-  unpackedFixed64?: number|Long[]|null;
-  unpackedSfixed32?: number[]|null;
-  unpackedSfixed64?: number|Long[]|null;
-  unpackedFloat?: number[]|null;
-  unpackedDouble?: number[]|null;
-  unpackedBool?: boolean[]|null;
-  unpackedNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum[]|null;
-  mapInt32Int32?: { [k: string]: number }|null;
-  mapInt64Int64?: { [k: string]: number|Long }|null;
-  mapUint32Uint32?: { [k: string]: number }|null;
-  mapUint64Uint64?: { [k: string]: number|Long }|null;
-  mapSint32Sint32?: { [k: string]: number }|null;
-  mapSint64Sint64?: { [k: string]: number|Long }|null;
-  mapFixed32Fixed32?: { [k: string]: number }|null;
-  mapFixed64Fixed64?: { [k: string]: number|Long }|null;
-  mapSfixed32Sfixed32?: { [k: string]: number }|null;
-  mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
-  mapInt32Float?: { [k: string]: number }|null;
-  mapInt32Double?: { [k: string]: number }|null;
-  mapBoolBool?: { [k: string]: boolean }|null;
-  mapStringString?: { [k: string]: string }|null;
-  mapStringBytes?: { [k: string]: Uint8Array }|null;
-  mapStringNestedMessage?: { [k: string]: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape }|null;
-  mapStringForeignMessage?: { [k: string]: protobuf_test_messages.editions.ForeignMessageEdition2023.$Shape }|null;
-  mapStringNestedEnum?: { [k: string]: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum }|null;
-  mapStringForeignEnum?: { [k: string]: protobuf_test_messages.editions.ForeignEnumEdition2023 }|null;
-  oneofUint32?: number|null;
-  oneofNestedMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape|null;
-  oneofString?: string|null;
-  oneofBytes?: Uint8Array|null;
-  oneofBool?: boolean|null;
-  oneofUint64?: number|Long|null;
-  oneofFloat?: number|null;
-  oneofDouble?: number|null;
-  oneofEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum|null;
-  groupliketype?: protobuf_test_messages.editions.TestAllTypesEdition2023.GroupLikeType.$Shape|null;
-  delimitedField?: protobuf_test_messages.editions.TestAllTypesEdition2023.GroupLikeType.$Shape|null;
-  ".protobuf_test_messages.editions.extensionInt32"?: number|null;
-  ".protobuf_test_messages.editions.groupliketype"?: protobuf_test_messages.editions.GroupLikeType.$Shape|null;
-  ".protobuf_test_messages.editions.delimitedExt"?: protobuf_test_messages.editions.GroupLikeType.$Shape|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum })
-);
+              optionalInt32?: number|null;
+              optionalInt64?: number|Long|null;
+              optionalUint32?: number|null;
+              optionalUint64?: number|Long|null;
+              optionalSint32?: number|null;
+              optionalSint64?: number|Long|null;
+              optionalFixed32?: number|null;
+              optionalFixed64?: number|Long|null;
+              optionalSfixed32?: number|null;
+              optionalSfixed64?: number|Long|null;
+              optionalFloat?: number|null;
+              optionalDouble?: number|null;
+              optionalBool?: boolean|null;
+              optionalString?: string|null;
+              optionalBytes?: Uint8Array|null;
+              optionalNestedMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape|null;
+              optionalForeignMessage?: protobuf_test_messages.editions.ForeignMessageEdition2023.$Shape|null;
+              optionalNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum|null;
+              optionalForeignEnum?: protobuf_test_messages.editions.ForeignEnumEdition2023|null;
+              optionalStringPiece?: string|null;
+              optionalCord?: string|null;
+              recursiveMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.$Shape|null;
+              repeatedInt32?: number[]|null;
+              repeatedInt64?: number|Long[]|null;
+              repeatedUint32?: number[]|null;
+              repeatedUint64?: number|Long[]|null;
+              repeatedSint32?: number[]|null;
+              repeatedSint64?: number|Long[]|null;
+              repeatedFixed32?: number[]|null;
+              repeatedFixed64?: number|Long[]|null;
+              repeatedSfixed32?: number[]|null;
+              repeatedSfixed64?: number|Long[]|null;
+              repeatedFloat?: number[]|null;
+              repeatedDouble?: number[]|null;
+              repeatedBool?: boolean[]|null;
+              repeatedString?: string[]|null;
+              repeatedBytes?: Uint8Array[]|null;
+              repeatedNestedMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape[]|null;
+              repeatedForeignMessage?: protobuf_test_messages.editions.ForeignMessageEdition2023.$Shape[]|null;
+              repeatedNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum[]|null;
+              repeatedForeignEnum?: protobuf_test_messages.editions.ForeignEnumEdition2023[]|null;
+              repeatedStringPiece?: string[]|null;
+              repeatedCord?: string[]|null;
+              packedInt32?: number[]|null;
+              packedInt64?: number|Long[]|null;
+              packedUint32?: number[]|null;
+              packedUint64?: number|Long[]|null;
+              packedSint32?: number[]|null;
+              packedSint64?: number|Long[]|null;
+              packedFixed32?: number[]|null;
+              packedFixed64?: number|Long[]|null;
+              packedSfixed32?: number[]|null;
+              packedSfixed64?: number|Long[]|null;
+              packedFloat?: number[]|null;
+              packedDouble?: number[]|null;
+              packedBool?: boolean[]|null;
+              packedNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum[]|null;
+              unpackedInt32?: number[]|null;
+              unpackedInt64?: number|Long[]|null;
+              unpackedUint32?: number[]|null;
+              unpackedUint64?: number|Long[]|null;
+              unpackedSint32?: number[]|null;
+              unpackedSint64?: number|Long[]|null;
+              unpackedFixed32?: number[]|null;
+              unpackedFixed64?: number|Long[]|null;
+              unpackedSfixed32?: number[]|null;
+              unpackedSfixed64?: number|Long[]|null;
+              unpackedFloat?: number[]|null;
+              unpackedDouble?: number[]|null;
+              unpackedBool?: boolean[]|null;
+              unpackedNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum[]|null;
+              mapInt32Int32?: { [k: string]: number }|null;
+              mapInt64Int64?: { [k: string]: number|Long }|null;
+              mapUint32Uint32?: { [k: string]: number }|null;
+              mapUint64Uint64?: { [k: string]: number|Long }|null;
+              mapSint32Sint32?: { [k: string]: number }|null;
+              mapSint64Sint64?: { [k: string]: number|Long }|null;
+              mapFixed32Fixed32?: { [k: string]: number }|null;
+              mapFixed64Fixed64?: { [k: string]: number|Long }|null;
+              mapSfixed32Sfixed32?: { [k: string]: number }|null;
+              mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
+              mapInt32Float?: { [k: string]: number }|null;
+              mapInt32Double?: { [k: string]: number }|null;
+              mapBoolBool?: { [k: string]: boolean }|null;
+              mapStringString?: { [k: string]: string }|null;
+              mapStringBytes?: { [k: string]: Uint8Array }|null;
+              mapStringNestedMessage?: { [k: string]: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape }|null;
+              mapStringForeignMessage?: { [k: string]: protobuf_test_messages.editions.ForeignMessageEdition2023.$Shape }|null;
+              mapStringNestedEnum?: { [k: string]: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum }|null;
+              mapStringForeignEnum?: { [k: string]: protobuf_test_messages.editions.ForeignEnumEdition2023 }|null;
+              oneofUint32?: number|null;
+              oneofNestedMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape|null;
+              oneofString?: string|null;
+              oneofBytes?: Uint8Array|null;
+              oneofBool?: boolean|null;
+              oneofUint64?: number|Long|null;
+              oneofFloat?: number|null;
+              oneofDouble?: number|null;
+              oneofEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum|null;
+              groupliketype?: protobuf_test_messages.editions.TestAllTypesEdition2023.GroupLikeType.$Shape|null;
+              delimitedField?: protobuf_test_messages.editions.TestAllTypesEdition2023.GroupLikeType.$Shape|null;
+              ".protobuf_test_messages.editions.extensionInt32"?: number|null;
+              ".protobuf_test_messages.editions.groupliketype"?: protobuf_test_messages.editions.GroupLikeType.$Shape|null;
+              ".protobuf_test_messages.editions.delimitedExt"?: protobuf_test_messages.editions.GroupLikeType.$Shape|null;
+              $unknowns?: Uint8Array[];
+            } & (
+              ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum })
+            );
 
             /**
              * Properties of a NestedMessage.
@@ -8016,7 +8016,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** NestedMessage a. */
@@ -8115,16 +8115,16 @@ export namespace protobuf_test_messages {
                     /** NestedMessage corecursive */
                     corecursive?: (protobuf_test_messages.editions.TestAllTypesEdition2023.$Properties|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
                 /** Shape of a NestedMessage. */
                 type $Shape = {
-  a?: number|null;
-  corecursive?: protobuf_test_messages.editions.TestAllTypesEdition2023.$Shape|null;
-  $unknowns?: Uint8Array[];
-};
+                  a?: number|null;
+                  corecursive?: protobuf_test_messages.editions.TestAllTypesEdition2023.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                };
             }
 
             /** NestedEnum enum. */
@@ -8156,7 +8156,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use GroupLikeType.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** GroupLikeType groupInt32. */
@@ -8255,7 +8255,7 @@ export namespace protobuf_test_messages {
                     /** GroupLikeType groupUint32 */
                     groupUint32?: (number|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -8277,7 +8277,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use ForeignMessageEdition2023.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** ForeignMessageEdition2023 c. */
@@ -8370,7 +8370,7 @@ export namespace protobuf_test_messages {
                 /** ForeignMessageEdition2023 c */
                 c?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -8404,7 +8404,7 @@ export namespace protobuf_test_messages {
             /** Reflection-backed declarations are not constructable. Use GroupLikeType.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** GroupLikeType c. */
@@ -8497,7 +8497,7 @@ export namespace protobuf_test_messages {
                 /** GroupLikeType c */
                 c?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -8527,7 +8527,7 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto2 .protobuf_test_messages.editions.proto2.groupfield */
                 ".protobuf_test_messages.editions.proto2.groupfield"?: (protobuf_test_messages.editions.proto2.GroupField.$Properties|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** TestAllTypesProto2 optionalInt32. */
@@ -9448,155 +9448,155 @@ export namespace protobuf_test_messages {
                     /** TestAllTypesProto2 oneofField */
                     oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum");
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
                 /** Narrowed shape of a TestAllTypesProto2. */
                 type $Shape = {
-  optionalInt32?: number|null;
-  optionalInt64?: number|Long|null;
-  optionalUint32?: number|null;
-  optionalUint64?: number|Long|null;
-  optionalSint32?: number|null;
-  optionalSint64?: number|Long|null;
-  optionalFixed32?: number|null;
-  optionalFixed64?: number|Long|null;
-  optionalSfixed32?: number|null;
-  optionalSfixed64?: number|Long|null;
-  optionalFloat?: number|null;
-  optionalDouble?: number|null;
-  optionalBool?: boolean|null;
-  optionalString?: string|null;
-  optionalBytes?: Uint8Array|null;
-  optionalNestedMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
-  optionalForeignMessage?: protobuf_test_messages.editions.proto2.ForeignMessageProto2.$Shape|null;
-  optionalNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum|null;
-  optionalForeignEnum?: protobuf_test_messages.editions.proto2.ForeignEnumProto2|null;
-  optionalStringPiece?: string|null;
-  optionalCord?: string|null;
-  recursiveMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.$Shape|null;
-  repeatedInt32?: number[]|null;
-  repeatedInt64?: number|Long[]|null;
-  repeatedUint32?: number[]|null;
-  repeatedUint64?: number|Long[]|null;
-  repeatedSint32?: number[]|null;
-  repeatedSint64?: number|Long[]|null;
-  repeatedFixed32?: number[]|null;
-  repeatedFixed64?: number|Long[]|null;
-  repeatedSfixed32?: number[]|null;
-  repeatedSfixed64?: number|Long[]|null;
-  repeatedFloat?: number[]|null;
-  repeatedDouble?: number[]|null;
-  repeatedBool?: boolean[]|null;
-  repeatedString?: string[]|null;
-  repeatedBytes?: Uint8Array[]|null;
-  repeatedNestedMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape[]|null;
-  repeatedForeignMessage?: protobuf_test_messages.editions.proto2.ForeignMessageProto2.$Shape[]|null;
-  repeatedNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[]|null;
-  repeatedForeignEnum?: protobuf_test_messages.editions.proto2.ForeignEnumProto2[]|null;
-  repeatedStringPiece?: string[]|null;
-  repeatedCord?: string[]|null;
-  packedInt32?: number[]|null;
-  packedInt64?: number|Long[]|null;
-  packedUint32?: number[]|null;
-  packedUint64?: number|Long[]|null;
-  packedSint32?: number[]|null;
-  packedSint64?: number|Long[]|null;
-  packedFixed32?: number[]|null;
-  packedFixed64?: number|Long[]|null;
-  packedSfixed32?: number[]|null;
-  packedSfixed64?: number|Long[]|null;
-  packedFloat?: number[]|null;
-  packedDouble?: number[]|null;
-  packedBool?: boolean[]|null;
-  packedNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[]|null;
-  unpackedInt32?: number[]|null;
-  unpackedInt64?: number|Long[]|null;
-  unpackedUint32?: number[]|null;
-  unpackedUint64?: number|Long[]|null;
-  unpackedSint32?: number[]|null;
-  unpackedSint64?: number|Long[]|null;
-  unpackedFixed32?: number[]|null;
-  unpackedFixed64?: number|Long[]|null;
-  unpackedSfixed32?: number[]|null;
-  unpackedSfixed64?: number|Long[]|null;
-  unpackedFloat?: number[]|null;
-  unpackedDouble?: number[]|null;
-  unpackedBool?: boolean[]|null;
-  unpackedNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[]|null;
-  mapInt32Int32?: { [k: string]: number }|null;
-  mapInt64Int64?: { [k: string]: number|Long }|null;
-  mapUint32Uint32?: { [k: string]: number }|null;
-  mapUint64Uint64?: { [k: string]: number|Long }|null;
-  mapSint32Sint32?: { [k: string]: number }|null;
-  mapSint64Sint64?: { [k: string]: number|Long }|null;
-  mapFixed32Fixed32?: { [k: string]: number }|null;
-  mapFixed64Fixed64?: { [k: string]: number|Long }|null;
-  mapSfixed32Sfixed32?: { [k: string]: number }|null;
-  mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
-  mapInt32Bool?: { [k: string]: boolean }|null;
-  mapInt32Float?: { [k: string]: number }|null;
-  mapInt32Double?: { [k: string]: number }|null;
-  mapInt32NestedMessage?: { [k: string]: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
-  mapBoolBool?: { [k: string]: boolean }|null;
-  mapStringString?: { [k: string]: string }|null;
-  mapStringBytes?: { [k: string]: Uint8Array }|null;
-  mapStringNestedMessage?: { [k: string]: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
-  mapStringForeignMessage?: { [k: string]: protobuf_test_messages.editions.proto2.ForeignMessageProto2.$Shape }|null;
-  mapStringNestedEnum?: { [k: string]: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum }|null;
-  mapStringForeignEnum?: { [k: string]: protobuf_test_messages.editions.proto2.ForeignEnumProto2 }|null;
-  oneofUint32?: number|null;
-  oneofNestedMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
-  oneofString?: string|null;
-  oneofBytes?: Uint8Array|null;
-  oneofBool?: boolean|null;
-  oneofUint64?: number|Long|null;
-  oneofFloat?: number|null;
-  oneofDouble?: number|null;
-  oneofEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum|null;
-  data?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.$Shape|null;
-  multiwordgroupfield?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape|null;
-  defaultInt32?: number|null;
-  defaultInt64?: number|Long|null;
-  defaultUint32?: number|null;
-  defaultUint64?: number|Long|null;
-  defaultSint32?: number|null;
-  defaultSint64?: number|Long|null;
-  defaultFixed32?: number|null;
-  defaultFixed64?: number|Long|null;
-  defaultSfixed32?: number|null;
-  defaultSfixed64?: number|Long|null;
-  defaultFloat?: number|null;
-  defaultDouble?: number|null;
-  defaultBool?: boolean|null;
-  defaultString?: string|null;
-  defaultBytes?: Uint8Array|null;
-  fieldname1?: number|null;
-  fieldName2?: number|null;
-  _fieldName3?: number|null;
-  field_Name4_?: number|null;
-  field0name5?: number|null;
-  field_0Name6?: number|null;
-  fieldName7?: number|null;
-  FieldName8?: number|null;
-  field_Name9?: number|null;
-  Field_Name10?: number|null;
-  FIELD_NAME11?: number|null;
-  FIELDName12?: number|null;
-  _FieldName13?: number|null;
-  __FieldName14?: number|null;
-  field_Name15?: number|null;
-  field__Name16?: number|null;
-  fieldName17__?: number|null;
-  FieldName18__?: number|null;
-  messageSetCorrect?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape|null;
-  ".protobuf_test_messages.editions.proto2.extensionInt32"?: number|null;
-  ".protobuf_test_messages.editions.proto2.groupfield"?: protobuf_test_messages.editions.proto2.GroupField.$Shape|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum })
-);
+                  optionalInt32?: number|null;
+                  optionalInt64?: number|Long|null;
+                  optionalUint32?: number|null;
+                  optionalUint64?: number|Long|null;
+                  optionalSint32?: number|null;
+                  optionalSint64?: number|Long|null;
+                  optionalFixed32?: number|null;
+                  optionalFixed64?: number|Long|null;
+                  optionalSfixed32?: number|null;
+                  optionalSfixed64?: number|Long|null;
+                  optionalFloat?: number|null;
+                  optionalDouble?: number|null;
+                  optionalBool?: boolean|null;
+                  optionalString?: string|null;
+                  optionalBytes?: Uint8Array|null;
+                  optionalNestedMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
+                  optionalForeignMessage?: protobuf_test_messages.editions.proto2.ForeignMessageProto2.$Shape|null;
+                  optionalNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum|null;
+                  optionalForeignEnum?: protobuf_test_messages.editions.proto2.ForeignEnumProto2|null;
+                  optionalStringPiece?: string|null;
+                  optionalCord?: string|null;
+                  recursiveMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.$Shape|null;
+                  repeatedInt32?: number[]|null;
+                  repeatedInt64?: number|Long[]|null;
+                  repeatedUint32?: number[]|null;
+                  repeatedUint64?: number|Long[]|null;
+                  repeatedSint32?: number[]|null;
+                  repeatedSint64?: number|Long[]|null;
+                  repeatedFixed32?: number[]|null;
+                  repeatedFixed64?: number|Long[]|null;
+                  repeatedSfixed32?: number[]|null;
+                  repeatedSfixed64?: number|Long[]|null;
+                  repeatedFloat?: number[]|null;
+                  repeatedDouble?: number[]|null;
+                  repeatedBool?: boolean[]|null;
+                  repeatedString?: string[]|null;
+                  repeatedBytes?: Uint8Array[]|null;
+                  repeatedNestedMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape[]|null;
+                  repeatedForeignMessage?: protobuf_test_messages.editions.proto2.ForeignMessageProto2.$Shape[]|null;
+                  repeatedNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[]|null;
+                  repeatedForeignEnum?: protobuf_test_messages.editions.proto2.ForeignEnumProto2[]|null;
+                  repeatedStringPiece?: string[]|null;
+                  repeatedCord?: string[]|null;
+                  packedInt32?: number[]|null;
+                  packedInt64?: number|Long[]|null;
+                  packedUint32?: number[]|null;
+                  packedUint64?: number|Long[]|null;
+                  packedSint32?: number[]|null;
+                  packedSint64?: number|Long[]|null;
+                  packedFixed32?: number[]|null;
+                  packedFixed64?: number|Long[]|null;
+                  packedSfixed32?: number[]|null;
+                  packedSfixed64?: number|Long[]|null;
+                  packedFloat?: number[]|null;
+                  packedDouble?: number[]|null;
+                  packedBool?: boolean[]|null;
+                  packedNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[]|null;
+                  unpackedInt32?: number[]|null;
+                  unpackedInt64?: number|Long[]|null;
+                  unpackedUint32?: number[]|null;
+                  unpackedUint64?: number|Long[]|null;
+                  unpackedSint32?: number[]|null;
+                  unpackedSint64?: number|Long[]|null;
+                  unpackedFixed32?: number[]|null;
+                  unpackedFixed64?: number|Long[]|null;
+                  unpackedSfixed32?: number[]|null;
+                  unpackedSfixed64?: number|Long[]|null;
+                  unpackedFloat?: number[]|null;
+                  unpackedDouble?: number[]|null;
+                  unpackedBool?: boolean[]|null;
+                  unpackedNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[]|null;
+                  mapInt32Int32?: { [k: string]: number }|null;
+                  mapInt64Int64?: { [k: string]: number|Long }|null;
+                  mapUint32Uint32?: { [k: string]: number }|null;
+                  mapUint64Uint64?: { [k: string]: number|Long }|null;
+                  mapSint32Sint32?: { [k: string]: number }|null;
+                  mapSint64Sint64?: { [k: string]: number|Long }|null;
+                  mapFixed32Fixed32?: { [k: string]: number }|null;
+                  mapFixed64Fixed64?: { [k: string]: number|Long }|null;
+                  mapSfixed32Sfixed32?: { [k: string]: number }|null;
+                  mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
+                  mapInt32Bool?: { [k: string]: boolean }|null;
+                  mapInt32Float?: { [k: string]: number }|null;
+                  mapInt32Double?: { [k: string]: number }|null;
+                  mapInt32NestedMessage?: { [k: string]: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
+                  mapBoolBool?: { [k: string]: boolean }|null;
+                  mapStringString?: { [k: string]: string }|null;
+                  mapStringBytes?: { [k: string]: Uint8Array }|null;
+                  mapStringNestedMessage?: { [k: string]: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
+                  mapStringForeignMessage?: { [k: string]: protobuf_test_messages.editions.proto2.ForeignMessageProto2.$Shape }|null;
+                  mapStringNestedEnum?: { [k: string]: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum }|null;
+                  mapStringForeignEnum?: { [k: string]: protobuf_test_messages.editions.proto2.ForeignEnumProto2 }|null;
+                  oneofUint32?: number|null;
+                  oneofNestedMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
+                  oneofString?: string|null;
+                  oneofBytes?: Uint8Array|null;
+                  oneofBool?: boolean|null;
+                  oneofUint64?: number|Long|null;
+                  oneofFloat?: number|null;
+                  oneofDouble?: number|null;
+                  oneofEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum|null;
+                  data?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.$Shape|null;
+                  multiwordgroupfield?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape|null;
+                  defaultInt32?: number|null;
+                  defaultInt64?: number|Long|null;
+                  defaultUint32?: number|null;
+                  defaultUint64?: number|Long|null;
+                  defaultSint32?: number|null;
+                  defaultSint64?: number|Long|null;
+                  defaultFixed32?: number|null;
+                  defaultFixed64?: number|Long|null;
+                  defaultSfixed32?: number|null;
+                  defaultSfixed64?: number|Long|null;
+                  defaultFloat?: number|null;
+                  defaultDouble?: number|null;
+                  defaultBool?: boolean|null;
+                  defaultString?: string|null;
+                  defaultBytes?: Uint8Array|null;
+                  fieldname1?: number|null;
+                  fieldName2?: number|null;
+                  _fieldName3?: number|null;
+                  field_Name4_?: number|null;
+                  field0name5?: number|null;
+                  field_0Name6?: number|null;
+                  fieldName7?: number|null;
+                  FieldName8?: number|null;
+                  field_Name9?: number|null;
+                  Field_Name10?: number|null;
+                  FIELD_NAME11?: number|null;
+                  FIELDName12?: number|null;
+                  _FieldName13?: number|null;
+                  __FieldName14?: number|null;
+                  field_Name15?: number|null;
+                  field__Name16?: number|null;
+                  fieldName17__?: number|null;
+                  FieldName18__?: number|null;
+                  messageSetCorrect?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape|null;
+                  ".protobuf_test_messages.editions.proto2.extensionInt32"?: number|null;
+                  ".protobuf_test_messages.editions.proto2.groupfield"?: protobuf_test_messages.editions.proto2.GroupField.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                } & (
+                  ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum })
+                );
 
                 /**
                  * Properties of a NestedMessage.
@@ -9611,7 +9611,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** NestedMessage a. */
@@ -9710,16 +9710,16 @@ export namespace protobuf_test_messages {
                         /** NestedMessage corecursive */
                         corecursive?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.$Properties|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
                     /** Shape of a NestedMessage. */
                     type $Shape = {
-  a?: number|null;
-  corecursive?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.$Shape|null;
-  $unknowns?: Uint8Array[];
-};
+                      a?: number|null;
+                      corecursive?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.$Shape|null;
+                      $unknowns?: Uint8Array[];
+                    };
                 }
 
                 /** NestedEnum enum. */
@@ -9751,7 +9751,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use Data.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** Data groupInt32. */
@@ -9850,7 +9850,7 @@ export namespace protobuf_test_messages {
                         /** Data groupUint32 */
                         groupUint32?: (number|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -9871,7 +9871,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use MultiWordGroupField.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** MultiWordGroupField groupInt32. */
@@ -9970,7 +9970,7 @@ export namespace protobuf_test_messages {
                         /** MultiWordGroupField groupUint32 */
                         groupUint32?: (number|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -10000,7 +10000,7 @@ export namespace protobuf_test_messages {
                     /** MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
                     ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /**
@@ -10096,17 +10096,17 @@ export namespace protobuf_test_messages {
                         /** MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
                         ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
                     /** Shape of a MessageSetCorrect. */
                     type $Shape = {
-  ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape|null;
-  ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape|null;
-  ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape|null;
-  $unknowns?: Uint8Array[];
-};
+                      ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape|null;
+                      ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape|null;
+                      ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape|null;
+                      $unknowns?: Uint8Array[];
+                    };
                 }
 
                 /**
@@ -10122,7 +10122,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension1.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** MessageSetCorrectExtension1 str. */
@@ -10215,7 +10215,7 @@ export namespace protobuf_test_messages {
                         /** MessageSetCorrectExtension1 str */
                         str?: (string|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -10236,7 +10236,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension2.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** MessageSetCorrectExtension2 i. */
@@ -10329,7 +10329,7 @@ export namespace protobuf_test_messages {
                         /** MessageSetCorrectExtension2 i */
                         i?: (number|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -10350,7 +10350,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use ExtensionWithOneof.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** ExtensionWithOneof a. */
@@ -10455,18 +10455,18 @@ export namespace protobuf_test_messages {
                         /** ExtensionWithOneof oneofField */
                         oneofField?: ("a"|"b");
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
                     /** Narrowed shape of an ExtensionWithOneof. */
                     type $Shape = {
-  a?: number|null;
-  b?: number|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ oneofField?: undefined; a?: null; b?: null }|{ oneofField?: "a"; a: number; b?: null }|{ oneofField?: "b"; a?: null; b: number })
-);
+                      a?: number|null;
+                      b?: number|null;
+                      $unknowns?: Uint8Array[];
+                    } & (
+                      ({ oneofField?: undefined; a?: null; b?: null }|{ oneofField?: "a"; a: number; b?: null }|{ oneofField?: "b"; a?: null; b: number })
+                    );
                 }
             }
 
@@ -10483,7 +10483,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use ForeignMessageProto2.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** ForeignMessageProto2 c. */
@@ -10576,7 +10576,7 @@ export namespace protobuf_test_messages {
                     /** ForeignMessageProto2 c */
                     c?: (number|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -10610,7 +10610,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use GroupField.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** GroupField groupInt32. */
@@ -10709,7 +10709,7 @@ export namespace protobuf_test_messages {
                     /** GroupField groupUint32 */
                     groupUint32?: (number|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -10730,7 +10730,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use UnknownToTestAllTypes.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** UnknownToTestAllTypes optionalInt32. */
@@ -10853,7 +10853,7 @@ export namespace protobuf_test_messages {
                     /** UnknownToTestAllTypes repeatedInt32 */
                     repeatedInt32?: (number[]|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -10873,7 +10873,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use OptionalGroup.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** OptionalGroup a. */
@@ -10966,7 +10966,7 @@ export namespace protobuf_test_messages {
                         /** OptionalGroup a */
                         a?: (number|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -10988,7 +10988,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use NullHypothesisProto2.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -11075,7 +11075,7 @@ export namespace protobuf_test_messages {
                 /** Properties of a NullHypothesisProto2. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -11096,7 +11096,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use EnumOnlyProto2.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -11183,7 +11183,7 @@ export namespace protobuf_test_messages {
                 /** Properties of an EnumOnlyProto2. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -11214,7 +11214,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use OneStringProto2.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** OneStringProto2 data. */
@@ -11307,7 +11307,7 @@ export namespace protobuf_test_messages {
                     /** OneStringProto2 data */
                     data?: (string|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -11328,7 +11328,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use ProtoWithKeywords.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** ProtoWithKeywords inline. */
@@ -11433,7 +11433,7 @@ export namespace protobuf_test_messages {
                     /** ProtoWithKeywords requires */
                     requires?: (string[]|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -11454,7 +11454,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use TestAllRequiredTypesProto2.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** TestAllRequiredTypesProto2 requiredInt32. */
@@ -11775,7 +11775,7 @@ export namespace protobuf_test_messages {
                     /** TestAllRequiredTypesProto2 defaultBytes */
                     defaultBytes: Uint8Array;
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -11795,7 +11795,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** NestedMessage a. */
@@ -11900,7 +11900,7 @@ export namespace protobuf_test_messages {
                         /** NestedMessage optionalCorecursive */
                         optionalCorecursive?: (protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.$Properties|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -11937,7 +11937,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use Data.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** Data groupInt32. */
@@ -12036,7 +12036,7 @@ export namespace protobuf_test_messages {
                         /** Data groupUint32 */
                         groupUint32: number;
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -12063,7 +12063,7 @@ export namespace protobuf_test_messages {
                     /** MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
                     ".protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /**
@@ -12156,7 +12156,7 @@ export namespace protobuf_test_messages {
                         /** MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
                         ".protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -12177,7 +12177,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension1.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** MessageSetCorrectExtension1 str. */
@@ -12270,7 +12270,7 @@ export namespace protobuf_test_messages {
                         /** MessageSetCorrectExtension1 str */
                         str: string;
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -12291,7 +12291,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension2.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** MessageSetCorrectExtension2 i. */
@@ -12384,7 +12384,7 @@ export namespace protobuf_test_messages {
                         /** MessageSetCorrectExtension2 i */
                         i: number;
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -12406,7 +12406,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use TestLargeOneof.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** TestLargeOneof a1. */
@@ -12529,21 +12529,21 @@ export namespace protobuf_test_messages {
                     /** TestLargeOneof largeOneof */
                     largeOneof?: ("a1"|"a2"|"a3"|"a4"|"a5");
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
                 /** Narrowed shape of a TestLargeOneof. */
                 type $Shape = {
-  a1?: protobuf_test_messages.editions.proto2.TestLargeOneof.A1.$Shape|null;
-  a2?: protobuf_test_messages.editions.proto2.TestLargeOneof.A2.$Shape|null;
-  a3?: protobuf_test_messages.editions.proto2.TestLargeOneof.A3.$Shape|null;
-  a4?: protobuf_test_messages.editions.proto2.TestLargeOneof.A4.$Shape|null;
-  a5?: protobuf_test_messages.editions.proto2.TestLargeOneof.A5.$Shape|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ largeOneof?: undefined; a1?: null; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a1"; a1: protobuf_test_messages.editions.proto2.TestLargeOneof.A1.$Shape; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a2"; a1?: null; a2: protobuf_test_messages.editions.proto2.TestLargeOneof.A2.$Shape; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a3"; a1?: null; a2?: null; a3: protobuf_test_messages.editions.proto2.TestLargeOneof.A3.$Shape; a4?: null; a5?: null }|{ largeOneof?: "a4"; a1?: null; a2?: null; a3?: null; a4: protobuf_test_messages.editions.proto2.TestLargeOneof.A4.$Shape; a5?: null }|{ largeOneof?: "a5"; a1?: null; a2?: null; a3?: null; a4?: null; a5: protobuf_test_messages.editions.proto2.TestLargeOneof.A5.$Shape })
-);
+                  a1?: protobuf_test_messages.editions.proto2.TestLargeOneof.A1.$Shape|null;
+                  a2?: protobuf_test_messages.editions.proto2.TestLargeOneof.A2.$Shape|null;
+                  a3?: protobuf_test_messages.editions.proto2.TestLargeOneof.A3.$Shape|null;
+                  a4?: protobuf_test_messages.editions.proto2.TestLargeOneof.A4.$Shape|null;
+                  a5?: protobuf_test_messages.editions.proto2.TestLargeOneof.A5.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                } & (
+                  ({ largeOneof?: undefined; a1?: null; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a1"; a1: protobuf_test_messages.editions.proto2.TestLargeOneof.A1.$Shape; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a2"; a1?: null; a2: protobuf_test_messages.editions.proto2.TestLargeOneof.A2.$Shape; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a3"; a1?: null; a2?: null; a3: protobuf_test_messages.editions.proto2.TestLargeOneof.A3.$Shape; a4?: null; a5?: null }|{ largeOneof?: "a4"; a1?: null; a2?: null; a3?: null; a4: protobuf_test_messages.editions.proto2.TestLargeOneof.A4.$Shape; a5?: null }|{ largeOneof?: "a5"; a1?: null; a2?: null; a3?: null; a4?: null; a5: protobuf_test_messages.editions.proto2.TestLargeOneof.A5.$Shape })
+                );
 
                 /**
                  * Properties of a A1.
@@ -12558,7 +12558,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use A1.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /**
@@ -12645,7 +12645,7 @@ export namespace protobuf_test_messages {
                     /** Properties of a A1. */
                     interface $Properties {
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -12666,7 +12666,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use A2.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /**
@@ -12753,7 +12753,7 @@ export namespace protobuf_test_messages {
                     /** Properties of a A2. */
                     interface $Properties {
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -12774,7 +12774,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use A3.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /**
@@ -12861,7 +12861,7 @@ export namespace protobuf_test_messages {
                     /** Properties of a A3. */
                     interface $Properties {
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -12882,7 +12882,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use A4.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /**
@@ -12969,7 +12969,7 @@ export namespace protobuf_test_messages {
                     /** Properties of a A4. */
                     interface $Properties {
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -12990,7 +12990,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use A5.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /**
@@ -13077,7 +13077,7 @@ export namespace protobuf_test_messages {
                     /** Properties of a A5. */
                     interface $Properties {
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
@@ -13103,7 +13103,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use TestAllTypesProto3.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** TestAllTypesProto3 optionalInt32. */
@@ -14102,167 +14102,167 @@ export namespace protobuf_test_messages {
                     /** TestAllTypesProto3 oneofField */
                     oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum"|"oneofNullValue");
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
                 /** Narrowed shape of a TestAllTypesProto3. */
                 type $Shape = {
-  optionalInt32?: number|null;
-  optionalInt64?: number|Long|null;
-  optionalUint32?: number|null;
-  optionalUint64?: number|Long|null;
-  optionalSint32?: number|null;
-  optionalSint64?: number|Long|null;
-  optionalFixed32?: number|null;
-  optionalFixed64?: number|Long|null;
-  optionalSfixed32?: number|null;
-  optionalSfixed64?: number|Long|null;
-  optionalFloat?: number|null;
-  optionalDouble?: number|null;
-  optionalBool?: boolean|null;
-  optionalString?: string|null;
-  optionalBytes?: Uint8Array|null;
-  optionalNestedMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
-  optionalForeignMessage?: protobuf_test_messages.editions.proto3.ForeignMessage.$Shape|null;
-  optionalNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum|null;
-  optionalForeignEnum?: protobuf_test_messages.editions.proto3.ForeignEnum|null;
-  optionalAliasedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.AliasedEnum|null;
-  optionalStringPiece?: string|null;
-  optionalCord?: string|null;
-  recursiveMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.$Shape|null;
-  repeatedInt32?: number[]|null;
-  repeatedInt64?: number|Long[]|null;
-  repeatedUint32?: number[]|null;
-  repeatedUint64?: number|Long[]|null;
-  repeatedSint32?: number[]|null;
-  repeatedSint64?: number|Long[]|null;
-  repeatedFixed32?: number[]|null;
-  repeatedFixed64?: number|Long[]|null;
-  repeatedSfixed32?: number[]|null;
-  repeatedSfixed64?: number|Long[]|null;
-  repeatedFloat?: number[]|null;
-  repeatedDouble?: number[]|null;
-  repeatedBool?: boolean[]|null;
-  repeatedString?: string[]|null;
-  repeatedBytes?: Uint8Array[]|null;
-  repeatedNestedMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape[]|null;
-  repeatedForeignMessage?: protobuf_test_messages.editions.proto3.ForeignMessage.$Shape[]|null;
-  repeatedNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum[]|null;
-  repeatedForeignEnum?: protobuf_test_messages.editions.proto3.ForeignEnum[]|null;
-  repeatedStringPiece?: string[]|null;
-  repeatedCord?: string[]|null;
-  packedInt32?: number[]|null;
-  packedInt64?: number|Long[]|null;
-  packedUint32?: number[]|null;
-  packedUint64?: number|Long[]|null;
-  packedSint32?: number[]|null;
-  packedSint64?: number|Long[]|null;
-  packedFixed32?: number[]|null;
-  packedFixed64?: number|Long[]|null;
-  packedSfixed32?: number[]|null;
-  packedSfixed64?: number|Long[]|null;
-  packedFloat?: number[]|null;
-  packedDouble?: number[]|null;
-  packedBool?: boolean[]|null;
-  packedNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum[]|null;
-  unpackedInt32?: number[]|null;
-  unpackedInt64?: number|Long[]|null;
-  unpackedUint32?: number[]|null;
-  unpackedUint64?: number|Long[]|null;
-  unpackedSint32?: number[]|null;
-  unpackedSint64?: number|Long[]|null;
-  unpackedFixed32?: number[]|null;
-  unpackedFixed64?: number|Long[]|null;
-  unpackedSfixed32?: number[]|null;
-  unpackedSfixed64?: number|Long[]|null;
-  unpackedFloat?: number[]|null;
-  unpackedDouble?: number[]|null;
-  unpackedBool?: boolean[]|null;
-  unpackedNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum[]|null;
-  mapInt32Int32?: { [k: string]: number }|null;
-  mapInt64Int64?: { [k: string]: number|Long }|null;
-  mapUint32Uint32?: { [k: string]: number }|null;
-  mapUint64Uint64?: { [k: string]: number|Long }|null;
-  mapSint32Sint32?: { [k: string]: number }|null;
-  mapSint64Sint64?: { [k: string]: number|Long }|null;
-  mapFixed32Fixed32?: { [k: string]: number }|null;
-  mapFixed64Fixed64?: { [k: string]: number|Long }|null;
-  mapSfixed32Sfixed32?: { [k: string]: number }|null;
-  mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
-  mapInt32Float?: { [k: string]: number }|null;
-  mapInt32Double?: { [k: string]: number }|null;
-  mapBoolBool?: { [k: string]: boolean }|null;
-  mapStringString?: { [k: string]: string }|null;
-  mapStringBytes?: { [k: string]: Uint8Array }|null;
-  mapStringNestedMessage?: { [k: string]: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape }|null;
-  mapStringForeignMessage?: { [k: string]: protobuf_test_messages.editions.proto3.ForeignMessage.$Shape }|null;
-  mapStringNestedEnum?: { [k: string]: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum }|null;
-  mapStringForeignEnum?: { [k: string]: protobuf_test_messages.editions.proto3.ForeignEnum }|null;
-  oneofUint32?: number|null;
-  oneofNestedMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
-  oneofString?: string|null;
-  oneofBytes?: Uint8Array|null;
-  oneofBool?: boolean|null;
-  oneofUint64?: number|Long|null;
-  oneofFloat?: number|null;
-  oneofDouble?: number|null;
-  oneofEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum|null;
-  oneofNullValue?: google.protobuf.NullValue|null;
-  optionalBoolWrapper?: google.protobuf.BoolValue.$Shape|null;
-  optionalInt32Wrapper?: google.protobuf.Int32Value.$Shape|null;
-  optionalInt64Wrapper?: google.protobuf.Int64Value.$Shape|null;
-  optionalUint32Wrapper?: google.protobuf.UInt32Value.$Shape|null;
-  optionalUint64Wrapper?: google.protobuf.UInt64Value.$Shape|null;
-  optionalFloatWrapper?: google.protobuf.FloatValue.$Shape|null;
-  optionalDoubleWrapper?: google.protobuf.DoubleValue.$Shape|null;
-  optionalStringWrapper?: google.protobuf.StringValue.$Shape|null;
-  optionalBytesWrapper?: google.protobuf.BytesValue.$Shape|null;
-  repeatedBoolWrapper?: google.protobuf.BoolValue.$Shape[]|null;
-  repeatedInt32Wrapper?: google.protobuf.Int32Value.$Shape[]|null;
-  repeatedInt64Wrapper?: google.protobuf.Int64Value.$Shape[]|null;
-  repeatedUint32Wrapper?: google.protobuf.UInt32Value.$Shape[]|null;
-  repeatedUint64Wrapper?: google.protobuf.UInt64Value.$Shape[]|null;
-  repeatedFloatWrapper?: google.protobuf.FloatValue.$Shape[]|null;
-  repeatedDoubleWrapper?: google.protobuf.DoubleValue.$Shape[]|null;
-  repeatedStringWrapper?: google.protobuf.StringValue.$Shape[]|null;
-  repeatedBytesWrapper?: google.protobuf.BytesValue.$Shape[]|null;
-  optionalDuration?: google.protobuf.Duration.$Shape|null;
-  optionalTimestamp?: google.protobuf.Timestamp.$Shape|null;
-  optionalFieldMask?: google.protobuf.FieldMask.$Shape|null;
-  optionalStruct?: google.protobuf.Struct.$Shape|null;
-  optionalAny?: google.protobuf.Any.$Shape|null;
-  optionalValue?: google.protobuf.Value.$Shape|null;
-  optionalNullValue?: google.protobuf.NullValue|null;
-  repeatedDuration?: google.protobuf.Duration.$Shape[]|null;
-  repeatedTimestamp?: google.protobuf.Timestamp.$Shape[]|null;
-  repeatedFieldmask?: google.protobuf.FieldMask.$Shape[]|null;
-  repeatedStruct?: google.protobuf.Struct.$Shape[]|null;
-  repeatedAny?: google.protobuf.Any.$Shape[]|null;
-  repeatedValue?: google.protobuf.Value.$Shape[]|null;
-  repeatedListValue?: google.protobuf.ListValue.$Shape[]|null;
-  fieldname1?: number|null;
-  fieldName2?: number|null;
-  _fieldName3?: number|null;
-  field_Name4_?: number|null;
-  field0name5?: number|null;
-  field_0Name6?: number|null;
-  fieldName7?: number|null;
-  FieldName8?: number|null;
-  field_Name9?: number|null;
-  Field_Name10?: number|null;
-  FIELD_NAME11?: number|null;
-  FIELDName12?: number|null;
-  _FieldName13?: number|null;
-  __FieldName14?: number|null;
-  field_Name15?: number|null;
-  field__Name16?: number|null;
-  fieldName17__?: number|null;
-  FieldName18__?: number|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum; oneofNullValue?: null }|{ oneofField?: "oneofNullValue"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue: google.protobuf.NullValue })
-);
+                  optionalInt32?: number|null;
+                  optionalInt64?: number|Long|null;
+                  optionalUint32?: number|null;
+                  optionalUint64?: number|Long|null;
+                  optionalSint32?: number|null;
+                  optionalSint64?: number|Long|null;
+                  optionalFixed32?: number|null;
+                  optionalFixed64?: number|Long|null;
+                  optionalSfixed32?: number|null;
+                  optionalSfixed64?: number|Long|null;
+                  optionalFloat?: number|null;
+                  optionalDouble?: number|null;
+                  optionalBool?: boolean|null;
+                  optionalString?: string|null;
+                  optionalBytes?: Uint8Array|null;
+                  optionalNestedMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
+                  optionalForeignMessage?: protobuf_test_messages.editions.proto3.ForeignMessage.$Shape|null;
+                  optionalNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum|null;
+                  optionalForeignEnum?: protobuf_test_messages.editions.proto3.ForeignEnum|null;
+                  optionalAliasedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.AliasedEnum|null;
+                  optionalStringPiece?: string|null;
+                  optionalCord?: string|null;
+                  recursiveMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.$Shape|null;
+                  repeatedInt32?: number[]|null;
+                  repeatedInt64?: number|Long[]|null;
+                  repeatedUint32?: number[]|null;
+                  repeatedUint64?: number|Long[]|null;
+                  repeatedSint32?: number[]|null;
+                  repeatedSint64?: number|Long[]|null;
+                  repeatedFixed32?: number[]|null;
+                  repeatedFixed64?: number|Long[]|null;
+                  repeatedSfixed32?: number[]|null;
+                  repeatedSfixed64?: number|Long[]|null;
+                  repeatedFloat?: number[]|null;
+                  repeatedDouble?: number[]|null;
+                  repeatedBool?: boolean[]|null;
+                  repeatedString?: string[]|null;
+                  repeatedBytes?: Uint8Array[]|null;
+                  repeatedNestedMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape[]|null;
+                  repeatedForeignMessage?: protobuf_test_messages.editions.proto3.ForeignMessage.$Shape[]|null;
+                  repeatedNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum[]|null;
+                  repeatedForeignEnum?: protobuf_test_messages.editions.proto3.ForeignEnum[]|null;
+                  repeatedStringPiece?: string[]|null;
+                  repeatedCord?: string[]|null;
+                  packedInt32?: number[]|null;
+                  packedInt64?: number|Long[]|null;
+                  packedUint32?: number[]|null;
+                  packedUint64?: number|Long[]|null;
+                  packedSint32?: number[]|null;
+                  packedSint64?: number|Long[]|null;
+                  packedFixed32?: number[]|null;
+                  packedFixed64?: number|Long[]|null;
+                  packedSfixed32?: number[]|null;
+                  packedSfixed64?: number|Long[]|null;
+                  packedFloat?: number[]|null;
+                  packedDouble?: number[]|null;
+                  packedBool?: boolean[]|null;
+                  packedNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum[]|null;
+                  unpackedInt32?: number[]|null;
+                  unpackedInt64?: number|Long[]|null;
+                  unpackedUint32?: number[]|null;
+                  unpackedUint64?: number|Long[]|null;
+                  unpackedSint32?: number[]|null;
+                  unpackedSint64?: number|Long[]|null;
+                  unpackedFixed32?: number[]|null;
+                  unpackedFixed64?: number|Long[]|null;
+                  unpackedSfixed32?: number[]|null;
+                  unpackedSfixed64?: number|Long[]|null;
+                  unpackedFloat?: number[]|null;
+                  unpackedDouble?: number[]|null;
+                  unpackedBool?: boolean[]|null;
+                  unpackedNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum[]|null;
+                  mapInt32Int32?: { [k: string]: number }|null;
+                  mapInt64Int64?: { [k: string]: number|Long }|null;
+                  mapUint32Uint32?: { [k: string]: number }|null;
+                  mapUint64Uint64?: { [k: string]: number|Long }|null;
+                  mapSint32Sint32?: { [k: string]: number }|null;
+                  mapSint64Sint64?: { [k: string]: number|Long }|null;
+                  mapFixed32Fixed32?: { [k: string]: number }|null;
+                  mapFixed64Fixed64?: { [k: string]: number|Long }|null;
+                  mapSfixed32Sfixed32?: { [k: string]: number }|null;
+                  mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
+                  mapInt32Float?: { [k: string]: number }|null;
+                  mapInt32Double?: { [k: string]: number }|null;
+                  mapBoolBool?: { [k: string]: boolean }|null;
+                  mapStringString?: { [k: string]: string }|null;
+                  mapStringBytes?: { [k: string]: Uint8Array }|null;
+                  mapStringNestedMessage?: { [k: string]: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape }|null;
+                  mapStringForeignMessage?: { [k: string]: protobuf_test_messages.editions.proto3.ForeignMessage.$Shape }|null;
+                  mapStringNestedEnum?: { [k: string]: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum }|null;
+                  mapStringForeignEnum?: { [k: string]: protobuf_test_messages.editions.proto3.ForeignEnum }|null;
+                  oneofUint32?: number|null;
+                  oneofNestedMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
+                  oneofString?: string|null;
+                  oneofBytes?: Uint8Array|null;
+                  oneofBool?: boolean|null;
+                  oneofUint64?: number|Long|null;
+                  oneofFloat?: number|null;
+                  oneofDouble?: number|null;
+                  oneofEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum|null;
+                  oneofNullValue?: google.protobuf.NullValue|null;
+                  optionalBoolWrapper?: google.protobuf.BoolValue.$Shape|null;
+                  optionalInt32Wrapper?: google.protobuf.Int32Value.$Shape|null;
+                  optionalInt64Wrapper?: google.protobuf.Int64Value.$Shape|null;
+                  optionalUint32Wrapper?: google.protobuf.UInt32Value.$Shape|null;
+                  optionalUint64Wrapper?: google.protobuf.UInt64Value.$Shape|null;
+                  optionalFloatWrapper?: google.protobuf.FloatValue.$Shape|null;
+                  optionalDoubleWrapper?: google.protobuf.DoubleValue.$Shape|null;
+                  optionalStringWrapper?: google.protobuf.StringValue.$Shape|null;
+                  optionalBytesWrapper?: google.protobuf.BytesValue.$Shape|null;
+                  repeatedBoolWrapper?: google.protobuf.BoolValue.$Shape[]|null;
+                  repeatedInt32Wrapper?: google.protobuf.Int32Value.$Shape[]|null;
+                  repeatedInt64Wrapper?: google.protobuf.Int64Value.$Shape[]|null;
+                  repeatedUint32Wrapper?: google.protobuf.UInt32Value.$Shape[]|null;
+                  repeatedUint64Wrapper?: google.protobuf.UInt64Value.$Shape[]|null;
+                  repeatedFloatWrapper?: google.protobuf.FloatValue.$Shape[]|null;
+                  repeatedDoubleWrapper?: google.protobuf.DoubleValue.$Shape[]|null;
+                  repeatedStringWrapper?: google.protobuf.StringValue.$Shape[]|null;
+                  repeatedBytesWrapper?: google.protobuf.BytesValue.$Shape[]|null;
+                  optionalDuration?: google.protobuf.Duration.$Shape|null;
+                  optionalTimestamp?: google.protobuf.Timestamp.$Shape|null;
+                  optionalFieldMask?: google.protobuf.FieldMask.$Shape|null;
+                  optionalStruct?: google.protobuf.Struct.$Shape|null;
+                  optionalAny?: google.protobuf.Any.$Shape|null;
+                  optionalValue?: google.protobuf.Value.$Shape|null;
+                  optionalNullValue?: google.protobuf.NullValue|null;
+                  repeatedDuration?: google.protobuf.Duration.$Shape[]|null;
+                  repeatedTimestamp?: google.protobuf.Timestamp.$Shape[]|null;
+                  repeatedFieldmask?: google.protobuf.FieldMask.$Shape[]|null;
+                  repeatedStruct?: google.protobuf.Struct.$Shape[]|null;
+                  repeatedAny?: google.protobuf.Any.$Shape[]|null;
+                  repeatedValue?: google.protobuf.Value.$Shape[]|null;
+                  repeatedListValue?: google.protobuf.ListValue.$Shape[]|null;
+                  fieldname1?: number|null;
+                  fieldName2?: number|null;
+                  _fieldName3?: number|null;
+                  field_Name4_?: number|null;
+                  field0name5?: number|null;
+                  field_0Name6?: number|null;
+                  fieldName7?: number|null;
+                  FieldName8?: number|null;
+                  field_Name9?: number|null;
+                  Field_Name10?: number|null;
+                  FIELD_NAME11?: number|null;
+                  FIELDName12?: number|null;
+                  _FieldName13?: number|null;
+                  __FieldName14?: number|null;
+                  field_Name15?: number|null;
+                  field__Name16?: number|null;
+                  fieldName17__?: number|null;
+                  FieldName18__?: number|null;
+                  $unknowns?: Uint8Array[];
+                } & (
+                  ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum; oneofNullValue?: null }|{ oneofField?: "oneofNullValue"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue: google.protobuf.NullValue })
+                );
 
                 /**
                  * Properties of a NestedMessage.
@@ -14277,7 +14277,7 @@ export namespace protobuf_test_messages {
                     /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
                     private constructor();
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
 
                     /** NestedMessage a. */
@@ -14376,16 +14376,16 @@ export namespace protobuf_test_messages {
                         /** NestedMessage corecursive */
                         corecursive?: (protobuf_test_messages.editions.proto3.TestAllTypesProto3.$Properties|null);
 
-                        /** Unknown fields preserved while decoding */
+                        /** Unknown fields preserved while decoding when enabled */
                         $unknowns?: Uint8Array[];
                     }
 
                     /** Shape of a NestedMessage. */
                     type $Shape = {
-  a?: number|null;
-  corecursive?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.$Shape|null;
-  $unknowns?: Uint8Array[];
-};
+                      a?: number|null;
+                      corecursive?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.$Shape|null;
+                      $unknowns?: Uint8Array[];
+                    };
                 }
 
                 /** NestedEnum enum. */
@@ -14440,7 +14440,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use ForeignMessage.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /** ForeignMessage c. */
@@ -14533,7 +14533,7 @@ export namespace protobuf_test_messages {
                     /** ForeignMessage c */
                     c?: (number|null);
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -14567,7 +14567,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use NullHypothesisProto3.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -14654,7 +14654,7 @@ export namespace protobuf_test_messages {
                 /** Properties of a NullHypothesisProto3. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -14675,7 +14675,7 @@ export namespace protobuf_test_messages {
                 /** Reflection-backed declarations are not constructable. Use EnumOnlyProto3.create(...) instead. */
                 private constructor();
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
 
                 /**
@@ -14762,7 +14762,7 @@ export namespace protobuf_test_messages {
                 /** Properties of an EnumOnlyProto3. */
                 interface $Properties {
 
-                    /** Unknown fields preserved while decoding */
+                    /** Unknown fields preserved while decoding when enabled */
                     $unknowns?: Uint8Array[];
                 }
 
@@ -14802,7 +14802,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use Any.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** Any type_url. */
@@ -14901,7 +14901,7 @@ export namespace google {
                 /** Any value */
                 value?: (Uint8Array|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -14922,7 +14922,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use Duration.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** Duration seconds. */
@@ -15021,7 +15021,7 @@ export namespace google {
                 /** Duration nanos */
                 nanos?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -15042,7 +15042,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use FieldMask.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** FieldMask paths. */
@@ -15135,7 +15135,7 @@ export namespace google {
                 /** FieldMask paths */
                 paths?: (string[]|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -15156,7 +15156,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use Struct.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** Struct fields. */
@@ -15249,15 +15249,15 @@ export namespace google {
                 /** Struct fields */
                 fields?: ({ [k: string]: google.protobuf.Value.$Properties }|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
             /** Shape of a Struct. */
             type $Shape = {
-  fields?: { [k: string]: google.protobuf.Value.$Shape }|null;
-  $unknowns?: Uint8Array[];
-};
+              fields?: { [k: string]: google.protobuf.Value.$Shape }|null;
+              $unknowns?: Uint8Array[];
+            };
         }
 
         /**
@@ -15273,7 +15273,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use Value.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** Value nullValue. */
@@ -15402,22 +15402,22 @@ export namespace google {
                 /** Value kind */
                 kind?: ("nullValue"|"numberValue"|"stringValue"|"boolValue"|"structValue"|"listValue");
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
             /** Narrowed shape of a Value. */
             type $Shape = {
-  nullValue?: google.protobuf.NullValue|null;
-  numberValue?: number|null;
-  stringValue?: string|null;
-  boolValue?: boolean|null;
-  structValue?: google.protobuf.Struct.$Shape|null;
-  listValue?: google.protobuf.ListValue.$Shape|null;
-  $unknowns?: Uint8Array[];
-} & (
-  ({ kind?: undefined; nullValue?: null; numberValue?: null; stringValue?: null; boolValue?: null; structValue?: null; listValue?: null }|{ kind?: "nullValue"; nullValue: google.protobuf.NullValue; numberValue?: null; stringValue?: null; boolValue?: null; structValue?: null; listValue?: null }|{ kind?: "numberValue"; nullValue?: null; numberValue: number; stringValue?: null; boolValue?: null; structValue?: null; listValue?: null }|{ kind?: "stringValue"; nullValue?: null; numberValue?: null; stringValue: string; boolValue?: null; structValue?: null; listValue?: null }|{ kind?: "boolValue"; nullValue?: null; numberValue?: null; stringValue?: null; boolValue: boolean; structValue?: null; listValue?: null }|{ kind?: "structValue"; nullValue?: null; numberValue?: null; stringValue?: null; boolValue?: null; structValue: google.protobuf.Struct.$Shape; listValue?: null }|{ kind?: "listValue"; nullValue?: null; numberValue?: null; stringValue?: null; boolValue?: null; structValue?: null; listValue: google.protobuf.ListValue.$Shape })
-);
+              nullValue?: google.protobuf.NullValue|null;
+              numberValue?: number|null;
+              stringValue?: string|null;
+              boolValue?: boolean|null;
+              structValue?: google.protobuf.Struct.$Shape|null;
+              listValue?: google.protobuf.ListValue.$Shape|null;
+              $unknowns?: Uint8Array[];
+            } & (
+              ({ kind?: undefined; nullValue?: null; numberValue?: null; stringValue?: null; boolValue?: null; structValue?: null; listValue?: null }|{ kind?: "nullValue"; nullValue: google.protobuf.NullValue; numberValue?: null; stringValue?: null; boolValue?: null; structValue?: null; listValue?: null }|{ kind?: "numberValue"; nullValue?: null; numberValue: number; stringValue?: null; boolValue?: null; structValue?: null; listValue?: null }|{ kind?: "stringValue"; nullValue?: null; numberValue?: null; stringValue: string; boolValue?: null; structValue?: null; listValue?: null }|{ kind?: "boolValue"; nullValue?: null; numberValue?: null; stringValue?: null; boolValue: boolean; structValue?: null; listValue?: null }|{ kind?: "structValue"; nullValue?: null; numberValue?: null; stringValue?: null; boolValue?: null; structValue: google.protobuf.Struct.$Shape; listValue?: null }|{ kind?: "listValue"; nullValue?: null; numberValue?: null; stringValue?: null; boolValue?: null; structValue?: null; listValue: google.protobuf.ListValue.$Shape })
+            );
         }
 
         /** NullValue enum. */
@@ -15440,7 +15440,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use ListValue.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** ListValue values. */
@@ -15533,15 +15533,15 @@ export namespace google {
                 /** ListValue values */
                 values?: (google.protobuf.Value.$Properties[]|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
             /** Shape of a ListValue. */
             type $Shape = {
-  values?: google.protobuf.Value.$Shape[]|null;
-  $unknowns?: Uint8Array[];
-};
+              values?: google.protobuf.Value.$Shape[]|null;
+              $unknowns?: Uint8Array[];
+            };
         }
 
         /**
@@ -15557,7 +15557,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use Timestamp.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** Timestamp seconds. */
@@ -15656,7 +15656,7 @@ export namespace google {
                 /** Timestamp nanos */
                 nanos?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -15677,7 +15677,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use DoubleValue.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** DoubleValue value. */
@@ -15770,7 +15770,7 @@ export namespace google {
                 /** DoubleValue value */
                 value?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -15791,7 +15791,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use FloatValue.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** FloatValue value. */
@@ -15884,7 +15884,7 @@ export namespace google {
                 /** FloatValue value */
                 value?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -15905,7 +15905,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use Int64Value.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** Int64Value value. */
@@ -15998,7 +15998,7 @@ export namespace google {
                 /** Int64Value value */
                 value?: (number|Long|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -16019,7 +16019,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use UInt64Value.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** UInt64Value value. */
@@ -16112,7 +16112,7 @@ export namespace google {
                 /** UInt64Value value */
                 value?: (number|Long|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -16133,7 +16133,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use Int32Value.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** Int32Value value. */
@@ -16226,7 +16226,7 @@ export namespace google {
                 /** Int32Value value */
                 value?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -16247,7 +16247,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use UInt32Value.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** UInt32Value value. */
@@ -16340,7 +16340,7 @@ export namespace google {
                 /** UInt32Value value */
                 value?: (number|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -16361,7 +16361,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use BoolValue.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** BoolValue value. */
@@ -16454,7 +16454,7 @@ export namespace google {
                 /** BoolValue value */
                 value?: (boolean|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -16475,7 +16475,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use StringValue.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** StringValue value. */
@@ -16568,7 +16568,7 @@ export namespace google {
                 /** StringValue value */
                 value?: (string|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 
@@ -16589,7 +16589,7 @@ export namespace google {
             /** Reflection-backed declarations are not constructable. Use BytesValue.create(...) instead. */
             private constructor();
 
-            /** Unknown fields preserved while decoding */
+            /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
             /** BytesValue value. */
@@ -16682,7 +16682,7 @@ export namespace google {
                 /** BytesValue value */
                 value?: (Uint8Array|null);
 
-                /** Unknown fields preserved while decoding */
+                /** Unknown fields preserved while decoding when enabled */
                 $unknowns?: Uint8Array[];
             }
 

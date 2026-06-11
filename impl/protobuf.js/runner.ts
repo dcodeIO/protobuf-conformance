@@ -21,6 +21,8 @@ import * as $protobuf from "protobufjs";
 import protojson from "protobufjs/ext/protojson.js";
 import textformat from "protobufjs/ext/textformat.js";
 
+$protobuf.Reader.discardUnknown = false;
+
 protos.default.resolveAll();
 
 const registry: Record<string, $protobuf.Type> = {
@@ -77,7 +79,7 @@ interface Result {
   [s: string]: Uint8Array | string;
 }
 
-function test(request: protos.conformance.ConformanceRequest): Result {
+function test(request: protos.conformance.ConformanceRequest.$Shape): Result {
   if (request.messageType === protos.conformance.FailureSet.name) {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
@@ -86,6 +88,12 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     return {
       protobufPayload:
         protos.conformance.FailureSet.encode(failureSet).finish(),
+    };
+  }
+
+  if (!request.messageType) {
+    return {
+      runtimeError: `missing request message type`,
     };
   }
 
@@ -101,25 +109,19 @@ function test(request: protos.conformance.ConformanceRequest): Result {
   try {
     switch (request.payload) {
       case "protobufPayload":
-        payload = payloadType.decode(
-          request.protobufPayload ?? new Uint8Array(),
-        );
+        payload = payloadType.decode(request.protobufPayload);
         break;
 
       case "jsonPayload":
-        payload = protojson.fromJsonString(
-          payloadType,
-          request.jsonPayload ?? "",
-          {
-            ignoreUnknownFields:
-              request.testCategory ===
-              protos.conformance.TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST,
-          },
-        );
+        payload = protojson.fromJsonString(payloadType, request.jsonPayload, {
+          ignoreUnknownFields:
+            request.testCategory ===
+            protos.conformance.TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST,
+        });
         break;
 
       case "textPayload":
-        payload = textformat.fromText(payloadType, request.textPayload ?? "");
+        payload = textformat.fromText(payloadType, request.textPayload);
         break;
 
       default:
@@ -155,7 +157,7 @@ function test(request: protos.conformance.ConformanceRequest): Result {
       case 4: // TEXT_FORMAT
         return {
           textPayload: textformat.toText(payloadType, payload, {
-            unknowns: request.printUnknownFields,
+            unknowns: request.printUnknownFields ?? false,
           }),
         };
 
@@ -175,7 +177,7 @@ function test(request: protos.conformance.ConformanceRequest): Result {
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
 function testIo(
-  test: (request: protos.conformance.ConformanceRequest) => Result,
+  test: (request: protos.conformance.ConformanceRequest.$Shape) => Result,
 ): boolean {
   setBlockingStdout();
   const requestLengthBuf = readBuffer(4);
