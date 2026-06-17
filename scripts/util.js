@@ -13,11 +13,12 @@
 // limitations under the License.
 
 import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
-import { join as joinPath } from "node:path";
+import { dirname, join as joinPath } from "node:path";
 import process from "node:process";
 import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 
-const implDirectory = new URL("../impl", import.meta.url).pathname;
+const implDirectory = fileURLToPath(new URL("../impl", import.meta.url));
 
 /**
  * @typedef Impl
@@ -68,9 +69,12 @@ const implDirectory = new URL("../impl", import.meta.url).pathname;
  * @property {string} name
  * @property {boolean} baseline
  * @property {string} githubUrl
+ * @property {string} version
+ * @property {string | undefined} versionPackage
  * @property {string} maximumEdition
  * @property {boolean} javascript
  * @property {boolean} typescript
+ * @property {string | undefined} typescriptNote
  * @property {boolean} standardPlugin
  */
 
@@ -78,7 +82,7 @@ const implDirectory = new URL("../impl", import.meta.url).pathname;
  * Implementations are sorted by conformance:
  * - Highest count of required conformance tests passed first
  * - If tied, consider recommended conformance tests
- * - If tied, score features (support for editions, TypeScript and JavaScript, standard plugin)
+ * - If tied, score features (support for editions, TypeScript and protoc)
  *
  * @param {string[]} knownEditions
  * @return {Impl[]}
@@ -99,18 +103,16 @@ export function listImpl(knownEditions) {
   if (missingBaselines.length > 0) {
     throw new Error(`missing baseline for ${missingBaselines.join(", ")}`);
   }
+  const comparisonEdition = knownEditions[knownEditions.length - 1];
+  const baseline = baselines.find(
+    (b) => b.conformanceMeta.maximumEdition === comparisonEdition,
+  );
+  if (!baseline) {
+    throw new Error(`missing baseline for ${comparisonEdition}`);
+  }
   return all
     .filter((i) => !i.conformanceMeta.baseline)
     .map((i) => {
-      const baseline = baselines.find(
-        (b) =>
-          b.conformanceMeta.maximumEdition === i.conformanceMeta.maximumEdition,
-      );
-      if (!baseline) {
-        throw new Error(
-          `missing baseline for ${i.conformanceMeta.maximumEdition}`,
-        );
-      }
       let featureScore = knownEditions.indexOf(
         i.conformanceMeta.maximumEdition,
       );
@@ -118,9 +120,6 @@ export function listImpl(knownEditions) {
         featureScore++;
       }
       if (i.conformanceMeta.typescript) {
-        featureScore++;
-      }
-      if (i.conformanceMeta.javascript) {
         featureScore++;
       }
       const thisFailures = i.getFailures();
@@ -166,7 +165,13 @@ export function listImpl(knownEditions) {
       if (a.featureScore > b.featureScore) {
         return -1;
       }
-      return a.conformanceMeta.name - b.conformanceMeta.name;
+      if (a.conformanceMeta.name < b.conformanceMeta.name) {
+        return -1;
+      }
+      if (a.conformanceMeta.name > b.conformanceMeta.name) {
+        return 1;
+      }
+      return 0;
     });
 }
 
@@ -184,7 +189,15 @@ export function listAll() {
       path: dir,
       conformanceMeta: parseImplPackage(joinPath(dir, "package.json")),
       getFailures() {
-        return parseFailingTests(joinPath(dir, "failing_tests.txt"));
+        const main = parseFailingTests(joinPath(dir, "failing_tests.txt"));
+        const textFormat = parseFailingTests(
+          joinPath(dir, "failing_tests_text_format.txt"),
+        );
+        return {
+          lines: main.lines.concat(textFormat.lines),
+          required: main.required + textFormat.required,
+          recommended: main.recommended + textFormat.recommended,
+        };
       },
       run(command) {
         const opt = {
@@ -233,6 +246,21 @@ function parseImplPackage(path) {
   if (typeof json.conformanceMeta.githubUrl != "string") {
     throw new Error(`${path}: expected conformanceMeta.githubUrl to be string`);
   }
+  const versionPackage = json.conformanceMeta.versionPackage;
+  if (!baseline && typeof versionPackage != "string") {
+    throw new Error(
+      `${path}: expected conformanceMeta.versionPackage to be string`,
+    );
+  }
+  if (
+    baseline &&
+    versionPackage !== undefined &&
+    typeof versionPackage != "string"
+  ) {
+    throw new Error(
+      `${path}: expected conformanceMeta.versionPackage to be string`,
+    );
+  }
   if (typeof json.conformanceMeta.maximumEdition != "string") {
     throw new Error(
       `${path}: expected conformanceMeta.maximumEdition to be string`,
@@ -248,6 +276,12 @@ function parseImplPackage(path) {
       `${path}: expected conformanceMeta.typescript to be string`,
     );
   }
+  const typescriptNote = json.conformanceMeta.typescriptNote;
+  if (typescriptNote !== undefined && typeof typescriptNote != "string") {
+    throw new Error(
+      `${path}: expected conformanceMeta.typescriptNote to be string`,
+    );
+  }
   if (typeof json.conformanceMeta.standardPlugin != "boolean") {
     throw new Error(
       `${path}: expected conformanceMeta.standardPlugin to be string`,
@@ -257,11 +291,53 @@ function parseImplPackage(path) {
     name: json.conformanceMeta.name,
     baseline,
     githubUrl: json.conformanceMeta.githubUrl,
+    version:
+      versionPackage === undefined
+        ? ""
+        : resolvePackageVersion(path, json, versionPackage),
+    versionPackage,
     maximumEdition: json.conformanceMeta.maximumEdition,
     javascript: json.conformanceMeta.javascript,
     typescript: json.conformanceMeta.typescript,
+    typescriptNote,
     standardPlugin: json.conformanceMeta.standardPlugin,
   };
+}
+
+/**
+ * @param {string} packageJsonPath
+ * @param {{ dependencies?: Record<string, string>, devDependencies?: Record<string, string> }} packageJson
+ * @param {string} versionPackage
+ * @return {string}
+ */
+function resolvePackageVersion(packageJsonPath, packageJson, versionPackage) {
+  const packageLockPath = joinPath(
+    dirname(packageJsonPath),
+    "package-lock.json",
+  );
+  if (existsSync(packageLockPath)) {
+    const packageLock = JSON.parse(readFileSync(packageLockPath, "utf-8"));
+    const lockedVersion =
+      packageLock?.packages?.[`node_modules/${versionPackage}`]?.version;
+    if (typeof lockedVersion == "string") {
+      return `v${lockedVersion}`;
+    }
+  }
+  const dependencyVersion =
+    packageJson.dependencies?.[versionPackage] ??
+    packageJson.devDependencies?.[versionPackage];
+  if (typeof dependencyVersion != "string") {
+    throw new Error(
+      `${packageJsonPath}: expected dependency ${versionPackage} to be present`,
+    );
+  }
+  const match = dependencyVersion.match(/\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?/);
+  if (!match) {
+    throw new Error(
+      `${packageJsonPath}: unable to parse version ${dependencyVersion} for ${versionPackage}`,
+    );
+  }
+  return `v${match[0]}`;
 }
 
 /**
@@ -291,16 +367,21 @@ function parseFailingTests(failureListPath) {
  * @param {string} contents
  */
 export function injectMarkdown(filePath, marker, contents) {
-  const cStart = `<!-- ${marker}-START -->\n`;
+  const cStart = `<!-- ${marker}-START -->`;
   const cEnd = `<!-- ${marker}-END -->`;
   const fileContent = readFileSync(filePath, "utf-8");
   const iStart = fileContent.indexOf(cStart);
   const iEnd = fileContent.indexOf(cEnd);
   if (iStart < 0 || iEnd < 0)
     throw new Error(`missing marker annotation in ${filePath}`);
-  const head = fileContent.substring(0, iStart + cStart.length);
+  const iStartEnd = fileContent.indexOf("\n", iStart);
+  if (iStartEnd < 0 || iStartEnd > iEnd) {
+    throw new Error(`missing marker line ending in ${filePath}`);
+  }
+  const eol = fileContent.includes("\r\n") ? "\r\n" : "\n";
+  const head = fileContent.substring(0, iStartEnd + 1);
   const foot = fileContent.substring(iEnd);
-  const newContent = head + contents + foot;
+  const newContent = head + contents.replaceAll("\n", eol) + foot;
   if (newContent !== fileContent) {
     writeFileSync(filePath, newContent);
   }

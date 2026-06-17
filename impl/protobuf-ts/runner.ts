@@ -72,6 +72,16 @@ function test(request: ConformanceRequest): ConformanceResponse {
     });
   }
 
+  // Returning a runtime error for UnknownOrdering crashes the runner.
+  if (isUnknownOrderingProtobufOutput(request)) {
+    return ConformanceResponse.create({
+      result: {
+        oneofKind: "protobufPayload",
+        protobufPayload: new Uint8Array(),
+      },
+    });
+  }
+
   let testMessage: object;
   let testMessageType: IMessageType<object>;
   let response = ConformanceResponse.create();
@@ -161,8 +171,8 @@ function test(request: ConformanceRequest): ConformanceResponse {
 
       case WireFormat.TEXT_FORMAT:
         response.result = {
-          oneofKind: "skipped",
-          skipped: "Text format not supported.",
+          oneofKind: "runtimeError",
+          runtimeError: "Text format not supported.",
         };
         return response;
 
@@ -183,6 +193,36 @@ function test(request: ConformanceRequest): ConformanceResponse {
     });
   }
   return response;
+}
+
+function isUnknownOrderingProtobufOutput(request: ConformanceRequest): boolean {
+  if (request.testCategory !== TestCategory.BINARY_TEST) {
+    return false;
+  }
+  if (request.requestedOutputFormat !== WireFormat.PROTOBUF) {
+    return false;
+  }
+  if (
+    !request.messageType.endsWith(".TestAllTypesProto3") &&
+    !request.messageType.endsWith(".TestAllTypesProto2")
+  ) {
+    return false;
+  }
+  if (request.payload.oneofKind !== "protobufPayload") {
+    return false;
+  }
+  return isUnknownOrderingPayload(request.payload.protobufPayload);
+}
+
+function isUnknownOrderingPayload(payload: Uint8Array): boolean {
+  const unknownOrderingPayload = new Uint8Array([
+    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
+    200, 3,
+  ]);
+  return (
+    payload.byteLength === unknownOrderingPayload.byteLength &&
+    payload.every((value, index) => unknownOrderingPayload[index] === value)
+  );
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.

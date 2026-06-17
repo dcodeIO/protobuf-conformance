@@ -68,11 +68,8 @@ function test(
     return;
   }
 
-  // Returning a runtime error for the test Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
-  // crashes the runner.
-  if (
-    is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(request)
-  ) {
+  // Returning a runtime error for UnknownOrdering crashes the runner.
+  if (isUnknownOrderingProtobufOutput(request)) {
     response.protobuf_payload = new Uint8Array();
     return;
   }
@@ -129,7 +126,7 @@ function test(
   }
 }
 
-function is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(
+function isUnknownOrderingProtobufOutput(
   request: conformance.ConformanceRequest,
 ) {
   if (request.test_category != conformance.TestCategory.BINARY_TEST) {
@@ -139,9 +136,8 @@ function is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(
     return false;
   }
   if (
-    request.message_type !=
-      "protobuf_test_messages.proto3.TestAllTypesProto3" &&
-    request.message_type != "protobuf_test_messages.proto2.TestAllTypesProto2"
+    !request.message_type.endsWith(".TestAllTypesProto3") &&
+    !request.message_type.endsWith(".TestAllTypesProto2")
   ) {
     return false;
   }

@@ -3,6 +3,7 @@
   "conformanceMeta": {
     "name": "protoc-gen-ts",
     "githubUrl": "https://github.com/thesayyn/protoc-gen-ts",
+    "versionPackage": "protoc-gen-ts",
     "maximumEdition": "proto3",
     "javascript": false,
     "typescript": true,
@@ -12,7 +13,7 @@
   "scripts": {
     "generate": "bash generate.sh",
     "build": "bash build.sh",
-    "test": "conformance_test_runner --maximum_edition PROTO3 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
+    "test": "conformance_test_runner --maximum_edition 2024 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
   },
   "dependencies": {
     "@types/google-protobuf": "^3.15.7",

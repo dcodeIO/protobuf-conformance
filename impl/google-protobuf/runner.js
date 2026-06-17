@@ -25,9 +25,8 @@
 //   files used in the test.  These tests generate the code from the Protobuf files using protoc-gen-js.
 // - This file uses CommonJS instead of the Closure Compiler
 // - err.toString was converted to String(err)
-// - Any unsupported input formats (JSON, TextFormat) that were skipped in the original test runner files have been
-//   modified to instead fail the tests just for transparency.  Output formats that were skipped were left as skipped
-//   to match Protobuf-ES.
+// - Any unsupported input and output formats (JSON, TextFormat) that were skipped in the original test runner files
+//   have been modified to instead fail the tests just for transparency.
 const {
   ConformanceRequest,
   ConformanceResponse,
@@ -123,17 +122,12 @@ function doTest(request) {
   }
 
   if (request.getRequestedOutputFormat() === WireFormat.JSON) {
-    response.setSkipped("Json is not supported as output format.");
+    response.setRuntimeError("Json is not supported as output format.");
     return response;
   }
 
   if (request.getRequestedOutputFormat() === WireFormat.TEXT_FORMAT) {
-    response.setSkipped("Text format is not supported as output format.");
-    return response;
-  }
-
-  if (request.getRequestedOutputFormat() === WireFormat.TEXT_FORMAT) {
-    response.setRuntimeError("Unspecified output format");
+    response.setRuntimeError("Text format is not supported as output format.");
     return response;
   }
 

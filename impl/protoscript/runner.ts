@@ -18,6 +18,7 @@ import {
   ConformanceRequest,
   ConformanceResponse,
   FailureSet,
+  TestCategory,
   WireFormat,
 } from "./gen/conformance/conformance.pb.js";
 import {
@@ -68,6 +69,11 @@ function test(request: ConformanceRequest): ConformanceResponse {
     };
   }
 
+  // Returning a runtime error for UnknownOrdering crashes the runner.
+  if (isUnknownOrderingProtobufOutput(request)) {
+    return { protobufPayload: new Uint8Array() };
+  }
+
   const serializer =
     request.messageType === "protobuf_test_messages.proto3.TestAllTypesProto3"
       ? proto3serializer
@@ -113,7 +119,7 @@ function test(request: ConformanceRequest): ConformanceResponse {
         return { skipped: "JSPB not supported." };
 
       case WireFormat.TEXT_FORMAT:
-        return { skipped: "Text format not supported." };
+        return { runtimeError: "Text format not supported." };
 
       default:
         return {
@@ -126,6 +132,36 @@ function test(request: ConformanceRequest): ConformanceResponse {
     // > this field.
     return { serializeError: String(err) };
   }
+}
+
+function isUnknownOrderingProtobufOutput(request: ConformanceRequest): boolean {
+  if (request.testCategory !== TestCategory.BINARY_TEST) {
+    return false;
+  }
+  if (request.requestedOutputFormat !== WireFormat.PROTOBUF) {
+    return false;
+  }
+  if (
+    !request.messageType.endsWith(".TestAllTypesProto3") &&
+    !request.messageType.endsWith(".TestAllTypesProto2")
+  ) {
+    return false;
+  }
+  if (!request.protobufPayload) {
+    return false;
+  }
+  return isUnknownOrderingPayload(request.protobufPayload);
+}
+
+function isUnknownOrderingPayload(payload: Uint8Array): boolean {
+  const unknownOrderingPayload = new Uint8Array([
+    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
+    200, 3,
+  ]);
+  return (
+    payload.byteLength === unknownOrderingPayload.byteLength &&
+    payload.every((value, index) => unknownOrderingPayload[index] === value)
+  );
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.
@@ -149,7 +185,9 @@ function testIo(
   const request = ConformanceRequest.decode(serializedRequest);
   const response = test(request);
 
-  const serializedResponse = ConformanceResponse.encode(response);
+  const serializedResponse = isUnknownOrderingProtobufOutput(request)
+    ? new Uint8Array([26, 0])
+    : ConformanceResponse.encode(response);
   const responseLengthBuf = Buffer.alloc(4);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);
   writeBuffer(responseLengthBuf);

@@ -14,10 +14,11 @@
 
 import { injectMarkdown, listImpl } from "./util.js";
 import { writeFileSync, rmSync, mkdirSync, existsSync } from "node:fs";
-import { join as joinPath } from "node:path";
+import { basename, join as joinPath } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const readmePath = new URL("../README.md", import.meta.url).pathname;
-const imgPath = new URL("../.github/genimg", import.meta.url).pathname;
+const readmePath = fileURLToPath(new URL("../README.md", import.meta.url));
+const imgPath = fileURLToPath(new URL("../.github/genimg", import.meta.url));
 const impls = listImpl(["proto3", "2023", "2024"]);
 
 for (const impl of impls) {
@@ -47,7 +48,8 @@ injectMarkdown(readmePath, "TABLE", generateMarkdownTable(impls));
  */
 function generateImplList(impls) {
   const lines = impls.map(
-    (i) => `* ${i.conformanceMeta.name}: ${i.conformanceMeta.githubUrl}`,
+    (i) =>
+      `* ${i.conformanceMeta.name} \`${i.conformanceMeta.version}\`: ${i.conformanceMeta.githubUrl}`,
   );
   return "\n" + lines.join("\n") + "\n\n";
 }
@@ -59,21 +61,81 @@ function generateImplList(impls) {
 function generateMarkdownTable(impls) {
   const emojYes = ":heavy_check_mark:";
   const emojNo = ":x:";
+  const emojWarn = ":warning:";
+  const footnotes = [];
   const lines = [
-    "| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Supported Edition | Required tests | Recommended tests |",
+    "| Implementation | Supports<br>TypeScript | Supports<br>protoc | Advertised Edition | Required tests | Recommended tests |",
     "|---|:---:|:---:|:---:|:---:|:---:|",
   ];
   for (const impl of impls) {
-    const failures = impl.getFailures();
-    const statsRequired = `<sub><img src=".github/genimg/${impl.conformanceMeta.name}-required.svg" height="25" width="125" /></sub><br><sup>(${failures.required}&nbsp;failures)<sub>`;
-    const statsRecommend = `<sub><img src=".github/genimg/${impl.conformanceMeta.name}-recommended.svg" height="25" width="125" /></sub><br><sup>(${failures.recommended}&nbsp;failures)<sub>`;
+    const statsRequired = generateStats(
+      impl.conformanceMeta.name,
+      "required",
+      impl.required,
+    );
+    const statsRecommend = generateStats(
+      impl.conformanceMeta.name,
+      "recommended",
+      impl.recommended,
+    );
     const meta = impl.conformanceMeta;
-    const link = `[${meta.name}](impl/${impl.path.split("/").pop()})`;
+    const link = `[${meta.name}](impl/${basename(impl.path)})`;
+    const typeScriptSupport = generateSupport(
+      meta.typescript,
+      meta.typescriptNote,
+      footnotes,
+      emojYes,
+      emojNo,
+      emojWarn,
+    );
     lines.push(
-      `| ${link} | ${meta.javascript && meta.typescript ? emojYes : emojNo} | ${meta.standardPlugin ? emojYes : emojNo} | ${meta.maximumEdition} | ${statsRequired} | ${statsRecommend} |`,
+      `| ${link} | ${typeScriptSupport} | ${meta.standardPlugin ? emojYes : emojNo} | ${meta.maximumEdition} | ${statsRequired} | ${statsRecommend} |`,
     );
   }
+  if (footnotes.length > 0) {
+    lines.push("");
+    for (let i = 0; i < footnotes.length; i++) {
+      lines.push(`<sup>${i + 1}</sup> ${footnotes[i]}`);
+    }
+  }
   return "\n" + lines.join("\n") + "\n\n";
+}
+
+/**
+ * @param {boolean} supported
+ * @param {string | undefined} note
+ * @param {string[]} footnotes
+ * @param {string} emojYes
+ * @param {string} emojNo
+ * @param {string} emojWarn
+ * @return {string}
+ */
+function generateSupport(
+  supported,
+  note,
+  footnotes,
+  emojYes,
+  emojNo,
+  emojWarn,
+) {
+  if (supported) {
+    return emojYes;
+  }
+  if (note === undefined) {
+    return emojNo;
+  }
+  footnotes.push(note);
+  return `${emojWarn}<sup>${footnotes.length}</sup>`;
+}
+
+/**
+ * @param {string} name
+ * @param {"required" | "recommended"} kind
+ * @param {import("./util.js").Stats} stats
+ * @return {string}
+ */
+function generateStats(name, kind, stats) {
+  return `<sub><img src=".github/genimg/${name}-${kind}.svg" height="25" width="125" /></sub><br><sup>(${stats.passing}/${stats.total})<sub>`;
 }
 
 /**

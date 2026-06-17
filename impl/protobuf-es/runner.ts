@@ -148,7 +148,7 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
         return { case: "skipped", value: "JSPB not supported." };
 
       case WireFormat.TEXT_FORMAT:
-        return { case: "skipped", value: "Text format not supported." };
+        return { case: "runtimeError", value: "Text format not supported." };
 
       default:
         return {

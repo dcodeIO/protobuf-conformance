@@ -3,6 +3,7 @@
   "conformanceMeta": {
     "name": "ts-proto",
     "githubUrl": "https://github.com/stephenh/ts-proto",
+    "versionPackage": "ts-proto",
     "maximumEdition": "proto3",
     "javascript": false,
     "typescript": true,
@@ -13,7 +14,7 @@
   "scripts": {
     "generate": "bash generate.sh",
     "build": "bash build.sh",
-    "test": "conformance_test_runner --maximum_edition PROTO3 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
+    "test": "conformance_test_runner --maximum_edition 2024 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.66.1",

@@ -3,6 +3,7 @@
   "conformanceMeta": {
     "name": "Protobuf-ES",
     "githubUrl": "https://github.com/bufbuild/protobuf-es",
+    "versionPackage": "@bufbuild/protobuf",
     "maximumEdition": "2024",
     "javascript": true,
     "typescript": true,

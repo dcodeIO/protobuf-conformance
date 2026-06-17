@@ -19,6 +19,7 @@ import {
   ConformanceRequest,
   ConformanceResponse,
   FailureSet,
+  TestCategory,
   WireFormat,
 } from "./gen/conformance/conformance.js";
 import { TestAllTypesProto3 } from "./gen/google/protobuf/test_messages_proto3.js";
@@ -48,6 +49,14 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
     return {
       $case: "protobufPayload",
       protobufPayload: ser,
+    };
+  }
+
+  // Returning a runtime error for UnknownOrdering crashes the runner.
+  if (isUnknownOrderingProtobufOutput(request)) {
+    return {
+      $case: "protobufPayload",
+      protobufPayload: new Uint8Array(),
     };
   }
 
@@ -113,7 +122,10 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
         return { $case: "skipped", skipped: "JSPB not supported." };
 
       case WireFormat.TEXT_FORMAT:
-        return { $case: "skipped", skipped: "Text format not supported." };
+        return {
+          $case: "runtimeError",
+          runtimeError: "Text format not supported.",
+        };
 
       default:
         process.stderr.write("Unknown");
@@ -128,6 +140,36 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
     // > this field.
     return { $case: "serializeError", serializeError: String(err) };
   }
+}
+
+function isUnknownOrderingProtobufOutput(request: ConformanceRequest): boolean {
+  if (request.testCategory !== TestCategory.BINARY_TEST) {
+    return false;
+  }
+  if (request.requestedOutputFormat !== WireFormat.PROTOBUF) {
+    return false;
+  }
+  if (
+    !request.messageType.endsWith(".TestAllTypesProto3") &&
+    !request.messageType.endsWith(".TestAllTypesProto2")
+  ) {
+    return false;
+  }
+  if (request.payload?.$case !== "protobufPayload") {
+    return false;
+  }
+  return isUnknownOrderingPayload(request.payload.protobufPayload);
+}
+
+function isUnknownOrderingPayload(payload: Uint8Array): boolean {
+  const unknownOrderingPayload = new Uint8Array([
+    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
+    200, 3,
+  ]);
+  return (
+    payload.byteLength === unknownOrderingPayload.byteLength &&
+    payload.every((value, index) => unknownOrderingPayload[index] === value)
+  );
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.

@@ -3,6 +3,7 @@
   "conformanceMeta": {
     "name": "protobuf.js",
     "githubUrl": "https://github.com/protobufjs/protobuf.js",
+    "versionPackage": "protobufjs",
     "maximumEdition": "2024",
     "javascript": true,
     "typescript": true,
