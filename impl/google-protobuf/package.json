@@ -20,6 +20,6 @@
     "@protocolbuffers/protoc-gen-js": "^4.0.2"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.66.0"
+    "@bufbuild/buf": "^1.71.0"
   }
 }
