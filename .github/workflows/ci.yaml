@@ -20,6 +20,27 @@ jobs:
         run: npm run license-header
       - name: Format
         run: npm run format
+      - name: Generate patch
+        if: github.actor == 'dependabot[bot]'
+        run: |
+          git add --intent-to-add -- \
+            README.md \
+            .github/genimg \
+            ':(glob)impl/**/gen/**' \
+            ':(glob)impl/**/failing_tests*.txt'
+          git diff --binary -- \
+            README.md \
+            .github/genimg \
+            ':(glob)impl/**/gen/**' \
+            ':(glob)impl/**/failing_tests*.txt' \
+            > "$RUNNER_TEMP/generated.patch"
+      - name: Upload patch
+        if: github.actor == 'dependabot[bot]'
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-patch
+          path: ${{ runner.temp }}/generated.patch
+          retention-days: 1
       - name: Check Diff
         run: |
           [[ -z $(git status --porcelain | tee /dev/stderr) ]] || exit 1
