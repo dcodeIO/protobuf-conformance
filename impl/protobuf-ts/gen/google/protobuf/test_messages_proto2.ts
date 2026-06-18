@@ -562,7 +562,7 @@ export interface TestAllTypesProto2 {
      */
     defaultSfixed64?: bigint;
     /**
-     * @generated from protobuf field: optional float default_float = 251 [default = 9e+09]
+     * @generated from protobuf field: optional float default_float = 251 [default = 8.999999488e+09]
      */
     defaultFloat?: number;
     /**
@@ -1019,7 +1019,7 @@ export interface TestAllRequiredTypesProto2 {
      */
     defaultSfixed64: bigint;
     /**
-     * @generated from protobuf field: required float default_float = 251 [default = 9e+09]
+     * @generated from protobuf field: required float default_float = 251 [default = 8.999999488e+09]
      */
     defaultFloat: number;
     /**
@@ -1957,7 +1957,7 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
                 case /* optional sfixed64 default_sfixed64 = 250 [default = -9123456789123456789] */ 250:
                     message.defaultSfixed64 = reader.sfixed64().toBigInt();
                     break;
-                case /* optional float default_float = 251 [default = 9e+09] */ 251:
+                case /* optional float default_float = 251 [default = 8.999999488e+09] */ 251:
                     message.defaultFloat = reader.float();
                     break;
                 case /* optional double default_double = 252 [default = 7e+22] */ 252:
@@ -2778,7 +2778,7 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
         /* optional sfixed64 default_sfixed64 = 250 [default = -9123456789123456789]; */
         if (message.defaultSfixed64 !== undefined)
             writer.tag(250, WireType.Bit64).sfixed64(message.defaultSfixed64);
-        /* optional float default_float = 251 [default = 9e+09]; */
+        /* optional float default_float = 251 [default = 8.999999488e+09]; */
         if (message.defaultFloat !== undefined)
             writer.tag(251, WireType.Bit32).float(message.defaultFloat);
         /* optional double default_double = 252 [default = 7e+22]; */
@@ -3804,7 +3804,7 @@ class TestAllRequiredTypesProto2$Type extends MessageType<TestAllRequiredTypesPr
                 case /* required sfixed64 default_sfixed64 = 250 [default = -9123456789123456789] */ 250:
                     message.defaultSfixed64 = reader.sfixed64().toBigInt();
                     break;
-                case /* required float default_float = 251 [default = 9e+09] */ 251:
+                case /* required float default_float = 251 [default = 8.999999488e+09] */ 251:
                     message.defaultFloat = reader.float();
                     break;
                 case /* required double default_double = 252 [default = 7e+22] */ 252:
@@ -3930,7 +3930,7 @@ class TestAllRequiredTypesProto2$Type extends MessageType<TestAllRequiredTypesPr
         /* required sfixed64 default_sfixed64 = 250 [default = -9123456789123456789]; */
         if (message.defaultSfixed64 !== 0n)
             writer.tag(250, WireType.Bit64).sfixed64(message.defaultSfixed64);
-        /* required float default_float = 251 [default = 9e+09]; */
+        /* required float default_float = 251 [default = 8.999999488e+09]; */
         if (message.defaultFloat !== 0)
             writer.tag(251, WireType.Bit32).float(message.defaultFloat);
         /* required double default_double = 252 [default = 7e+22]; */
