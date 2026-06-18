@@ -1,11 +1,11 @@
-name: apply-generated-patch
+name: patch
 on:
   workflow_run:
     workflows: [ci]
     types: [completed]
 permissions:
-  actions: write
-  contents: write
+  actions: read
+  contents: read
   pull-requests: read
 concurrency:
   group: apply-generated-patch-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
@@ -89,21 +89,30 @@ jobs:
 
           echo "available=true" >> "$GITHUB_OUTPUT"
 
+      - name: Create app token
+        id: app-token
+        if: steps.patch.outputs.available == 'true'
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.PATCH_APP_ID }}
+          private-key: ${{ secrets.PATCH_APP_PRIVATE_KEY }}
+          permission-contents: write
+
       - name: Checkout
         if: steps.patch.outputs.available == 'true'
         uses: actions/checkout@v6
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Apply patch
-        id: apply
         if: steps.patch.outputs.available == 'true'
         env:
+          APP_SLUG: ${{ steps.app-token.outputs.app-slug }}
+          GH_TOKEN: ${{ github.token }}
           HEAD_REF: ${{ steps.pr.outputs.head_ref }}
           RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
-          echo "pushed=false" >> "$GITHUB_OUTPUT"
-
           git apply --check --index "$RUNNER_TEMP/generated-patch/generated.patch"
           git apply --index "$RUNNER_TEMP/generated-patch/generated.patch"
 
@@ -118,8 +127,10 @@ jobs:
 
           git diff --cached --check
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          bot_login="${APP_SLUG}[bot]"
+          bot_id=$(gh api "users/${APP_SLUG}%5Bbot%5D" --jq .id)
+          git config user.name "$bot_login"
+          git config user.email "$bot_id+$bot_login@users.noreply.github.com"
 
           if git diff --cached --quiet; then
             exit 0
@@ -134,11 +145,3 @@ jobs:
           fi
 
           git push origin "HEAD:$HEAD_REF"
-          echo "pushed=true" >> "$GITHUB_OUTPUT"
-
-      - name: Run CI
-        if: steps.apply.outputs.pushed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          HEAD_REF: ${{ steps.pr.outputs.head_ref }}
-        run: gh workflow run ci.yaml --ref "$HEAD_REF"
