@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]' && github.event.pull_request.head.sha || github.sha }}
       - name: Install
         run: npm ci
       - name: Run tests and create report
@@ -21,7 +23,9 @@ jobs:
       - name: Format
         run: npm run format
       - name: Generate patch
-        if: github.actor == 'dependabot[bot]'
+        if: >
+          (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]') ||
+          github.event_name == 'workflow_dispatch'
         run: |
           git add --intent-to-add -- \
             README.md \
@@ -34,8 +38,22 @@ jobs:
             ':(glob)impl/**/gen/**' \
             ':(glob)impl/**/failing_tests*.txt' \
             > "$RUNNER_TEMP/generated.patch"
+      - name: Check non-generated diff
+        if: >
+          (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]') ||
+          github.event_name == 'workflow_dispatch'
+        run: |
+          [[ -z $(git status --porcelain -- \
+            . \
+            ':(exclude)README.md' \
+            ':(exclude).github/genimg/**' \
+            ':(exclude,glob)impl/**/gen/**' \
+            ':(exclude,glob)impl/**/failing_tests*.txt' \
+            | tee /dev/stderr) ]] || exit 1
       - name: Upload patch
-        if: github.actor == 'dependabot[bot]'
+        if: >
+          (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]') ||
+          github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
           name: generated-patch

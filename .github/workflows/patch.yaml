@@ -1,0 +1,144 @@
+name: apply-generated-patch
+on:
+  workflow_run:
+    workflows: [ci]
+    types: [completed]
+permissions:
+  actions: write
+  contents: write
+  pull-requests: read
+concurrency:
+  group: apply-generated-patch-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: false
+jobs:
+  apply-generated-patch:
+    if: >
+      (github.event.workflow_run.event == 'pull_request' || github.event.workflow_run.event == 'workflow_dispatch') &&
+      github.event.workflow_run.conclusion == 'failure' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve PR
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.workflow_run.pull_requests[0].number }}
+          RUN_EVENT: ${{ github.event.workflow_run.event }}
+          RUN_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          if [[ -z "$PR_NUMBER" || "$PR_NUMBER" == "null" ]]; then
+            if [[ "$RUN_EVENT" != "workflow_dispatch" || -z "$RUN_HEAD_BRANCH" || "$RUN_HEAD_BRANCH" == "null" ]]; then
+              echo "apply=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+
+            repo_owner="${GITHUB_REPOSITORY%%/*}"
+            gh api "repos/$GITHUB_REPOSITORY/pulls" \
+              -f state=open \
+              -f base=patched \
+              -f "head=$repo_owner:$RUN_HEAD_BRANCH" > prs.json
+            jq '.[0] // empty' prs.json > pr.json
+
+            if [[ ! -s pr.json ]]; then
+              echo "apply=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          else
+            gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" > pr.json
+          fi
+
+          apply=$(
+            jq -r --arg repo "$GITHUB_REPOSITORY" --arg sha "$RUN_HEAD_SHA" '
+              if .state == "open" and
+                .base.ref == "patched" and
+                .head.repo.full_name == $repo and
+                .head.sha == $sha and
+                .user.login == "dependabot[bot]"
+              then "true" else "false" end
+            ' pr.json
+          )
+
+          echo "apply=$apply" >> "$GITHUB_OUTPUT"
+          echo "head_ref=$(jq -r .head.ref pr.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Download patch
+        id: download
+        if: steps.pr.outputs.apply == 'true'
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: generated-patch
+          path: ${{ runner.temp }}/generated-patch
+          github-token: ${{ github.token }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Inspect patch
+        id: patch
+        if: steps.pr.outputs.apply == 'true'
+        run: |
+          if [[ "${{ steps.download.outcome }}" != "success" ]]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [[ ! -s "$RUNNER_TEMP/generated-patch/generated.patch" ]]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "available=true" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        if: steps.patch.outputs.available == 'true'
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Apply patch
+        id: apply
+        if: steps.patch.outputs.available == 'true'
+        env:
+          HEAD_REF: ${{ steps.pr.outputs.head_ref }}
+          RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          echo "pushed=false" >> "$GITHUB_OUTPUT"
+
+          git apply --check --index "$RUNNER_TEMP/generated-patch/generated.patch"
+          git apply --index "$RUNNER_TEMP/generated-patch/generated.patch"
+
+          bad_paths=$(
+            git diff --cached --name-only |
+              grep -Ev '^(README\.md|\.github/genimg/|impl/[^/]+/gen/|impl/[^/]+/failing_tests.*\.txt$)' || true
+          )
+          if [[ -n "$bad_paths" ]]; then
+            echo "$bad_paths"
+            exit 1
+          fi
+
+          git diff --cached --check
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+
+          git commit -m "Update generated fixtures"
+
+          remote_sha=$(git ls-remote origin "refs/heads/$HEAD_REF" | awk '{print $1}')
+          if [[ "$remote_sha" != "$RUN_HEAD_SHA" ]]; then
+            echo "Branch moved from $RUN_HEAD_SHA to $remote_sha; leaving the newer run to handle it."
+            exit 0
+          fi
+
+          git push origin "HEAD:$HEAD_REF"
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Run CI
+        if: steps.apply.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_REF: ${{ steps.pr.outputs.head_ref }}
+        run: gh workflow run ci.yaml --ref "$HEAD_REF"
