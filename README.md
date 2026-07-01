@@ -43,6 +43,10 @@ The current implementations being tested are:
 
 ## FAQ
 
+**Why this repository?**
+
+See [the blog post](https://dev.to/dcode/when-the-model-is-the-marketing-device-a-protobuf-short-story-2p7p).
+
 **How does this differ from upstream?**
 
 This fork runs all implementations against the same test surface and includes implementation versions in the report.
@@ -50,10 +54,6 @@ This fork runs all implementations against the same test surface and includes im
 **What is tested here?**
 
 The full conformance test surface: Binary Protobuf, ProtoJSON, and Text Format, with `--maximum_edition 2024` and `--enforce_recommended`.
-
-**So what is the best JavaScript or TypeScript Protobuf library in 2026?**
-
-It depends on your requirements. For up-to-date information about each library, compare capabilities and verify claims against primary sources.
 
 **Will this repository receive updates?**
 
