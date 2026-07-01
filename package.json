@@ -19,7 +19,7 @@
   "dependencies": {
     "@bufbuild/license-header": "^0.0.4",
     "fflate": "^0.8.3",
-    "prettier": "^3.8.4"
+    "prettier": "^3.9.4"
   },
   "devDependencies": {
     "protobuf-conformance": "^33.0.0"
