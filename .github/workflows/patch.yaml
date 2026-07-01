@@ -65,7 +65,7 @@ jobs:
       - name: Download patch
         id: download
         if: steps.pr.outputs.apply == 'true'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         continue-on-error: true
         with:
           name: generated-patch
