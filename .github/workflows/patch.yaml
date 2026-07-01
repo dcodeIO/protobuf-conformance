@@ -100,7 +100,7 @@ jobs:
 
       - name: Checkout
         if: steps.patch.outputs.available == 'true'
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
           token: ${{ steps.app-token.outputs.token }}
