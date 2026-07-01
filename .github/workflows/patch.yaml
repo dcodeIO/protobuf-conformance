@@ -92,7 +92,7 @@ jobs:
       - name: Create app token
         id: app-token
         if: steps.patch.outputs.available == 'true'
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ secrets.PATCH_APP_ID }}
           private-key: ${{ secrets.PATCH_APP_PRIVATE_KEY }}
