@@ -17,7 +17,7 @@ The current implementations being tested are:
 * Protobuf-ES `v2.12.0`: https://github.com/bufbuild/protobuf-es
 * protobuf-ts `v2.11.1`: https://github.com/timostamm/protobuf-ts
 * google-protobuf `v4.0.2`: https://github.com/protocolbuffers/protobuf-javascript
-* ts-proto `v2.11.8`: https://github.com/stephenh/ts-proto
+* ts-proto `v2.11.10`: https://github.com/stephenh/ts-proto
 * protoscript `v0.0.18`: https://github.com/TateThurston/protoscript
 * protoc-gen-ts `v0.8.7`: https://github.com/thesayyn/protoc-gen-ts
 
