@@ -1,49 +1,8 @@
-import * as $protobuf from "protobufjs";
+import * as $protobuf from "protobufjs/light.js";
 import Long = require("long");
 
 /** Namespace conformance. */
 export namespace conformance {
-
-    /** WireFormat enum. */
-    enum WireFormat {
-
-        /** UNSPECIFIED value */
-        UNSPECIFIED = 0,
-
-        /** PROTOBUF value */
-        PROTOBUF = 1,
-
-        /** JSON value */
-        JSON = 2,
-
-        /** JSPB value */
-        JSPB = 3,
-
-        /** TEXT_FORMAT value */
-        TEXT_FORMAT = 4
-    }
-
-    /** TestCategory enum. */
-    enum TestCategory {
-
-        /** UNSPECIFIED_TEST value */
-        UNSPECIFIED_TEST = 0,
-
-        /** BINARY_TEST value */
-        BINARY_TEST = 1,
-
-        /** JSON_TEST value */
-        JSON_TEST = 2,
-
-        /** JSON_IGNORE_UNKNOWN_PARSING_TEST value */
-        JSON_IGNORE_UNKNOWN_PARSING_TEST = 3,
-
-        /** JSPB_TEST value */
-        JSPB_TEST = 4,
-
-        /** TEXT_FORMAT_TEST value */
-        TEXT_FORMAT_TEST = 5
-    }
 
     /**
      * Properties of a TestStatus.
@@ -760,6286 +719,51 @@ export namespace conformance {
         /** Shape of a JspbEncodingConfig. */
         type $Shape = conformance.JspbEncodingConfig.$Properties;
     }
+
+    /** WireFormat enum. */
+    enum WireFormat {
+
+        /** UNSPECIFIED value */
+        UNSPECIFIED = 0,
+
+        /** PROTOBUF value */
+        PROTOBUF = 1,
+
+        /** JSON value */
+        JSON = 2,
+
+        /** JSPB value */
+        JSPB = 3,
+
+        /** TEXT_FORMAT value */
+        TEXT_FORMAT = 4
+    }
+
+    /** TestCategory enum. */
+    enum TestCategory {
+
+        /** UNSPECIFIED_TEST value */
+        UNSPECIFIED_TEST = 0,
+
+        /** BINARY_TEST value */
+        BINARY_TEST = 1,
+
+        /** JSON_TEST value */
+        JSON_TEST = 2,
+
+        /** JSON_IGNORE_UNKNOWN_PARSING_TEST value */
+        JSON_IGNORE_UNKNOWN_PARSING_TEST = 3,
+
+        /** JSPB_TEST value */
+        JSPB_TEST = 4,
+
+        /** TEXT_FORMAT_TEST value */
+        TEXT_FORMAT_TEST = 5
+    }
 }
 
 /** Namespace protobuf_test_messages. */
 export namespace protobuf_test_messages {
-
-    /** Namespace proto2. */
-    namespace proto2 {
-
-        /**
-         * Properties of a TestAllTypesProto2.
-         * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.$Properties instead.
-         */
-        interface ITestAllTypesProto2 extends protobuf_test_messages.proto2.TestAllTypesProto2.$Properties {
-        }
-
-        /** Represents a TestAllTypesProto2. */
-        class TestAllTypesProto2 {
-
-            /** Reflection-backed declarations are not constructable. Use TestAllTypesProto2.create(...) instead. */
-            private constructor();
-
-            /** TestAllTypesProto2 .protobuf_test_messages.proto2.extensionInt32 */
-            ".protobuf_test_messages.proto2.extensionInt32": number;
-
-            /** TestAllTypesProto2 .protobuf_test_messages.proto2.groupField */
-            ".protobuf_test_messages.proto2.groupField"?: (protobuf_test_messages.proto2.GroupField.$Properties|null);
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** TestAllTypesProto2 optionalInt32. */
-            optionalInt32: number;
-
-            /** TestAllTypesProto2 optionalInt64. */
-            optionalInt64: (number|Long);
-
-            /** TestAllTypesProto2 optionalUint32. */
-            optionalUint32: number;
-
-            /** TestAllTypesProto2 optionalUint64. */
-            optionalUint64: (number|Long);
-
-            /** TestAllTypesProto2 optionalSint32. */
-            optionalSint32: number;
-
-            /** TestAllTypesProto2 optionalSint64. */
-            optionalSint64: (number|Long);
-
-            /** TestAllTypesProto2 optionalFixed32. */
-            optionalFixed32: number;
-
-            /** TestAllTypesProto2 optionalFixed64. */
-            optionalFixed64: (number|Long);
-
-            /** TestAllTypesProto2 optionalSfixed32. */
-            optionalSfixed32: number;
-
-            /** TestAllTypesProto2 optionalSfixed64. */
-            optionalSfixed64: (number|Long);
-
-            /** TestAllTypesProto2 optionalFloat. */
-            optionalFloat: number;
-
-            /** TestAllTypesProto2 optionalDouble. */
-            optionalDouble: number;
-
-            /** TestAllTypesProto2 optionalBool. */
-            optionalBool: boolean;
-
-            /** TestAllTypesProto2 optionalString. */
-            optionalString: string;
-
-            /** TestAllTypesProto2 optionalBytes. */
-            optionalBytes: Uint8Array;
-
-            /** TestAllTypesProto2 optionalNestedMessage. */
-            optionalNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties|null);
-
-            /** TestAllTypesProto2 optionalForeignMessage. */
-            optionalForeignMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties|null);
-
-            /** TestAllTypesProto2 optionalNestedEnum. */
-            optionalNestedEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum;
-
-            /** TestAllTypesProto2 optionalForeignEnum. */
-            optionalForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2;
-
-            /** TestAllTypesProto2 optionalStringPiece. */
-            optionalStringPiece: string;
-
-            /** TestAllTypesProto2 optionalCord. */
-            optionalCord: string;
-
-            /** TestAllTypesProto2 recursiveMessage. */
-            recursiveMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
-
-            /** TestAllTypesProto2 repeatedInt32. */
-            repeatedInt32: number[];
-
-            /** TestAllTypesProto2 repeatedInt64. */
-            repeatedInt64: (number|Long)[];
-
-            /** TestAllTypesProto2 repeatedUint32. */
-            repeatedUint32: number[];
-
-            /** TestAllTypesProto2 repeatedUint64. */
-            repeatedUint64: (number|Long)[];
-
-            /** TestAllTypesProto2 repeatedSint32. */
-            repeatedSint32: number[];
-
-            /** TestAllTypesProto2 repeatedSint64. */
-            repeatedSint64: (number|Long)[];
-
-            /** TestAllTypesProto2 repeatedFixed32. */
-            repeatedFixed32: number[];
-
-            /** TestAllTypesProto2 repeatedFixed64. */
-            repeatedFixed64: (number|Long)[];
-
-            /** TestAllTypesProto2 repeatedSfixed32. */
-            repeatedSfixed32: number[];
-
-            /** TestAllTypesProto2 repeatedSfixed64. */
-            repeatedSfixed64: (number|Long)[];
-
-            /** TestAllTypesProto2 repeatedFloat. */
-            repeatedFloat: number[];
-
-            /** TestAllTypesProto2 repeatedDouble. */
-            repeatedDouble: number[];
-
-            /** TestAllTypesProto2 repeatedBool. */
-            repeatedBool: boolean[];
-
-            /** TestAllTypesProto2 repeatedString. */
-            repeatedString: string[];
-
-            /** TestAllTypesProto2 repeatedBytes. */
-            repeatedBytes: Uint8Array[];
-
-            /** TestAllTypesProto2 repeatedNestedMessage. */
-            repeatedNestedMessage: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties[];
-
-            /** TestAllTypesProto2 repeatedForeignMessage. */
-            repeatedForeignMessage: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties[];
-
-            /** TestAllTypesProto2 repeatedNestedEnum. */
-            repeatedNestedEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[];
-
-            /** TestAllTypesProto2 repeatedForeignEnum. */
-            repeatedForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2[];
-
-            /** TestAllTypesProto2 repeatedStringPiece. */
-            repeatedStringPiece: string[];
-
-            /** TestAllTypesProto2 repeatedCord. */
-            repeatedCord: string[];
-
-            /** TestAllTypesProto2 packedInt32. */
-            packedInt32: number[];
-
-            /** TestAllTypesProto2 packedInt64. */
-            packedInt64: (number|Long)[];
-
-            /** TestAllTypesProto2 packedUint32. */
-            packedUint32: number[];
-
-            /** TestAllTypesProto2 packedUint64. */
-            packedUint64: (number|Long)[];
-
-            /** TestAllTypesProto2 packedSint32. */
-            packedSint32: number[];
-
-            /** TestAllTypesProto2 packedSint64. */
-            packedSint64: (number|Long)[];
-
-            /** TestAllTypesProto2 packedFixed32. */
-            packedFixed32: number[];
-
-            /** TestAllTypesProto2 packedFixed64. */
-            packedFixed64: (number|Long)[];
-
-            /** TestAllTypesProto2 packedSfixed32. */
-            packedSfixed32: number[];
-
-            /** TestAllTypesProto2 packedSfixed64. */
-            packedSfixed64: (number|Long)[];
-
-            /** TestAllTypesProto2 packedFloat. */
-            packedFloat: number[];
-
-            /** TestAllTypesProto2 packedDouble. */
-            packedDouble: number[];
-
-            /** TestAllTypesProto2 packedBool. */
-            packedBool: boolean[];
-
-            /** TestAllTypesProto2 packedNestedEnum. */
-            packedNestedEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[];
-
-            /** TestAllTypesProto2 unpackedInt32. */
-            unpackedInt32: number[];
-
-            /** TestAllTypesProto2 unpackedInt64. */
-            unpackedInt64: (number|Long)[];
-
-            /** TestAllTypesProto2 unpackedUint32. */
-            unpackedUint32: number[];
-
-            /** TestAllTypesProto2 unpackedUint64. */
-            unpackedUint64: (number|Long)[];
-
-            /** TestAllTypesProto2 unpackedSint32. */
-            unpackedSint32: number[];
-
-            /** TestAllTypesProto2 unpackedSint64. */
-            unpackedSint64: (number|Long)[];
-
-            /** TestAllTypesProto2 unpackedFixed32. */
-            unpackedFixed32: number[];
-
-            /** TestAllTypesProto2 unpackedFixed64. */
-            unpackedFixed64: (number|Long)[];
-
-            /** TestAllTypesProto2 unpackedSfixed32. */
-            unpackedSfixed32: number[];
-
-            /** TestAllTypesProto2 unpackedSfixed64. */
-            unpackedSfixed64: (number|Long)[];
-
-            /** TestAllTypesProto2 unpackedFloat. */
-            unpackedFloat: number[];
-
-            /** TestAllTypesProto2 unpackedDouble. */
-            unpackedDouble: number[];
-
-            /** TestAllTypesProto2 unpackedBool. */
-            unpackedBool: boolean[];
-
-            /** TestAllTypesProto2 unpackedNestedEnum. */
-            unpackedNestedEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[];
-
-            /** TestAllTypesProto2 mapInt32Int32. */
-            mapInt32Int32: { [k: string]: number };
-
-            /** TestAllTypesProto2 mapInt64Int64. */
-            mapInt64Int64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto2 mapUint32Uint32. */
-            mapUint32Uint32: { [k: string]: number };
-
-            /** TestAllTypesProto2 mapUint64Uint64. */
-            mapUint64Uint64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto2 mapSint32Sint32. */
-            mapSint32Sint32: { [k: string]: number };
-
-            /** TestAllTypesProto2 mapSint64Sint64. */
-            mapSint64Sint64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto2 mapFixed32Fixed32. */
-            mapFixed32Fixed32: { [k: string]: number };
-
-            /** TestAllTypesProto2 mapFixed64Fixed64. */
-            mapFixed64Fixed64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto2 mapSfixed32Sfixed32. */
-            mapSfixed32Sfixed32: { [k: string]: number };
-
-            /** TestAllTypesProto2 mapSfixed64Sfixed64. */
-            mapSfixed64Sfixed64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto2 mapInt32Bool. */
-            mapInt32Bool: { [k: string]: boolean };
-
-            /** TestAllTypesProto2 mapInt32Float. */
-            mapInt32Float: { [k: string]: number };
-
-            /** TestAllTypesProto2 mapInt32Double. */
-            mapInt32Double: { [k: string]: number };
-
-            /** TestAllTypesProto2 mapInt32NestedMessage. */
-            mapInt32NestedMessage: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties };
-
-            /** TestAllTypesProto2 mapBoolBool. */
-            mapBoolBool: { [k: string]: boolean };
-
-            /** TestAllTypesProto2 mapStringString. */
-            mapStringString: { [k: string]: string };
-
-            /** TestAllTypesProto2 mapStringBytes. */
-            mapStringBytes: { [k: string]: Uint8Array };
-
-            /** TestAllTypesProto2 mapStringNestedMessage. */
-            mapStringNestedMessage: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties };
-
-            /** TestAllTypesProto2 mapStringForeignMessage. */
-            mapStringForeignMessage: { [k: string]: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties };
-
-            /** TestAllTypesProto2 mapStringNestedEnum. */
-            mapStringNestedEnum: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum };
-
-            /** TestAllTypesProto2 mapStringForeignEnum. */
-            mapStringForeignEnum: { [k: string]: protobuf_test_messages.proto2.ForeignEnumProto2 };
-
-            /** TestAllTypesProto2 oneofUint32. */
-            oneofUint32?: (number|null);
-
-            /** TestAllTypesProto2 oneofNestedMessage. */
-            oneofNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties|null);
-
-            /** TestAllTypesProto2 oneofString. */
-            oneofString?: (string|null);
-
-            /** TestAllTypesProto2 oneofBytes. */
-            oneofBytes?: (Uint8Array|null);
-
-            /** TestAllTypesProto2 oneofBool. */
-            oneofBool?: (boolean|null);
-
-            /** TestAllTypesProto2 oneofUint64. */
-            oneofUint64?: (number|Long|null);
-
-            /** TestAllTypesProto2 oneofFloat. */
-            oneofFloat?: (number|null);
-
-            /** TestAllTypesProto2 oneofDouble. */
-            oneofDouble?: (number|null);
-
-            /** TestAllTypesProto2 oneofEnum. */
-            oneofEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null);
-
-            /** TestAllTypesProto2 data. */
-            data?: (protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties|null);
-
-            /** TestAllTypesProto2 multiWordGroupField. */
-            multiWordGroupField?: (protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties|null);
-
-            /** TestAllTypesProto2 defaultInt32. */
-            defaultInt32: number;
-
-            /** TestAllTypesProto2 defaultInt64. */
-            defaultInt64: (number|Long);
-
-            /** TestAllTypesProto2 defaultUint32. */
-            defaultUint32: number;
-
-            /** TestAllTypesProto2 defaultUint64. */
-            defaultUint64: (number|Long);
-
-            /** TestAllTypesProto2 defaultSint32. */
-            defaultSint32: number;
-
-            /** TestAllTypesProto2 defaultSint64. */
-            defaultSint64: (number|Long);
-
-            /** TestAllTypesProto2 defaultFixed32. */
-            defaultFixed32: number;
-
-            /** TestAllTypesProto2 defaultFixed64. */
-            defaultFixed64: (number|Long);
-
-            /** TestAllTypesProto2 defaultSfixed32. */
-            defaultSfixed32: number;
-
-            /** TestAllTypesProto2 defaultSfixed64. */
-            defaultSfixed64: (number|Long);
-
-            /** TestAllTypesProto2 defaultFloat. */
-            defaultFloat: number;
-
-            /** TestAllTypesProto2 defaultDouble. */
-            defaultDouble: number;
-
-            /** TestAllTypesProto2 defaultBool. */
-            defaultBool: boolean;
-
-            /** TestAllTypesProto2 defaultString. */
-            defaultString: string;
-
-            /** TestAllTypesProto2 defaultBytes. */
-            defaultBytes: Uint8Array;
-
-            /** TestAllTypesProto2 fieldname1. */
-            fieldname1: number;
-
-            /** TestAllTypesProto2 fieldName2. */
-            fieldName2: number;
-
-            /** TestAllTypesProto2 _fieldName3. */
-            _fieldName3: number;
-
-            /** TestAllTypesProto2 field_Name4_. */
-            field_Name4_: number;
-
-            /** TestAllTypesProto2 field0name5. */
-            field0name5: number;
-
-            /** TestAllTypesProto2 field_0Name6. */
-            field_0Name6: number;
-
-            /** TestAllTypesProto2 fieldName7. */
-            fieldName7: number;
-
-            /** TestAllTypesProto2 FieldName8. */
-            FieldName8: number;
-
-            /** TestAllTypesProto2 field_Name9. */
-            field_Name9: number;
-
-            /** TestAllTypesProto2 Field_Name10. */
-            Field_Name10: number;
-
-            /** TestAllTypesProto2 FIELD_NAME11. */
-            FIELD_NAME11: number;
-
-            /** TestAllTypesProto2 FIELDName12. */
-            FIELDName12: number;
-
-            /** TestAllTypesProto2 _FieldName13. */
-            _FieldName13: number;
-
-            /** TestAllTypesProto2 __FieldName14. */
-            __FieldName14: number;
-
-            /** TestAllTypesProto2 field_Name15. */
-            field_Name15: number;
-
-            /** TestAllTypesProto2 field__Name16. */
-            field__Name16: number;
-
-            /** TestAllTypesProto2 fieldName17__. */
-            fieldName17__: number;
-
-            /** TestAllTypesProto2 FieldName18__. */
-            FieldName18__: number;
-
-            /** TestAllTypesProto2 messageSetCorrect. */
-            messageSetCorrect?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties|null);
-
-            /** TestAllTypesProto2 oneofField. */
-            oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum");
-
-            /**
-             * Creates a new TestAllTypesProto2 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns TestAllTypesProto2 instance
-             */
-            static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2;
-
-            /**
-             * Encodes the specified TestAllTypesProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.verify|verify} messages.
-             * @param message TestAllTypesProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified TestAllTypesProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.verify|verify} messages.
-             * @param message TestAllTypesProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a TestAllTypesProto2 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape} TestAllTypesProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape;
-
-            /**
-             * Decodes a TestAllTypesProto2 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape} TestAllTypesProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape;
-
-            /**
-             * Verifies a TestAllTypesProto2 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a TestAllTypesProto2 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns TestAllTypesProto2
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2;
-
-            /**
-             * Creates a plain object from a TestAllTypesProto2 message. Also converts values to other types if specified.
-             * @param message TestAllTypesProto2
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this TestAllTypesProto2 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for TestAllTypesProto2
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace TestAllTypesProto2 {
-
-            /** Properties of a TestAllTypesProto2. */
-            interface $Properties {
-
-                /** TestAllTypesProto2 optionalInt32 */
-                optionalInt32?: (number|null);
-
-                /** TestAllTypesProto2 optionalInt64 */
-                optionalInt64?: (number|Long|null);
-
-                /** TestAllTypesProto2 optionalUint32 */
-                optionalUint32?: (number|null);
-
-                /** TestAllTypesProto2 optionalUint64 */
-                optionalUint64?: (number|Long|null);
-
-                /** TestAllTypesProto2 optionalSint32 */
-                optionalSint32?: (number|null);
-
-                /** TestAllTypesProto2 optionalSint64 */
-                optionalSint64?: (number|Long|null);
-
-                /** TestAllTypesProto2 optionalFixed32 */
-                optionalFixed32?: (number|null);
-
-                /** TestAllTypesProto2 optionalFixed64 */
-                optionalFixed64?: (number|Long|null);
-
-                /** TestAllTypesProto2 optionalSfixed32 */
-                optionalSfixed32?: (number|null);
-
-                /** TestAllTypesProto2 optionalSfixed64 */
-                optionalSfixed64?: (number|Long|null);
-
-                /** TestAllTypesProto2 optionalFloat */
-                optionalFloat?: (number|null);
-
-                /** TestAllTypesProto2 optionalDouble */
-                optionalDouble?: (number|null);
-
-                /** TestAllTypesProto2 optionalBool */
-                optionalBool?: (boolean|null);
-
-                /** TestAllTypesProto2 optionalString */
-                optionalString?: (string|null);
-
-                /** TestAllTypesProto2 optionalBytes */
-                optionalBytes?: (Uint8Array|null);
-
-                /** TestAllTypesProto2 optionalNestedMessage */
-                optionalNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties|null);
-
-                /** TestAllTypesProto2 optionalForeignMessage */
-                optionalForeignMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties|null);
-
-                /** TestAllTypesProto2 optionalNestedEnum */
-                optionalNestedEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null);
-
-                /** TestAllTypesProto2 optionalForeignEnum */
-                optionalForeignEnum?: (protobuf_test_messages.proto2.ForeignEnumProto2|null);
-
-                /** TestAllTypesProto2 optionalStringPiece */
-                optionalStringPiece?: (string|null);
-
-                /** TestAllTypesProto2 optionalCord */
-                optionalCord?: (string|null);
-
-                /** TestAllTypesProto2 recursiveMessage */
-                recursiveMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
-
-                /** TestAllTypesProto2 repeatedInt32 */
-                repeatedInt32?: (number[]|null);
-
-                /** TestAllTypesProto2 repeatedInt64 */
-                repeatedInt64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 repeatedUint32 */
-                repeatedUint32?: (number[]|null);
-
-                /** TestAllTypesProto2 repeatedUint64 */
-                repeatedUint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 repeatedSint32 */
-                repeatedSint32?: (number[]|null);
-
-                /** TestAllTypesProto2 repeatedSint64 */
-                repeatedSint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 repeatedFixed32 */
-                repeatedFixed32?: (number[]|null);
-
-                /** TestAllTypesProto2 repeatedFixed64 */
-                repeatedFixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 repeatedSfixed32 */
-                repeatedSfixed32?: (number[]|null);
-
-                /** TestAllTypesProto2 repeatedSfixed64 */
-                repeatedSfixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 repeatedFloat */
-                repeatedFloat?: (number[]|null);
-
-                /** TestAllTypesProto2 repeatedDouble */
-                repeatedDouble?: (number[]|null);
-
-                /** TestAllTypesProto2 repeatedBool */
-                repeatedBool?: (boolean[]|null);
-
-                /** TestAllTypesProto2 repeatedString */
-                repeatedString?: (string[]|null);
-
-                /** TestAllTypesProto2 repeatedBytes */
-                repeatedBytes?: (Uint8Array[]|null);
-
-                /** TestAllTypesProto2 repeatedNestedMessage */
-                repeatedNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties[]|null);
-
-                /** TestAllTypesProto2 repeatedForeignMessage */
-                repeatedForeignMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties[]|null);
-
-                /** TestAllTypesProto2 repeatedNestedEnum */
-                repeatedNestedEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null);
-
-                /** TestAllTypesProto2 repeatedForeignEnum */
-                repeatedForeignEnum?: (protobuf_test_messages.proto2.ForeignEnumProto2[]|null);
-
-                /** TestAllTypesProto2 repeatedStringPiece */
-                repeatedStringPiece?: (string[]|null);
-
-                /** TestAllTypesProto2 repeatedCord */
-                repeatedCord?: (string[]|null);
-
-                /** TestAllTypesProto2 packedInt32 */
-                packedInt32?: (number[]|null);
-
-                /** TestAllTypesProto2 packedInt64 */
-                packedInt64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 packedUint32 */
-                packedUint32?: (number[]|null);
-
-                /** TestAllTypesProto2 packedUint64 */
-                packedUint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 packedSint32 */
-                packedSint32?: (number[]|null);
-
-                /** TestAllTypesProto2 packedSint64 */
-                packedSint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 packedFixed32 */
-                packedFixed32?: (number[]|null);
-
-                /** TestAllTypesProto2 packedFixed64 */
-                packedFixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 packedSfixed32 */
-                packedSfixed32?: (number[]|null);
-
-                /** TestAllTypesProto2 packedSfixed64 */
-                packedSfixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 packedFloat */
-                packedFloat?: (number[]|null);
-
-                /** TestAllTypesProto2 packedDouble */
-                packedDouble?: (number[]|null);
-
-                /** TestAllTypesProto2 packedBool */
-                packedBool?: (boolean[]|null);
-
-                /** TestAllTypesProto2 packedNestedEnum */
-                packedNestedEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null);
-
-                /** TestAllTypesProto2 unpackedInt32 */
-                unpackedInt32?: (number[]|null);
-
-                /** TestAllTypesProto2 unpackedInt64 */
-                unpackedInt64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 unpackedUint32 */
-                unpackedUint32?: (number[]|null);
-
-                /** TestAllTypesProto2 unpackedUint64 */
-                unpackedUint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 unpackedSint32 */
-                unpackedSint32?: (number[]|null);
-
-                /** TestAllTypesProto2 unpackedSint64 */
-                unpackedSint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 unpackedFixed32 */
-                unpackedFixed32?: (number[]|null);
-
-                /** TestAllTypesProto2 unpackedFixed64 */
-                unpackedFixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 unpackedSfixed32 */
-                unpackedSfixed32?: (number[]|null);
-
-                /** TestAllTypesProto2 unpackedSfixed64 */
-                unpackedSfixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto2 unpackedFloat */
-                unpackedFloat?: (number[]|null);
-
-                /** TestAllTypesProto2 unpackedDouble */
-                unpackedDouble?: (number[]|null);
-
-                /** TestAllTypesProto2 unpackedBool */
-                unpackedBool?: (boolean[]|null);
-
-                /** TestAllTypesProto2 unpackedNestedEnum */
-                unpackedNestedEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null);
-
-                /** TestAllTypesProto2 mapInt32Int32 */
-                mapInt32Int32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto2 mapInt64Int64 */
-                mapInt64Int64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto2 mapUint32Uint32 */
-                mapUint32Uint32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto2 mapUint64Uint64 */
-                mapUint64Uint64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto2 mapSint32Sint32 */
-                mapSint32Sint32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto2 mapSint64Sint64 */
-                mapSint64Sint64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto2 mapFixed32Fixed32 */
-                mapFixed32Fixed32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto2 mapFixed64Fixed64 */
-                mapFixed64Fixed64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto2 mapSfixed32Sfixed32 */
-                mapSfixed32Sfixed32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto2 mapSfixed64Sfixed64 */
-                mapSfixed64Sfixed64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto2 mapInt32Bool */
-                mapInt32Bool?: ({ [k: string]: boolean }|null);
-
-                /** TestAllTypesProto2 mapInt32Float */
-                mapInt32Float?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto2 mapInt32Double */
-                mapInt32Double?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto2 mapInt32NestedMessage */
-                mapInt32NestedMessage?: ({ [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties }|null);
-
-                /** TestAllTypesProto2 mapBoolBool */
-                mapBoolBool?: ({ [k: string]: boolean }|null);
-
-                /** TestAllTypesProto2 mapStringString */
-                mapStringString?: ({ [k: string]: string }|null);
-
-                /** TestAllTypesProto2 mapStringBytes */
-                mapStringBytes?: ({ [k: string]: Uint8Array }|null);
-
-                /** TestAllTypesProto2 mapStringNestedMessage */
-                mapStringNestedMessage?: ({ [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties }|null);
-
-                /** TestAllTypesProto2 mapStringForeignMessage */
-                mapStringForeignMessage?: ({ [k: string]: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties }|null);
-
-                /** TestAllTypesProto2 mapStringNestedEnum */
-                mapStringNestedEnum?: ({ [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum }|null);
-
-                /** TestAllTypesProto2 mapStringForeignEnum */
-                mapStringForeignEnum?: ({ [k: string]: protobuf_test_messages.proto2.ForeignEnumProto2 }|null);
-
-                /** TestAllTypesProto2 oneofUint32 */
-                oneofUint32?: (number|null);
-
-                /** TestAllTypesProto2 oneofNestedMessage */
-                oneofNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties|null);
-
-                /** TestAllTypesProto2 oneofString */
-                oneofString?: (string|null);
-
-                /** TestAllTypesProto2 oneofBytes */
-                oneofBytes?: (Uint8Array|null);
-
-                /** TestAllTypesProto2 oneofBool */
-                oneofBool?: (boolean|null);
-
-                /** TestAllTypesProto2 oneofUint64 */
-                oneofUint64?: (number|Long|null);
-
-                /** TestAllTypesProto2 oneofFloat */
-                oneofFloat?: (number|null);
-
-                /** TestAllTypesProto2 oneofDouble */
-                oneofDouble?: (number|null);
-
-                /** TestAllTypesProto2 oneofEnum */
-                oneofEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null);
-
-                /** TestAllTypesProto2 data */
-                data?: (protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties|null);
-
-                /** TestAllTypesProto2 multiWordGroupField */
-                multiWordGroupField?: (protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties|null);
-
-                /** TestAllTypesProto2 defaultInt32 */
-                defaultInt32?: (number|null);
-
-                /** TestAllTypesProto2 defaultInt64 */
-                defaultInt64?: (number|Long|null);
-
-                /** TestAllTypesProto2 defaultUint32 */
-                defaultUint32?: (number|null);
-
-                /** TestAllTypesProto2 defaultUint64 */
-                defaultUint64?: (number|Long|null);
-
-                /** TestAllTypesProto2 defaultSint32 */
-                defaultSint32?: (number|null);
-
-                /** TestAllTypesProto2 defaultSint64 */
-                defaultSint64?: (number|Long|null);
-
-                /** TestAllTypesProto2 defaultFixed32 */
-                defaultFixed32?: (number|null);
-
-                /** TestAllTypesProto2 defaultFixed64 */
-                defaultFixed64?: (number|Long|null);
-
-                /** TestAllTypesProto2 defaultSfixed32 */
-                defaultSfixed32?: (number|null);
-
-                /** TestAllTypesProto2 defaultSfixed64 */
-                defaultSfixed64?: (number|Long|null);
-
-                /** TestAllTypesProto2 defaultFloat */
-                defaultFloat?: (number|null);
-
-                /** TestAllTypesProto2 defaultDouble */
-                defaultDouble?: (number|null);
-
-                /** TestAllTypesProto2 defaultBool */
-                defaultBool?: (boolean|null);
-
-                /** TestAllTypesProto2 defaultString */
-                defaultString?: (string|null);
-
-                /** TestAllTypesProto2 defaultBytes */
-                defaultBytes?: (Uint8Array|null);
-
-                /** TestAllTypesProto2 fieldname1 */
-                fieldname1?: (number|null);
-
-                /** TestAllTypesProto2 fieldName2 */
-                fieldName2?: (number|null);
-
-                /** TestAllTypesProto2 _fieldName3 */
-                _fieldName3?: (number|null);
-
-                /** TestAllTypesProto2 field_Name4_ */
-                field_Name4_?: (number|null);
-
-                /** TestAllTypesProto2 field0name5 */
-                field0name5?: (number|null);
-
-                /** TestAllTypesProto2 field_0Name6 */
-                field_0Name6?: (number|null);
-
-                /** TestAllTypesProto2 fieldName7 */
-                fieldName7?: (number|null);
-
-                /** TestAllTypesProto2 FieldName8 */
-                FieldName8?: (number|null);
-
-                /** TestAllTypesProto2 field_Name9 */
-                field_Name9?: (number|null);
-
-                /** TestAllTypesProto2 Field_Name10 */
-                Field_Name10?: (number|null);
-
-                /** TestAllTypesProto2 FIELD_NAME11 */
-                FIELD_NAME11?: (number|null);
-
-                /** TestAllTypesProto2 FIELDName12 */
-                FIELDName12?: (number|null);
-
-                /** TestAllTypesProto2 _FieldName13 */
-                _FieldName13?: (number|null);
-
-                /** TestAllTypesProto2 __FieldName14 */
-                __FieldName14?: (number|null);
-
-                /** TestAllTypesProto2 field_Name15 */
-                field_Name15?: (number|null);
-
-                /** TestAllTypesProto2 field__Name16 */
-                field__Name16?: (number|null);
-
-                /** TestAllTypesProto2 fieldName17__ */
-                fieldName17__?: (number|null);
-
-                /** TestAllTypesProto2 FieldName18__ */
-                FieldName18__?: (number|null);
-
-                /** TestAllTypesProto2 messageSetCorrect */
-                messageSetCorrect?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties|null);
-
-                /** TestAllTypesProto2 .protobuf_test_messages.proto2.extensionInt32 */
-                ".protobuf_test_messages.proto2.extensionInt32"?: (number|null);
-
-                /** TestAllTypesProto2 .protobuf_test_messages.proto2.groupField */
-                ".protobuf_test_messages.proto2.groupField"?: (protobuf_test_messages.proto2.GroupField.$Properties|null);
-
-                /** TestAllTypesProto2 oneofField */
-                oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum");
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Narrowed shape of a TestAllTypesProto2. */
-            type $Shape = {
-              optionalInt32?: number|null;
-              optionalInt64?: number|Long|null;
-              optionalUint32?: number|null;
-              optionalUint64?: number|Long|null;
-              optionalSint32?: number|null;
-              optionalSint64?: number|Long|null;
-              optionalFixed32?: number|null;
-              optionalFixed64?: number|Long|null;
-              optionalSfixed32?: number|null;
-              optionalSfixed64?: number|Long|null;
-              optionalFloat?: number|null;
-              optionalDouble?: number|null;
-              optionalBool?: boolean|null;
-              optionalString?: string|null;
-              optionalBytes?: Uint8Array|null;
-              optionalNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
-              optionalForeignMessage?: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape|null;
-              optionalNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null;
-              optionalForeignEnum?: protobuf_test_messages.proto2.ForeignEnumProto2|null;
-              optionalStringPiece?: string|null;
-              optionalCord?: string|null;
-              recursiveMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape|null;
-              repeatedInt32?: number[]|null;
-              repeatedInt64?: number|Long[]|null;
-              repeatedUint32?: number[]|null;
-              repeatedUint64?: number|Long[]|null;
-              repeatedSint32?: number[]|null;
-              repeatedSint64?: number|Long[]|null;
-              repeatedFixed32?: number[]|null;
-              repeatedFixed64?: number|Long[]|null;
-              repeatedSfixed32?: number[]|null;
-              repeatedSfixed64?: number|Long[]|null;
-              repeatedFloat?: number[]|null;
-              repeatedDouble?: number[]|null;
-              repeatedBool?: boolean[]|null;
-              repeatedString?: string[]|null;
-              repeatedBytes?: Uint8Array[]|null;
-              repeatedNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape[]|null;
-              repeatedForeignMessage?: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape[]|null;
-              repeatedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
-              repeatedForeignEnum?: protobuf_test_messages.proto2.ForeignEnumProto2[]|null;
-              repeatedStringPiece?: string[]|null;
-              repeatedCord?: string[]|null;
-              packedInt32?: number[]|null;
-              packedInt64?: number|Long[]|null;
-              packedUint32?: number[]|null;
-              packedUint64?: number|Long[]|null;
-              packedSint32?: number[]|null;
-              packedSint64?: number|Long[]|null;
-              packedFixed32?: number[]|null;
-              packedFixed64?: number|Long[]|null;
-              packedSfixed32?: number[]|null;
-              packedSfixed64?: number|Long[]|null;
-              packedFloat?: number[]|null;
-              packedDouble?: number[]|null;
-              packedBool?: boolean[]|null;
-              packedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
-              unpackedInt32?: number[]|null;
-              unpackedInt64?: number|Long[]|null;
-              unpackedUint32?: number[]|null;
-              unpackedUint64?: number|Long[]|null;
-              unpackedSint32?: number[]|null;
-              unpackedSint64?: number|Long[]|null;
-              unpackedFixed32?: number[]|null;
-              unpackedFixed64?: number|Long[]|null;
-              unpackedSfixed32?: number[]|null;
-              unpackedSfixed64?: number|Long[]|null;
-              unpackedFloat?: number[]|null;
-              unpackedDouble?: number[]|null;
-              unpackedBool?: boolean[]|null;
-              unpackedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
-              mapInt32Int32?: { [k: string]: number }|null;
-              mapInt64Int64?: { [k: string]: number|Long }|null;
-              mapUint32Uint32?: { [k: string]: number }|null;
-              mapUint64Uint64?: { [k: string]: number|Long }|null;
-              mapSint32Sint32?: { [k: string]: number }|null;
-              mapSint64Sint64?: { [k: string]: number|Long }|null;
-              mapFixed32Fixed32?: { [k: string]: number }|null;
-              mapFixed64Fixed64?: { [k: string]: number|Long }|null;
-              mapSfixed32Sfixed32?: { [k: string]: number }|null;
-              mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
-              mapInt32Bool?: { [k: string]: boolean }|null;
-              mapInt32Float?: { [k: string]: number }|null;
-              mapInt32Double?: { [k: string]: number }|null;
-              mapInt32NestedMessage?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
-              mapBoolBool?: { [k: string]: boolean }|null;
-              mapStringString?: { [k: string]: string }|null;
-              mapStringBytes?: { [k: string]: Uint8Array }|null;
-              mapStringNestedMessage?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
-              mapStringForeignMessage?: { [k: string]: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape }|null;
-              mapStringNestedEnum?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum }|null;
-              mapStringForeignEnum?: { [k: string]: protobuf_test_messages.proto2.ForeignEnumProto2 }|null;
-              oneofUint32?: number|null;
-              oneofNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
-              oneofString?: string|null;
-              oneofBytes?: Uint8Array|null;
-              oneofBool?: boolean|null;
-              oneofUint64?: number|Long|null;
-              oneofFloat?: number|null;
-              oneofDouble?: number|null;
-              oneofEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null;
-              data?: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape|null;
-              multiWordGroupField?: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape|null;
-              defaultInt32?: number|null;
-              defaultInt64?: number|Long|null;
-              defaultUint32?: number|null;
-              defaultUint64?: number|Long|null;
-              defaultSint32?: number|null;
-              defaultSint64?: number|Long|null;
-              defaultFixed32?: number|null;
-              defaultFixed64?: number|Long|null;
-              defaultSfixed32?: number|null;
-              defaultSfixed64?: number|Long|null;
-              defaultFloat?: number|null;
-              defaultDouble?: number|null;
-              defaultBool?: boolean|null;
-              defaultString?: string|null;
-              defaultBytes?: Uint8Array|null;
-              fieldname1?: number|null;
-              fieldName2?: number|null;
-              _fieldName3?: number|null;
-              field_Name4_?: number|null;
-              field0name5?: number|null;
-              field_0Name6?: number|null;
-              fieldName7?: number|null;
-              FieldName8?: number|null;
-              field_Name9?: number|null;
-              Field_Name10?: number|null;
-              FIELD_NAME11?: number|null;
-              FIELDName12?: number|null;
-              _FieldName13?: number|null;
-              __FieldName14?: number|null;
-              field_Name15?: number|null;
-              field__Name16?: number|null;
-              fieldName17__?: number|null;
-              FieldName18__?: number|null;
-              messageSetCorrect?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape|null;
-              ".protobuf_test_messages.proto2.extensionInt32"?: number|null;
-              ".protobuf_test_messages.proto2.groupField"?: protobuf_test_messages.proto2.GroupField.$Shape|null;
-              $unknowns?: Uint8Array[];
-            } & (
-              ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum })
-            );
-
-            /**
-             * Properties of a NestedMessage.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties instead.
-             */
-            interface INestedMessage extends protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties {
-            }
-
-            /** Represents a NestedMessage. */
-            class NestedMessage {
-
-                /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** NestedMessage a. */
-                a: number;
-
-                /** NestedMessage corecursive. */
-                corecursive?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
-
-                /**
-                 * Creates a new NestedMessage instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns NestedMessage instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage;
-
-                /**
-                 * Encodes the specified NestedMessage message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.verify|verify} messages.
-                 * @param message NestedMessage message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified NestedMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.verify|verify} messages.
-                 * @param message NestedMessage message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a NestedMessage message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape} NestedMessage
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape;
-
-                /**
-                 * Decodes a NestedMessage message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape} NestedMessage
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape;
-
-                /**
-                 * Verifies a NestedMessage message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a NestedMessage message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns NestedMessage
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage;
-
-                /**
-                 * Creates a plain object from a NestedMessage message. Also converts values to other types if specified.
-                 * @param message NestedMessage
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this NestedMessage to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for NestedMessage
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace NestedMessage {
-
-                /** Properties of a NestedMessage. */
-                interface $Properties {
-
-                    /** NestedMessage a */
-                    a?: (number|null);
-
-                    /** NestedMessage corecursive */
-                    corecursive?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a NestedMessage. */
-                type $Shape = {
-                  a?: number|null;
-                  corecursive?: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape|null;
-                  $unknowns?: Uint8Array[];
-                };
-            }
-
-            /** NestedEnum enum. */
-            enum NestedEnum {
-
-                /** FOO value */
-                FOO = 0,
-
-                /** BAR value */
-                BAR = 1,
-
-                /** BAZ value */
-                BAZ = 2,
-
-                /** NEG value */
-                NEG = -1
-            }
-
-            /**
-             * Properties of a Data.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties instead.
-             */
-            interface IData extends protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties {
-            }
-
-            /** Represents a Data. */
-            class Data {
-
-                /** Reflection-backed declarations are not constructable. Use Data.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** Data groupInt32. */
-                groupInt32: number;
-
-                /** Data groupUint32. */
-                groupUint32: number;
-
-                /**
-                 * Creates a new Data instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns Data instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.Data;
-
-                /**
-                 * Encodes the specified Data message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.Data.verify|verify} messages.
-                 * @param message Data message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Data message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.Data.verify|verify} messages.
-                 * @param message Data message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Data message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape} Data
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape;
-
-                /**
-                 * Decodes a Data message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape} Data
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape;
-
-                /**
-                 * Verifies a Data message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Data message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Data
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.Data;
-
-                /**
-                 * Creates a plain object from a Data message. Also converts values to other types if specified.
-                 * @param message Data
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.Data, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Data to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for Data
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace Data {
-
-                /** Properties of a Data. */
-                interface $Properties {
-
-                    /** Data groupInt32 */
-                    groupInt32?: (number|null);
-
-                    /** Data groupUint32 */
-                    groupUint32?: (number|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a Data. */
-                type $Shape = protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties;
-            }
-
-            /**
-             * Properties of a MultiWordGroupField.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties instead.
-             */
-            interface IMultiWordGroupField extends protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties {
-            }
-
-            /** Represents a MultiWordGroupField. */
-            class MultiWordGroupField {
-
-                /** Reflection-backed declarations are not constructable. Use MultiWordGroupField.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** MultiWordGroupField groupInt32. */
-                groupInt32: number;
-
-                /** MultiWordGroupField groupUint32. */
-                groupUint32: number;
-
-                /**
-                 * Creates a new MultiWordGroupField instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns MultiWordGroupField instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField;
-
-                /**
-                 * Encodes the specified MultiWordGroupField message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.verify|verify} messages.
-                 * @param message MultiWordGroupField message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MultiWordGroupField message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.verify|verify} messages.
-                 * @param message MultiWordGroupField message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MultiWordGroupField message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape} MultiWordGroupField
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape;
-
-                /**
-                 * Decodes a MultiWordGroupField message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape} MultiWordGroupField
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape;
-
-                /**
-                 * Verifies a MultiWordGroupField message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MultiWordGroupField message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MultiWordGroupField
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField;
-
-                /**
-                 * Creates a plain object from a MultiWordGroupField message. Also converts values to other types if specified.
-                 * @param message MultiWordGroupField
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MultiWordGroupField to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for MultiWordGroupField
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace MultiWordGroupField {
-
-                /** Properties of a MultiWordGroupField. */
-                interface $Properties {
-
-                    /** MultiWordGroupField groupInt32 */
-                    groupInt32?: (number|null);
-
-                    /** MultiWordGroupField groupUint32 */
-                    groupUint32?: (number|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a MultiWordGroupField. */
-                type $Shape = protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties;
-            }
-
-            /**
-             * Properties of a MessageSetCorrect.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties instead.
-             */
-            interface IMessageSetCorrect extends protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties {
-            }
-
-            /** Represents a MessageSetCorrect. */
-            class MessageSetCorrect {
-
-                /** Reflection-backed declarations are not constructable. Use MessageSetCorrect.create(...) instead. */
-                private constructor();
-
-                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
-                ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties|null);
-
-                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
-                ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties|null);
-
-                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
-                ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties|null);
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /**
-                 * Creates a new MessageSetCorrect instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns MessageSetCorrect instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect;
-
-                /**
-                 * Encodes the specified MessageSetCorrect message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.verify|verify} messages.
-                 * @param message MessageSetCorrect message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MessageSetCorrect message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.verify|verify} messages.
-                 * @param message MessageSetCorrect message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MessageSetCorrect message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape} MessageSetCorrect
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape;
-
-                /**
-                 * Decodes a MessageSetCorrect message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape} MessageSetCorrect
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape;
-
-                /**
-                 * Verifies a MessageSetCorrect message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MessageSetCorrect message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MessageSetCorrect
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect;
-
-                /**
-                 * Creates a plain object from a MessageSetCorrect message. Also converts values to other types if specified.
-                 * @param message MessageSetCorrect
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MessageSetCorrect to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for MessageSetCorrect
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace MessageSetCorrect {
-
-                /** Properties of a MessageSetCorrect. */
-                interface $Properties {
-
-                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
-                    ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties|null);
-
-                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
-                    ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties|null);
-
-                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
-                    ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a MessageSetCorrect. */
-                type $Shape = {
-                  ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape|null;
-                  ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape|null;
-                  ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape|null;
-                  $unknowns?: Uint8Array[];
-                };
-            }
-
-            /**
-             * Properties of a MessageSetCorrectExtension1.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties instead.
-             */
-            interface IMessageSetCorrectExtension1 extends protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties {
-            }
-
-            /** Represents a MessageSetCorrectExtension1. */
-            class MessageSetCorrectExtension1 {
-
-                /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension1.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** MessageSetCorrectExtension1 str. */
-                str: string;
-
-                /**
-                 * Creates a new MessageSetCorrectExtension1 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns MessageSetCorrectExtension1 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1;
-
-                /**
-                 * Encodes the specified MessageSetCorrectExtension1 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
-                 * @param message MessageSetCorrectExtension1 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MessageSetCorrectExtension1 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
-                 * @param message MessageSetCorrectExtension1 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape} MessageSetCorrectExtension1
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape;
-
-                /**
-                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape} MessageSetCorrectExtension1
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape;
-
-                /**
-                 * Verifies a MessageSetCorrectExtension1 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MessageSetCorrectExtension1 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MessageSetCorrectExtension1
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1;
-
-                /**
-                 * Creates a plain object from a MessageSetCorrectExtension1 message. Also converts values to other types if specified.
-                 * @param message MessageSetCorrectExtension1
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MessageSetCorrectExtension1 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for MessageSetCorrectExtension1
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace MessageSetCorrectExtension1 {
-
-                /** Properties of a MessageSetCorrectExtension1. */
-                interface $Properties {
-
-                    /** MessageSetCorrectExtension1 str */
-                    str?: (string|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a MessageSetCorrectExtension1. */
-                type $Shape = protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties;
-            }
-
-            /**
-             * Properties of a MessageSetCorrectExtension2.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties instead.
-             */
-            interface IMessageSetCorrectExtension2 extends protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties {
-            }
-
-            /** Represents a MessageSetCorrectExtension2. */
-            class MessageSetCorrectExtension2 {
-
-                /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension2.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** MessageSetCorrectExtension2 i. */
-                i: number;
-
-                /**
-                 * Creates a new MessageSetCorrectExtension2 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns MessageSetCorrectExtension2 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2;
-
-                /**
-                 * Encodes the specified MessageSetCorrectExtension2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
-                 * @param message MessageSetCorrectExtension2 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MessageSetCorrectExtension2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
-                 * @param message MessageSetCorrectExtension2 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape} MessageSetCorrectExtension2
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape;
-
-                /**
-                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape} MessageSetCorrectExtension2
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape;
-
-                /**
-                 * Verifies a MessageSetCorrectExtension2 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MessageSetCorrectExtension2 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MessageSetCorrectExtension2
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2;
-
-                /**
-                 * Creates a plain object from a MessageSetCorrectExtension2 message. Also converts values to other types if specified.
-                 * @param message MessageSetCorrectExtension2
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MessageSetCorrectExtension2 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for MessageSetCorrectExtension2
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace MessageSetCorrectExtension2 {
-
-                /** Properties of a MessageSetCorrectExtension2. */
-                interface $Properties {
-
-                    /** MessageSetCorrectExtension2 i */
-                    i?: (number|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a MessageSetCorrectExtension2. */
-                type $Shape = protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties;
-            }
-
-            /**
-             * Properties of an ExtensionWithOneof.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties instead.
-             */
-            interface IExtensionWithOneof extends protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties {
-            }
-
-            /** Represents an ExtensionWithOneof. */
-            class ExtensionWithOneof {
-
-                /** Reflection-backed declarations are not constructable. Use ExtensionWithOneof.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** ExtensionWithOneof a. */
-                a?: (number|null);
-
-                /** ExtensionWithOneof b. */
-                b?: (number|null);
-
-                /** ExtensionWithOneof oneofField. */
-                oneofField?: ("a"|"b");
-
-                /**
-                 * Creates a new ExtensionWithOneof instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns ExtensionWithOneof instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof;
-
-                /**
-                 * Encodes the specified ExtensionWithOneof message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.verify|verify} messages.
-                 * @param message ExtensionWithOneof message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified ExtensionWithOneof message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.verify|verify} messages.
-                 * @param message ExtensionWithOneof message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an ExtensionWithOneof message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape} ExtensionWithOneof
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape;
-
-                /**
-                 * Decodes an ExtensionWithOneof message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape} ExtensionWithOneof
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape;
-
-                /**
-                 * Verifies an ExtensionWithOneof message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an ExtensionWithOneof message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns ExtensionWithOneof
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof;
-
-                /**
-                 * Creates a plain object from an ExtensionWithOneof message. Also converts values to other types if specified.
-                 * @param message ExtensionWithOneof
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this ExtensionWithOneof to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for ExtensionWithOneof
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace ExtensionWithOneof {
-
-                /** Properties of an ExtensionWithOneof. */
-                interface $Properties {
-
-                    /** ExtensionWithOneof a */
-                    a?: (number|null);
-
-                    /** ExtensionWithOneof b */
-                    b?: (number|null);
-
-                    /** ExtensionWithOneof oneofField */
-                    oneofField?: ("a"|"b");
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Narrowed shape of an ExtensionWithOneof. */
-                type $Shape = {
-                  a?: number|null;
-                  b?: number|null;
-                  $unknowns?: Uint8Array[];
-                } & (
-                  ({ oneofField?: undefined; a?: null; b?: null }|{ oneofField?: "a"; a: number; b?: null }|{ oneofField?: "b"; a?: null; b: number })
-                );
-            }
-        }
-
-        /**
-         * Properties of a ForeignMessageProto2.
-         * @deprecated Use protobuf_test_messages.proto2.ForeignMessageProto2.$Properties instead.
-         */
-        interface IForeignMessageProto2 extends protobuf_test_messages.proto2.ForeignMessageProto2.$Properties {
-        }
-
-        /** Represents a ForeignMessageProto2. */
-        class ForeignMessageProto2 {
-
-            /** Reflection-backed declarations are not constructable. Use ForeignMessageProto2.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** ForeignMessageProto2 c. */
-            c: number;
-
-            /**
-             * Creates a new ForeignMessageProto2 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns ForeignMessageProto2 instance
-             */
-            static create(properties: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape): protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties): protobuf_test_messages.proto2.ForeignMessageProto2;
-
-            /**
-             * Encodes the specified ForeignMessageProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.ForeignMessageProto2.verify|verify} messages.
-             * @param message ForeignMessageProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified ForeignMessageProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.ForeignMessageProto2.verify|verify} messages.
-             * @param message ForeignMessageProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a ForeignMessageProto2 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape} ForeignMessageProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape;
-
-            /**
-             * Decodes a ForeignMessageProto2 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape} ForeignMessageProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape;
-
-            /**
-             * Verifies a ForeignMessageProto2 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a ForeignMessageProto2 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns ForeignMessageProto2
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.ForeignMessageProto2;
-
-            /**
-             * Creates a plain object from a ForeignMessageProto2 message. Also converts values to other types if specified.
-             * @param message ForeignMessageProto2
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.ForeignMessageProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this ForeignMessageProto2 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for ForeignMessageProto2
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace ForeignMessageProto2 {
-
-            /** Properties of a ForeignMessageProto2. */
-            interface $Properties {
-
-                /** ForeignMessageProto2 c */
-                c?: (number|null);
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of a ForeignMessageProto2. */
-            type $Shape = protobuf_test_messages.proto2.ForeignMessageProto2.$Properties;
-        }
-
-        /** ForeignEnumProto2 enum. */
-        enum ForeignEnumProto2 {
-
-            /** FOREIGN_FOO value */
-            FOREIGN_FOO = 0,
-
-            /** FOREIGN_BAR value */
-            FOREIGN_BAR = 1,
-
-            /** FOREIGN_BAZ value */
-            FOREIGN_BAZ = 2
-        }
-
-        /**
-         * Properties of a GroupField.
-         * @deprecated Use protobuf_test_messages.proto2.GroupField.$Properties instead.
-         */
-        interface IGroupField extends protobuf_test_messages.proto2.GroupField.$Properties {
-        }
-
-        /** Represents a GroupField. */
-        class GroupField {
-
-            /** Reflection-backed declarations are not constructable. Use GroupField.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** GroupField groupInt32. */
-            groupInt32: number;
-
-            /** GroupField groupUint32. */
-            groupUint32: number;
-
-            /**
-             * Creates a new GroupField instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns GroupField instance
-             */
-            static create(properties: protobuf_test_messages.proto2.GroupField.$Shape): protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.GroupField.$Properties): protobuf_test_messages.proto2.GroupField;
-
-            /**
-             * Encodes the specified GroupField message. Does not implicitly {@link protobuf_test_messages.proto2.GroupField.verify|verify} messages.
-             * @param message GroupField message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.GroupField.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified GroupField message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.GroupField.verify|verify} messages.
-             * @param message GroupField message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.GroupField.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a GroupField message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape} GroupField
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape;
-
-            /**
-             * Decodes a GroupField message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape} GroupField
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape;
-
-            /**
-             * Verifies a GroupField message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a GroupField message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns GroupField
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.GroupField;
-
-            /**
-             * Creates a plain object from a GroupField message. Also converts values to other types if specified.
-             * @param message GroupField
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.GroupField, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this GroupField to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for GroupField
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace GroupField {
-
-            /** Properties of a GroupField. */
-            interface $Properties {
-
-                /** GroupField groupInt32 */
-                groupInt32?: (number|null);
-
-                /** GroupField groupUint32 */
-                groupUint32?: (number|null);
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of a GroupField. */
-            type $Shape = protobuf_test_messages.proto2.GroupField.$Properties;
-        }
-
-        /**
-         * Properties of an UnknownToTestAllTypes.
-         * @deprecated Use protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties instead.
-         */
-        interface IUnknownToTestAllTypes extends protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties {
-        }
-
-        /** Represents an UnknownToTestAllTypes. */
-        class UnknownToTestAllTypes {
-
-            /** Reflection-backed declarations are not constructable. Use UnknownToTestAllTypes.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** UnknownToTestAllTypes optionalInt32. */
-            optionalInt32: number;
-
-            /** UnknownToTestAllTypes optionalString. */
-            optionalString: string;
-
-            /** UnknownToTestAllTypes nestedMessage. */
-            nestedMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties|null);
-
-            /** UnknownToTestAllTypes optionalGroup. */
-            optionalGroup?: (protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties|null);
-
-            /** UnknownToTestAllTypes optionalBool. */
-            optionalBool: boolean;
-
-            /** UnknownToTestAllTypes repeatedInt32. */
-            repeatedInt32: number[];
-
-            /**
-             * Creates a new UnknownToTestAllTypes instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns UnknownToTestAllTypes instance
-             */
-            static create(properties: protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape): protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties): protobuf_test_messages.proto2.UnknownToTestAllTypes;
-
-            /**
-             * Encodes the specified UnknownToTestAllTypes message. Does not implicitly {@link protobuf_test_messages.proto2.UnknownToTestAllTypes.verify|verify} messages.
-             * @param message UnknownToTestAllTypes message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified UnknownToTestAllTypes message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.UnknownToTestAllTypes.verify|verify} messages.
-             * @param message UnknownToTestAllTypes message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an UnknownToTestAllTypes message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape} UnknownToTestAllTypes
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape;
-
-            /**
-             * Decodes an UnknownToTestAllTypes message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape} UnknownToTestAllTypes
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape;
-
-            /**
-             * Verifies an UnknownToTestAllTypes message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an UnknownToTestAllTypes message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns UnknownToTestAllTypes
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.UnknownToTestAllTypes;
-
-            /**
-             * Creates a plain object from an UnknownToTestAllTypes message. Also converts values to other types if specified.
-             * @param message UnknownToTestAllTypes
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.UnknownToTestAllTypes, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this UnknownToTestAllTypes to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for UnknownToTestAllTypes
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace UnknownToTestAllTypes {
-
-            /** Properties of an UnknownToTestAllTypes. */
-            interface $Properties {
-
-                /** UnknownToTestAllTypes optionalInt32 */
-                optionalInt32?: (number|null);
-
-                /** UnknownToTestAllTypes optionalString */
-                optionalString?: (string|null);
-
-                /** UnknownToTestAllTypes nestedMessage */
-                nestedMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties|null);
-
-                /** UnknownToTestAllTypes optionalGroup */
-                optionalGroup?: (protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties|null);
-
-                /** UnknownToTestAllTypes optionalBool */
-                optionalBool?: (boolean|null);
-
-                /** UnknownToTestAllTypes repeatedInt32 */
-                repeatedInt32?: (number[]|null);
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of an UnknownToTestAllTypes. */
-            type $Shape = protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties;
-
-            /**
-             * Properties of an OptionalGroup.
-             * @deprecated Use protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties instead.
-             */
-            interface IOptionalGroup extends protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties {
-            }
-
-            /** Represents an OptionalGroup. */
-            class OptionalGroup {
-
-                /** Reflection-backed declarations are not constructable. Use OptionalGroup.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** OptionalGroup a. */
-                a: number;
-
-                /**
-                 * Creates a new OptionalGroup instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns OptionalGroup instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup;
-
-                /**
-                 * Encodes the specified OptionalGroup message. Does not implicitly {@link protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.verify|verify} messages.
-                 * @param message OptionalGroup message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified OptionalGroup message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.verify|verify} messages.
-                 * @param message OptionalGroup message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an OptionalGroup message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape} OptionalGroup
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape;
-
-                /**
-                 * Decodes an OptionalGroup message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape} OptionalGroup
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape;
-
-                /**
-                 * Verifies an OptionalGroup message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an OptionalGroup message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns OptionalGroup
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup;
-
-                /**
-                 * Creates a plain object from an OptionalGroup message. Also converts values to other types if specified.
-                 * @param message OptionalGroup
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this OptionalGroup to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for OptionalGroup
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace OptionalGroup {
-
-                /** Properties of an OptionalGroup. */
-                interface $Properties {
-
-                    /** OptionalGroup a */
-                    a?: (number|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of an OptionalGroup. */
-                type $Shape = protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties;
-            }
-        }
-
-        /**
-         * Properties of a NullHypothesisProto2.
-         * @deprecated Use protobuf_test_messages.proto2.NullHypothesisProto2.$Properties instead.
-         */
-        interface INullHypothesisProto2 extends protobuf_test_messages.proto2.NullHypothesisProto2.$Properties {
-        }
-
-        /** Represents a NullHypothesisProto2. */
-        class NullHypothesisProto2 {
-
-            /** Reflection-backed declarations are not constructable. Use NullHypothesisProto2.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /**
-             * Creates a new NullHypothesisProto2 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns NullHypothesisProto2 instance
-             */
-            static create(properties: protobuf_test_messages.proto2.NullHypothesisProto2.$Shape): protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.NullHypothesisProto2.$Properties): protobuf_test_messages.proto2.NullHypothesisProto2;
-
-            /**
-             * Encodes the specified NullHypothesisProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.NullHypothesisProto2.verify|verify} messages.
-             * @param message NullHypothesisProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.NullHypothesisProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified NullHypothesisProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.NullHypothesisProto2.verify|verify} messages.
-             * @param message NullHypothesisProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.NullHypothesisProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a NullHypothesisProto2 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape} NullHypothesisProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape;
-
-            /**
-             * Decodes a NullHypothesisProto2 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape} NullHypothesisProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape;
-
-            /**
-             * Verifies a NullHypothesisProto2 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a NullHypothesisProto2 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns NullHypothesisProto2
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.NullHypothesisProto2;
-
-            /**
-             * Creates a plain object from a NullHypothesisProto2 message. Also converts values to other types if specified.
-             * @param message NullHypothesisProto2
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.NullHypothesisProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this NullHypothesisProto2 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for NullHypothesisProto2
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace NullHypothesisProto2 {
-
-            /** Properties of a NullHypothesisProto2. */
-            interface $Properties {
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of a NullHypothesisProto2. */
-            type $Shape = protobuf_test_messages.proto2.NullHypothesisProto2.$Properties;
-        }
-
-        /**
-         * Properties of an EnumOnlyProto2.
-         * @deprecated Use protobuf_test_messages.proto2.EnumOnlyProto2.$Properties instead.
-         */
-        interface IEnumOnlyProto2 extends protobuf_test_messages.proto2.EnumOnlyProto2.$Properties {
-        }
-
-        /** Represents an EnumOnlyProto2. */
-        class EnumOnlyProto2 {
-
-            /** Reflection-backed declarations are not constructable. Use EnumOnlyProto2.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /**
-             * Creates a new EnumOnlyProto2 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns EnumOnlyProto2 instance
-             */
-            static create(properties: protobuf_test_messages.proto2.EnumOnlyProto2.$Shape): protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.EnumOnlyProto2.$Properties): protobuf_test_messages.proto2.EnumOnlyProto2;
-
-            /**
-             * Encodes the specified EnumOnlyProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.EnumOnlyProto2.verify|verify} messages.
-             * @param message EnumOnlyProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.EnumOnlyProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified EnumOnlyProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.EnumOnlyProto2.verify|verify} messages.
-             * @param message EnumOnlyProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.EnumOnlyProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an EnumOnlyProto2 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape} EnumOnlyProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape;
-
-            /**
-             * Decodes an EnumOnlyProto2 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape} EnumOnlyProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape;
-
-            /**
-             * Verifies an EnumOnlyProto2 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an EnumOnlyProto2 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns EnumOnlyProto2
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.EnumOnlyProto2;
-
-            /**
-             * Creates a plain object from an EnumOnlyProto2 message. Also converts values to other types if specified.
-             * @param message EnumOnlyProto2
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.EnumOnlyProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this EnumOnlyProto2 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for EnumOnlyProto2
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace EnumOnlyProto2 {
-
-            /** Properties of an EnumOnlyProto2. */
-            interface $Properties {
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of an EnumOnlyProto2. */
-            type $Shape = protobuf_test_messages.proto2.EnumOnlyProto2.$Properties;
-
-            /** Bool enum. */
-            enum Bool {
-
-                /** kFalse value */
-                kFalse = 0,
-
-                /** kTrue value */
-                kTrue = 1
-            }
-        }
-
-        /**
-         * Properties of a OneStringProto2.
-         * @deprecated Use protobuf_test_messages.proto2.OneStringProto2.$Properties instead.
-         */
-        interface IOneStringProto2 extends protobuf_test_messages.proto2.OneStringProto2.$Properties {
-        }
-
-        /** Represents a OneStringProto2. */
-        class OneStringProto2 {
-
-            /** Reflection-backed declarations are not constructable. Use OneStringProto2.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** OneStringProto2 data. */
-            data: string;
-
-            /**
-             * Creates a new OneStringProto2 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns OneStringProto2 instance
-             */
-            static create(properties: protobuf_test_messages.proto2.OneStringProto2.$Shape): protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.OneStringProto2.$Properties): protobuf_test_messages.proto2.OneStringProto2;
-
-            /**
-             * Encodes the specified OneStringProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.OneStringProto2.verify|verify} messages.
-             * @param message OneStringProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.OneStringProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified OneStringProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.OneStringProto2.verify|verify} messages.
-             * @param message OneStringProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.OneStringProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a OneStringProto2 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape} OneStringProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape;
-
-            /**
-             * Decodes a OneStringProto2 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape} OneStringProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape;
-
-            /**
-             * Verifies a OneStringProto2 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a OneStringProto2 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns OneStringProto2
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.OneStringProto2;
-
-            /**
-             * Creates a plain object from a OneStringProto2 message. Also converts values to other types if specified.
-             * @param message OneStringProto2
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.OneStringProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this OneStringProto2 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for OneStringProto2
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace OneStringProto2 {
-
-            /** Properties of a OneStringProto2. */
-            interface $Properties {
-
-                /** OneStringProto2 data */
-                data?: (string|null);
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of a OneStringProto2. */
-            type $Shape = protobuf_test_messages.proto2.OneStringProto2.$Properties;
-        }
-
-        /**
-         * Properties of a ProtoWithKeywords.
-         * @deprecated Use protobuf_test_messages.proto2.ProtoWithKeywords.$Properties instead.
-         */
-        interface IProtoWithKeywords extends protobuf_test_messages.proto2.ProtoWithKeywords.$Properties {
-        }
-
-        /** Represents a ProtoWithKeywords. */
-        class ProtoWithKeywords {
-
-            /** Reflection-backed declarations are not constructable. Use ProtoWithKeywords.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** ProtoWithKeywords inline. */
-            inline: number;
-
-            /** ProtoWithKeywords concept. */
-            concept: string;
-
-            /** ProtoWithKeywords requires. */
-            requires: string[];
-
-            /**
-             * Creates a new ProtoWithKeywords instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns ProtoWithKeywords instance
-             */
-            static create(properties: protobuf_test_messages.proto2.ProtoWithKeywords.$Shape): protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.ProtoWithKeywords.$Properties): protobuf_test_messages.proto2.ProtoWithKeywords;
-
-            /**
-             * Encodes the specified ProtoWithKeywords message. Does not implicitly {@link protobuf_test_messages.proto2.ProtoWithKeywords.verify|verify} messages.
-             * @param message ProtoWithKeywords message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.ProtoWithKeywords.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified ProtoWithKeywords message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.ProtoWithKeywords.verify|verify} messages.
-             * @param message ProtoWithKeywords message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.ProtoWithKeywords.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a ProtoWithKeywords message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape} ProtoWithKeywords
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape;
-
-            /**
-             * Decodes a ProtoWithKeywords message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape} ProtoWithKeywords
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape;
-
-            /**
-             * Verifies a ProtoWithKeywords message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a ProtoWithKeywords message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns ProtoWithKeywords
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.ProtoWithKeywords;
-
-            /**
-             * Creates a plain object from a ProtoWithKeywords message. Also converts values to other types if specified.
-             * @param message ProtoWithKeywords
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.ProtoWithKeywords, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this ProtoWithKeywords to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for ProtoWithKeywords
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace ProtoWithKeywords {
-
-            /** Properties of a ProtoWithKeywords. */
-            interface $Properties {
-
-                /** ProtoWithKeywords inline */
-                inline?: (number|null);
-
-                /** ProtoWithKeywords concept */
-                concept?: (string|null);
-
-                /** ProtoWithKeywords requires */
-                requires?: (string[]|null);
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of a ProtoWithKeywords. */
-            type $Shape = protobuf_test_messages.proto2.ProtoWithKeywords.$Properties;
-        }
-
-        /**
-         * Properties of a TestAllRequiredTypesProto2.
-         * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties instead.
-         */
-        interface ITestAllRequiredTypesProto2 extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties {
-        }
-
-        /** Represents a TestAllRequiredTypesProto2. */
-        class TestAllRequiredTypesProto2 {
-
-            /** Reflection-backed declarations are not constructable. Use TestAllRequiredTypesProto2.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** TestAllRequiredTypesProto2 requiredInt32. */
-            requiredInt32: number;
-
-            /** TestAllRequiredTypesProto2 requiredInt64. */
-            requiredInt64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 requiredUint32. */
-            requiredUint32: number;
-
-            /** TestAllRequiredTypesProto2 requiredUint64. */
-            requiredUint64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 requiredSint32. */
-            requiredSint32: number;
-
-            /** TestAllRequiredTypesProto2 requiredSint64. */
-            requiredSint64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 requiredFixed32. */
-            requiredFixed32: number;
-
-            /** TestAllRequiredTypesProto2 requiredFixed64. */
-            requiredFixed64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 requiredSfixed32. */
-            requiredSfixed32: number;
-
-            /** TestAllRequiredTypesProto2 requiredSfixed64. */
-            requiredSfixed64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 requiredFloat. */
-            requiredFloat: number;
-
-            /** TestAllRequiredTypesProto2 requiredDouble. */
-            requiredDouble: number;
-
-            /** TestAllRequiredTypesProto2 requiredBool. */
-            requiredBool: boolean;
-
-            /** TestAllRequiredTypesProto2 requiredString. */
-            requiredString: string;
-
-            /** TestAllRequiredTypesProto2 requiredBytes. */
-            requiredBytes: Uint8Array;
-
-            /** TestAllRequiredTypesProto2 requiredNestedMessage. */
-            requiredNestedMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties;
-
-            /** TestAllRequiredTypesProto2 requiredForeignMessage. */
-            requiredForeignMessage: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties;
-
-            /** TestAllRequiredTypesProto2 requiredNestedEnum. */
-            requiredNestedEnum: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum;
-
-            /** TestAllRequiredTypesProto2 requiredForeignEnum. */
-            requiredForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2;
-
-            /** TestAllRequiredTypesProto2 requiredStringPiece. */
-            requiredStringPiece: string;
-
-            /** TestAllRequiredTypesProto2 requiredCord. */
-            requiredCord: string;
-
-            /** TestAllRequiredTypesProto2 recursiveMessage. */
-            recursiveMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
-
-            /** TestAllRequiredTypesProto2 optionalRecursiveMessage. */
-            optionalRecursiveMessage?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
-
-            /** TestAllRequiredTypesProto2 data. */
-            data: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties;
-
-            /** TestAllRequiredTypesProto2 defaultInt32. */
-            defaultInt32: number;
-
-            /** TestAllRequiredTypesProto2 defaultInt64. */
-            defaultInt64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 defaultUint32. */
-            defaultUint32: number;
-
-            /** TestAllRequiredTypesProto2 defaultUint64. */
-            defaultUint64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 defaultSint32. */
-            defaultSint32: number;
-
-            /** TestAllRequiredTypesProto2 defaultSint64. */
-            defaultSint64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 defaultFixed32. */
-            defaultFixed32: number;
-
-            /** TestAllRequiredTypesProto2 defaultFixed64. */
-            defaultFixed64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 defaultSfixed32. */
-            defaultSfixed32: number;
-
-            /** TestAllRequiredTypesProto2 defaultSfixed64. */
-            defaultSfixed64: (number|Long);
-
-            /** TestAllRequiredTypesProto2 defaultFloat. */
-            defaultFloat: number;
-
-            /** TestAllRequiredTypesProto2 defaultDouble. */
-            defaultDouble: number;
-
-            /** TestAllRequiredTypesProto2 defaultBool. */
-            defaultBool: boolean;
-
-            /** TestAllRequiredTypesProto2 defaultString. */
-            defaultString: string;
-
-            /** TestAllRequiredTypesProto2 defaultBytes. */
-            defaultBytes: Uint8Array;
-
-            /**
-             * Creates a new TestAllRequiredTypesProto2 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns TestAllRequiredTypesProto2 instance
-             */
-            static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
-
-            /**
-             * Encodes the specified TestAllRequiredTypesProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify|verify} messages.
-             * @param message TestAllRequiredTypesProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified TestAllRequiredTypesProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify|verify} messages.
-             * @param message TestAllRequiredTypesProto2 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a TestAllRequiredTypesProto2 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape} TestAllRequiredTypesProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape;
-
-            /**
-             * Decodes a TestAllRequiredTypesProto2 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape} TestAllRequiredTypesProto2
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape;
-
-            /**
-             * Verifies a TestAllRequiredTypesProto2 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a TestAllRequiredTypesProto2 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns TestAllRequiredTypesProto2
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
-
-            /**
-             * Creates a plain object from a TestAllRequiredTypesProto2 message. Also converts values to other types if specified.
-             * @param message TestAllRequiredTypesProto2
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this TestAllRequiredTypesProto2 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for TestAllRequiredTypesProto2
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace TestAllRequiredTypesProto2 {
-
-            /** Properties of a TestAllRequiredTypesProto2. */
-            interface $Properties {
-
-                /** TestAllRequiredTypesProto2 requiredInt32 */
-                requiredInt32: number;
-
-                /** TestAllRequiredTypesProto2 requiredInt64 */
-                requiredInt64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 requiredUint32 */
-                requiredUint32: number;
-
-                /** TestAllRequiredTypesProto2 requiredUint64 */
-                requiredUint64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 requiredSint32 */
-                requiredSint32: number;
-
-                /** TestAllRequiredTypesProto2 requiredSint64 */
-                requiredSint64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 requiredFixed32 */
-                requiredFixed32: number;
-
-                /** TestAllRequiredTypesProto2 requiredFixed64 */
-                requiredFixed64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 requiredSfixed32 */
-                requiredSfixed32: number;
-
-                /** TestAllRequiredTypesProto2 requiredSfixed64 */
-                requiredSfixed64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 requiredFloat */
-                requiredFloat: number;
-
-                /** TestAllRequiredTypesProto2 requiredDouble */
-                requiredDouble: number;
-
-                /** TestAllRequiredTypesProto2 requiredBool */
-                requiredBool: boolean;
-
-                /** TestAllRequiredTypesProto2 requiredString */
-                requiredString: string;
-
-                /** TestAllRequiredTypesProto2 requiredBytes */
-                requiredBytes: Uint8Array;
-
-                /** TestAllRequiredTypesProto2 requiredNestedMessage */
-                requiredNestedMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties;
-
-                /** TestAllRequiredTypesProto2 requiredForeignMessage */
-                requiredForeignMessage: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties;
-
-                /** TestAllRequiredTypesProto2 requiredNestedEnum */
-                requiredNestedEnum: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum;
-
-                /** TestAllRequiredTypesProto2 requiredForeignEnum */
-                requiredForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2;
-
-                /** TestAllRequiredTypesProto2 requiredStringPiece */
-                requiredStringPiece: string;
-
-                /** TestAllRequiredTypesProto2 requiredCord */
-                requiredCord: string;
-
-                /** TestAllRequiredTypesProto2 recursiveMessage */
-                recursiveMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
-
-                /** TestAllRequiredTypesProto2 optionalRecursiveMessage */
-                optionalRecursiveMessage?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
-
-                /** TestAllRequiredTypesProto2 data */
-                data: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties;
-
-                /** TestAllRequiredTypesProto2 defaultInt32 */
-                defaultInt32: number;
-
-                /** TestAllRequiredTypesProto2 defaultInt64 */
-                defaultInt64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 defaultUint32 */
-                defaultUint32: number;
-
-                /** TestAllRequiredTypesProto2 defaultUint64 */
-                defaultUint64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 defaultSint32 */
-                defaultSint32: number;
-
-                /** TestAllRequiredTypesProto2 defaultSint64 */
-                defaultSint64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 defaultFixed32 */
-                defaultFixed32: number;
-
-                /** TestAllRequiredTypesProto2 defaultFixed64 */
-                defaultFixed64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 defaultSfixed32 */
-                defaultSfixed32: number;
-
-                /** TestAllRequiredTypesProto2 defaultSfixed64 */
-                defaultSfixed64: (number|Long);
-
-                /** TestAllRequiredTypesProto2 defaultFloat */
-                defaultFloat: number;
-
-                /** TestAllRequiredTypesProto2 defaultDouble */
-                defaultDouble: number;
-
-                /** TestAllRequiredTypesProto2 defaultBool */
-                defaultBool: boolean;
-
-                /** TestAllRequiredTypesProto2 defaultString */
-                defaultString: string;
-
-                /** TestAllRequiredTypesProto2 defaultBytes */
-                defaultBytes: Uint8Array;
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of a TestAllRequiredTypesProto2. */
-            type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
-
-            /**
-             * Properties of a NestedMessage.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties instead.
-             */
-            interface INestedMessage extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties {
-            }
-
-            /** Represents a NestedMessage. */
-            class NestedMessage {
-
-                /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** NestedMessage a. */
-                a: number;
-
-                /** NestedMessage corecursive. */
-                corecursive: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
-
-                /** NestedMessage optionalCorecursive. */
-                optionalCorecursive?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
-
-                /**
-                 * Creates a new NestedMessage instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns NestedMessage instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
-
-                /**
-                 * Encodes the specified NestedMessage message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify|verify} messages.
-                 * @param message NestedMessage message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified NestedMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify|verify} messages.
-                 * @param message NestedMessage message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a NestedMessage message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape} NestedMessage
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape;
-
-                /**
-                 * Decodes a NestedMessage message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape} NestedMessage
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape;
-
-                /**
-                 * Verifies a NestedMessage message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a NestedMessage message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns NestedMessage
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
-
-                /**
-                 * Creates a plain object from a NestedMessage message. Also converts values to other types if specified.
-                 * @param message NestedMessage
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this NestedMessage to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for NestedMessage
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace NestedMessage {
-
-                /** Properties of a NestedMessage. */
-                interface $Properties {
-
-                    /** NestedMessage a */
-                    a: number;
-
-                    /** NestedMessage corecursive */
-                    corecursive: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
-
-                    /** NestedMessage optionalCorecursive */
-                    optionalCorecursive?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a NestedMessage. */
-                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties;
-            }
-
-            /** NestedEnum enum. */
-            enum NestedEnum {
-
-                /** FOO value */
-                FOO = 0,
-
-                /** BAR value */
-                BAR = 1,
-
-                /** BAZ value */
-                BAZ = 2,
-
-                /** NEG value */
-                NEG = -1
-            }
-
-            /**
-             * Properties of a Data.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties instead.
-             */
-            interface IData extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties {
-            }
-
-            /** Represents a Data. */
-            class Data {
-
-                /** Reflection-backed declarations are not constructable. Use Data.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** Data groupInt32. */
-                groupInt32: number;
-
-                /** Data groupUint32. */
-                groupUint32: number;
-
-                /**
-                 * Creates a new Data instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns Data instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
-
-                /**
-                 * Encodes the specified Data message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify|verify} messages.
-                 * @param message Data message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Data message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify|verify} messages.
-                 * @param message Data message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Data message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape} Data
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape;
-
-                /**
-                 * Decodes a Data message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape} Data
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape;
-
-                /**
-                 * Verifies a Data message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Data message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Data
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
-
-                /**
-                 * Creates a plain object from a Data message. Also converts values to other types if specified.
-                 * @param message Data
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Data to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for Data
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace Data {
-
-                /** Properties of a Data. */
-                interface $Properties {
-
-                    /** Data groupInt32 */
-                    groupInt32: number;
-
-                    /** Data groupUint32 */
-                    groupUint32: number;
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a Data. */
-                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties;
-            }
-
-            /**
-             * Properties of a MessageSetCorrect.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties instead.
-             */
-            interface IMessageSetCorrect extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties {
-            }
-
-            /** Represents a MessageSetCorrect. */
-            class MessageSetCorrect {
-
-                /** Reflection-backed declarations are not constructable. Use MessageSetCorrect.create(...) instead. */
-                private constructor();
-
-                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
-                ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties|null);
-
-                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
-                ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties|null);
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /**
-                 * Creates a new MessageSetCorrect instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns MessageSetCorrect instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
-
-                /**
-                 * Encodes the specified MessageSetCorrect message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.verify|verify} messages.
-                 * @param message MessageSetCorrect message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MessageSetCorrect message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.verify|verify} messages.
-                 * @param message MessageSetCorrect message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MessageSetCorrect message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape} MessageSetCorrect
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape;
-
-                /**
-                 * Decodes a MessageSetCorrect message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape} MessageSetCorrect
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape;
-
-                /**
-                 * Verifies a MessageSetCorrect message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MessageSetCorrect message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MessageSetCorrect
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
-
-                /**
-                 * Creates a plain object from a MessageSetCorrect message. Also converts values to other types if specified.
-                 * @param message MessageSetCorrect
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MessageSetCorrect to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for MessageSetCorrect
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace MessageSetCorrect {
-
-                /** Properties of a MessageSetCorrect. */
-                interface $Properties {
-
-                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
-                    ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties|null);
-
-                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
-                    ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a MessageSetCorrect. */
-                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties;
-            }
-
-            /**
-             * Properties of a MessageSetCorrectExtension1.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties instead.
-             */
-            interface IMessageSetCorrectExtension1 extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties {
-            }
-
-            /** Represents a MessageSetCorrectExtension1. */
-            class MessageSetCorrectExtension1 {
-
-                /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension1.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** MessageSetCorrectExtension1 str. */
-                str: string;
-
-                /**
-                 * Creates a new MessageSetCorrectExtension1 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns MessageSetCorrectExtension1 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
-
-                /**
-                 * Encodes the specified MessageSetCorrectExtension1 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
-                 * @param message MessageSetCorrectExtension1 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MessageSetCorrectExtension1 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
-                 * @param message MessageSetCorrectExtension1 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape} MessageSetCorrectExtension1
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape;
-
-                /**
-                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape} MessageSetCorrectExtension1
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape;
-
-                /**
-                 * Verifies a MessageSetCorrectExtension1 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MessageSetCorrectExtension1 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MessageSetCorrectExtension1
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
-
-                /**
-                 * Creates a plain object from a MessageSetCorrectExtension1 message. Also converts values to other types if specified.
-                 * @param message MessageSetCorrectExtension1
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MessageSetCorrectExtension1 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for MessageSetCorrectExtension1
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace MessageSetCorrectExtension1 {
-
-                /** Properties of a MessageSetCorrectExtension1. */
-                interface $Properties {
-
-                    /** MessageSetCorrectExtension1 str */
-                    str: string;
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a MessageSetCorrectExtension1. */
-                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties;
-            }
-
-            /**
-             * Properties of a MessageSetCorrectExtension2.
-             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties instead.
-             */
-            interface IMessageSetCorrectExtension2 extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties {
-            }
-
-            /** Represents a MessageSetCorrectExtension2. */
-            class MessageSetCorrectExtension2 {
-
-                /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension2.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** MessageSetCorrectExtension2 i. */
-                i: number;
-
-                /**
-                 * Creates a new MessageSetCorrectExtension2 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns MessageSetCorrectExtension2 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
-
-                /**
-                 * Encodes the specified MessageSetCorrectExtension2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
-                 * @param message MessageSetCorrectExtension2 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MessageSetCorrectExtension2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
-                 * @param message MessageSetCorrectExtension2 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape} MessageSetCorrectExtension2
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape;
-
-                /**
-                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape} MessageSetCorrectExtension2
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape;
-
-                /**
-                 * Verifies a MessageSetCorrectExtension2 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MessageSetCorrectExtension2 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MessageSetCorrectExtension2
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
-
-                /**
-                 * Creates a plain object from a MessageSetCorrectExtension2 message. Also converts values to other types if specified.
-                 * @param message MessageSetCorrectExtension2
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MessageSetCorrectExtension2 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for MessageSetCorrectExtension2
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace MessageSetCorrectExtension2 {
-
-                /** Properties of a MessageSetCorrectExtension2. */
-                interface $Properties {
-
-                    /** MessageSetCorrectExtension2 i */
-                    i: number;
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a MessageSetCorrectExtension2. */
-                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties;
-            }
-        }
-
-        /**
-         * Properties of a TestLargeOneof.
-         * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.$Properties instead.
-         */
-        interface ITestLargeOneof extends protobuf_test_messages.proto2.TestLargeOneof.$Properties {
-        }
-
-        /** Represents a TestLargeOneof. */
-        class TestLargeOneof {
-
-            /** Reflection-backed declarations are not constructable. Use TestLargeOneof.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** TestLargeOneof a1. */
-            a1?: (protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties|null);
-
-            /** TestLargeOneof a2. */
-            a2?: (protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties|null);
-
-            /** TestLargeOneof a3. */
-            a3?: (protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties|null);
-
-            /** TestLargeOneof a4. */
-            a4?: (protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties|null);
-
-            /** TestLargeOneof a5. */
-            a5?: (protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties|null);
-
-            /** TestLargeOneof largeOneof. */
-            largeOneof?: ("a1"|"a2"|"a3"|"a4"|"a5");
-
-            /**
-             * Creates a new TestLargeOneof instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns TestLargeOneof instance
-             */
-            static create(properties: protobuf_test_messages.proto2.TestLargeOneof.$Shape): protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape;
-            static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.$Properties): protobuf_test_messages.proto2.TestLargeOneof;
-
-            /**
-             * Encodes the specified TestLargeOneof message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.verify|verify} messages.
-             * @param message TestLargeOneof message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto2.TestLargeOneof.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified TestLargeOneof message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.verify|verify} messages.
-             * @param message TestLargeOneof message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a TestLargeOneof message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape} TestLargeOneof
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape;
-
-            /**
-             * Decodes a TestLargeOneof message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape} TestLargeOneof
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape;
-
-            /**
-             * Verifies a TestLargeOneof message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a TestLargeOneof message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns TestLargeOneof
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof;
-
-            /**
-             * Creates a plain object from a TestLargeOneof message. Also converts values to other types if specified.
-             * @param message TestLargeOneof
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto2.TestLargeOneof, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this TestLargeOneof to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for TestLargeOneof
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace TestLargeOneof {
-
-            /** Properties of a TestLargeOneof. */
-            interface $Properties {
-
-                /** TestLargeOneof a1 */
-                a1?: (protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties|null);
-
-                /** TestLargeOneof a2 */
-                a2?: (protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties|null);
-
-                /** TestLargeOneof a3 */
-                a3?: (protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties|null);
-
-                /** TestLargeOneof a4 */
-                a4?: (protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties|null);
-
-                /** TestLargeOneof a5 */
-                a5?: (protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties|null);
-
-                /** TestLargeOneof largeOneof */
-                largeOneof?: ("a1"|"a2"|"a3"|"a4"|"a5");
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Narrowed shape of a TestLargeOneof. */
-            type $Shape = {
-              a1?: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape|null;
-              a2?: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape|null;
-              a3?: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape|null;
-              a4?: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape|null;
-              a5?: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape|null;
-              $unknowns?: Uint8Array[];
-            } & (
-              ({ largeOneof?: undefined; a1?: null; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a1"; a1: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a2"; a1?: null; a2: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a3"; a1?: null; a2?: null; a3: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape; a4?: null; a5?: null }|{ largeOneof?: "a4"; a1?: null; a2?: null; a3?: null; a4: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape; a5?: null }|{ largeOneof?: "a5"; a1?: null; a2?: null; a3?: null; a4?: null; a5: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape })
-            );
-
-            /**
-             * Properties of a A1.
-             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties instead.
-             */
-            interface IA1 extends protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties {
-            }
-
-            /** Represents a A1. */
-            class A1 {
-
-                /** Reflection-backed declarations are not constructable. Use A1.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /**
-                 * Creates a new A1 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns A1 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A1;
-
-                /**
-                 * Encodes the specified A1 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A1.verify|verify} messages.
-                 * @param message A1 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified A1 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A1.verify|verify} messages.
-                 * @param message A1 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a A1 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape} A1
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape;
-
-                /**
-                 * Decodes a A1 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape} A1
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape;
-
-                /**
-                 * Verifies a A1 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a A1 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns A1
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A1;
-
-                /**
-                 * Creates a plain object from a A1 message. Also converts values to other types if specified.
-                 * @param message A1
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A1, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this A1 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for A1
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace A1 {
-
-                /** Properties of a A1. */
-                interface $Properties {
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a A1. */
-                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties;
-            }
-
-            /**
-             * Properties of a A2.
-             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties instead.
-             */
-            interface IA2 extends protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties {
-            }
-
-            /** Represents a A2. */
-            class A2 {
-
-                /** Reflection-backed declarations are not constructable. Use A2.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /**
-                 * Creates a new A2 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns A2 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A2;
-
-                /**
-                 * Encodes the specified A2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A2.verify|verify} messages.
-                 * @param message A2 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified A2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A2.verify|verify} messages.
-                 * @param message A2 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a A2 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape} A2
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape;
-
-                /**
-                 * Decodes a A2 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape} A2
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape;
-
-                /**
-                 * Verifies a A2 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a A2 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns A2
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A2;
-
-                /**
-                 * Creates a plain object from a A2 message. Also converts values to other types if specified.
-                 * @param message A2
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this A2 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for A2
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace A2 {
-
-                /** Properties of a A2. */
-                interface $Properties {
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a A2. */
-                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties;
-            }
-
-            /**
-             * Properties of a A3.
-             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties instead.
-             */
-            interface IA3 extends protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties {
-            }
-
-            /** Represents a A3. */
-            class A3 {
-
-                /** Reflection-backed declarations are not constructable. Use A3.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /**
-                 * Creates a new A3 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns A3 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A3;
-
-                /**
-                 * Encodes the specified A3 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A3.verify|verify} messages.
-                 * @param message A3 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified A3 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A3.verify|verify} messages.
-                 * @param message A3 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a A3 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape} A3
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape;
-
-                /**
-                 * Decodes a A3 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape} A3
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape;
-
-                /**
-                 * Verifies a A3 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a A3 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns A3
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A3;
-
-                /**
-                 * Creates a plain object from a A3 message. Also converts values to other types if specified.
-                 * @param message A3
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A3, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this A3 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for A3
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace A3 {
-
-                /** Properties of a A3. */
-                interface $Properties {
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a A3. */
-                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties;
-            }
-
-            /**
-             * Properties of a A4.
-             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties instead.
-             */
-            interface IA4 extends protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties {
-            }
-
-            /** Represents a A4. */
-            class A4 {
-
-                /** Reflection-backed declarations are not constructable. Use A4.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /**
-                 * Creates a new A4 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns A4 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A4;
-
-                /**
-                 * Encodes the specified A4 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A4.verify|verify} messages.
-                 * @param message A4 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified A4 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A4.verify|verify} messages.
-                 * @param message A4 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a A4 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape} A4
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape;
-
-                /**
-                 * Decodes a A4 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape} A4
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape;
-
-                /**
-                 * Verifies a A4 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a A4 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns A4
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A4;
-
-                /**
-                 * Creates a plain object from a A4 message. Also converts values to other types if specified.
-                 * @param message A4
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A4, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this A4 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for A4
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace A4 {
-
-                /** Properties of a A4. */
-                interface $Properties {
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a A4. */
-                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties;
-            }
-
-            /**
-             * Properties of a A5.
-             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties instead.
-             */
-            interface IA5 extends protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties {
-            }
-
-            /** Represents a A5. */
-            class A5 {
-
-                /** Reflection-backed declarations are not constructable. Use A5.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /**
-                 * Creates a new A5 instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns A5 instance
-                 */
-                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape;
-                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A5;
-
-                /**
-                 * Encodes the specified A5 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A5.verify|verify} messages.
-                 * @param message A5 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified A5 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A5.verify|verify} messages.
-                 * @param message A5 message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a A5 message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape} A5
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape;
-
-                /**
-                 * Decodes a A5 message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape} A5
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape;
-
-                /**
-                 * Verifies a A5 message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a A5 message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns A5
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A5;
-
-                /**
-                 * Creates a plain object from a A5 message. Also converts values to other types if specified.
-                 * @param message A5
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A5, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this A5 to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for A5
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace A5 {
-
-                /** Properties of a A5. */
-                interface $Properties {
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a A5. */
-                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties;
-            }
-        }
-    }
-
-    /** Namespace proto3. */
-    namespace proto3 {
-
-        /**
-         * Properties of a TestAllTypesProto3.
-         * @deprecated Use protobuf_test_messages.proto3.TestAllTypesProto3.$Properties instead.
-         */
-        interface ITestAllTypesProto3 extends protobuf_test_messages.proto3.TestAllTypesProto3.$Properties {
-        }
-
-        /** Represents a TestAllTypesProto3. */
-        class TestAllTypesProto3 {
-
-            /** Reflection-backed declarations are not constructable. Use TestAllTypesProto3.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** TestAllTypesProto3 optionalInt32. */
-            optionalInt32: number;
-
-            /** TestAllTypesProto3 optionalInt64. */
-            optionalInt64: (number|Long);
-
-            /** TestAllTypesProto3 optionalUint32. */
-            optionalUint32: number;
-
-            /** TestAllTypesProto3 optionalUint64. */
-            optionalUint64: (number|Long);
-
-            /** TestAllTypesProto3 optionalSint32. */
-            optionalSint32: number;
-
-            /** TestAllTypesProto3 optionalSint64. */
-            optionalSint64: (number|Long);
-
-            /** TestAllTypesProto3 optionalFixed32. */
-            optionalFixed32: number;
-
-            /** TestAllTypesProto3 optionalFixed64. */
-            optionalFixed64: (number|Long);
-
-            /** TestAllTypesProto3 optionalSfixed32. */
-            optionalSfixed32: number;
-
-            /** TestAllTypesProto3 optionalSfixed64. */
-            optionalSfixed64: (number|Long);
-
-            /** TestAllTypesProto3 optionalFloat. */
-            optionalFloat: number;
-
-            /** TestAllTypesProto3 optionalDouble. */
-            optionalDouble: number;
-
-            /** TestAllTypesProto3 optionalBool. */
-            optionalBool: boolean;
-
-            /** TestAllTypesProto3 optionalString. */
-            optionalString: string;
-
-            /** TestAllTypesProto3 optionalBytes. */
-            optionalBytes: Uint8Array;
-
-            /** TestAllTypesProto3 optionalNestedMessage. */
-            optionalNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties|null);
-
-            /** TestAllTypesProto3 optionalForeignMessage. */
-            optionalForeignMessage?: (protobuf_test_messages.proto3.ForeignMessage.$Properties|null);
-
-            /** TestAllTypesProto3 optionalNestedEnum. */
-            optionalNestedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum;
-
-            /** TestAllTypesProto3 optionalForeignEnum. */
-            optionalForeignEnum: protobuf_test_messages.proto3.ForeignEnum;
-
-            /** TestAllTypesProto3 optionalAliasedEnum. */
-            optionalAliasedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum;
-
-            /** TestAllTypesProto3 optionalStringPiece. */
-            optionalStringPiece: string;
-
-            /** TestAllTypesProto3 optionalCord. */
-            optionalCord: string;
-
-            /** TestAllTypesProto3 recursiveMessage. */
-            recursiveMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
-
-            /** TestAllTypesProto3 repeatedInt32. */
-            repeatedInt32: number[];
-
-            /** TestAllTypesProto3 repeatedInt64. */
-            repeatedInt64: (number|Long)[];
-
-            /** TestAllTypesProto3 repeatedUint32. */
-            repeatedUint32: number[];
-
-            /** TestAllTypesProto3 repeatedUint64. */
-            repeatedUint64: (number|Long)[];
-
-            /** TestAllTypesProto3 repeatedSint32. */
-            repeatedSint32: number[];
-
-            /** TestAllTypesProto3 repeatedSint64. */
-            repeatedSint64: (number|Long)[];
-
-            /** TestAllTypesProto3 repeatedFixed32. */
-            repeatedFixed32: number[];
-
-            /** TestAllTypesProto3 repeatedFixed64. */
-            repeatedFixed64: (number|Long)[];
-
-            /** TestAllTypesProto3 repeatedSfixed32. */
-            repeatedSfixed32: number[];
-
-            /** TestAllTypesProto3 repeatedSfixed64. */
-            repeatedSfixed64: (number|Long)[];
-
-            /** TestAllTypesProto3 repeatedFloat. */
-            repeatedFloat: number[];
-
-            /** TestAllTypesProto3 repeatedDouble. */
-            repeatedDouble: number[];
-
-            /** TestAllTypesProto3 repeatedBool. */
-            repeatedBool: boolean[];
-
-            /** TestAllTypesProto3 repeatedString. */
-            repeatedString: string[];
-
-            /** TestAllTypesProto3 repeatedBytes. */
-            repeatedBytes: Uint8Array[];
-
-            /** TestAllTypesProto3 repeatedNestedMessage. */
-            repeatedNestedMessage: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties[];
-
-            /** TestAllTypesProto3 repeatedForeignMessage. */
-            repeatedForeignMessage: protobuf_test_messages.proto3.ForeignMessage.$Properties[];
-
-            /** TestAllTypesProto3 repeatedNestedEnum. */
-            repeatedNestedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[];
-
-            /** TestAllTypesProto3 repeatedForeignEnum. */
-            repeatedForeignEnum: protobuf_test_messages.proto3.ForeignEnum[];
-
-            /** TestAllTypesProto3 repeatedStringPiece. */
-            repeatedStringPiece: string[];
-
-            /** TestAllTypesProto3 repeatedCord. */
-            repeatedCord: string[];
-
-            /** TestAllTypesProto3 packedInt32. */
-            packedInt32: number[];
-
-            /** TestAllTypesProto3 packedInt64. */
-            packedInt64: (number|Long)[];
-
-            /** TestAllTypesProto3 packedUint32. */
-            packedUint32: number[];
-
-            /** TestAllTypesProto3 packedUint64. */
-            packedUint64: (number|Long)[];
-
-            /** TestAllTypesProto3 packedSint32. */
-            packedSint32: number[];
-
-            /** TestAllTypesProto3 packedSint64. */
-            packedSint64: (number|Long)[];
-
-            /** TestAllTypesProto3 packedFixed32. */
-            packedFixed32: number[];
-
-            /** TestAllTypesProto3 packedFixed64. */
-            packedFixed64: (number|Long)[];
-
-            /** TestAllTypesProto3 packedSfixed32. */
-            packedSfixed32: number[];
-
-            /** TestAllTypesProto3 packedSfixed64. */
-            packedSfixed64: (number|Long)[];
-
-            /** TestAllTypesProto3 packedFloat. */
-            packedFloat: number[];
-
-            /** TestAllTypesProto3 packedDouble. */
-            packedDouble: number[];
-
-            /** TestAllTypesProto3 packedBool. */
-            packedBool: boolean[];
-
-            /** TestAllTypesProto3 packedNestedEnum. */
-            packedNestedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[];
-
-            /** TestAllTypesProto3 unpackedInt32. */
-            unpackedInt32: number[];
-
-            /** TestAllTypesProto3 unpackedInt64. */
-            unpackedInt64: (number|Long)[];
-
-            /** TestAllTypesProto3 unpackedUint32. */
-            unpackedUint32: number[];
-
-            /** TestAllTypesProto3 unpackedUint64. */
-            unpackedUint64: (number|Long)[];
-
-            /** TestAllTypesProto3 unpackedSint32. */
-            unpackedSint32: number[];
-
-            /** TestAllTypesProto3 unpackedSint64. */
-            unpackedSint64: (number|Long)[];
-
-            /** TestAllTypesProto3 unpackedFixed32. */
-            unpackedFixed32: number[];
-
-            /** TestAllTypesProto3 unpackedFixed64. */
-            unpackedFixed64: (number|Long)[];
-
-            /** TestAllTypesProto3 unpackedSfixed32. */
-            unpackedSfixed32: number[];
-
-            /** TestAllTypesProto3 unpackedSfixed64. */
-            unpackedSfixed64: (number|Long)[];
-
-            /** TestAllTypesProto3 unpackedFloat. */
-            unpackedFloat: number[];
-
-            /** TestAllTypesProto3 unpackedDouble. */
-            unpackedDouble: number[];
-
-            /** TestAllTypesProto3 unpackedBool. */
-            unpackedBool: boolean[];
-
-            /** TestAllTypesProto3 unpackedNestedEnum. */
-            unpackedNestedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[];
-
-            /** TestAllTypesProto3 mapInt32Int32. */
-            mapInt32Int32: { [k: string]: number };
-
-            /** TestAllTypesProto3 mapInt64Int64. */
-            mapInt64Int64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto3 mapUint32Uint32. */
-            mapUint32Uint32: { [k: string]: number };
-
-            /** TestAllTypesProto3 mapUint64Uint64. */
-            mapUint64Uint64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto3 mapSint32Sint32. */
-            mapSint32Sint32: { [k: string]: number };
-
-            /** TestAllTypesProto3 mapSint64Sint64. */
-            mapSint64Sint64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto3 mapFixed32Fixed32. */
-            mapFixed32Fixed32: { [k: string]: number };
-
-            /** TestAllTypesProto3 mapFixed64Fixed64. */
-            mapFixed64Fixed64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto3 mapSfixed32Sfixed32. */
-            mapSfixed32Sfixed32: { [k: string]: number };
-
-            /** TestAllTypesProto3 mapSfixed64Sfixed64. */
-            mapSfixed64Sfixed64: { [k: string]: (number|Long) };
-
-            /** TestAllTypesProto3 mapInt32Float. */
-            mapInt32Float: { [k: string]: number };
-
-            /** TestAllTypesProto3 mapInt32Double. */
-            mapInt32Double: { [k: string]: number };
-
-            /** TestAllTypesProto3 mapBoolBool. */
-            mapBoolBool: { [k: string]: boolean };
-
-            /** TestAllTypesProto3 mapStringString. */
-            mapStringString: { [k: string]: string };
-
-            /** TestAllTypesProto3 mapStringBytes. */
-            mapStringBytes: { [k: string]: Uint8Array };
-
-            /** TestAllTypesProto3 mapStringNestedMessage. */
-            mapStringNestedMessage: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties };
-
-            /** TestAllTypesProto3 mapStringForeignMessage. */
-            mapStringForeignMessage: { [k: string]: protobuf_test_messages.proto3.ForeignMessage.$Properties };
-
-            /** TestAllTypesProto3 mapStringNestedEnum. */
-            mapStringNestedEnum: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum };
-
-            /** TestAllTypesProto3 mapStringForeignEnum. */
-            mapStringForeignEnum: { [k: string]: protobuf_test_messages.proto3.ForeignEnum };
-
-            /** TestAllTypesProto3 oneofUint32. */
-            oneofUint32?: (number|null);
-
-            /** TestAllTypesProto3 oneofNestedMessage. */
-            oneofNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties|null);
-
-            /** TestAllTypesProto3 oneofString. */
-            oneofString?: (string|null);
-
-            /** TestAllTypesProto3 oneofBytes. */
-            oneofBytes?: (Uint8Array|null);
-
-            /** TestAllTypesProto3 oneofBool. */
-            oneofBool?: (boolean|null);
-
-            /** TestAllTypesProto3 oneofUint64. */
-            oneofUint64?: (number|Long|null);
-
-            /** TestAllTypesProto3 oneofFloat. */
-            oneofFloat?: (number|null);
-
-            /** TestAllTypesProto3 oneofDouble. */
-            oneofDouble?: (number|null);
-
-            /** TestAllTypesProto3 oneofEnum. */
-            oneofEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null);
-
-            /** TestAllTypesProto3 oneofNullValue. */
-            oneofNullValue?: (google.protobuf.NullValue|null);
-
-            /** TestAllTypesProto3 optionalBoolWrapper. */
-            optionalBoolWrapper?: (google.protobuf.BoolValue.$Properties|null);
-
-            /** TestAllTypesProto3 optionalInt32Wrapper. */
-            optionalInt32Wrapper?: (google.protobuf.Int32Value.$Properties|null);
-
-            /** TestAllTypesProto3 optionalInt64Wrapper. */
-            optionalInt64Wrapper?: (google.protobuf.Int64Value.$Properties|null);
-
-            /** TestAllTypesProto3 optionalUint32Wrapper. */
-            optionalUint32Wrapper?: (google.protobuf.UInt32Value.$Properties|null);
-
-            /** TestAllTypesProto3 optionalUint64Wrapper. */
-            optionalUint64Wrapper?: (google.protobuf.UInt64Value.$Properties|null);
-
-            /** TestAllTypesProto3 optionalFloatWrapper. */
-            optionalFloatWrapper?: (google.protobuf.FloatValue.$Properties|null);
-
-            /** TestAllTypesProto3 optionalDoubleWrapper. */
-            optionalDoubleWrapper?: (google.protobuf.DoubleValue.$Properties|null);
-
-            /** TestAllTypesProto3 optionalStringWrapper. */
-            optionalStringWrapper?: (google.protobuf.StringValue.$Properties|null);
-
-            /** TestAllTypesProto3 optionalBytesWrapper. */
-            optionalBytesWrapper?: (google.protobuf.BytesValue.$Properties|null);
-
-            /** TestAllTypesProto3 repeatedBoolWrapper. */
-            repeatedBoolWrapper: google.protobuf.BoolValue.$Properties[];
-
-            /** TestAllTypesProto3 repeatedInt32Wrapper. */
-            repeatedInt32Wrapper: google.protobuf.Int32Value.$Properties[];
-
-            /** TestAllTypesProto3 repeatedInt64Wrapper. */
-            repeatedInt64Wrapper: google.protobuf.Int64Value.$Properties[];
-
-            /** TestAllTypesProto3 repeatedUint32Wrapper. */
-            repeatedUint32Wrapper: google.protobuf.UInt32Value.$Properties[];
-
-            /** TestAllTypesProto3 repeatedUint64Wrapper. */
-            repeatedUint64Wrapper: google.protobuf.UInt64Value.$Properties[];
-
-            /** TestAllTypesProto3 repeatedFloatWrapper. */
-            repeatedFloatWrapper: google.protobuf.FloatValue.$Properties[];
-
-            /** TestAllTypesProto3 repeatedDoubleWrapper. */
-            repeatedDoubleWrapper: google.protobuf.DoubleValue.$Properties[];
-
-            /** TestAllTypesProto3 repeatedStringWrapper. */
-            repeatedStringWrapper: google.protobuf.StringValue.$Properties[];
-
-            /** TestAllTypesProto3 repeatedBytesWrapper. */
-            repeatedBytesWrapper: google.protobuf.BytesValue.$Properties[];
-
-            /** TestAllTypesProto3 optionalDuration. */
-            optionalDuration?: (google.protobuf.Duration.$Properties|null);
-
-            /** TestAllTypesProto3 optionalTimestamp. */
-            optionalTimestamp?: (google.protobuf.Timestamp.$Properties|null);
-
-            /** TestAllTypesProto3 optionalFieldMask. */
-            optionalFieldMask?: (google.protobuf.FieldMask.$Properties|null);
-
-            /** TestAllTypesProto3 optionalStruct. */
-            optionalStruct?: (google.protobuf.Struct.$Properties|null);
-
-            /** TestAllTypesProto3 optionalAny. */
-            optionalAny?: (google.protobuf.Any.$Properties|null);
-
-            /** TestAllTypesProto3 optionalValue. */
-            optionalValue?: (google.protobuf.Value.$Properties|null);
-
-            /** TestAllTypesProto3 optionalNullValue. */
-            optionalNullValue: google.protobuf.NullValue;
-
-            /** TestAllTypesProto3 repeatedDuration. */
-            repeatedDuration: google.protobuf.Duration.$Properties[];
-
-            /** TestAllTypesProto3 repeatedTimestamp. */
-            repeatedTimestamp: google.protobuf.Timestamp.$Properties[];
-
-            /** TestAllTypesProto3 repeatedFieldmask. */
-            repeatedFieldmask: google.protobuf.FieldMask.$Properties[];
-
-            /** TestAllTypesProto3 repeatedStruct. */
-            repeatedStruct: google.protobuf.Struct.$Properties[];
-
-            /** TestAllTypesProto3 repeatedAny. */
-            repeatedAny: google.protobuf.Any.$Properties[];
-
-            /** TestAllTypesProto3 repeatedValue. */
-            repeatedValue: google.protobuf.Value.$Properties[];
-
-            /** TestAllTypesProto3 repeatedListValue. */
-            repeatedListValue: google.protobuf.ListValue.$Properties[];
-
-            /** TestAllTypesProto3 fieldname1. */
-            fieldname1: number;
-
-            /** TestAllTypesProto3 fieldName2. */
-            fieldName2: number;
-
-            /** TestAllTypesProto3 _fieldName3. */
-            _fieldName3: number;
-
-            /** TestAllTypesProto3 field_Name4_. */
-            field_Name4_: number;
-
-            /** TestAllTypesProto3 field0name5. */
-            field0name5: number;
-
-            /** TestAllTypesProto3 field_0Name6. */
-            field_0Name6: number;
-
-            /** TestAllTypesProto3 fieldName7. */
-            fieldName7: number;
-
-            /** TestAllTypesProto3 FieldName8. */
-            FieldName8: number;
-
-            /** TestAllTypesProto3 field_Name9. */
-            field_Name9: number;
-
-            /** TestAllTypesProto3 Field_Name10. */
-            Field_Name10: number;
-
-            /** TestAllTypesProto3 FIELD_NAME11. */
-            FIELD_NAME11: number;
-
-            /** TestAllTypesProto3 FIELDName12. */
-            FIELDName12: number;
-
-            /** TestAllTypesProto3 _FieldName13. */
-            _FieldName13: number;
-
-            /** TestAllTypesProto3 __FieldName14. */
-            __FieldName14: number;
-
-            /** TestAllTypesProto3 field_Name15. */
-            field_Name15: number;
-
-            /** TestAllTypesProto3 field__Name16. */
-            field__Name16: number;
-
-            /** TestAllTypesProto3 fieldName17__. */
-            fieldName17__: number;
-
-            /** TestAllTypesProto3 FieldName18__. */
-            FieldName18__: number;
-
-            /** TestAllTypesProto3 oneofField. */
-            oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum"|"oneofNullValue");
-
-            /**
-             * Creates a new TestAllTypesProto3 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns TestAllTypesProto3 instance
-             */
-            static create(properties: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape): protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape;
-            static create(properties?: protobuf_test_messages.proto3.TestAllTypesProto3.$Properties): protobuf_test_messages.proto3.TestAllTypesProto3;
-
-            /**
-             * Encodes the specified TestAllTypesProto3 message. Does not implicitly {@link protobuf_test_messages.proto3.TestAllTypesProto3.verify|verify} messages.
-             * @param message TestAllTypesProto3 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto3.TestAllTypesProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified TestAllTypesProto3 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.TestAllTypesProto3.verify|verify} messages.
-             * @param message TestAllTypesProto3 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto3.TestAllTypesProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a TestAllTypesProto3 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape} TestAllTypesProto3
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape;
-
-            /**
-             * Decodes a TestAllTypesProto3 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape} TestAllTypesProto3
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape;
-
-            /**
-             * Verifies a TestAllTypesProto3 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a TestAllTypesProto3 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns TestAllTypesProto3
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.TestAllTypesProto3;
-
-            /**
-             * Creates a plain object from a TestAllTypesProto3 message. Also converts values to other types if specified.
-             * @param message TestAllTypesProto3
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto3.TestAllTypesProto3, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this TestAllTypesProto3 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for TestAllTypesProto3
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace TestAllTypesProto3 {
-
-            /** Properties of a TestAllTypesProto3. */
-            interface $Properties {
-
-                /** TestAllTypesProto3 optionalInt32 */
-                optionalInt32?: (number|null);
-
-                /** TestAllTypesProto3 optionalInt64 */
-                optionalInt64?: (number|Long|null);
-
-                /** TestAllTypesProto3 optionalUint32 */
-                optionalUint32?: (number|null);
-
-                /** TestAllTypesProto3 optionalUint64 */
-                optionalUint64?: (number|Long|null);
-
-                /** TestAllTypesProto3 optionalSint32 */
-                optionalSint32?: (number|null);
-
-                /** TestAllTypesProto3 optionalSint64 */
-                optionalSint64?: (number|Long|null);
-
-                /** TestAllTypesProto3 optionalFixed32 */
-                optionalFixed32?: (number|null);
-
-                /** TestAllTypesProto3 optionalFixed64 */
-                optionalFixed64?: (number|Long|null);
-
-                /** TestAllTypesProto3 optionalSfixed32 */
-                optionalSfixed32?: (number|null);
-
-                /** TestAllTypesProto3 optionalSfixed64 */
-                optionalSfixed64?: (number|Long|null);
-
-                /** TestAllTypesProto3 optionalFloat */
-                optionalFloat?: (number|null);
-
-                /** TestAllTypesProto3 optionalDouble */
-                optionalDouble?: (number|null);
-
-                /** TestAllTypesProto3 optionalBool */
-                optionalBool?: (boolean|null);
-
-                /** TestAllTypesProto3 optionalString */
-                optionalString?: (string|null);
-
-                /** TestAllTypesProto3 optionalBytes */
-                optionalBytes?: (Uint8Array|null);
-
-                /** TestAllTypesProto3 optionalNestedMessage */
-                optionalNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties|null);
-
-                /** TestAllTypesProto3 optionalForeignMessage */
-                optionalForeignMessage?: (protobuf_test_messages.proto3.ForeignMessage.$Properties|null);
-
-                /** TestAllTypesProto3 optionalNestedEnum */
-                optionalNestedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null);
-
-                /** TestAllTypesProto3 optionalForeignEnum */
-                optionalForeignEnum?: (protobuf_test_messages.proto3.ForeignEnum|null);
-
-                /** TestAllTypesProto3 optionalAliasedEnum */
-                optionalAliasedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum|null);
-
-                /** TestAllTypesProto3 optionalStringPiece */
-                optionalStringPiece?: (string|null);
-
-                /** TestAllTypesProto3 optionalCord */
-                optionalCord?: (string|null);
-
-                /** TestAllTypesProto3 recursiveMessage */
-                recursiveMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
-
-                /** TestAllTypesProto3 repeatedInt32 */
-                repeatedInt32?: (number[]|null);
-
-                /** TestAllTypesProto3 repeatedInt64 */
-                repeatedInt64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 repeatedUint32 */
-                repeatedUint32?: (number[]|null);
-
-                /** TestAllTypesProto3 repeatedUint64 */
-                repeatedUint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 repeatedSint32 */
-                repeatedSint32?: (number[]|null);
-
-                /** TestAllTypesProto3 repeatedSint64 */
-                repeatedSint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 repeatedFixed32 */
-                repeatedFixed32?: (number[]|null);
-
-                /** TestAllTypesProto3 repeatedFixed64 */
-                repeatedFixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 repeatedSfixed32 */
-                repeatedSfixed32?: (number[]|null);
-
-                /** TestAllTypesProto3 repeatedSfixed64 */
-                repeatedSfixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 repeatedFloat */
-                repeatedFloat?: (number[]|null);
-
-                /** TestAllTypesProto3 repeatedDouble */
-                repeatedDouble?: (number[]|null);
-
-                /** TestAllTypesProto3 repeatedBool */
-                repeatedBool?: (boolean[]|null);
-
-                /** TestAllTypesProto3 repeatedString */
-                repeatedString?: (string[]|null);
-
-                /** TestAllTypesProto3 repeatedBytes */
-                repeatedBytes?: (Uint8Array[]|null);
-
-                /** TestAllTypesProto3 repeatedNestedMessage */
-                repeatedNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedForeignMessage */
-                repeatedForeignMessage?: (protobuf_test_messages.proto3.ForeignMessage.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedNestedEnum */
-                repeatedNestedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null);
-
-                /** TestAllTypesProto3 repeatedForeignEnum */
-                repeatedForeignEnum?: (protobuf_test_messages.proto3.ForeignEnum[]|null);
-
-                /** TestAllTypesProto3 repeatedStringPiece */
-                repeatedStringPiece?: (string[]|null);
-
-                /** TestAllTypesProto3 repeatedCord */
-                repeatedCord?: (string[]|null);
-
-                /** TestAllTypesProto3 packedInt32 */
-                packedInt32?: (number[]|null);
-
-                /** TestAllTypesProto3 packedInt64 */
-                packedInt64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 packedUint32 */
-                packedUint32?: (number[]|null);
-
-                /** TestAllTypesProto3 packedUint64 */
-                packedUint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 packedSint32 */
-                packedSint32?: (number[]|null);
-
-                /** TestAllTypesProto3 packedSint64 */
-                packedSint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 packedFixed32 */
-                packedFixed32?: (number[]|null);
-
-                /** TestAllTypesProto3 packedFixed64 */
-                packedFixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 packedSfixed32 */
-                packedSfixed32?: (number[]|null);
-
-                /** TestAllTypesProto3 packedSfixed64 */
-                packedSfixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 packedFloat */
-                packedFloat?: (number[]|null);
-
-                /** TestAllTypesProto3 packedDouble */
-                packedDouble?: (number[]|null);
-
-                /** TestAllTypesProto3 packedBool */
-                packedBool?: (boolean[]|null);
-
-                /** TestAllTypesProto3 packedNestedEnum */
-                packedNestedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null);
-
-                /** TestAllTypesProto3 unpackedInt32 */
-                unpackedInt32?: (number[]|null);
-
-                /** TestAllTypesProto3 unpackedInt64 */
-                unpackedInt64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 unpackedUint32 */
-                unpackedUint32?: (number[]|null);
-
-                /** TestAllTypesProto3 unpackedUint64 */
-                unpackedUint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 unpackedSint32 */
-                unpackedSint32?: (number[]|null);
-
-                /** TestAllTypesProto3 unpackedSint64 */
-                unpackedSint64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 unpackedFixed32 */
-                unpackedFixed32?: (number[]|null);
-
-                /** TestAllTypesProto3 unpackedFixed64 */
-                unpackedFixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 unpackedSfixed32 */
-                unpackedSfixed32?: (number[]|null);
-
-                /** TestAllTypesProto3 unpackedSfixed64 */
-                unpackedSfixed64?: ((number|Long)[]|null);
-
-                /** TestAllTypesProto3 unpackedFloat */
-                unpackedFloat?: (number[]|null);
-
-                /** TestAllTypesProto3 unpackedDouble */
-                unpackedDouble?: (number[]|null);
-
-                /** TestAllTypesProto3 unpackedBool */
-                unpackedBool?: (boolean[]|null);
-
-                /** TestAllTypesProto3 unpackedNestedEnum */
-                unpackedNestedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null);
-
-                /** TestAllTypesProto3 mapInt32Int32 */
-                mapInt32Int32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto3 mapInt64Int64 */
-                mapInt64Int64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto3 mapUint32Uint32 */
-                mapUint32Uint32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto3 mapUint64Uint64 */
-                mapUint64Uint64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto3 mapSint32Sint32 */
-                mapSint32Sint32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto3 mapSint64Sint64 */
-                mapSint64Sint64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto3 mapFixed32Fixed32 */
-                mapFixed32Fixed32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto3 mapFixed64Fixed64 */
-                mapFixed64Fixed64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto3 mapSfixed32Sfixed32 */
-                mapSfixed32Sfixed32?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto3 mapSfixed64Sfixed64 */
-                mapSfixed64Sfixed64?: ({ [k: string]: (number|Long) }|null);
-
-                /** TestAllTypesProto3 mapInt32Float */
-                mapInt32Float?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto3 mapInt32Double */
-                mapInt32Double?: ({ [k: string]: number }|null);
-
-                /** TestAllTypesProto3 mapBoolBool */
-                mapBoolBool?: ({ [k: string]: boolean }|null);
-
-                /** TestAllTypesProto3 mapStringString */
-                mapStringString?: ({ [k: string]: string }|null);
-
-                /** TestAllTypesProto3 mapStringBytes */
-                mapStringBytes?: ({ [k: string]: Uint8Array }|null);
-
-                /** TestAllTypesProto3 mapStringNestedMessage */
-                mapStringNestedMessage?: ({ [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties }|null);
-
-                /** TestAllTypesProto3 mapStringForeignMessage */
-                mapStringForeignMessage?: ({ [k: string]: protobuf_test_messages.proto3.ForeignMessage.$Properties }|null);
-
-                /** TestAllTypesProto3 mapStringNestedEnum */
-                mapStringNestedEnum?: ({ [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum }|null);
-
-                /** TestAllTypesProto3 mapStringForeignEnum */
-                mapStringForeignEnum?: ({ [k: string]: protobuf_test_messages.proto3.ForeignEnum }|null);
-
-                /** TestAllTypesProto3 oneofUint32 */
-                oneofUint32?: (number|null);
-
-                /** TestAllTypesProto3 oneofNestedMessage */
-                oneofNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties|null);
-
-                /** TestAllTypesProto3 oneofString */
-                oneofString?: (string|null);
-
-                /** TestAllTypesProto3 oneofBytes */
-                oneofBytes?: (Uint8Array|null);
-
-                /** TestAllTypesProto3 oneofBool */
-                oneofBool?: (boolean|null);
-
-                /** TestAllTypesProto3 oneofUint64 */
-                oneofUint64?: (number|Long|null);
-
-                /** TestAllTypesProto3 oneofFloat */
-                oneofFloat?: (number|null);
-
-                /** TestAllTypesProto3 oneofDouble */
-                oneofDouble?: (number|null);
-
-                /** TestAllTypesProto3 oneofEnum */
-                oneofEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null);
-
-                /** TestAllTypesProto3 oneofNullValue */
-                oneofNullValue?: (google.protobuf.NullValue|null);
-
-                /** TestAllTypesProto3 optionalBoolWrapper */
-                optionalBoolWrapper?: (google.protobuf.BoolValue.$Properties|null);
-
-                /** TestAllTypesProto3 optionalInt32Wrapper */
-                optionalInt32Wrapper?: (google.protobuf.Int32Value.$Properties|null);
-
-                /** TestAllTypesProto3 optionalInt64Wrapper */
-                optionalInt64Wrapper?: (google.protobuf.Int64Value.$Properties|null);
-
-                /** TestAllTypesProto3 optionalUint32Wrapper */
-                optionalUint32Wrapper?: (google.protobuf.UInt32Value.$Properties|null);
-
-                /** TestAllTypesProto3 optionalUint64Wrapper */
-                optionalUint64Wrapper?: (google.protobuf.UInt64Value.$Properties|null);
-
-                /** TestAllTypesProto3 optionalFloatWrapper */
-                optionalFloatWrapper?: (google.protobuf.FloatValue.$Properties|null);
-
-                /** TestAllTypesProto3 optionalDoubleWrapper */
-                optionalDoubleWrapper?: (google.protobuf.DoubleValue.$Properties|null);
-
-                /** TestAllTypesProto3 optionalStringWrapper */
-                optionalStringWrapper?: (google.protobuf.StringValue.$Properties|null);
-
-                /** TestAllTypesProto3 optionalBytesWrapper */
-                optionalBytesWrapper?: (google.protobuf.BytesValue.$Properties|null);
-
-                /** TestAllTypesProto3 repeatedBoolWrapper */
-                repeatedBoolWrapper?: (google.protobuf.BoolValue.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedInt32Wrapper */
-                repeatedInt32Wrapper?: (google.protobuf.Int32Value.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedInt64Wrapper */
-                repeatedInt64Wrapper?: (google.protobuf.Int64Value.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedUint32Wrapper */
-                repeatedUint32Wrapper?: (google.protobuf.UInt32Value.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedUint64Wrapper */
-                repeatedUint64Wrapper?: (google.protobuf.UInt64Value.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedFloatWrapper */
-                repeatedFloatWrapper?: (google.protobuf.FloatValue.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedDoubleWrapper */
-                repeatedDoubleWrapper?: (google.protobuf.DoubleValue.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedStringWrapper */
-                repeatedStringWrapper?: (google.protobuf.StringValue.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedBytesWrapper */
-                repeatedBytesWrapper?: (google.protobuf.BytesValue.$Properties[]|null);
-
-                /** TestAllTypesProto3 optionalDuration */
-                optionalDuration?: (google.protobuf.Duration.$Properties|null);
-
-                /** TestAllTypesProto3 optionalTimestamp */
-                optionalTimestamp?: (google.protobuf.Timestamp.$Properties|null);
-
-                /** TestAllTypesProto3 optionalFieldMask */
-                optionalFieldMask?: (google.protobuf.FieldMask.$Properties|null);
-
-                /** TestAllTypesProto3 optionalStruct */
-                optionalStruct?: (google.protobuf.Struct.$Properties|null);
-
-                /** TestAllTypesProto3 optionalAny */
-                optionalAny?: (google.protobuf.Any.$Properties|null);
-
-                /** TestAllTypesProto3 optionalValue */
-                optionalValue?: (google.protobuf.Value.$Properties|null);
-
-                /** TestAllTypesProto3 optionalNullValue */
-                optionalNullValue?: (google.protobuf.NullValue|null);
-
-                /** TestAllTypesProto3 repeatedDuration */
-                repeatedDuration?: (google.protobuf.Duration.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedTimestamp */
-                repeatedTimestamp?: (google.protobuf.Timestamp.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedFieldmask */
-                repeatedFieldmask?: (google.protobuf.FieldMask.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedStruct */
-                repeatedStruct?: (google.protobuf.Struct.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedAny */
-                repeatedAny?: (google.protobuf.Any.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedValue */
-                repeatedValue?: (google.protobuf.Value.$Properties[]|null);
-
-                /** TestAllTypesProto3 repeatedListValue */
-                repeatedListValue?: (google.protobuf.ListValue.$Properties[]|null);
-
-                /** TestAllTypesProto3 fieldname1 */
-                fieldname1?: (number|null);
-
-                /** TestAllTypesProto3 fieldName2 */
-                fieldName2?: (number|null);
-
-                /** TestAllTypesProto3 _fieldName3 */
-                _fieldName3?: (number|null);
-
-                /** TestAllTypesProto3 field_Name4_ */
-                field_Name4_?: (number|null);
-
-                /** TestAllTypesProto3 field0name5 */
-                field0name5?: (number|null);
-
-                /** TestAllTypesProto3 field_0Name6 */
-                field_0Name6?: (number|null);
-
-                /** TestAllTypesProto3 fieldName7 */
-                fieldName7?: (number|null);
-
-                /** TestAllTypesProto3 FieldName8 */
-                FieldName8?: (number|null);
-
-                /** TestAllTypesProto3 field_Name9 */
-                field_Name9?: (number|null);
-
-                /** TestAllTypesProto3 Field_Name10 */
-                Field_Name10?: (number|null);
-
-                /** TestAllTypesProto3 FIELD_NAME11 */
-                FIELD_NAME11?: (number|null);
-
-                /** TestAllTypesProto3 FIELDName12 */
-                FIELDName12?: (number|null);
-
-                /** TestAllTypesProto3 _FieldName13 */
-                _FieldName13?: (number|null);
-
-                /** TestAllTypesProto3 __FieldName14 */
-                __FieldName14?: (number|null);
-
-                /** TestAllTypesProto3 field_Name15 */
-                field_Name15?: (number|null);
-
-                /** TestAllTypesProto3 field__Name16 */
-                field__Name16?: (number|null);
-
-                /** TestAllTypesProto3 fieldName17__ */
-                fieldName17__?: (number|null);
-
-                /** TestAllTypesProto3 FieldName18__ */
-                FieldName18__?: (number|null);
-
-                /** TestAllTypesProto3 oneofField */
-                oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum"|"oneofNullValue");
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Narrowed shape of a TestAllTypesProto3. */
-            type $Shape = {
-              optionalInt32?: number|null;
-              optionalInt64?: number|Long|null;
-              optionalUint32?: number|null;
-              optionalUint64?: number|Long|null;
-              optionalSint32?: number|null;
-              optionalSint64?: number|Long|null;
-              optionalFixed32?: number|null;
-              optionalFixed64?: number|Long|null;
-              optionalSfixed32?: number|null;
-              optionalSfixed64?: number|Long|null;
-              optionalFloat?: number|null;
-              optionalDouble?: number|null;
-              optionalBool?: boolean|null;
-              optionalString?: string|null;
-              optionalBytes?: Uint8Array|null;
-              optionalNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
-              optionalForeignMessage?: protobuf_test_messages.proto3.ForeignMessage.$Shape|null;
-              optionalNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null;
-              optionalForeignEnum?: protobuf_test_messages.proto3.ForeignEnum|null;
-              optionalAliasedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum|null;
-              optionalStringPiece?: string|null;
-              optionalCord?: string|null;
-              recursiveMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape|null;
-              repeatedInt32?: number[]|null;
-              repeatedInt64?: number|Long[]|null;
-              repeatedUint32?: number[]|null;
-              repeatedUint64?: number|Long[]|null;
-              repeatedSint32?: number[]|null;
-              repeatedSint64?: number|Long[]|null;
-              repeatedFixed32?: number[]|null;
-              repeatedFixed64?: number|Long[]|null;
-              repeatedSfixed32?: number[]|null;
-              repeatedSfixed64?: number|Long[]|null;
-              repeatedFloat?: number[]|null;
-              repeatedDouble?: number[]|null;
-              repeatedBool?: boolean[]|null;
-              repeatedString?: string[]|null;
-              repeatedBytes?: Uint8Array[]|null;
-              repeatedNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape[]|null;
-              repeatedForeignMessage?: protobuf_test_messages.proto3.ForeignMessage.$Shape[]|null;
-              repeatedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
-              repeatedForeignEnum?: protobuf_test_messages.proto3.ForeignEnum[]|null;
-              repeatedStringPiece?: string[]|null;
-              repeatedCord?: string[]|null;
-              packedInt32?: number[]|null;
-              packedInt64?: number|Long[]|null;
-              packedUint32?: number[]|null;
-              packedUint64?: number|Long[]|null;
-              packedSint32?: number[]|null;
-              packedSint64?: number|Long[]|null;
-              packedFixed32?: number[]|null;
-              packedFixed64?: number|Long[]|null;
-              packedSfixed32?: number[]|null;
-              packedSfixed64?: number|Long[]|null;
-              packedFloat?: number[]|null;
-              packedDouble?: number[]|null;
-              packedBool?: boolean[]|null;
-              packedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
-              unpackedInt32?: number[]|null;
-              unpackedInt64?: number|Long[]|null;
-              unpackedUint32?: number[]|null;
-              unpackedUint64?: number|Long[]|null;
-              unpackedSint32?: number[]|null;
-              unpackedSint64?: number|Long[]|null;
-              unpackedFixed32?: number[]|null;
-              unpackedFixed64?: number|Long[]|null;
-              unpackedSfixed32?: number[]|null;
-              unpackedSfixed64?: number|Long[]|null;
-              unpackedFloat?: number[]|null;
-              unpackedDouble?: number[]|null;
-              unpackedBool?: boolean[]|null;
-              unpackedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
-              mapInt32Int32?: { [k: string]: number }|null;
-              mapInt64Int64?: { [k: string]: number|Long }|null;
-              mapUint32Uint32?: { [k: string]: number }|null;
-              mapUint64Uint64?: { [k: string]: number|Long }|null;
-              mapSint32Sint32?: { [k: string]: number }|null;
-              mapSint64Sint64?: { [k: string]: number|Long }|null;
-              mapFixed32Fixed32?: { [k: string]: number }|null;
-              mapFixed64Fixed64?: { [k: string]: number|Long }|null;
-              mapSfixed32Sfixed32?: { [k: string]: number }|null;
-              mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
-              mapInt32Float?: { [k: string]: number }|null;
-              mapInt32Double?: { [k: string]: number }|null;
-              mapBoolBool?: { [k: string]: boolean }|null;
-              mapStringString?: { [k: string]: string }|null;
-              mapStringBytes?: { [k: string]: Uint8Array }|null;
-              mapStringNestedMessage?: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape }|null;
-              mapStringForeignMessage?: { [k: string]: protobuf_test_messages.proto3.ForeignMessage.$Shape }|null;
-              mapStringNestedEnum?: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum }|null;
-              mapStringForeignEnum?: { [k: string]: protobuf_test_messages.proto3.ForeignEnum }|null;
-              oneofUint32?: number|null;
-              oneofNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
-              oneofString?: string|null;
-              oneofBytes?: Uint8Array|null;
-              oneofBool?: boolean|null;
-              oneofUint64?: number|Long|null;
-              oneofFloat?: number|null;
-              oneofDouble?: number|null;
-              oneofEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null;
-              oneofNullValue?: google.protobuf.NullValue|null;
-              optionalBoolWrapper?: google.protobuf.BoolValue.$Shape|null;
-              optionalInt32Wrapper?: google.protobuf.Int32Value.$Shape|null;
-              optionalInt64Wrapper?: google.protobuf.Int64Value.$Shape|null;
-              optionalUint32Wrapper?: google.protobuf.UInt32Value.$Shape|null;
-              optionalUint64Wrapper?: google.protobuf.UInt64Value.$Shape|null;
-              optionalFloatWrapper?: google.protobuf.FloatValue.$Shape|null;
-              optionalDoubleWrapper?: google.protobuf.DoubleValue.$Shape|null;
-              optionalStringWrapper?: google.protobuf.StringValue.$Shape|null;
-              optionalBytesWrapper?: google.protobuf.BytesValue.$Shape|null;
-              repeatedBoolWrapper?: google.protobuf.BoolValue.$Shape[]|null;
-              repeatedInt32Wrapper?: google.protobuf.Int32Value.$Shape[]|null;
-              repeatedInt64Wrapper?: google.protobuf.Int64Value.$Shape[]|null;
-              repeatedUint32Wrapper?: google.protobuf.UInt32Value.$Shape[]|null;
-              repeatedUint64Wrapper?: google.protobuf.UInt64Value.$Shape[]|null;
-              repeatedFloatWrapper?: google.protobuf.FloatValue.$Shape[]|null;
-              repeatedDoubleWrapper?: google.protobuf.DoubleValue.$Shape[]|null;
-              repeatedStringWrapper?: google.protobuf.StringValue.$Shape[]|null;
-              repeatedBytesWrapper?: google.protobuf.BytesValue.$Shape[]|null;
-              optionalDuration?: google.protobuf.Duration.$Shape|null;
-              optionalTimestamp?: google.protobuf.Timestamp.$Shape|null;
-              optionalFieldMask?: google.protobuf.FieldMask.$Shape|null;
-              optionalStruct?: google.protobuf.Struct.$Shape|null;
-              optionalAny?: google.protobuf.Any.$Shape|null;
-              optionalValue?: google.protobuf.Value.$Shape|null;
-              optionalNullValue?: google.protobuf.NullValue|null;
-              repeatedDuration?: google.protobuf.Duration.$Shape[]|null;
-              repeatedTimestamp?: google.protobuf.Timestamp.$Shape[]|null;
-              repeatedFieldmask?: google.protobuf.FieldMask.$Shape[]|null;
-              repeatedStruct?: google.protobuf.Struct.$Shape[]|null;
-              repeatedAny?: google.protobuf.Any.$Shape[]|null;
-              repeatedValue?: google.protobuf.Value.$Shape[]|null;
-              repeatedListValue?: google.protobuf.ListValue.$Shape[]|null;
-              fieldname1?: number|null;
-              fieldName2?: number|null;
-              _fieldName3?: number|null;
-              field_Name4_?: number|null;
-              field0name5?: number|null;
-              field_0Name6?: number|null;
-              fieldName7?: number|null;
-              FieldName8?: number|null;
-              field_Name9?: number|null;
-              Field_Name10?: number|null;
-              FIELD_NAME11?: number|null;
-              FIELDName12?: number|null;
-              _FieldName13?: number|null;
-              __FieldName14?: number|null;
-              field_Name15?: number|null;
-              field__Name16?: number|null;
-              fieldName17__?: number|null;
-              FieldName18__?: number|null;
-              $unknowns?: Uint8Array[];
-            } & (
-              ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum; oneofNullValue?: null }|{ oneofField?: "oneofNullValue"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue: google.protobuf.NullValue })
-            );
-
-            /**
-             * Properties of a NestedMessage.
-             * @deprecated Use protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties instead.
-             */
-            interface INestedMessage extends protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties {
-            }
-
-            /** Represents a NestedMessage. */
-            class NestedMessage {
-
-                /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
-                private constructor();
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-
-                /** NestedMessage a. */
-                a: number;
-
-                /** NestedMessage corecursive. */
-                corecursive?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
-
-                /**
-                 * Creates a new NestedMessage instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns NestedMessage instance
-                 */
-                static create(properties: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape;
-                static create(properties?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage;
-
-                /**
-                 * Encodes the specified NestedMessage message. Does not implicitly {@link protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.verify|verify} messages.
-                 * @param message NestedMessage message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encode(message: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified NestedMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.verify|verify} messages.
-                 * @param message NestedMessage message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                static encodeDelimited(message: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a NestedMessage message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns {protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape} NestedMessage
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape;
-
-                /**
-                 * Decodes a NestedMessage message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns {protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape} NestedMessage
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape;
-
-                /**
-                 * Verifies a NestedMessage message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a NestedMessage message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns NestedMessage
-                 */
-                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage;
-
-                /**
-                 * Creates a plain object from a NestedMessage message. Also converts values to other types if specified.
-                 * @param message NestedMessage
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                static toObject(message: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this NestedMessage to JSON.
-                 * @returns JSON object
-                 */
-                toJSON(): { [k: string]: any };
-
-                /**
-                 * Gets the type url for NestedMessage
-                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-                 * @returns The type url
-                 */
-                static getTypeUrl(prefix?: string): string;
-            }
-
-            namespace NestedMessage {
-
-                /** Properties of a NestedMessage. */
-                interface $Properties {
-
-                    /** NestedMessage a */
-                    a?: (number|null);
-
-                    /** NestedMessage corecursive */
-                    corecursive?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
-
-                    /** Unknown fields preserved while decoding when enabled */
-                    $unknowns?: Uint8Array[];
-                }
-
-                /** Shape of a NestedMessage. */
-                type $Shape = {
-                  a?: number|null;
-                  corecursive?: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape|null;
-                  $unknowns?: Uint8Array[];
-                };
-            }
-
-            /** NestedEnum enum. */
-            enum NestedEnum {
-
-                /** FOO value */
-                FOO = 0,
-
-                /** BAR value */
-                BAR = 1,
-
-                /** BAZ value */
-                BAZ = 2,
-
-                /** NEG value */
-                NEG = -1
-            }
-
-            /** AliasedEnum enum. */
-            enum AliasedEnum {
-
-                /** ALIAS_FOO value */
-                ALIAS_FOO = 0,
-
-                /** ALIAS_BAR value */
-                ALIAS_BAR = 1,
-
-                /** ALIAS_BAZ value */
-                ALIAS_BAZ = 2,
-
-                /** MOO value */
-                MOO = 2,
-
-                /** moo value */
-                moo = 2,
-
-                /** bAz value */
-                bAz = 2
-            }
-        }
-
-        /**
-         * Properties of a ForeignMessage.
-         * @deprecated Use protobuf_test_messages.proto3.ForeignMessage.$Properties instead.
-         */
-        interface IForeignMessage extends protobuf_test_messages.proto3.ForeignMessage.$Properties {
-        }
-
-        /** Represents a ForeignMessage. */
-        class ForeignMessage {
-
-            /** Reflection-backed declarations are not constructable. Use ForeignMessage.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /** ForeignMessage c. */
-            c: number;
-
-            /**
-             * Creates a new ForeignMessage instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns ForeignMessage instance
-             */
-            static create(properties: protobuf_test_messages.proto3.ForeignMessage.$Shape): protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape;
-            static create(properties?: protobuf_test_messages.proto3.ForeignMessage.$Properties): protobuf_test_messages.proto3.ForeignMessage;
-
-            /**
-             * Encodes the specified ForeignMessage message. Does not implicitly {@link protobuf_test_messages.proto3.ForeignMessage.verify|verify} messages.
-             * @param message ForeignMessage message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto3.ForeignMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified ForeignMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.ForeignMessage.verify|verify} messages.
-             * @param message ForeignMessage message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto3.ForeignMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a ForeignMessage message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape} ForeignMessage
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape;
-
-            /**
-             * Decodes a ForeignMessage message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape} ForeignMessage
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape;
-
-            /**
-             * Verifies a ForeignMessage message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a ForeignMessage message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns ForeignMessage
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.ForeignMessage;
-
-            /**
-             * Creates a plain object from a ForeignMessage message. Also converts values to other types if specified.
-             * @param message ForeignMessage
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto3.ForeignMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this ForeignMessage to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for ForeignMessage
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace ForeignMessage {
-
-            /** Properties of a ForeignMessage. */
-            interface $Properties {
-
-                /** ForeignMessage c */
-                c?: (number|null);
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of a ForeignMessage. */
-            type $Shape = protobuf_test_messages.proto3.ForeignMessage.$Properties;
-        }
-
-        /** ForeignEnum enum. */
-        enum ForeignEnum {
-
-            /** FOREIGN_FOO value */
-            FOREIGN_FOO = 0,
-
-            /** FOREIGN_BAR value */
-            FOREIGN_BAR = 1,
-
-            /** FOREIGN_BAZ value */
-            FOREIGN_BAZ = 2
-        }
-
-        /**
-         * Properties of a NullHypothesisProto3.
-         * @deprecated Use protobuf_test_messages.proto3.NullHypothesisProto3.$Properties instead.
-         */
-        interface INullHypothesisProto3 extends protobuf_test_messages.proto3.NullHypothesisProto3.$Properties {
-        }
-
-        /** Represents a NullHypothesisProto3. */
-        class NullHypothesisProto3 {
-
-            /** Reflection-backed declarations are not constructable. Use NullHypothesisProto3.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /**
-             * Creates a new NullHypothesisProto3 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns NullHypothesisProto3 instance
-             */
-            static create(properties: protobuf_test_messages.proto3.NullHypothesisProto3.$Shape): protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape;
-            static create(properties?: protobuf_test_messages.proto3.NullHypothesisProto3.$Properties): protobuf_test_messages.proto3.NullHypothesisProto3;
-
-            /**
-             * Encodes the specified NullHypothesisProto3 message. Does not implicitly {@link protobuf_test_messages.proto3.NullHypothesisProto3.verify|verify} messages.
-             * @param message NullHypothesisProto3 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto3.NullHypothesisProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified NullHypothesisProto3 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.NullHypothesisProto3.verify|verify} messages.
-             * @param message NullHypothesisProto3 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto3.NullHypothesisProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a NullHypothesisProto3 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape} NullHypothesisProto3
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape;
-
-            /**
-             * Decodes a NullHypothesisProto3 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape} NullHypothesisProto3
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape;
-
-            /**
-             * Verifies a NullHypothesisProto3 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a NullHypothesisProto3 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns NullHypothesisProto3
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.NullHypothesisProto3;
-
-            /**
-             * Creates a plain object from a NullHypothesisProto3 message. Also converts values to other types if specified.
-             * @param message NullHypothesisProto3
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto3.NullHypothesisProto3, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this NullHypothesisProto3 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for NullHypothesisProto3
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace NullHypothesisProto3 {
-
-            /** Properties of a NullHypothesisProto3. */
-            interface $Properties {
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of a NullHypothesisProto3. */
-            type $Shape = protobuf_test_messages.proto3.NullHypothesisProto3.$Properties;
-        }
-
-        /**
-         * Properties of an EnumOnlyProto3.
-         * @deprecated Use protobuf_test_messages.proto3.EnumOnlyProto3.$Properties instead.
-         */
-        interface IEnumOnlyProto3 extends protobuf_test_messages.proto3.EnumOnlyProto3.$Properties {
-        }
-
-        /** Represents an EnumOnlyProto3. */
-        class EnumOnlyProto3 {
-
-            /** Reflection-backed declarations are not constructable. Use EnumOnlyProto3.create(...) instead. */
-            private constructor();
-
-            /** Unknown fields preserved while decoding when enabled */
-            $unknowns?: Uint8Array[];
-
-            /**
-             * Creates a new EnumOnlyProto3 instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns EnumOnlyProto3 instance
-             */
-            static create(properties: protobuf_test_messages.proto3.EnumOnlyProto3.$Shape): protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape;
-            static create(properties?: protobuf_test_messages.proto3.EnumOnlyProto3.$Properties): protobuf_test_messages.proto3.EnumOnlyProto3;
-
-            /**
-             * Encodes the specified EnumOnlyProto3 message. Does not implicitly {@link protobuf_test_messages.proto3.EnumOnlyProto3.verify|verify} messages.
-             * @param message EnumOnlyProto3 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encode(message: protobuf_test_messages.proto3.EnumOnlyProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified EnumOnlyProto3 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.EnumOnlyProto3.verify|verify} messages.
-             * @param message EnumOnlyProto3 message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            static encodeDelimited(message: protobuf_test_messages.proto3.EnumOnlyProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an EnumOnlyProto3 message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns {protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape} EnumOnlyProto3
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape;
-
-            /**
-             * Decodes an EnumOnlyProto3 message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns {protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape} EnumOnlyProto3
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape;
-
-            /**
-             * Verifies an EnumOnlyProto3 message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an EnumOnlyProto3 message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns EnumOnlyProto3
-             */
-            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.EnumOnlyProto3;
-
-            /**
-             * Creates a plain object from an EnumOnlyProto3 message. Also converts values to other types if specified.
-             * @param message EnumOnlyProto3
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            static toObject(message: protobuf_test_messages.proto3.EnumOnlyProto3, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this EnumOnlyProto3 to JSON.
-             * @returns JSON object
-             */
-            toJSON(): { [k: string]: any };
-
-            /**
-             * Gets the type url for EnumOnlyProto3
-             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
-             * @returns The type url
-             */
-            static getTypeUrl(prefix?: string): string;
-        }
-
-        namespace EnumOnlyProto3 {
-
-            /** Properties of an EnumOnlyProto3. */
-            interface $Properties {
-
-                /** Unknown fields preserved while decoding when enabled */
-                $unknowns?: Uint8Array[];
-            }
-
-            /** Shape of an EnumOnlyProto3. */
-            type $Shape = protobuf_test_messages.proto3.EnumOnlyProto3.$Properties;
-
-            /** Bool enum. */
-            enum Bool {
-
-                /** kFalse value */
-                kFalse = 0,
-
-                /** kTrue value */
-                kTrue = 1
-            }
-        }
-    }
 
     /** Namespace editions. */
     namespace editions {
@@ -7917,15 +1641,15 @@ export namespace protobuf_test_messages {
               optionalCord?: string|null;
               recursiveMessage?: protobuf_test_messages.editions.TestAllTypesEdition2023.$Shape|null;
               repeatedInt32?: number[]|null;
-              repeatedInt64?: number|Long[]|null;
+              repeatedInt64?: (number|Long)[]|null;
               repeatedUint32?: number[]|null;
-              repeatedUint64?: number|Long[]|null;
+              repeatedUint64?: (number|Long)[]|null;
               repeatedSint32?: number[]|null;
-              repeatedSint64?: number|Long[]|null;
+              repeatedSint64?: (number|Long)[]|null;
               repeatedFixed32?: number[]|null;
-              repeatedFixed64?: number|Long[]|null;
+              repeatedFixed64?: (number|Long)[]|null;
               repeatedSfixed32?: number[]|null;
-              repeatedSfixed64?: number|Long[]|null;
+              repeatedSfixed64?: (number|Long)[]|null;
               repeatedFloat?: number[]|null;
               repeatedDouble?: number[]|null;
               repeatedBool?: boolean[]|null;
@@ -7938,29 +1662,29 @@ export namespace protobuf_test_messages {
               repeatedStringPiece?: string[]|null;
               repeatedCord?: string[]|null;
               packedInt32?: number[]|null;
-              packedInt64?: number|Long[]|null;
+              packedInt64?: (number|Long)[]|null;
               packedUint32?: number[]|null;
-              packedUint64?: number|Long[]|null;
+              packedUint64?: (number|Long)[]|null;
               packedSint32?: number[]|null;
-              packedSint64?: number|Long[]|null;
+              packedSint64?: (number|Long)[]|null;
               packedFixed32?: number[]|null;
-              packedFixed64?: number|Long[]|null;
+              packedFixed64?: (number|Long)[]|null;
               packedSfixed32?: number[]|null;
-              packedSfixed64?: number|Long[]|null;
+              packedSfixed64?: (number|Long)[]|null;
               packedFloat?: number[]|null;
               packedDouble?: number[]|null;
               packedBool?: boolean[]|null;
               packedNestedEnum?: protobuf_test_messages.editions.TestAllTypesEdition2023.NestedEnum[]|null;
               unpackedInt32?: number[]|null;
-              unpackedInt64?: number|Long[]|null;
+              unpackedInt64?: (number|Long)[]|null;
               unpackedUint32?: number[]|null;
-              unpackedUint64?: number|Long[]|null;
+              unpackedUint64?: (number|Long)[]|null;
               unpackedSint32?: number[]|null;
-              unpackedSint64?: number|Long[]|null;
+              unpackedSint64?: (number|Long)[]|null;
               unpackedFixed32?: number[]|null;
-              unpackedFixed64?: number|Long[]|null;
+              unpackedFixed64?: (number|Long)[]|null;
               unpackedSfixed32?: number[]|null;
-              unpackedSfixed64?: number|Long[]|null;
+              unpackedSfixed64?: (number|Long)[]|null;
               unpackedFloat?: number[]|null;
               unpackedDouble?: number[]|null;
               unpackedBool?: boolean[]|null;
@@ -8127,22 +1851,6 @@ export namespace protobuf_test_messages {
                 };
             }
 
-            /** NestedEnum enum. */
-            enum NestedEnum {
-
-                /** FOO value */
-                FOO = 0,
-
-                /** BAR value */
-                BAR = 1,
-
-                /** BAZ value */
-                BAZ = 2,
-
-                /** NEG value */
-                NEG = -1
-            }
-
             /**
              * Properties of a GroupLikeType.
              * @deprecated Use protobuf_test_messages.editions.TestAllTypesEdition2023.GroupLikeType.$Properties instead.
@@ -8262,6 +1970,22 @@ export namespace protobuf_test_messages {
                 /** Shape of a GroupLikeType. */
                 type $Shape = protobuf_test_messages.editions.TestAllTypesEdition2023.GroupLikeType.$Properties;
             }
+
+            /** NestedEnum enum. */
+            enum NestedEnum {
+
+                /** FOO value */
+                FOO = 0,
+
+                /** BAR value */
+                BAR = 1,
+
+                /** BAZ value */
+                BAZ = 2,
+
+                /** NEG value */
+                NEG = -1
+            }
         }
 
         /**
@@ -8378,19 +2102,6 @@ export namespace protobuf_test_messages {
             type $Shape = protobuf_test_messages.editions.ForeignMessageEdition2023.$Properties;
         }
 
-        /** ForeignEnumEdition2023 enum. */
-        enum ForeignEnumEdition2023 {
-
-            /** FOREIGN_FOO value */
-            FOREIGN_FOO = 0,
-
-            /** FOREIGN_BAR value */
-            FOREIGN_BAR = 1,
-
-            /** FOREIGN_BAZ value */
-            FOREIGN_BAZ = 2
-        }
-
         /**
          * Properties of a GroupLikeType.
          * @deprecated Use protobuf_test_messages.editions.GroupLikeType.$Properties instead.
@@ -8503,6 +2214,19 @@ export namespace protobuf_test_messages {
 
             /** Shape of a GroupLikeType. */
             type $Shape = protobuf_test_messages.editions.GroupLikeType.$Properties;
+        }
+
+        /** ForeignEnumEdition2023 enum. */
+        enum ForeignEnumEdition2023 {
+
+            /** FOREIGN_FOO value */
+            FOREIGN_FOO = 0,
+
+            /** FOREIGN_BAR value */
+            FOREIGN_BAR = 1,
+
+            /** FOREIGN_BAZ value */
+            FOREIGN_BAZ = 2
         }
 
         /** Namespace proto2. */
@@ -8890,17 +2614,17 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto2 fieldName2. */
                 fieldName2: number;
 
-                /** TestAllTypesProto2 _fieldName3. */
-                _fieldName3: number;
+                /** TestAllTypesProto2 FieldName3. */
+                FieldName3: number;
 
-                /** TestAllTypesProto2 field_Name4_. */
-                field_Name4_: number;
+                /** TestAllTypesProto2 fieldName4. */
+                fieldName4: number;
 
                 /** TestAllTypesProto2 field0name5. */
                 field0name5: number;
 
-                /** TestAllTypesProto2 field_0Name6. */
-                field_0Name6: number;
+                /** TestAllTypesProto2 field0Name6. */
+                field0Name6: number;
 
                 /** TestAllTypesProto2 fieldName7. */
                 fieldName7: number;
@@ -8908,35 +2632,35 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto2 FieldName8. */
                 FieldName8: number;
 
-                /** TestAllTypesProto2 field_Name9. */
-                field_Name9: number;
+                /** TestAllTypesProto2 fieldName9. */
+                fieldName9: number;
 
-                /** TestAllTypesProto2 Field_Name10. */
-                Field_Name10: number;
+                /** TestAllTypesProto2 FieldName10. */
+                FieldName10: number;
 
-                /** TestAllTypesProto2 FIELD_NAME11. */
-                FIELD_NAME11: number;
+                /** TestAllTypesProto2 FIELDNAME11. */
+                FIELDNAME11: number;
 
                 /** TestAllTypesProto2 FIELDName12. */
                 FIELDName12: number;
 
-                /** TestAllTypesProto2 _FieldName13. */
-                _FieldName13: number;
+                /** TestAllTypesProto2 FieldName13. */
+                FieldName13: number;
 
-                /** TestAllTypesProto2 __FieldName14. */
-                __FieldName14: number;
+                /** TestAllTypesProto2 FieldName14. */
+                FieldName14: number;
 
-                /** TestAllTypesProto2 field_Name15. */
-                field_Name15: number;
+                /** TestAllTypesProto2 fieldName15. */
+                fieldName15: number;
 
-                /** TestAllTypesProto2 field__Name16. */
-                field__Name16: number;
+                /** TestAllTypesProto2 fieldName16. */
+                fieldName16: number;
 
-                /** TestAllTypesProto2 fieldName17__. */
-                fieldName17__: number;
+                /** TestAllTypesProto2 fieldName17. */
+                fieldName17: number;
 
-                /** TestAllTypesProto2 FieldName18__. */
-                FieldName18__: number;
+                /** TestAllTypesProto2 FieldName18. */
+                FieldName18: number;
 
                 /** TestAllTypesProto2 messageSetCorrect. */
                 messageSetCorrect?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties|null);
@@ -9388,17 +3112,17 @@ export namespace protobuf_test_messages {
                     /** TestAllTypesProto2 fieldName2 */
                     fieldName2?: (number|null);
 
-                    /** TestAllTypesProto2 _fieldName3 */
-                    _fieldName3?: (number|null);
+                    /** TestAllTypesProto2 FieldName3 */
+                    FieldName3?: (number|null);
 
-                    /** TestAllTypesProto2 field_Name4_ */
-                    field_Name4_?: (number|null);
+                    /** TestAllTypesProto2 fieldName4 */
+                    fieldName4?: (number|null);
 
                     /** TestAllTypesProto2 field0name5 */
                     field0name5?: (number|null);
 
-                    /** TestAllTypesProto2 field_0Name6 */
-                    field_0Name6?: (number|null);
+                    /** TestAllTypesProto2 field0Name6 */
+                    field0Name6?: (number|null);
 
                     /** TestAllTypesProto2 fieldName7 */
                     fieldName7?: (number|null);
@@ -9406,35 +3130,35 @@ export namespace protobuf_test_messages {
                     /** TestAllTypesProto2 FieldName8 */
                     FieldName8?: (number|null);
 
-                    /** TestAllTypesProto2 field_Name9 */
-                    field_Name9?: (number|null);
+                    /** TestAllTypesProto2 fieldName9 */
+                    fieldName9?: (number|null);
 
-                    /** TestAllTypesProto2 Field_Name10 */
-                    Field_Name10?: (number|null);
+                    /** TestAllTypesProto2 FieldName10 */
+                    FieldName10?: (number|null);
 
-                    /** TestAllTypesProto2 FIELD_NAME11 */
-                    FIELD_NAME11?: (number|null);
+                    /** TestAllTypesProto2 FIELDNAME11 */
+                    FIELDNAME11?: (number|null);
 
                     /** TestAllTypesProto2 FIELDName12 */
                     FIELDName12?: (number|null);
 
-                    /** TestAllTypesProto2 _FieldName13 */
-                    _FieldName13?: (number|null);
+                    /** TestAllTypesProto2 FieldName13 */
+                    FieldName13?: (number|null);
 
-                    /** TestAllTypesProto2 __FieldName14 */
-                    __FieldName14?: (number|null);
+                    /** TestAllTypesProto2 FieldName14 */
+                    FieldName14?: (number|null);
 
-                    /** TestAllTypesProto2 field_Name15 */
-                    field_Name15?: (number|null);
+                    /** TestAllTypesProto2 fieldName15 */
+                    fieldName15?: (number|null);
 
-                    /** TestAllTypesProto2 field__Name16 */
-                    field__Name16?: (number|null);
+                    /** TestAllTypesProto2 fieldName16 */
+                    fieldName16?: (number|null);
 
-                    /** TestAllTypesProto2 fieldName17__ */
-                    fieldName17__?: (number|null);
+                    /** TestAllTypesProto2 fieldName17 */
+                    fieldName17?: (number|null);
 
-                    /** TestAllTypesProto2 FieldName18__ */
-                    FieldName18__?: (number|null);
+                    /** TestAllTypesProto2 FieldName18 */
+                    FieldName18?: (number|null);
 
                     /** TestAllTypesProto2 messageSetCorrect */
                     messageSetCorrect?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties|null);
@@ -9477,15 +3201,15 @@ export namespace protobuf_test_messages {
                   optionalCord?: string|null;
                   recursiveMessage?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.$Shape|null;
                   repeatedInt32?: number[]|null;
-                  repeatedInt64?: number|Long[]|null;
+                  repeatedInt64?: (number|Long)[]|null;
                   repeatedUint32?: number[]|null;
-                  repeatedUint64?: number|Long[]|null;
+                  repeatedUint64?: (number|Long)[]|null;
                   repeatedSint32?: number[]|null;
-                  repeatedSint64?: number|Long[]|null;
+                  repeatedSint64?: (number|Long)[]|null;
                   repeatedFixed32?: number[]|null;
-                  repeatedFixed64?: number|Long[]|null;
+                  repeatedFixed64?: (number|Long)[]|null;
                   repeatedSfixed32?: number[]|null;
-                  repeatedSfixed64?: number|Long[]|null;
+                  repeatedSfixed64?: (number|Long)[]|null;
                   repeatedFloat?: number[]|null;
                   repeatedDouble?: number[]|null;
                   repeatedBool?: boolean[]|null;
@@ -9498,29 +3222,29 @@ export namespace protobuf_test_messages {
                   repeatedStringPiece?: string[]|null;
                   repeatedCord?: string[]|null;
                   packedInt32?: number[]|null;
-                  packedInt64?: number|Long[]|null;
+                  packedInt64?: (number|Long)[]|null;
                   packedUint32?: number[]|null;
-                  packedUint64?: number|Long[]|null;
+                  packedUint64?: (number|Long)[]|null;
                   packedSint32?: number[]|null;
-                  packedSint64?: number|Long[]|null;
+                  packedSint64?: (number|Long)[]|null;
                   packedFixed32?: number[]|null;
-                  packedFixed64?: number|Long[]|null;
+                  packedFixed64?: (number|Long)[]|null;
                   packedSfixed32?: number[]|null;
-                  packedSfixed64?: number|Long[]|null;
+                  packedSfixed64?: (number|Long)[]|null;
                   packedFloat?: number[]|null;
                   packedDouble?: number[]|null;
                   packedBool?: boolean[]|null;
                   packedNestedEnum?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[]|null;
                   unpackedInt32?: number[]|null;
-                  unpackedInt64?: number|Long[]|null;
+                  unpackedInt64?: (number|Long)[]|null;
                   unpackedUint32?: number[]|null;
-                  unpackedUint64?: number|Long[]|null;
+                  unpackedUint64?: (number|Long)[]|null;
                   unpackedSint32?: number[]|null;
-                  unpackedSint64?: number|Long[]|null;
+                  unpackedSint64?: (number|Long)[]|null;
                   unpackedFixed32?: number[]|null;
-                  unpackedFixed64?: number|Long[]|null;
+                  unpackedFixed64?: (number|Long)[]|null;
                   unpackedSfixed32?: number[]|null;
-                  unpackedSfixed64?: number|Long[]|null;
+                  unpackedSfixed64?: (number|Long)[]|null;
                   unpackedFloat?: number[]|null;
                   unpackedDouble?: number[]|null;
                   unpackedBool?: boolean[]|null;
@@ -9574,22 +3298,22 @@ export namespace protobuf_test_messages {
                   defaultBytes?: Uint8Array|null;
                   fieldname1?: number|null;
                   fieldName2?: number|null;
-                  _fieldName3?: number|null;
-                  field_Name4_?: number|null;
+                  FieldName3?: number|null;
+                  fieldName4?: number|null;
                   field0name5?: number|null;
-                  field_0Name6?: number|null;
+                  field0Name6?: number|null;
                   fieldName7?: number|null;
                   FieldName8?: number|null;
-                  field_Name9?: number|null;
-                  Field_Name10?: number|null;
-                  FIELD_NAME11?: number|null;
+                  fieldName9?: number|null;
+                  FieldName10?: number|null;
+                  FIELDNAME11?: number|null;
                   FIELDName12?: number|null;
-                  _FieldName13?: number|null;
-                  __FieldName14?: number|null;
-                  field_Name15?: number|null;
-                  field__Name16?: number|null;
-                  fieldName17__?: number|null;
-                  FieldName18__?: number|null;
+                  FieldName13?: number|null;
+                  FieldName14?: number|null;
+                  fieldName15?: number|null;
+                  fieldName16?: number|null;
+                  fieldName17?: number|null;
+                  FieldName18?: number|null;
                   messageSetCorrect?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape|null;
                   ".protobuf_test_messages.editions.proto2.extensionInt32"?: number|null;
                   ".protobuf_test_messages.editions.proto2.groupfield"?: protobuf_test_messages.editions.proto2.GroupField.$Shape|null;
@@ -9720,22 +3444,6 @@ export namespace protobuf_test_messages {
                       corecursive?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.$Shape|null;
                       $unknowns?: Uint8Array[];
                     };
-                }
-
-                /** NestedEnum enum. */
-                enum NestedEnum {
-
-                    /** FOO value */
-                    FOO = 0,
-
-                    /** BAR value */
-                    BAR = 1,
-
-                    /** BAZ value */
-                    BAZ = 2,
-
-                    /** NEG value */
-                    NEG = -1
                 }
 
                 /**
@@ -10468,6 +4176,22 @@ export namespace protobuf_test_messages {
                       ({ oneofField?: undefined; a?: null; b?: null }|{ oneofField?: "a"; a: number; b?: null }|{ oneofField?: "b"; a?: null; b: number })
                     );
                 }
+
+                /** NestedEnum enum. */
+                enum NestedEnum {
+
+                    /** FOO value */
+                    FOO = 0,
+
+                    /** BAR value */
+                    BAR = 1,
+
+                    /** BAZ value */
+                    BAZ = 2,
+
+                    /** NEG value */
+                    NEG = -1
+                }
             }
 
             /**
@@ -10582,19 +4306,6 @@ export namespace protobuf_test_messages {
 
                 /** Shape of a ForeignMessageProto2. */
                 type $Shape = protobuf_test_messages.editions.proto2.ForeignMessageProto2.$Properties;
-            }
-
-            /** ForeignEnumProto2 enum. */
-            enum ForeignEnumProto2 {
-
-                /** FOREIGN_FOO value */
-                FOREIGN_FOO = 0,
-
-                /** FOREIGN_BAR value */
-                FOREIGN_BAR = 1,
-
-                /** FOREIGN_BAZ value */
-                FOREIGN_BAZ = 2
             }
 
             /**
@@ -11908,22 +5619,6 @@ export namespace protobuf_test_messages {
                     type $Shape = protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties;
                 }
 
-                /** NestedEnum enum. */
-                enum NestedEnum {
-
-                    /** FOO value */
-                    FOO = 0,
-
-                    /** BAR value */
-                    BAR = 1,
-
-                    /** BAZ value */
-                    BAZ = 2,
-
-                    /** NEG value */
-                    NEG = -1
-                }
-
                 /**
                  * Properties of a Data.
                  * @deprecated Use protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.$Properties instead.
@@ -12390,6 +6085,22 @@ export namespace protobuf_test_messages {
 
                     /** Shape of a MessageSetCorrectExtension2. */
                     type $Shape = protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties;
+                }
+
+                /** NestedEnum enum. */
+                enum NestedEnum {
+
+                    /** FOO value */
+                    FOO = 0,
+
+                    /** BAR value */
+                    BAR = 1,
+
+                    /** BAZ value */
+                    BAZ = 2,
+
+                    /** NEG value */
+                    NEG = -1
                 }
             }
 
@@ -13085,6 +6796,19 @@ export namespace protobuf_test_messages {
                     type $Shape = protobuf_test_messages.editions.proto2.TestLargeOneof.A5.$Properties;
                 }
             }
+
+            /** ForeignEnumProto2 enum. */
+            enum ForeignEnumProto2 {
+
+                /** FOREIGN_FOO value */
+                FOREIGN_FOO = 0,
+
+                /** FOREIGN_BAR value */
+                FOREIGN_BAR = 1,
+
+                /** FOREIGN_BAZ value */
+                FOREIGN_BAZ = 2
+            }
         }
 
         /** Namespace proto3. */
@@ -13511,17 +7235,17 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto3 fieldName2. */
                 fieldName2: number;
 
-                /** TestAllTypesProto3 _fieldName3. */
-                _fieldName3: number;
+                /** TestAllTypesProto3 FieldName3. */
+                FieldName3: number;
 
-                /** TestAllTypesProto3 field_Name4_. */
-                field_Name4_: number;
+                /** TestAllTypesProto3 fieldName4. */
+                fieldName4: number;
 
                 /** TestAllTypesProto3 field0name5. */
                 field0name5: number;
 
-                /** TestAllTypesProto3 field_0Name6. */
-                field_0Name6: number;
+                /** TestAllTypesProto3 field0Name6. */
+                field0Name6: number;
 
                 /** TestAllTypesProto3 fieldName7. */
                 fieldName7: number;
@@ -13529,35 +7253,35 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto3 FieldName8. */
                 FieldName8: number;
 
-                /** TestAllTypesProto3 field_Name9. */
-                field_Name9: number;
+                /** TestAllTypesProto3 fieldName9. */
+                fieldName9: number;
 
-                /** TestAllTypesProto3 Field_Name10. */
-                Field_Name10: number;
+                /** TestAllTypesProto3 FieldName10. */
+                FieldName10: number;
 
-                /** TestAllTypesProto3 FIELD_NAME11. */
-                FIELD_NAME11: number;
+                /** TestAllTypesProto3 FIELDNAME11. */
+                FIELDNAME11: number;
 
                 /** TestAllTypesProto3 FIELDName12. */
                 FIELDName12: number;
 
-                /** TestAllTypesProto3 _FieldName13. */
-                _FieldName13: number;
+                /** TestAllTypesProto3 FieldName13. */
+                FieldName13: number;
 
-                /** TestAllTypesProto3 __FieldName14. */
-                __FieldName14: number;
+                /** TestAllTypesProto3 FieldName14. */
+                FieldName14: number;
 
-                /** TestAllTypesProto3 field_Name15. */
-                field_Name15: number;
+                /** TestAllTypesProto3 fieldName15. */
+                fieldName15: number;
 
-                /** TestAllTypesProto3 field__Name16. */
-                field__Name16: number;
+                /** TestAllTypesProto3 fieldName16. */
+                fieldName16: number;
 
-                /** TestAllTypesProto3 fieldName17__. */
-                fieldName17__: number;
+                /** TestAllTypesProto3 fieldName17. */
+                fieldName17: number;
 
-                /** TestAllTypesProto3 FieldName18__. */
-                FieldName18__: number;
+                /** TestAllTypesProto3 FieldName18. */
+                FieldName18: number;
 
                 /** TestAllTypesProto3 oneofField. */
                 oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum"|"oneofNullValue");
@@ -14051,17 +7775,17 @@ export namespace protobuf_test_messages {
                     /** TestAllTypesProto3 fieldName2 */
                     fieldName2?: (number|null);
 
-                    /** TestAllTypesProto3 _fieldName3 */
-                    _fieldName3?: (number|null);
+                    /** TestAllTypesProto3 FieldName3 */
+                    FieldName3?: (number|null);
 
-                    /** TestAllTypesProto3 field_Name4_ */
-                    field_Name4_?: (number|null);
+                    /** TestAllTypesProto3 fieldName4 */
+                    fieldName4?: (number|null);
 
                     /** TestAllTypesProto3 field0name5 */
                     field0name5?: (number|null);
 
-                    /** TestAllTypesProto3 field_0Name6 */
-                    field_0Name6?: (number|null);
+                    /** TestAllTypesProto3 field0Name6 */
+                    field0Name6?: (number|null);
 
                     /** TestAllTypesProto3 fieldName7 */
                     fieldName7?: (number|null);
@@ -14069,35 +7793,35 @@ export namespace protobuf_test_messages {
                     /** TestAllTypesProto3 FieldName8 */
                     FieldName8?: (number|null);
 
-                    /** TestAllTypesProto3 field_Name9 */
-                    field_Name9?: (number|null);
+                    /** TestAllTypesProto3 fieldName9 */
+                    fieldName9?: (number|null);
 
-                    /** TestAllTypesProto3 Field_Name10 */
-                    Field_Name10?: (number|null);
+                    /** TestAllTypesProto3 FieldName10 */
+                    FieldName10?: (number|null);
 
-                    /** TestAllTypesProto3 FIELD_NAME11 */
-                    FIELD_NAME11?: (number|null);
+                    /** TestAllTypesProto3 FIELDNAME11 */
+                    FIELDNAME11?: (number|null);
 
                     /** TestAllTypesProto3 FIELDName12 */
                     FIELDName12?: (number|null);
 
-                    /** TestAllTypesProto3 _FieldName13 */
-                    _FieldName13?: (number|null);
+                    /** TestAllTypesProto3 FieldName13 */
+                    FieldName13?: (number|null);
 
-                    /** TestAllTypesProto3 __FieldName14 */
-                    __FieldName14?: (number|null);
+                    /** TestAllTypesProto3 FieldName14 */
+                    FieldName14?: (number|null);
 
-                    /** TestAllTypesProto3 field_Name15 */
-                    field_Name15?: (number|null);
+                    /** TestAllTypesProto3 fieldName15 */
+                    fieldName15?: (number|null);
 
-                    /** TestAllTypesProto3 field__Name16 */
-                    field__Name16?: (number|null);
+                    /** TestAllTypesProto3 fieldName16 */
+                    fieldName16?: (number|null);
 
-                    /** TestAllTypesProto3 fieldName17__ */
-                    fieldName17__?: (number|null);
+                    /** TestAllTypesProto3 fieldName17 */
+                    fieldName17?: (number|null);
 
-                    /** TestAllTypesProto3 FieldName18__ */
-                    FieldName18__?: (number|null);
+                    /** TestAllTypesProto3 FieldName18 */
+                    FieldName18?: (number|null);
 
                     /** TestAllTypesProto3 oneofField */
                     oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum"|"oneofNullValue");
@@ -14132,15 +7856,15 @@ export namespace protobuf_test_messages {
                   optionalCord?: string|null;
                   recursiveMessage?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.$Shape|null;
                   repeatedInt32?: number[]|null;
-                  repeatedInt64?: number|Long[]|null;
+                  repeatedInt64?: (number|Long)[]|null;
                   repeatedUint32?: number[]|null;
-                  repeatedUint64?: number|Long[]|null;
+                  repeatedUint64?: (number|Long)[]|null;
                   repeatedSint32?: number[]|null;
-                  repeatedSint64?: number|Long[]|null;
+                  repeatedSint64?: (number|Long)[]|null;
                   repeatedFixed32?: number[]|null;
-                  repeatedFixed64?: number|Long[]|null;
+                  repeatedFixed64?: (number|Long)[]|null;
                   repeatedSfixed32?: number[]|null;
-                  repeatedSfixed64?: number|Long[]|null;
+                  repeatedSfixed64?: (number|Long)[]|null;
                   repeatedFloat?: number[]|null;
                   repeatedDouble?: number[]|null;
                   repeatedBool?: boolean[]|null;
@@ -14153,29 +7877,29 @@ export namespace protobuf_test_messages {
                   repeatedStringPiece?: string[]|null;
                   repeatedCord?: string[]|null;
                   packedInt32?: number[]|null;
-                  packedInt64?: number|Long[]|null;
+                  packedInt64?: (number|Long)[]|null;
                   packedUint32?: number[]|null;
-                  packedUint64?: number|Long[]|null;
+                  packedUint64?: (number|Long)[]|null;
                   packedSint32?: number[]|null;
-                  packedSint64?: number|Long[]|null;
+                  packedSint64?: (number|Long)[]|null;
                   packedFixed32?: number[]|null;
-                  packedFixed64?: number|Long[]|null;
+                  packedFixed64?: (number|Long)[]|null;
                   packedSfixed32?: number[]|null;
-                  packedSfixed64?: number|Long[]|null;
+                  packedSfixed64?: (number|Long)[]|null;
                   packedFloat?: number[]|null;
                   packedDouble?: number[]|null;
                   packedBool?: boolean[]|null;
                   packedNestedEnum?: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum[]|null;
                   unpackedInt32?: number[]|null;
-                  unpackedInt64?: number|Long[]|null;
+                  unpackedInt64?: (number|Long)[]|null;
                   unpackedUint32?: number[]|null;
-                  unpackedUint64?: number|Long[]|null;
+                  unpackedUint64?: (number|Long)[]|null;
                   unpackedSint32?: number[]|null;
-                  unpackedSint64?: number|Long[]|null;
+                  unpackedSint64?: (number|Long)[]|null;
                   unpackedFixed32?: number[]|null;
-                  unpackedFixed64?: number|Long[]|null;
+                  unpackedFixed64?: (number|Long)[]|null;
                   unpackedSfixed32?: number[]|null;
-                  unpackedSfixed64?: number|Long[]|null;
+                  unpackedSfixed64?: (number|Long)[]|null;
                   unpackedFloat?: number[]|null;
                   unpackedDouble?: number[]|null;
                   unpackedBool?: boolean[]|null;
@@ -14243,22 +7967,22 @@ export namespace protobuf_test_messages {
                   repeatedListValue?: google.protobuf.ListValue.$Shape[]|null;
                   fieldname1?: number|null;
                   fieldName2?: number|null;
-                  _fieldName3?: number|null;
-                  field_Name4_?: number|null;
+                  FieldName3?: number|null;
+                  fieldName4?: number|null;
                   field0name5?: number|null;
-                  field_0Name6?: number|null;
+                  field0Name6?: number|null;
                   fieldName7?: number|null;
                   FieldName8?: number|null;
-                  field_Name9?: number|null;
-                  Field_Name10?: number|null;
-                  FIELD_NAME11?: number|null;
+                  fieldName9?: number|null;
+                  FieldName10?: number|null;
+                  FIELDNAME11?: number|null;
                   FIELDName12?: number|null;
-                  _FieldName13?: number|null;
-                  __FieldName14?: number|null;
-                  field_Name15?: number|null;
-                  field__Name16?: number|null;
-                  fieldName17__?: number|null;
-                  FieldName18__?: number|null;
+                  FieldName13?: number|null;
+                  FieldName14?: number|null;
+                  fieldName15?: number|null;
+                  fieldName16?: number|null;
+                  fieldName17?: number|null;
+                  FieldName18?: number|null;
                   $unknowns?: Uint8Array[];
                 } & (
                   ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedEnum; oneofNullValue?: null }|{ oneofField?: "oneofNullValue"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue: google.protobuf.NullValue })
@@ -14541,19 +8265,6 @@ export namespace protobuf_test_messages {
                 type $Shape = protobuf_test_messages.editions.proto3.ForeignMessage.$Properties;
             }
 
-            /** ForeignEnum enum. */
-            enum ForeignEnum {
-
-                /** FOREIGN_FOO value */
-                FOREIGN_FOO = 0,
-
-                /** FOREIGN_BAR value */
-                FOREIGN_BAR = 1,
-
-                /** FOREIGN_BAZ value */
-                FOREIGN_BAZ = 2
-            }
-
             /**
              * Properties of a NullHypothesisProto3.
              * @deprecated Use protobuf_test_messages.editions.proto3.NullHypothesisProto3.$Properties instead.
@@ -14779,6 +8490,6295 @@ export namespace protobuf_test_messages {
                     kTrue = 1
                 }
             }
+
+            /** ForeignEnum enum. */
+            enum ForeignEnum {
+
+                /** FOREIGN_FOO value */
+                FOREIGN_FOO = 0,
+
+                /** FOREIGN_BAR value */
+                FOREIGN_BAR = 1,
+
+                /** FOREIGN_BAZ value */
+                FOREIGN_BAZ = 2
+            }
+        }
+    }
+
+    /** Namespace proto2. */
+    namespace proto2 {
+
+        /**
+         * Properties of a TestAllTypesProto2.
+         * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.$Properties instead.
+         */
+        interface ITestAllTypesProto2 extends protobuf_test_messages.proto2.TestAllTypesProto2.$Properties {
+        }
+
+        /** Represents a TestAllTypesProto2. */
+        class TestAllTypesProto2 {
+
+            /** Reflection-backed declarations are not constructable. Use TestAllTypesProto2.create(...) instead. */
+            private constructor();
+
+            /** TestAllTypesProto2 .protobuf_test_messages.proto2.extensionInt32 */
+            ".protobuf_test_messages.proto2.extensionInt32": number;
+
+            /** TestAllTypesProto2 .protobuf_test_messages.proto2.groupfield */
+            ".protobuf_test_messages.proto2.groupfield"?: (protobuf_test_messages.proto2.GroupField.$Properties|null);
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** TestAllTypesProto2 optionalInt32. */
+            optionalInt32: number;
+
+            /** TestAllTypesProto2 optionalInt64. */
+            optionalInt64: (number|Long);
+
+            /** TestAllTypesProto2 optionalUint32. */
+            optionalUint32: number;
+
+            /** TestAllTypesProto2 optionalUint64. */
+            optionalUint64: (number|Long);
+
+            /** TestAllTypesProto2 optionalSint32. */
+            optionalSint32: number;
+
+            /** TestAllTypesProto2 optionalSint64. */
+            optionalSint64: (number|Long);
+
+            /** TestAllTypesProto2 optionalFixed32. */
+            optionalFixed32: number;
+
+            /** TestAllTypesProto2 optionalFixed64. */
+            optionalFixed64: (number|Long);
+
+            /** TestAllTypesProto2 optionalSfixed32. */
+            optionalSfixed32: number;
+
+            /** TestAllTypesProto2 optionalSfixed64. */
+            optionalSfixed64: (number|Long);
+
+            /** TestAllTypesProto2 optionalFloat. */
+            optionalFloat: number;
+
+            /** TestAllTypesProto2 optionalDouble. */
+            optionalDouble: number;
+
+            /** TestAllTypesProto2 optionalBool. */
+            optionalBool: boolean;
+
+            /** TestAllTypesProto2 optionalString. */
+            optionalString: string;
+
+            /** TestAllTypesProto2 optionalBytes. */
+            optionalBytes: Uint8Array;
+
+            /** TestAllTypesProto2 optionalNestedMessage. */
+            optionalNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties|null);
+
+            /** TestAllTypesProto2 optionalForeignMessage. */
+            optionalForeignMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties|null);
+
+            /** TestAllTypesProto2 optionalNestedEnum. */
+            optionalNestedEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum;
+
+            /** TestAllTypesProto2 optionalForeignEnum. */
+            optionalForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2;
+
+            /** TestAllTypesProto2 optionalStringPiece. */
+            optionalStringPiece: string;
+
+            /** TestAllTypesProto2 optionalCord. */
+            optionalCord: string;
+
+            /** TestAllTypesProto2 recursiveMessage. */
+            recursiveMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
+
+            /** TestAllTypesProto2 repeatedInt32. */
+            repeatedInt32: number[];
+
+            /** TestAllTypesProto2 repeatedInt64. */
+            repeatedInt64: (number|Long)[];
+
+            /** TestAllTypesProto2 repeatedUint32. */
+            repeatedUint32: number[];
+
+            /** TestAllTypesProto2 repeatedUint64. */
+            repeatedUint64: (number|Long)[];
+
+            /** TestAllTypesProto2 repeatedSint32. */
+            repeatedSint32: number[];
+
+            /** TestAllTypesProto2 repeatedSint64. */
+            repeatedSint64: (number|Long)[];
+
+            /** TestAllTypesProto2 repeatedFixed32. */
+            repeatedFixed32: number[];
+
+            /** TestAllTypesProto2 repeatedFixed64. */
+            repeatedFixed64: (number|Long)[];
+
+            /** TestAllTypesProto2 repeatedSfixed32. */
+            repeatedSfixed32: number[];
+
+            /** TestAllTypesProto2 repeatedSfixed64. */
+            repeatedSfixed64: (number|Long)[];
+
+            /** TestAllTypesProto2 repeatedFloat. */
+            repeatedFloat: number[];
+
+            /** TestAllTypesProto2 repeatedDouble. */
+            repeatedDouble: number[];
+
+            /** TestAllTypesProto2 repeatedBool. */
+            repeatedBool: boolean[];
+
+            /** TestAllTypesProto2 repeatedString. */
+            repeatedString: string[];
+
+            /** TestAllTypesProto2 repeatedBytes. */
+            repeatedBytes: Uint8Array[];
+
+            /** TestAllTypesProto2 repeatedNestedMessage. */
+            repeatedNestedMessage: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties[];
+
+            /** TestAllTypesProto2 repeatedForeignMessage. */
+            repeatedForeignMessage: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties[];
+
+            /** TestAllTypesProto2 repeatedNestedEnum. */
+            repeatedNestedEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[];
+
+            /** TestAllTypesProto2 repeatedForeignEnum. */
+            repeatedForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2[];
+
+            /** TestAllTypesProto2 repeatedStringPiece. */
+            repeatedStringPiece: string[];
+
+            /** TestAllTypesProto2 repeatedCord. */
+            repeatedCord: string[];
+
+            /** TestAllTypesProto2 packedInt32. */
+            packedInt32: number[];
+
+            /** TestAllTypesProto2 packedInt64. */
+            packedInt64: (number|Long)[];
+
+            /** TestAllTypesProto2 packedUint32. */
+            packedUint32: number[];
+
+            /** TestAllTypesProto2 packedUint64. */
+            packedUint64: (number|Long)[];
+
+            /** TestAllTypesProto2 packedSint32. */
+            packedSint32: number[];
+
+            /** TestAllTypesProto2 packedSint64. */
+            packedSint64: (number|Long)[];
+
+            /** TestAllTypesProto2 packedFixed32. */
+            packedFixed32: number[];
+
+            /** TestAllTypesProto2 packedFixed64. */
+            packedFixed64: (number|Long)[];
+
+            /** TestAllTypesProto2 packedSfixed32. */
+            packedSfixed32: number[];
+
+            /** TestAllTypesProto2 packedSfixed64. */
+            packedSfixed64: (number|Long)[];
+
+            /** TestAllTypesProto2 packedFloat. */
+            packedFloat: number[];
+
+            /** TestAllTypesProto2 packedDouble. */
+            packedDouble: number[];
+
+            /** TestAllTypesProto2 packedBool. */
+            packedBool: boolean[];
+
+            /** TestAllTypesProto2 packedNestedEnum. */
+            packedNestedEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[];
+
+            /** TestAllTypesProto2 unpackedInt32. */
+            unpackedInt32: number[];
+
+            /** TestAllTypesProto2 unpackedInt64. */
+            unpackedInt64: (number|Long)[];
+
+            /** TestAllTypesProto2 unpackedUint32. */
+            unpackedUint32: number[];
+
+            /** TestAllTypesProto2 unpackedUint64. */
+            unpackedUint64: (number|Long)[];
+
+            /** TestAllTypesProto2 unpackedSint32. */
+            unpackedSint32: number[];
+
+            /** TestAllTypesProto2 unpackedSint64. */
+            unpackedSint64: (number|Long)[];
+
+            /** TestAllTypesProto2 unpackedFixed32. */
+            unpackedFixed32: number[];
+
+            /** TestAllTypesProto2 unpackedFixed64. */
+            unpackedFixed64: (number|Long)[];
+
+            /** TestAllTypesProto2 unpackedSfixed32. */
+            unpackedSfixed32: number[];
+
+            /** TestAllTypesProto2 unpackedSfixed64. */
+            unpackedSfixed64: (number|Long)[];
+
+            /** TestAllTypesProto2 unpackedFloat. */
+            unpackedFloat: number[];
+
+            /** TestAllTypesProto2 unpackedDouble. */
+            unpackedDouble: number[];
+
+            /** TestAllTypesProto2 unpackedBool. */
+            unpackedBool: boolean[];
+
+            /** TestAllTypesProto2 unpackedNestedEnum. */
+            unpackedNestedEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[];
+
+            /** TestAllTypesProto2 mapInt32Int32. */
+            mapInt32Int32: { [k: string]: number };
+
+            /** TestAllTypesProto2 mapInt64Int64. */
+            mapInt64Int64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto2 mapUint32Uint32. */
+            mapUint32Uint32: { [k: string]: number };
+
+            /** TestAllTypesProto2 mapUint64Uint64. */
+            mapUint64Uint64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto2 mapSint32Sint32. */
+            mapSint32Sint32: { [k: string]: number };
+
+            /** TestAllTypesProto2 mapSint64Sint64. */
+            mapSint64Sint64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto2 mapFixed32Fixed32. */
+            mapFixed32Fixed32: { [k: string]: number };
+
+            /** TestAllTypesProto2 mapFixed64Fixed64. */
+            mapFixed64Fixed64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto2 mapSfixed32Sfixed32. */
+            mapSfixed32Sfixed32: { [k: string]: number };
+
+            /** TestAllTypesProto2 mapSfixed64Sfixed64. */
+            mapSfixed64Sfixed64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto2 mapInt32Bool. */
+            mapInt32Bool: { [k: string]: boolean };
+
+            /** TestAllTypesProto2 mapInt32Float. */
+            mapInt32Float: { [k: string]: number };
+
+            /** TestAllTypesProto2 mapInt32Double. */
+            mapInt32Double: { [k: string]: number };
+
+            /** TestAllTypesProto2 mapInt32NestedMessage. */
+            mapInt32NestedMessage: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties };
+
+            /** TestAllTypesProto2 mapBoolBool. */
+            mapBoolBool: { [k: string]: boolean };
+
+            /** TestAllTypesProto2 mapStringString. */
+            mapStringString: { [k: string]: string };
+
+            /** TestAllTypesProto2 mapStringBytes. */
+            mapStringBytes: { [k: string]: Uint8Array };
+
+            /** TestAllTypesProto2 mapStringNestedMessage. */
+            mapStringNestedMessage: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties };
+
+            /** TestAllTypesProto2 mapStringForeignMessage. */
+            mapStringForeignMessage: { [k: string]: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties };
+
+            /** TestAllTypesProto2 mapStringNestedEnum. */
+            mapStringNestedEnum: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum };
+
+            /** TestAllTypesProto2 mapStringForeignEnum. */
+            mapStringForeignEnum: { [k: string]: protobuf_test_messages.proto2.ForeignEnumProto2 };
+
+            /** TestAllTypesProto2 oneofUint32. */
+            oneofUint32?: (number|null);
+
+            /** TestAllTypesProto2 oneofNestedMessage. */
+            oneofNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties|null);
+
+            /** TestAllTypesProto2 oneofString. */
+            oneofString?: (string|null);
+
+            /** TestAllTypesProto2 oneofBytes. */
+            oneofBytes?: (Uint8Array|null);
+
+            /** TestAllTypesProto2 oneofBool. */
+            oneofBool?: (boolean|null);
+
+            /** TestAllTypesProto2 oneofUint64. */
+            oneofUint64?: (number|Long|null);
+
+            /** TestAllTypesProto2 oneofFloat. */
+            oneofFloat?: (number|null);
+
+            /** TestAllTypesProto2 oneofDouble. */
+            oneofDouble?: (number|null);
+
+            /** TestAllTypesProto2 oneofEnum. */
+            oneofEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null);
+
+            /** TestAllTypesProto2 data. */
+            data?: (protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties|null);
+
+            /** TestAllTypesProto2 multiwordgroupfield. */
+            multiwordgroupfield?: (protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties|null);
+
+            /** TestAllTypesProto2 defaultInt32. */
+            defaultInt32: number;
+
+            /** TestAllTypesProto2 defaultInt64. */
+            defaultInt64: (number|Long);
+
+            /** TestAllTypesProto2 defaultUint32. */
+            defaultUint32: number;
+
+            /** TestAllTypesProto2 defaultUint64. */
+            defaultUint64: (number|Long);
+
+            /** TestAllTypesProto2 defaultSint32. */
+            defaultSint32: number;
+
+            /** TestAllTypesProto2 defaultSint64. */
+            defaultSint64: (number|Long);
+
+            /** TestAllTypesProto2 defaultFixed32. */
+            defaultFixed32: number;
+
+            /** TestAllTypesProto2 defaultFixed64. */
+            defaultFixed64: (number|Long);
+
+            /** TestAllTypesProto2 defaultSfixed32. */
+            defaultSfixed32: number;
+
+            /** TestAllTypesProto2 defaultSfixed64. */
+            defaultSfixed64: (number|Long);
+
+            /** TestAllTypesProto2 defaultFloat. */
+            defaultFloat: number;
+
+            /** TestAllTypesProto2 defaultDouble. */
+            defaultDouble: number;
+
+            /** TestAllTypesProto2 defaultBool. */
+            defaultBool: boolean;
+
+            /** TestAllTypesProto2 defaultString. */
+            defaultString: string;
+
+            /** TestAllTypesProto2 defaultBytes. */
+            defaultBytes: Uint8Array;
+
+            /** TestAllTypesProto2 fieldname1. */
+            fieldname1: number;
+
+            /** TestAllTypesProto2 fieldName2. */
+            fieldName2: number;
+
+            /** TestAllTypesProto2 FieldName3. */
+            FieldName3: number;
+
+            /** TestAllTypesProto2 fieldName4. */
+            fieldName4: number;
+
+            /** TestAllTypesProto2 field0name5. */
+            field0name5: number;
+
+            /** TestAllTypesProto2 field0Name6. */
+            field0Name6: number;
+
+            /** TestAllTypesProto2 fieldName7. */
+            fieldName7: number;
+
+            /** TestAllTypesProto2 FieldName8. */
+            FieldName8: number;
+
+            /** TestAllTypesProto2 fieldName9. */
+            fieldName9: number;
+
+            /** TestAllTypesProto2 FieldName10. */
+            FieldName10: number;
+
+            /** TestAllTypesProto2 FIELDNAME11. */
+            FIELDNAME11: number;
+
+            /** TestAllTypesProto2 FIELDName12. */
+            FIELDName12: number;
+
+            /** TestAllTypesProto2 FieldName13. */
+            FieldName13: number;
+
+            /** TestAllTypesProto2 FieldName14. */
+            FieldName14: number;
+
+            /** TestAllTypesProto2 fieldName15. */
+            fieldName15: number;
+
+            /** TestAllTypesProto2 fieldName16. */
+            fieldName16: number;
+
+            /** TestAllTypesProto2 fieldName17. */
+            fieldName17: number;
+
+            /** TestAllTypesProto2 FieldName18. */
+            FieldName18: number;
+
+            /** TestAllTypesProto2 messageSetCorrect. */
+            messageSetCorrect?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties|null);
+
+            /** TestAllTypesProto2 oneofField. */
+            oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum");
+
+            /**
+             * Creates a new TestAllTypesProto2 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns TestAllTypesProto2 instance
+             */
+            static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2;
+
+            /**
+             * Encodes the specified TestAllTypesProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.verify|verify} messages.
+             * @param message TestAllTypesProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified TestAllTypesProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.verify|verify} messages.
+             * @param message TestAllTypesProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a TestAllTypesProto2 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape} TestAllTypesProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape;
+
+            /**
+             * Decodes a TestAllTypesProto2 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape} TestAllTypesProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2 & protobuf_test_messages.proto2.TestAllTypesProto2.$Shape;
+
+            /**
+             * Verifies a TestAllTypesProto2 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a TestAllTypesProto2 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns TestAllTypesProto2
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2;
+
+            /**
+             * Creates a plain object from a TestAllTypesProto2 message. Also converts values to other types if specified.
+             * @param message TestAllTypesProto2
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this TestAllTypesProto2 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for TestAllTypesProto2
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace TestAllTypesProto2 {
+
+            /** Properties of a TestAllTypesProto2. */
+            interface $Properties {
+
+                /** TestAllTypesProto2 optionalInt32 */
+                optionalInt32?: (number|null);
+
+                /** TestAllTypesProto2 optionalInt64 */
+                optionalInt64?: (number|Long|null);
+
+                /** TestAllTypesProto2 optionalUint32 */
+                optionalUint32?: (number|null);
+
+                /** TestAllTypesProto2 optionalUint64 */
+                optionalUint64?: (number|Long|null);
+
+                /** TestAllTypesProto2 optionalSint32 */
+                optionalSint32?: (number|null);
+
+                /** TestAllTypesProto2 optionalSint64 */
+                optionalSint64?: (number|Long|null);
+
+                /** TestAllTypesProto2 optionalFixed32 */
+                optionalFixed32?: (number|null);
+
+                /** TestAllTypesProto2 optionalFixed64 */
+                optionalFixed64?: (number|Long|null);
+
+                /** TestAllTypesProto2 optionalSfixed32 */
+                optionalSfixed32?: (number|null);
+
+                /** TestAllTypesProto2 optionalSfixed64 */
+                optionalSfixed64?: (number|Long|null);
+
+                /** TestAllTypesProto2 optionalFloat */
+                optionalFloat?: (number|null);
+
+                /** TestAllTypesProto2 optionalDouble */
+                optionalDouble?: (number|null);
+
+                /** TestAllTypesProto2 optionalBool */
+                optionalBool?: (boolean|null);
+
+                /** TestAllTypesProto2 optionalString */
+                optionalString?: (string|null);
+
+                /** TestAllTypesProto2 optionalBytes */
+                optionalBytes?: (Uint8Array|null);
+
+                /** TestAllTypesProto2 optionalNestedMessage */
+                optionalNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties|null);
+
+                /** TestAllTypesProto2 optionalForeignMessage */
+                optionalForeignMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties|null);
+
+                /** TestAllTypesProto2 optionalNestedEnum */
+                optionalNestedEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null);
+
+                /** TestAllTypesProto2 optionalForeignEnum */
+                optionalForeignEnum?: (protobuf_test_messages.proto2.ForeignEnumProto2|null);
+
+                /** TestAllTypesProto2 optionalStringPiece */
+                optionalStringPiece?: (string|null);
+
+                /** TestAllTypesProto2 optionalCord */
+                optionalCord?: (string|null);
+
+                /** TestAllTypesProto2 recursiveMessage */
+                recursiveMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
+
+                /** TestAllTypesProto2 repeatedInt32 */
+                repeatedInt32?: (number[]|null);
+
+                /** TestAllTypesProto2 repeatedInt64 */
+                repeatedInt64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 repeatedUint32 */
+                repeatedUint32?: (number[]|null);
+
+                /** TestAllTypesProto2 repeatedUint64 */
+                repeatedUint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 repeatedSint32 */
+                repeatedSint32?: (number[]|null);
+
+                /** TestAllTypesProto2 repeatedSint64 */
+                repeatedSint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 repeatedFixed32 */
+                repeatedFixed32?: (number[]|null);
+
+                /** TestAllTypesProto2 repeatedFixed64 */
+                repeatedFixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 repeatedSfixed32 */
+                repeatedSfixed32?: (number[]|null);
+
+                /** TestAllTypesProto2 repeatedSfixed64 */
+                repeatedSfixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 repeatedFloat */
+                repeatedFloat?: (number[]|null);
+
+                /** TestAllTypesProto2 repeatedDouble */
+                repeatedDouble?: (number[]|null);
+
+                /** TestAllTypesProto2 repeatedBool */
+                repeatedBool?: (boolean[]|null);
+
+                /** TestAllTypesProto2 repeatedString */
+                repeatedString?: (string[]|null);
+
+                /** TestAllTypesProto2 repeatedBytes */
+                repeatedBytes?: (Uint8Array[]|null);
+
+                /** TestAllTypesProto2 repeatedNestedMessage */
+                repeatedNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties[]|null);
+
+                /** TestAllTypesProto2 repeatedForeignMessage */
+                repeatedForeignMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties[]|null);
+
+                /** TestAllTypesProto2 repeatedNestedEnum */
+                repeatedNestedEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null);
+
+                /** TestAllTypesProto2 repeatedForeignEnum */
+                repeatedForeignEnum?: (protobuf_test_messages.proto2.ForeignEnumProto2[]|null);
+
+                /** TestAllTypesProto2 repeatedStringPiece */
+                repeatedStringPiece?: (string[]|null);
+
+                /** TestAllTypesProto2 repeatedCord */
+                repeatedCord?: (string[]|null);
+
+                /** TestAllTypesProto2 packedInt32 */
+                packedInt32?: (number[]|null);
+
+                /** TestAllTypesProto2 packedInt64 */
+                packedInt64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 packedUint32 */
+                packedUint32?: (number[]|null);
+
+                /** TestAllTypesProto2 packedUint64 */
+                packedUint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 packedSint32 */
+                packedSint32?: (number[]|null);
+
+                /** TestAllTypesProto2 packedSint64 */
+                packedSint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 packedFixed32 */
+                packedFixed32?: (number[]|null);
+
+                /** TestAllTypesProto2 packedFixed64 */
+                packedFixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 packedSfixed32 */
+                packedSfixed32?: (number[]|null);
+
+                /** TestAllTypesProto2 packedSfixed64 */
+                packedSfixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 packedFloat */
+                packedFloat?: (number[]|null);
+
+                /** TestAllTypesProto2 packedDouble */
+                packedDouble?: (number[]|null);
+
+                /** TestAllTypesProto2 packedBool */
+                packedBool?: (boolean[]|null);
+
+                /** TestAllTypesProto2 packedNestedEnum */
+                packedNestedEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null);
+
+                /** TestAllTypesProto2 unpackedInt32 */
+                unpackedInt32?: (number[]|null);
+
+                /** TestAllTypesProto2 unpackedInt64 */
+                unpackedInt64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 unpackedUint32 */
+                unpackedUint32?: (number[]|null);
+
+                /** TestAllTypesProto2 unpackedUint64 */
+                unpackedUint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 unpackedSint32 */
+                unpackedSint32?: (number[]|null);
+
+                /** TestAllTypesProto2 unpackedSint64 */
+                unpackedSint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 unpackedFixed32 */
+                unpackedFixed32?: (number[]|null);
+
+                /** TestAllTypesProto2 unpackedFixed64 */
+                unpackedFixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 unpackedSfixed32 */
+                unpackedSfixed32?: (number[]|null);
+
+                /** TestAllTypesProto2 unpackedSfixed64 */
+                unpackedSfixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto2 unpackedFloat */
+                unpackedFloat?: (number[]|null);
+
+                /** TestAllTypesProto2 unpackedDouble */
+                unpackedDouble?: (number[]|null);
+
+                /** TestAllTypesProto2 unpackedBool */
+                unpackedBool?: (boolean[]|null);
+
+                /** TestAllTypesProto2 unpackedNestedEnum */
+                unpackedNestedEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null);
+
+                /** TestAllTypesProto2 mapInt32Int32 */
+                mapInt32Int32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto2 mapInt64Int64 */
+                mapInt64Int64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto2 mapUint32Uint32 */
+                mapUint32Uint32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto2 mapUint64Uint64 */
+                mapUint64Uint64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto2 mapSint32Sint32 */
+                mapSint32Sint32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto2 mapSint64Sint64 */
+                mapSint64Sint64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto2 mapFixed32Fixed32 */
+                mapFixed32Fixed32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto2 mapFixed64Fixed64 */
+                mapFixed64Fixed64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto2 mapSfixed32Sfixed32 */
+                mapSfixed32Sfixed32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto2 mapSfixed64Sfixed64 */
+                mapSfixed64Sfixed64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto2 mapInt32Bool */
+                mapInt32Bool?: ({ [k: string]: boolean }|null);
+
+                /** TestAllTypesProto2 mapInt32Float */
+                mapInt32Float?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto2 mapInt32Double */
+                mapInt32Double?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto2 mapInt32NestedMessage */
+                mapInt32NestedMessage?: ({ [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties }|null);
+
+                /** TestAllTypesProto2 mapBoolBool */
+                mapBoolBool?: ({ [k: string]: boolean }|null);
+
+                /** TestAllTypesProto2 mapStringString */
+                mapStringString?: ({ [k: string]: string }|null);
+
+                /** TestAllTypesProto2 mapStringBytes */
+                mapStringBytes?: ({ [k: string]: Uint8Array }|null);
+
+                /** TestAllTypesProto2 mapStringNestedMessage */
+                mapStringNestedMessage?: ({ [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties }|null);
+
+                /** TestAllTypesProto2 mapStringForeignMessage */
+                mapStringForeignMessage?: ({ [k: string]: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties }|null);
+
+                /** TestAllTypesProto2 mapStringNestedEnum */
+                mapStringNestedEnum?: ({ [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum }|null);
+
+                /** TestAllTypesProto2 mapStringForeignEnum */
+                mapStringForeignEnum?: ({ [k: string]: protobuf_test_messages.proto2.ForeignEnumProto2 }|null);
+
+                /** TestAllTypesProto2 oneofUint32 */
+                oneofUint32?: (number|null);
+
+                /** TestAllTypesProto2 oneofNestedMessage */
+                oneofNestedMessage?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties|null);
+
+                /** TestAllTypesProto2 oneofString */
+                oneofString?: (string|null);
+
+                /** TestAllTypesProto2 oneofBytes */
+                oneofBytes?: (Uint8Array|null);
+
+                /** TestAllTypesProto2 oneofBool */
+                oneofBool?: (boolean|null);
+
+                /** TestAllTypesProto2 oneofUint64 */
+                oneofUint64?: (number|Long|null);
+
+                /** TestAllTypesProto2 oneofFloat */
+                oneofFloat?: (number|null);
+
+                /** TestAllTypesProto2 oneofDouble */
+                oneofDouble?: (number|null);
+
+                /** TestAllTypesProto2 oneofEnum */
+                oneofEnum?: (protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null);
+
+                /** TestAllTypesProto2 data */
+                data?: (protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties|null);
+
+                /** TestAllTypesProto2 multiwordgroupfield */
+                multiwordgroupfield?: (protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties|null);
+
+                /** TestAllTypesProto2 defaultInt32 */
+                defaultInt32?: (number|null);
+
+                /** TestAllTypesProto2 defaultInt64 */
+                defaultInt64?: (number|Long|null);
+
+                /** TestAllTypesProto2 defaultUint32 */
+                defaultUint32?: (number|null);
+
+                /** TestAllTypesProto2 defaultUint64 */
+                defaultUint64?: (number|Long|null);
+
+                /** TestAllTypesProto2 defaultSint32 */
+                defaultSint32?: (number|null);
+
+                /** TestAllTypesProto2 defaultSint64 */
+                defaultSint64?: (number|Long|null);
+
+                /** TestAllTypesProto2 defaultFixed32 */
+                defaultFixed32?: (number|null);
+
+                /** TestAllTypesProto2 defaultFixed64 */
+                defaultFixed64?: (number|Long|null);
+
+                /** TestAllTypesProto2 defaultSfixed32 */
+                defaultSfixed32?: (number|null);
+
+                /** TestAllTypesProto2 defaultSfixed64 */
+                defaultSfixed64?: (number|Long|null);
+
+                /** TestAllTypesProto2 defaultFloat */
+                defaultFloat?: (number|null);
+
+                /** TestAllTypesProto2 defaultDouble */
+                defaultDouble?: (number|null);
+
+                /** TestAllTypesProto2 defaultBool */
+                defaultBool?: (boolean|null);
+
+                /** TestAllTypesProto2 defaultString */
+                defaultString?: (string|null);
+
+                /** TestAllTypesProto2 defaultBytes */
+                defaultBytes?: (Uint8Array|null);
+
+                /** TestAllTypesProto2 fieldname1 */
+                fieldname1?: (number|null);
+
+                /** TestAllTypesProto2 fieldName2 */
+                fieldName2?: (number|null);
+
+                /** TestAllTypesProto2 FieldName3 */
+                FieldName3?: (number|null);
+
+                /** TestAllTypesProto2 fieldName4 */
+                fieldName4?: (number|null);
+
+                /** TestAllTypesProto2 field0name5 */
+                field0name5?: (number|null);
+
+                /** TestAllTypesProto2 field0Name6 */
+                field0Name6?: (number|null);
+
+                /** TestAllTypesProto2 fieldName7 */
+                fieldName7?: (number|null);
+
+                /** TestAllTypesProto2 FieldName8 */
+                FieldName8?: (number|null);
+
+                /** TestAllTypesProto2 fieldName9 */
+                fieldName9?: (number|null);
+
+                /** TestAllTypesProto2 FieldName10 */
+                FieldName10?: (number|null);
+
+                /** TestAllTypesProto2 FIELDNAME11 */
+                FIELDNAME11?: (number|null);
+
+                /** TestAllTypesProto2 FIELDName12 */
+                FIELDName12?: (number|null);
+
+                /** TestAllTypesProto2 FieldName13 */
+                FieldName13?: (number|null);
+
+                /** TestAllTypesProto2 FieldName14 */
+                FieldName14?: (number|null);
+
+                /** TestAllTypesProto2 fieldName15 */
+                fieldName15?: (number|null);
+
+                /** TestAllTypesProto2 fieldName16 */
+                fieldName16?: (number|null);
+
+                /** TestAllTypesProto2 fieldName17 */
+                fieldName17?: (number|null);
+
+                /** TestAllTypesProto2 FieldName18 */
+                FieldName18?: (number|null);
+
+                /** TestAllTypesProto2 messageSetCorrect */
+                messageSetCorrect?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties|null);
+
+                /** TestAllTypesProto2 .protobuf_test_messages.proto2.extensionInt32 */
+                ".protobuf_test_messages.proto2.extensionInt32"?: (number|null);
+
+                /** TestAllTypesProto2 .protobuf_test_messages.proto2.groupfield */
+                ".protobuf_test_messages.proto2.groupfield"?: (protobuf_test_messages.proto2.GroupField.$Properties|null);
+
+                /** TestAllTypesProto2 oneofField */
+                oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum");
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Narrowed shape of a TestAllTypesProto2. */
+            type $Shape = {
+              optionalInt32?: number|null;
+              optionalInt64?: number|Long|null;
+              optionalUint32?: number|null;
+              optionalUint64?: number|Long|null;
+              optionalSint32?: number|null;
+              optionalSint64?: number|Long|null;
+              optionalFixed32?: number|null;
+              optionalFixed64?: number|Long|null;
+              optionalSfixed32?: number|null;
+              optionalSfixed64?: number|Long|null;
+              optionalFloat?: number|null;
+              optionalDouble?: number|null;
+              optionalBool?: boolean|null;
+              optionalString?: string|null;
+              optionalBytes?: Uint8Array|null;
+              optionalNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
+              optionalForeignMessage?: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape|null;
+              optionalNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null;
+              optionalForeignEnum?: protobuf_test_messages.proto2.ForeignEnumProto2|null;
+              optionalStringPiece?: string|null;
+              optionalCord?: string|null;
+              recursiveMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape|null;
+              repeatedInt32?: number[]|null;
+              repeatedInt64?: (number|Long)[]|null;
+              repeatedUint32?: number[]|null;
+              repeatedUint64?: (number|Long)[]|null;
+              repeatedSint32?: number[]|null;
+              repeatedSint64?: (number|Long)[]|null;
+              repeatedFixed32?: number[]|null;
+              repeatedFixed64?: (number|Long)[]|null;
+              repeatedSfixed32?: number[]|null;
+              repeatedSfixed64?: (number|Long)[]|null;
+              repeatedFloat?: number[]|null;
+              repeatedDouble?: number[]|null;
+              repeatedBool?: boolean[]|null;
+              repeatedString?: string[]|null;
+              repeatedBytes?: Uint8Array[]|null;
+              repeatedNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape[]|null;
+              repeatedForeignMessage?: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape[]|null;
+              repeatedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
+              repeatedForeignEnum?: protobuf_test_messages.proto2.ForeignEnumProto2[]|null;
+              repeatedStringPiece?: string[]|null;
+              repeatedCord?: string[]|null;
+              packedInt32?: number[]|null;
+              packedInt64?: (number|Long)[]|null;
+              packedUint32?: number[]|null;
+              packedUint64?: (number|Long)[]|null;
+              packedSint32?: number[]|null;
+              packedSint64?: (number|Long)[]|null;
+              packedFixed32?: number[]|null;
+              packedFixed64?: (number|Long)[]|null;
+              packedSfixed32?: number[]|null;
+              packedSfixed64?: (number|Long)[]|null;
+              packedFloat?: number[]|null;
+              packedDouble?: number[]|null;
+              packedBool?: boolean[]|null;
+              packedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
+              unpackedInt32?: number[]|null;
+              unpackedInt64?: (number|Long)[]|null;
+              unpackedUint32?: number[]|null;
+              unpackedUint64?: (number|Long)[]|null;
+              unpackedSint32?: number[]|null;
+              unpackedSint64?: (number|Long)[]|null;
+              unpackedFixed32?: number[]|null;
+              unpackedFixed64?: (number|Long)[]|null;
+              unpackedSfixed32?: number[]|null;
+              unpackedSfixed64?: (number|Long)[]|null;
+              unpackedFloat?: number[]|null;
+              unpackedDouble?: number[]|null;
+              unpackedBool?: boolean[]|null;
+              unpackedNestedEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum[]|null;
+              mapInt32Int32?: { [k: string]: number }|null;
+              mapInt64Int64?: { [k: string]: number|Long }|null;
+              mapUint32Uint32?: { [k: string]: number }|null;
+              mapUint64Uint64?: { [k: string]: number|Long }|null;
+              mapSint32Sint32?: { [k: string]: number }|null;
+              mapSint64Sint64?: { [k: string]: number|Long }|null;
+              mapFixed32Fixed32?: { [k: string]: number }|null;
+              mapFixed64Fixed64?: { [k: string]: number|Long }|null;
+              mapSfixed32Sfixed32?: { [k: string]: number }|null;
+              mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
+              mapInt32Bool?: { [k: string]: boolean }|null;
+              mapInt32Float?: { [k: string]: number }|null;
+              mapInt32Double?: { [k: string]: number }|null;
+              mapInt32NestedMessage?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
+              mapBoolBool?: { [k: string]: boolean }|null;
+              mapStringString?: { [k: string]: string }|null;
+              mapStringBytes?: { [k: string]: Uint8Array }|null;
+              mapStringNestedMessage?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape }|null;
+              mapStringForeignMessage?: { [k: string]: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape }|null;
+              mapStringNestedEnum?: { [k: string]: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum }|null;
+              mapStringForeignEnum?: { [k: string]: protobuf_test_messages.proto2.ForeignEnumProto2 }|null;
+              oneofUint32?: number|null;
+              oneofNestedMessage?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape|null;
+              oneofString?: string|null;
+              oneofBytes?: Uint8Array|null;
+              oneofBool?: boolean|null;
+              oneofUint64?: number|Long|null;
+              oneofFloat?: number|null;
+              oneofDouble?: number|null;
+              oneofEnum?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum|null;
+              data?: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape|null;
+              multiwordgroupfield?: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape|null;
+              defaultInt32?: number|null;
+              defaultInt64?: number|Long|null;
+              defaultUint32?: number|null;
+              defaultUint64?: number|Long|null;
+              defaultSint32?: number|null;
+              defaultSint64?: number|Long|null;
+              defaultFixed32?: number|null;
+              defaultFixed64?: number|Long|null;
+              defaultSfixed32?: number|null;
+              defaultSfixed64?: number|Long|null;
+              defaultFloat?: number|null;
+              defaultDouble?: number|null;
+              defaultBool?: boolean|null;
+              defaultString?: string|null;
+              defaultBytes?: Uint8Array|null;
+              fieldname1?: number|null;
+              fieldName2?: number|null;
+              FieldName3?: number|null;
+              fieldName4?: number|null;
+              field0name5?: number|null;
+              field0Name6?: number|null;
+              fieldName7?: number|null;
+              FieldName8?: number|null;
+              fieldName9?: number|null;
+              FieldName10?: number|null;
+              FIELDNAME11?: number|null;
+              FIELDName12?: number|null;
+              FieldName13?: number|null;
+              FieldName14?: number|null;
+              fieldName15?: number|null;
+              fieldName16?: number|null;
+              fieldName17?: number|null;
+              FieldName18?: number|null;
+              messageSetCorrect?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape|null;
+              ".protobuf_test_messages.proto2.extensionInt32"?: number|null;
+              ".protobuf_test_messages.proto2.groupfield"?: protobuf_test_messages.proto2.GroupField.$Shape|null;
+              $unknowns?: Uint8Array[];
+            } & (
+              ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum })
+            );
+
+            /**
+             * Properties of a NestedMessage.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties instead.
+             */
+            interface INestedMessage extends protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties {
+            }
+
+            /** Represents a NestedMessage. */
+            class NestedMessage {
+
+                /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** NestedMessage a. */
+                a: number;
+
+                /** NestedMessage corecursive. */
+                corecursive?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
+
+                /**
+                 * Creates a new NestedMessage instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns NestedMessage instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage;
+
+                /**
+                 * Encodes the specified NestedMessage message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.verify|verify} messages.
+                 * @param message NestedMessage message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified NestedMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.verify|verify} messages.
+                 * @param message NestedMessage message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape} NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape;
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape} NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.$Shape;
+
+                /**
+                 * Verifies a NestedMessage message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a NestedMessage message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns NestedMessage
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage;
+
+                /**
+                 * Creates a plain object from a NestedMessage message. Also converts values to other types if specified.
+                 * @param message NestedMessage
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this NestedMessage to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for NestedMessage
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace NestedMessage {
+
+                /** Properties of a NestedMessage. */
+                interface $Properties {
+
+                    /** NestedMessage a */
+                    a?: (number|null);
+
+                    /** NestedMessage corecursive */
+                    corecursive?: (protobuf_test_messages.proto2.TestAllTypesProto2.$Properties|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a NestedMessage. */
+                type $Shape = {
+                  a?: number|null;
+                  corecursive?: protobuf_test_messages.proto2.TestAllTypesProto2.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                };
+            }
+
+            /**
+             * Properties of a Data.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties instead.
+             */
+            interface IData extends protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties {
+            }
+
+            /** Represents a Data. */
+            class Data {
+
+                /** Reflection-backed declarations are not constructable. Use Data.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** Data groupInt32. */
+                groupInt32: number;
+
+                /** Data groupUint32. */
+                groupUint32: number;
+
+                /**
+                 * Creates a new Data instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns Data instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.Data;
+
+                /**
+                 * Encodes the specified Data message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.Data.verify|verify} messages.
+                 * @param message Data message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified Data message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.Data.verify|verify} messages.
+                 * @param message Data message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a Data message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape} Data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape;
+
+                /**
+                 * Decodes a Data message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape} Data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.Data & protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Shape;
+
+                /**
+                 * Verifies a Data message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a Data message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Data
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.Data;
+
+                /**
+                 * Creates a plain object from a Data message. Also converts values to other types if specified.
+                 * @param message Data
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.Data, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this Data to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for Data
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace Data {
+
+                /** Properties of a Data. */
+                interface $Properties {
+
+                    /** Data groupInt32 */
+                    groupInt32?: (number|null);
+
+                    /** Data groupUint32 */
+                    groupUint32?: (number|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a Data. */
+                type $Shape = protobuf_test_messages.proto2.TestAllTypesProto2.Data.$Properties;
+            }
+
+            /**
+             * Properties of a MultiWordGroupField.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties instead.
+             */
+            interface IMultiWordGroupField extends protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties {
+            }
+
+            /** Represents a MultiWordGroupField. */
+            class MultiWordGroupField {
+
+                /** Reflection-backed declarations are not constructable. Use MultiWordGroupField.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** MultiWordGroupField groupInt32. */
+                groupInt32: number;
+
+                /** MultiWordGroupField groupUint32. */
+                groupUint32: number;
+
+                /**
+                 * Creates a new MultiWordGroupField instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MultiWordGroupField instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField;
+
+                /**
+                 * Encodes the specified MultiWordGroupField message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.verify|verify} messages.
+                 * @param message MultiWordGroupField message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MultiWordGroupField message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.verify|verify} messages.
+                 * @param message MultiWordGroupField message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MultiWordGroupField message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape} MultiWordGroupField
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape;
+
+                /**
+                 * Decodes a MultiWordGroupField message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape} MultiWordGroupField
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField & protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Shape;
+
+                /**
+                 * Verifies a MultiWordGroupField message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MultiWordGroupField message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MultiWordGroupField
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField;
+
+                /**
+                 * Creates a plain object from a MultiWordGroupField message. Also converts values to other types if specified.
+                 * @param message MultiWordGroupField
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MultiWordGroupField to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for MultiWordGroupField
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace MultiWordGroupField {
+
+                /** Properties of a MultiWordGroupField. */
+                interface $Properties {
+
+                    /** MultiWordGroupField groupInt32 */
+                    groupInt32?: (number|null);
+
+                    /** MultiWordGroupField groupUint32 */
+                    groupUint32?: (number|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a MultiWordGroupField. */
+                type $Shape = protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.$Properties;
+            }
+
+            /**
+             * Properties of a MessageSetCorrect.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties instead.
+             */
+            interface IMessageSetCorrect extends protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties {
+            }
+
+            /** Represents a MessageSetCorrect. */
+            class MessageSetCorrect {
+
+                /** Reflection-backed declarations are not constructable. Use MessageSetCorrect.create(...) instead. */
+                private constructor();
+
+                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
+                ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties|null);
+
+                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
+                ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties|null);
+
+                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
+                ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties|null);
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /**
+                 * Creates a new MessageSetCorrect instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrect instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect;
+
+                /**
+                 * Encodes the specified MessageSetCorrect message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.verify|verify} messages.
+                 * @param message MessageSetCorrect message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrect message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.verify|verify} messages.
+                 * @param message MessageSetCorrect message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrect message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape} MessageSetCorrect
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape;
+
+                /**
+                 * Decodes a MessageSetCorrect message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape} MessageSetCorrect
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.$Shape;
+
+                /**
+                 * Verifies a MessageSetCorrect message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrect message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrect
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrect message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrect
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrect to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for MessageSetCorrect
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace MessageSetCorrect {
+
+                /** Properties of a MessageSetCorrect. */
+                interface $Properties {
+
+                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
+                    ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties|null);
+
+                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
+                    ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties|null);
+
+                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
+                    ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a MessageSetCorrect. */
+                type $Shape = {
+                  ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape|null;
+                  ".protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape|null;
+                  ".protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                };
+            }
+
+            /**
+             * Properties of a MessageSetCorrectExtension1.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties instead.
+             */
+            interface IMessageSetCorrectExtension1 extends protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties {
+            }
+
+            /** Represents a MessageSetCorrectExtension1. */
+            class MessageSetCorrectExtension1 {
+
+                /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension1.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** MessageSetCorrectExtension1 str. */
+                str: string;
+
+                /**
+                 * Creates a new MessageSetCorrectExtension1 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrectExtension1 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension1 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension1 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension1 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension1 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape} MessageSetCorrectExtension1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape} MessageSetCorrectExtension1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Shape;
+
+                /**
+                 * Verifies a MessageSetCorrectExtension1 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrectExtension1 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrectExtension1
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrectExtension1 message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrectExtension1
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrectExtension1 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for MessageSetCorrectExtension1
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace MessageSetCorrectExtension1 {
+
+                /** Properties of a MessageSetCorrectExtension1. */
+                interface $Properties {
+
+                    /** MessageSetCorrectExtension1 str */
+                    str?: (string|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a MessageSetCorrectExtension1. */
+                type $Shape = protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.$Properties;
+            }
+
+            /**
+             * Properties of a MessageSetCorrectExtension2.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties instead.
+             */
+            interface IMessageSetCorrectExtension2 extends protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties {
+            }
+
+            /** Represents a MessageSetCorrectExtension2. */
+            class MessageSetCorrectExtension2 {
+
+                /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension2.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** MessageSetCorrectExtension2 i. */
+                i: number;
+
+                /**
+                 * Creates a new MessageSetCorrectExtension2 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrectExtension2 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension2 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension2 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape} MessageSetCorrectExtension2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape} MessageSetCorrectExtension2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Shape;
+
+                /**
+                 * Verifies a MessageSetCorrectExtension2 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrectExtension2 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrectExtension2
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrectExtension2 message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrectExtension2
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrectExtension2 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for MessageSetCorrectExtension2
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace MessageSetCorrectExtension2 {
+
+                /** Properties of a MessageSetCorrectExtension2. */
+                interface $Properties {
+
+                    /** MessageSetCorrectExtension2 i */
+                    i?: (number|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a MessageSetCorrectExtension2. */
+                type $Shape = protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.$Properties;
+            }
+
+            /**
+             * Properties of an ExtensionWithOneof.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties instead.
+             */
+            interface IExtensionWithOneof extends protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties {
+            }
+
+            /** Represents an ExtensionWithOneof. */
+            class ExtensionWithOneof {
+
+                /** Reflection-backed declarations are not constructable. Use ExtensionWithOneof.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** ExtensionWithOneof a. */
+                a?: (number|null);
+
+                /** ExtensionWithOneof b. */
+                b?: (number|null);
+
+                /** ExtensionWithOneof oneofField. */
+                oneofField?: ("a"|"b");
+
+                /**
+                 * Creates a new ExtensionWithOneof instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns ExtensionWithOneof instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof;
+
+                /**
+                 * Encodes the specified ExtensionWithOneof message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.verify|verify} messages.
+                 * @param message ExtensionWithOneof message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified ExtensionWithOneof message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.verify|verify} messages.
+                 * @param message ExtensionWithOneof message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an ExtensionWithOneof message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape} ExtensionWithOneof
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape;
+
+                /**
+                 * Decodes an ExtensionWithOneof message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape} ExtensionWithOneof
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof & protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.$Shape;
+
+                /**
+                 * Verifies an ExtensionWithOneof message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an ExtensionWithOneof message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns ExtensionWithOneof
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof;
+
+                /**
+                 * Creates a plain object from an ExtensionWithOneof message. Also converts values to other types if specified.
+                 * @param message ExtensionWithOneof
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this ExtensionWithOneof to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for ExtensionWithOneof
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace ExtensionWithOneof {
+
+                /** Properties of an ExtensionWithOneof. */
+                interface $Properties {
+
+                    /** ExtensionWithOneof a */
+                    a?: (number|null);
+
+                    /** ExtensionWithOneof b */
+                    b?: (number|null);
+
+                    /** ExtensionWithOneof oneofField */
+                    oneofField?: ("a"|"b");
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Narrowed shape of an ExtensionWithOneof. */
+                type $Shape = {
+                  a?: number|null;
+                  b?: number|null;
+                  $unknowns?: Uint8Array[];
+                } & (
+                  ({ oneofField?: undefined; a?: null; b?: null }|{ oneofField?: "a"; a: number; b?: null }|{ oneofField?: "b"; a?: null; b: number })
+                );
+            }
+
+            /** NestedEnum enum. */
+            enum NestedEnum {
+
+                /** FOO value */
+                FOO = 0,
+
+                /** BAR value */
+                BAR = 1,
+
+                /** BAZ value */
+                BAZ = 2,
+
+                /** NEG value */
+                NEG = -1
+            }
+        }
+
+        /**
+         * Properties of a ForeignMessageProto2.
+         * @deprecated Use protobuf_test_messages.proto2.ForeignMessageProto2.$Properties instead.
+         */
+        interface IForeignMessageProto2 extends protobuf_test_messages.proto2.ForeignMessageProto2.$Properties {
+        }
+
+        /** Represents a ForeignMessageProto2. */
+        class ForeignMessageProto2 {
+
+            /** Reflection-backed declarations are not constructable. Use ForeignMessageProto2.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** ForeignMessageProto2 c. */
+            c: number;
+
+            /**
+             * Creates a new ForeignMessageProto2 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ForeignMessageProto2 instance
+             */
+            static create(properties: protobuf_test_messages.proto2.ForeignMessageProto2.$Shape): protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties): protobuf_test_messages.proto2.ForeignMessageProto2;
+
+            /**
+             * Encodes the specified ForeignMessageProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.ForeignMessageProto2.verify|verify} messages.
+             * @param message ForeignMessageProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ForeignMessageProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.ForeignMessageProto2.verify|verify} messages.
+             * @param message ForeignMessageProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ForeignMessageProto2 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape} ForeignMessageProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape;
+
+            /**
+             * Decodes a ForeignMessageProto2 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape} ForeignMessageProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.ForeignMessageProto2 & protobuf_test_messages.proto2.ForeignMessageProto2.$Shape;
+
+            /**
+             * Verifies a ForeignMessageProto2 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ForeignMessageProto2 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ForeignMessageProto2
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.ForeignMessageProto2;
+
+            /**
+             * Creates a plain object from a ForeignMessageProto2 message. Also converts values to other types if specified.
+             * @param message ForeignMessageProto2
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.ForeignMessageProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ForeignMessageProto2 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for ForeignMessageProto2
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace ForeignMessageProto2 {
+
+            /** Properties of a ForeignMessageProto2. */
+            interface $Properties {
+
+                /** ForeignMessageProto2 c */
+                c?: (number|null);
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of a ForeignMessageProto2. */
+            type $Shape = protobuf_test_messages.proto2.ForeignMessageProto2.$Properties;
+        }
+
+        /**
+         * Properties of a GroupField.
+         * @deprecated Use protobuf_test_messages.proto2.GroupField.$Properties instead.
+         */
+        interface IGroupField extends protobuf_test_messages.proto2.GroupField.$Properties {
+        }
+
+        /** Represents a GroupField. */
+        class GroupField {
+
+            /** Reflection-backed declarations are not constructable. Use GroupField.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** GroupField groupInt32. */
+            groupInt32: number;
+
+            /** GroupField groupUint32. */
+            groupUint32: number;
+
+            /**
+             * Creates a new GroupField instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns GroupField instance
+             */
+            static create(properties: protobuf_test_messages.proto2.GroupField.$Shape): protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.GroupField.$Properties): protobuf_test_messages.proto2.GroupField;
+
+            /**
+             * Encodes the specified GroupField message. Does not implicitly {@link protobuf_test_messages.proto2.GroupField.verify|verify} messages.
+             * @param message GroupField message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.GroupField.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified GroupField message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.GroupField.verify|verify} messages.
+             * @param message GroupField message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.GroupField.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a GroupField message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape} GroupField
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape;
+
+            /**
+             * Decodes a GroupField message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape} GroupField
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.GroupField & protobuf_test_messages.proto2.GroupField.$Shape;
+
+            /**
+             * Verifies a GroupField message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a GroupField message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns GroupField
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.GroupField;
+
+            /**
+             * Creates a plain object from a GroupField message. Also converts values to other types if specified.
+             * @param message GroupField
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.GroupField, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this GroupField to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for GroupField
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace GroupField {
+
+            /** Properties of a GroupField. */
+            interface $Properties {
+
+                /** GroupField groupInt32 */
+                groupInt32?: (number|null);
+
+                /** GroupField groupUint32 */
+                groupUint32?: (number|null);
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of a GroupField. */
+            type $Shape = protobuf_test_messages.proto2.GroupField.$Properties;
+        }
+
+        /**
+         * Properties of an UnknownToTestAllTypes.
+         * @deprecated Use protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties instead.
+         */
+        interface IUnknownToTestAllTypes extends protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties {
+        }
+
+        /** Represents an UnknownToTestAllTypes. */
+        class UnknownToTestAllTypes {
+
+            /** Reflection-backed declarations are not constructable. Use UnknownToTestAllTypes.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** UnknownToTestAllTypes optionalInt32. */
+            optionalInt32: number;
+
+            /** UnknownToTestAllTypes optionalString. */
+            optionalString: string;
+
+            /** UnknownToTestAllTypes nestedMessage. */
+            nestedMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties|null);
+
+            /** UnknownToTestAllTypes optionalgroup. */
+            optionalgroup?: (protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties|null);
+
+            /** UnknownToTestAllTypes optionalBool. */
+            optionalBool: boolean;
+
+            /** UnknownToTestAllTypes repeatedInt32. */
+            repeatedInt32: number[];
+
+            /**
+             * Creates a new UnknownToTestAllTypes instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns UnknownToTestAllTypes instance
+             */
+            static create(properties: protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape): protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties): protobuf_test_messages.proto2.UnknownToTestAllTypes;
+
+            /**
+             * Encodes the specified UnknownToTestAllTypes message. Does not implicitly {@link protobuf_test_messages.proto2.UnknownToTestAllTypes.verify|verify} messages.
+             * @param message UnknownToTestAllTypes message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified UnknownToTestAllTypes message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.UnknownToTestAllTypes.verify|verify} messages.
+             * @param message UnknownToTestAllTypes message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an UnknownToTestAllTypes message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape} UnknownToTestAllTypes
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape;
+
+            /**
+             * Decodes an UnknownToTestAllTypes message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape} UnknownToTestAllTypes
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.UnknownToTestAllTypes & protobuf_test_messages.proto2.UnknownToTestAllTypes.$Shape;
+
+            /**
+             * Verifies an UnknownToTestAllTypes message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an UnknownToTestAllTypes message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns UnknownToTestAllTypes
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.UnknownToTestAllTypes;
+
+            /**
+             * Creates a plain object from an UnknownToTestAllTypes message. Also converts values to other types if specified.
+             * @param message UnknownToTestAllTypes
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.UnknownToTestAllTypes, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this UnknownToTestAllTypes to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for UnknownToTestAllTypes
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace UnknownToTestAllTypes {
+
+            /** Properties of an UnknownToTestAllTypes. */
+            interface $Properties {
+
+                /** UnknownToTestAllTypes optionalInt32 */
+                optionalInt32?: (number|null);
+
+                /** UnknownToTestAllTypes optionalString */
+                optionalString?: (string|null);
+
+                /** UnknownToTestAllTypes nestedMessage */
+                nestedMessage?: (protobuf_test_messages.proto2.ForeignMessageProto2.$Properties|null);
+
+                /** UnknownToTestAllTypes optionalgroup */
+                optionalgroup?: (protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties|null);
+
+                /** UnknownToTestAllTypes optionalBool */
+                optionalBool?: (boolean|null);
+
+                /** UnknownToTestAllTypes repeatedInt32 */
+                repeatedInt32?: (number[]|null);
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of an UnknownToTestAllTypes. */
+            type $Shape = protobuf_test_messages.proto2.UnknownToTestAllTypes.$Properties;
+
+            /**
+             * Properties of an OptionalGroup.
+             * @deprecated Use protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties instead.
+             */
+            interface IOptionalGroup extends protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties {
+            }
+
+            /** Represents an OptionalGroup. */
+            class OptionalGroup {
+
+                /** Reflection-backed declarations are not constructable. Use OptionalGroup.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** OptionalGroup a. */
+                a: number;
+
+                /**
+                 * Creates a new OptionalGroup instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns OptionalGroup instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup;
+
+                /**
+                 * Encodes the specified OptionalGroup message. Does not implicitly {@link protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.verify|verify} messages.
+                 * @param message OptionalGroup message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified OptionalGroup message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.verify|verify} messages.
+                 * @param message OptionalGroup message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an OptionalGroup message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape} OptionalGroup
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape;
+
+                /**
+                 * Decodes an OptionalGroup message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape} OptionalGroup
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup & protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Shape;
+
+                /**
+                 * Verifies an OptionalGroup message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an OptionalGroup message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns OptionalGroup
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup;
+
+                /**
+                 * Creates a plain object from an OptionalGroup message. Also converts values to other types if specified.
+                 * @param message OptionalGroup
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this OptionalGroup to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for OptionalGroup
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace OptionalGroup {
+
+                /** Properties of an OptionalGroup. */
+                interface $Properties {
+
+                    /** OptionalGroup a */
+                    a?: (number|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of an OptionalGroup. */
+                type $Shape = protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.$Properties;
+            }
+        }
+
+        /**
+         * Properties of a NullHypothesisProto2.
+         * @deprecated Use protobuf_test_messages.proto2.NullHypothesisProto2.$Properties instead.
+         */
+        interface INullHypothesisProto2 extends protobuf_test_messages.proto2.NullHypothesisProto2.$Properties {
+        }
+
+        /** Represents a NullHypothesisProto2. */
+        class NullHypothesisProto2 {
+
+            /** Reflection-backed declarations are not constructable. Use NullHypothesisProto2.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /**
+             * Creates a new NullHypothesisProto2 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns NullHypothesisProto2 instance
+             */
+            static create(properties: protobuf_test_messages.proto2.NullHypothesisProto2.$Shape): protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.NullHypothesisProto2.$Properties): protobuf_test_messages.proto2.NullHypothesisProto2;
+
+            /**
+             * Encodes the specified NullHypothesisProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.NullHypothesisProto2.verify|verify} messages.
+             * @param message NullHypothesisProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.NullHypothesisProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified NullHypothesisProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.NullHypothesisProto2.verify|verify} messages.
+             * @param message NullHypothesisProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.NullHypothesisProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a NullHypothesisProto2 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape} NullHypothesisProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape;
+
+            /**
+             * Decodes a NullHypothesisProto2 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape} NullHypothesisProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.NullHypothesisProto2 & protobuf_test_messages.proto2.NullHypothesisProto2.$Shape;
+
+            /**
+             * Verifies a NullHypothesisProto2 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a NullHypothesisProto2 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns NullHypothesisProto2
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.NullHypothesisProto2;
+
+            /**
+             * Creates a plain object from a NullHypothesisProto2 message. Also converts values to other types if specified.
+             * @param message NullHypothesisProto2
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.NullHypothesisProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this NullHypothesisProto2 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for NullHypothesisProto2
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace NullHypothesisProto2 {
+
+            /** Properties of a NullHypothesisProto2. */
+            interface $Properties {
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of a NullHypothesisProto2. */
+            type $Shape = protobuf_test_messages.proto2.NullHypothesisProto2.$Properties;
+        }
+
+        /**
+         * Properties of an EnumOnlyProto2.
+         * @deprecated Use protobuf_test_messages.proto2.EnumOnlyProto2.$Properties instead.
+         */
+        interface IEnumOnlyProto2 extends protobuf_test_messages.proto2.EnumOnlyProto2.$Properties {
+        }
+
+        /** Represents an EnumOnlyProto2. */
+        class EnumOnlyProto2 {
+
+            /** Reflection-backed declarations are not constructable. Use EnumOnlyProto2.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /**
+             * Creates a new EnumOnlyProto2 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns EnumOnlyProto2 instance
+             */
+            static create(properties: protobuf_test_messages.proto2.EnumOnlyProto2.$Shape): protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.EnumOnlyProto2.$Properties): protobuf_test_messages.proto2.EnumOnlyProto2;
+
+            /**
+             * Encodes the specified EnumOnlyProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.EnumOnlyProto2.verify|verify} messages.
+             * @param message EnumOnlyProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.EnumOnlyProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified EnumOnlyProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.EnumOnlyProto2.verify|verify} messages.
+             * @param message EnumOnlyProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.EnumOnlyProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an EnumOnlyProto2 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape} EnumOnlyProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape;
+
+            /**
+             * Decodes an EnumOnlyProto2 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape} EnumOnlyProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.EnumOnlyProto2 & protobuf_test_messages.proto2.EnumOnlyProto2.$Shape;
+
+            /**
+             * Verifies an EnumOnlyProto2 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an EnumOnlyProto2 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns EnumOnlyProto2
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.EnumOnlyProto2;
+
+            /**
+             * Creates a plain object from an EnumOnlyProto2 message. Also converts values to other types if specified.
+             * @param message EnumOnlyProto2
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.EnumOnlyProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this EnumOnlyProto2 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for EnumOnlyProto2
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace EnumOnlyProto2 {
+
+            /** Properties of an EnumOnlyProto2. */
+            interface $Properties {
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of an EnumOnlyProto2. */
+            type $Shape = protobuf_test_messages.proto2.EnumOnlyProto2.$Properties;
+
+            /** Bool enum. */
+            enum Bool {
+
+                /** kFalse value */
+                kFalse = 0,
+
+                /** kTrue value */
+                kTrue = 1
+            }
+        }
+
+        /**
+         * Properties of a OneStringProto2.
+         * @deprecated Use protobuf_test_messages.proto2.OneStringProto2.$Properties instead.
+         */
+        interface IOneStringProto2 extends protobuf_test_messages.proto2.OneStringProto2.$Properties {
+        }
+
+        /** Represents a OneStringProto2. */
+        class OneStringProto2 {
+
+            /** Reflection-backed declarations are not constructable. Use OneStringProto2.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** OneStringProto2 data. */
+            data: string;
+
+            /**
+             * Creates a new OneStringProto2 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns OneStringProto2 instance
+             */
+            static create(properties: protobuf_test_messages.proto2.OneStringProto2.$Shape): protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.OneStringProto2.$Properties): protobuf_test_messages.proto2.OneStringProto2;
+
+            /**
+             * Encodes the specified OneStringProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.OneStringProto2.verify|verify} messages.
+             * @param message OneStringProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.OneStringProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified OneStringProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.OneStringProto2.verify|verify} messages.
+             * @param message OneStringProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.OneStringProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a OneStringProto2 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape} OneStringProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape;
+
+            /**
+             * Decodes a OneStringProto2 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape} OneStringProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.OneStringProto2 & protobuf_test_messages.proto2.OneStringProto2.$Shape;
+
+            /**
+             * Verifies a OneStringProto2 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a OneStringProto2 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns OneStringProto2
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.OneStringProto2;
+
+            /**
+             * Creates a plain object from a OneStringProto2 message. Also converts values to other types if specified.
+             * @param message OneStringProto2
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.OneStringProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this OneStringProto2 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for OneStringProto2
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace OneStringProto2 {
+
+            /** Properties of a OneStringProto2. */
+            interface $Properties {
+
+                /** OneStringProto2 data */
+                data?: (string|null);
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of a OneStringProto2. */
+            type $Shape = protobuf_test_messages.proto2.OneStringProto2.$Properties;
+        }
+
+        /**
+         * Properties of a ProtoWithKeywords.
+         * @deprecated Use protobuf_test_messages.proto2.ProtoWithKeywords.$Properties instead.
+         */
+        interface IProtoWithKeywords extends protobuf_test_messages.proto2.ProtoWithKeywords.$Properties {
+        }
+
+        /** Represents a ProtoWithKeywords. */
+        class ProtoWithKeywords {
+
+            /** Reflection-backed declarations are not constructable. Use ProtoWithKeywords.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** ProtoWithKeywords inline. */
+            inline: number;
+
+            /** ProtoWithKeywords concept. */
+            concept: string;
+
+            /** ProtoWithKeywords requires. */
+            requires: string[];
+
+            /**
+             * Creates a new ProtoWithKeywords instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ProtoWithKeywords instance
+             */
+            static create(properties: protobuf_test_messages.proto2.ProtoWithKeywords.$Shape): protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.ProtoWithKeywords.$Properties): protobuf_test_messages.proto2.ProtoWithKeywords;
+
+            /**
+             * Encodes the specified ProtoWithKeywords message. Does not implicitly {@link protobuf_test_messages.proto2.ProtoWithKeywords.verify|verify} messages.
+             * @param message ProtoWithKeywords message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.ProtoWithKeywords.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ProtoWithKeywords message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.ProtoWithKeywords.verify|verify} messages.
+             * @param message ProtoWithKeywords message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.ProtoWithKeywords.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ProtoWithKeywords message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape} ProtoWithKeywords
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape;
+
+            /**
+             * Decodes a ProtoWithKeywords message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape} ProtoWithKeywords
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.ProtoWithKeywords & protobuf_test_messages.proto2.ProtoWithKeywords.$Shape;
+
+            /**
+             * Verifies a ProtoWithKeywords message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ProtoWithKeywords message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ProtoWithKeywords
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.ProtoWithKeywords;
+
+            /**
+             * Creates a plain object from a ProtoWithKeywords message. Also converts values to other types if specified.
+             * @param message ProtoWithKeywords
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.ProtoWithKeywords, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ProtoWithKeywords to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for ProtoWithKeywords
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace ProtoWithKeywords {
+
+            /** Properties of a ProtoWithKeywords. */
+            interface $Properties {
+
+                /** ProtoWithKeywords inline */
+                inline?: (number|null);
+
+                /** ProtoWithKeywords concept */
+                concept?: (string|null);
+
+                /** ProtoWithKeywords requires */
+                requires?: (string[]|null);
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of a ProtoWithKeywords. */
+            type $Shape = protobuf_test_messages.proto2.ProtoWithKeywords.$Properties;
+        }
+
+        /**
+         * Properties of a TestAllRequiredTypesProto2.
+         * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties instead.
+         */
+        interface ITestAllRequiredTypesProto2 extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties {
+        }
+
+        /** Represents a TestAllRequiredTypesProto2. */
+        class TestAllRequiredTypesProto2 {
+
+            /** Reflection-backed declarations are not constructable. Use TestAllRequiredTypesProto2.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** TestAllRequiredTypesProto2 requiredInt32. */
+            requiredInt32: number;
+
+            /** TestAllRequiredTypesProto2 requiredInt64. */
+            requiredInt64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredUint32. */
+            requiredUint32: number;
+
+            /** TestAllRequiredTypesProto2 requiredUint64. */
+            requiredUint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredSint32. */
+            requiredSint32: number;
+
+            /** TestAllRequiredTypesProto2 requiredSint64. */
+            requiredSint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredFixed32. */
+            requiredFixed32: number;
+
+            /** TestAllRequiredTypesProto2 requiredFixed64. */
+            requiredFixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredSfixed32. */
+            requiredSfixed32: number;
+
+            /** TestAllRequiredTypesProto2 requiredSfixed64. */
+            requiredSfixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredFloat. */
+            requiredFloat: number;
+
+            /** TestAllRequiredTypesProto2 requiredDouble. */
+            requiredDouble: number;
+
+            /** TestAllRequiredTypesProto2 requiredBool. */
+            requiredBool: boolean;
+
+            /** TestAllRequiredTypesProto2 requiredString. */
+            requiredString: string;
+
+            /** TestAllRequiredTypesProto2 requiredBytes. */
+            requiredBytes: Uint8Array;
+
+            /** TestAllRequiredTypesProto2 requiredNestedMessage. */
+            requiredNestedMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties;
+
+            /** TestAllRequiredTypesProto2 requiredForeignMessage. */
+            requiredForeignMessage: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties;
+
+            /** TestAllRequiredTypesProto2 requiredNestedEnum. */
+            requiredNestedEnum: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum;
+
+            /** TestAllRequiredTypesProto2 requiredForeignEnum. */
+            requiredForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2;
+
+            /** TestAllRequiredTypesProto2 requiredStringPiece. */
+            requiredStringPiece: string;
+
+            /** TestAllRequiredTypesProto2 requiredCord. */
+            requiredCord: string;
+
+            /** TestAllRequiredTypesProto2 recursiveMessage. */
+            recursiveMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
+
+            /** TestAllRequiredTypesProto2 optionalRecursiveMessage. */
+            optionalRecursiveMessage?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
+
+            /** TestAllRequiredTypesProto2 data. */
+            data: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties;
+
+            /** TestAllRequiredTypesProto2 defaultInt32. */
+            defaultInt32: number;
+
+            /** TestAllRequiredTypesProto2 defaultInt64. */
+            defaultInt64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultUint32. */
+            defaultUint32: number;
+
+            /** TestAllRequiredTypesProto2 defaultUint64. */
+            defaultUint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultSint32. */
+            defaultSint32: number;
+
+            /** TestAllRequiredTypesProto2 defaultSint64. */
+            defaultSint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultFixed32. */
+            defaultFixed32: number;
+
+            /** TestAllRequiredTypesProto2 defaultFixed64. */
+            defaultFixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultSfixed32. */
+            defaultSfixed32: number;
+
+            /** TestAllRequiredTypesProto2 defaultSfixed64. */
+            defaultSfixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultFloat. */
+            defaultFloat: number;
+
+            /** TestAllRequiredTypesProto2 defaultDouble. */
+            defaultDouble: number;
+
+            /** TestAllRequiredTypesProto2 defaultBool. */
+            defaultBool: boolean;
+
+            /** TestAllRequiredTypesProto2 defaultString. */
+            defaultString: string;
+
+            /** TestAllRequiredTypesProto2 defaultBytes. */
+            defaultBytes: Uint8Array;
+
+            /**
+             * Creates a new TestAllRequiredTypesProto2 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns TestAllRequiredTypesProto2 instance
+             */
+            static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
+
+            /**
+             * Encodes the specified TestAllRequiredTypesProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify|verify} messages.
+             * @param message TestAllRequiredTypesProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified TestAllRequiredTypesProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify|verify} messages.
+             * @param message TestAllRequiredTypesProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a TestAllRequiredTypesProto2 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape} TestAllRequiredTypesProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape;
+
+            /**
+             * Decodes a TestAllRequiredTypesProto2 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape} TestAllRequiredTypesProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Shape;
+
+            /**
+             * Verifies a TestAllRequiredTypesProto2 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a TestAllRequiredTypesProto2 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns TestAllRequiredTypesProto2
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
+
+            /**
+             * Creates a plain object from a TestAllRequiredTypesProto2 message. Also converts values to other types if specified.
+             * @param message TestAllRequiredTypesProto2
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this TestAllRequiredTypesProto2 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for TestAllRequiredTypesProto2
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace TestAllRequiredTypesProto2 {
+
+            /** Properties of a TestAllRequiredTypesProto2. */
+            interface $Properties {
+
+                /** TestAllRequiredTypesProto2 requiredInt32 */
+                requiredInt32: number;
+
+                /** TestAllRequiredTypesProto2 requiredInt64 */
+                requiredInt64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 requiredUint32 */
+                requiredUint32: number;
+
+                /** TestAllRequiredTypesProto2 requiredUint64 */
+                requiredUint64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 requiredSint32 */
+                requiredSint32: number;
+
+                /** TestAllRequiredTypesProto2 requiredSint64 */
+                requiredSint64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 requiredFixed32 */
+                requiredFixed32: number;
+
+                /** TestAllRequiredTypesProto2 requiredFixed64 */
+                requiredFixed64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 requiredSfixed32 */
+                requiredSfixed32: number;
+
+                /** TestAllRequiredTypesProto2 requiredSfixed64 */
+                requiredSfixed64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 requiredFloat */
+                requiredFloat: number;
+
+                /** TestAllRequiredTypesProto2 requiredDouble */
+                requiredDouble: number;
+
+                /** TestAllRequiredTypesProto2 requiredBool */
+                requiredBool: boolean;
+
+                /** TestAllRequiredTypesProto2 requiredString */
+                requiredString: string;
+
+                /** TestAllRequiredTypesProto2 requiredBytes */
+                requiredBytes: Uint8Array;
+
+                /** TestAllRequiredTypesProto2 requiredNestedMessage */
+                requiredNestedMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties;
+
+                /** TestAllRequiredTypesProto2 requiredForeignMessage */
+                requiredForeignMessage: protobuf_test_messages.proto2.ForeignMessageProto2.$Properties;
+
+                /** TestAllRequiredTypesProto2 requiredNestedEnum */
+                requiredNestedEnum: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum;
+
+                /** TestAllRequiredTypesProto2 requiredForeignEnum */
+                requiredForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2;
+
+                /** TestAllRequiredTypesProto2 requiredStringPiece */
+                requiredStringPiece: string;
+
+                /** TestAllRequiredTypesProto2 requiredCord */
+                requiredCord: string;
+
+                /** TestAllRequiredTypesProto2 recursiveMessage */
+                recursiveMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
+
+                /** TestAllRequiredTypesProto2 optionalRecursiveMessage */
+                optionalRecursiveMessage?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
+
+                /** TestAllRequiredTypesProto2 data */
+                data: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties;
+
+                /** TestAllRequiredTypesProto2 defaultInt32 */
+                defaultInt32: number;
+
+                /** TestAllRequiredTypesProto2 defaultInt64 */
+                defaultInt64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 defaultUint32 */
+                defaultUint32: number;
+
+                /** TestAllRequiredTypesProto2 defaultUint64 */
+                defaultUint64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 defaultSint32 */
+                defaultSint32: number;
+
+                /** TestAllRequiredTypesProto2 defaultSint64 */
+                defaultSint64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 defaultFixed32 */
+                defaultFixed32: number;
+
+                /** TestAllRequiredTypesProto2 defaultFixed64 */
+                defaultFixed64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 defaultSfixed32 */
+                defaultSfixed32: number;
+
+                /** TestAllRequiredTypesProto2 defaultSfixed64 */
+                defaultSfixed64: (number|Long);
+
+                /** TestAllRequiredTypesProto2 defaultFloat */
+                defaultFloat: number;
+
+                /** TestAllRequiredTypesProto2 defaultDouble */
+                defaultDouble: number;
+
+                /** TestAllRequiredTypesProto2 defaultBool */
+                defaultBool: boolean;
+
+                /** TestAllRequiredTypesProto2 defaultString */
+                defaultString: string;
+
+                /** TestAllRequiredTypesProto2 defaultBytes */
+                defaultBytes: Uint8Array;
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of a TestAllRequiredTypesProto2. */
+            type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
+
+            /**
+             * Properties of a NestedMessage.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties instead.
+             */
+            interface INestedMessage extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties {
+            }
+
+            /** Represents a NestedMessage. */
+            class NestedMessage {
+
+                /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** NestedMessage a. */
+                a: number;
+
+                /** NestedMessage corecursive. */
+                corecursive: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
+
+                /** NestedMessage optionalCorecursive. */
+                optionalCorecursive?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
+
+                /**
+                 * Creates a new NestedMessage instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns NestedMessage instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
+
+                /**
+                 * Encodes the specified NestedMessage message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify|verify} messages.
+                 * @param message NestedMessage message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified NestedMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify|verify} messages.
+                 * @param message NestedMessage message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape} NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape;
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape} NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Shape;
+
+                /**
+                 * Verifies a NestedMessage message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a NestedMessage message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns NestedMessage
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
+
+                /**
+                 * Creates a plain object from a NestedMessage message. Also converts values to other types if specified.
+                 * @param message NestedMessage
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this NestedMessage to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for NestedMessage
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace NestedMessage {
+
+                /** Properties of a NestedMessage. */
+                interface $Properties {
+
+                    /** NestedMessage a */
+                    a: number;
+
+                    /** NestedMessage corecursive */
+                    corecursive: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties;
+
+                    /** NestedMessage optionalCorecursive */
+                    optionalCorecursive?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.$Properties|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a NestedMessage. */
+                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.$Properties;
+            }
+
+            /**
+             * Properties of a Data.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties instead.
+             */
+            interface IData extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties {
+            }
+
+            /** Represents a Data. */
+            class Data {
+
+                /** Reflection-backed declarations are not constructable. Use Data.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** Data groupInt32. */
+                groupInt32: number;
+
+                /** Data groupUint32. */
+                groupUint32: number;
+
+                /**
+                 * Creates a new Data instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns Data instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
+
+                /**
+                 * Encodes the specified Data message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify|verify} messages.
+                 * @param message Data message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified Data message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify|verify} messages.
+                 * @param message Data message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a Data message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape} Data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape;
+
+                /**
+                 * Decodes a Data message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape} Data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Shape;
+
+                /**
+                 * Verifies a Data message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a Data message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Data
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
+
+                /**
+                 * Creates a plain object from a Data message. Also converts values to other types if specified.
+                 * @param message Data
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this Data to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for Data
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace Data {
+
+                /** Properties of a Data. */
+                interface $Properties {
+
+                    /** Data groupInt32 */
+                    groupInt32: number;
+
+                    /** Data groupUint32 */
+                    groupUint32: number;
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a Data. */
+                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.$Properties;
+            }
+
+            /**
+             * Properties of a MessageSetCorrect.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties instead.
+             */
+            interface IMessageSetCorrect extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties {
+            }
+
+            /** Represents a MessageSetCorrect. */
+            class MessageSetCorrect {
+
+                /** Reflection-backed declarations are not constructable. Use MessageSetCorrect.create(...) instead. */
+                private constructor();
+
+                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
+                ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties|null);
+
+                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
+                ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties|null);
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /**
+                 * Creates a new MessageSetCorrect instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrect instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
+
+                /**
+                 * Encodes the specified MessageSetCorrect message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.verify|verify} messages.
+                 * @param message MessageSetCorrect message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrect message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.verify|verify} messages.
+                 * @param message MessageSetCorrect message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrect message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape} MessageSetCorrect
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape;
+
+                /**
+                 * Decodes a MessageSetCorrect message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape} MessageSetCorrect
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Shape;
+
+                /**
+                 * Verifies a MessageSetCorrect message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrect message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrect
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrect message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrect
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrect to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for MessageSetCorrect
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace MessageSetCorrect {
+
+                /** Properties of a MessageSetCorrect. */
+                interface $Properties {
+
+                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
+                    ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties|null);
+
+                    /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
+                    ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a MessageSetCorrect. */
+                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.$Properties;
+            }
+
+            /**
+             * Properties of a MessageSetCorrectExtension1.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties instead.
+             */
+            interface IMessageSetCorrectExtension1 extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties {
+            }
+
+            /** Represents a MessageSetCorrectExtension1. */
+            class MessageSetCorrectExtension1 {
+
+                /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension1.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** MessageSetCorrectExtension1 str. */
+                str: string;
+
+                /**
+                 * Creates a new MessageSetCorrectExtension1 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrectExtension1 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension1 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension1 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension1 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension1 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape} MessageSetCorrectExtension1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape} MessageSetCorrectExtension1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Shape;
+
+                /**
+                 * Verifies a MessageSetCorrectExtension1 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrectExtension1 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrectExtension1
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrectExtension1 message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrectExtension1
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrectExtension1 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for MessageSetCorrectExtension1
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace MessageSetCorrectExtension1 {
+
+                /** Properties of a MessageSetCorrectExtension1. */
+                interface $Properties {
+
+                    /** MessageSetCorrectExtension1 str */
+                    str: string;
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a MessageSetCorrectExtension1. */
+                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.$Properties;
+            }
+
+            /**
+             * Properties of a MessageSetCorrectExtension2.
+             * @deprecated Use protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties instead.
+             */
+            interface IMessageSetCorrectExtension2 extends protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties {
+            }
+
+            /** Represents a MessageSetCorrectExtension2. */
+            class MessageSetCorrectExtension2 {
+
+                /** Reflection-backed declarations are not constructable. Use MessageSetCorrectExtension2.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** MessageSetCorrectExtension2 i. */
+                i: number;
+
+                /**
+                 * Creates a new MessageSetCorrectExtension2 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrectExtension2 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension2 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension2 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape} MessageSetCorrectExtension2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape} MessageSetCorrectExtension2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 & protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Shape;
+
+                /**
+                 * Verifies a MessageSetCorrectExtension2 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrectExtension2 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrectExtension2
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrectExtension2 message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrectExtension2
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrectExtension2 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for MessageSetCorrectExtension2
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace MessageSetCorrectExtension2 {
+
+                /** Properties of a MessageSetCorrectExtension2. */
+                interface $Properties {
+
+                    /** MessageSetCorrectExtension2 i */
+                    i: number;
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a MessageSetCorrectExtension2. */
+                type $Shape = protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.$Properties;
+            }
+
+            /** NestedEnum enum. */
+            enum NestedEnum {
+
+                /** FOO value */
+                FOO = 0,
+
+                /** BAR value */
+                BAR = 1,
+
+                /** BAZ value */
+                BAZ = 2,
+
+                /** NEG value */
+                NEG = -1
+            }
+        }
+
+        /**
+         * Properties of a TestLargeOneof.
+         * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.$Properties instead.
+         */
+        interface ITestLargeOneof extends protobuf_test_messages.proto2.TestLargeOneof.$Properties {
+        }
+
+        /** Represents a TestLargeOneof. */
+        class TestLargeOneof {
+
+            /** Reflection-backed declarations are not constructable. Use TestLargeOneof.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** TestLargeOneof a1. */
+            a1?: (protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties|null);
+
+            /** TestLargeOneof a2. */
+            a2?: (protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties|null);
+
+            /** TestLargeOneof a3. */
+            a3?: (protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties|null);
+
+            /** TestLargeOneof a4. */
+            a4?: (protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties|null);
+
+            /** TestLargeOneof a5. */
+            a5?: (protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties|null);
+
+            /** TestLargeOneof largeOneof. */
+            largeOneof?: ("a1"|"a2"|"a3"|"a4"|"a5");
+
+            /**
+             * Creates a new TestLargeOneof instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns TestLargeOneof instance
+             */
+            static create(properties: protobuf_test_messages.proto2.TestLargeOneof.$Shape): protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape;
+            static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.$Properties): protobuf_test_messages.proto2.TestLargeOneof;
+
+            /**
+             * Encodes the specified TestLargeOneof message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.verify|verify} messages.
+             * @param message TestLargeOneof message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto2.TestLargeOneof.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified TestLargeOneof message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.verify|verify} messages.
+             * @param message TestLargeOneof message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a TestLargeOneof message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape} TestLargeOneof
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape;
+
+            /**
+             * Decodes a TestLargeOneof message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape} TestLargeOneof
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof & protobuf_test_messages.proto2.TestLargeOneof.$Shape;
+
+            /**
+             * Verifies a TestLargeOneof message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a TestLargeOneof message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns TestLargeOneof
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof;
+
+            /**
+             * Creates a plain object from a TestLargeOneof message. Also converts values to other types if specified.
+             * @param message TestLargeOneof
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto2.TestLargeOneof, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this TestLargeOneof to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for TestLargeOneof
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace TestLargeOneof {
+
+            /** Properties of a TestLargeOneof. */
+            interface $Properties {
+
+                /** TestLargeOneof a1 */
+                a1?: (protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties|null);
+
+                /** TestLargeOneof a2 */
+                a2?: (protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties|null);
+
+                /** TestLargeOneof a3 */
+                a3?: (protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties|null);
+
+                /** TestLargeOneof a4 */
+                a4?: (protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties|null);
+
+                /** TestLargeOneof a5 */
+                a5?: (protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties|null);
+
+                /** TestLargeOneof largeOneof */
+                largeOneof?: ("a1"|"a2"|"a3"|"a4"|"a5");
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Narrowed shape of a TestLargeOneof. */
+            type $Shape = {
+              a1?: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape|null;
+              a2?: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape|null;
+              a3?: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape|null;
+              a4?: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape|null;
+              a5?: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape|null;
+              $unknowns?: Uint8Array[];
+            } & (
+              ({ largeOneof?: undefined; a1?: null; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a1"; a1: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape; a2?: null; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a2"; a1?: null; a2: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape; a3?: null; a4?: null; a5?: null }|{ largeOneof?: "a3"; a1?: null; a2?: null; a3: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape; a4?: null; a5?: null }|{ largeOneof?: "a4"; a1?: null; a2?: null; a3?: null; a4: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape; a5?: null }|{ largeOneof?: "a5"; a1?: null; a2?: null; a3?: null; a4?: null; a5: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape })
+            );
+
+            /**
+             * Properties of a A1.
+             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties instead.
+             */
+            interface IA1 extends protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties {
+            }
+
+            /** Represents a A1. */
+            class A1 {
+
+                /** Reflection-backed declarations are not constructable. Use A1.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /**
+                 * Creates a new A1 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns A1 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A1;
+
+                /**
+                 * Encodes the specified A1 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A1.verify|verify} messages.
+                 * @param message A1 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified A1 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A1.verify|verify} messages.
+                 * @param message A1 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a A1 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape} A1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape;
+
+                /**
+                 * Decodes a A1 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape} A1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A1 & protobuf_test_messages.proto2.TestLargeOneof.A1.$Shape;
+
+                /**
+                 * Verifies a A1 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a A1 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns A1
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A1;
+
+                /**
+                 * Creates a plain object from a A1 message. Also converts values to other types if specified.
+                 * @param message A1
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A1, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this A1 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for A1
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace A1 {
+
+                /** Properties of a A1. */
+                interface $Properties {
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a A1. */
+                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A1.$Properties;
+            }
+
+            /**
+             * Properties of a A2.
+             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties instead.
+             */
+            interface IA2 extends protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties {
+            }
+
+            /** Represents a A2. */
+            class A2 {
+
+                /** Reflection-backed declarations are not constructable. Use A2.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /**
+                 * Creates a new A2 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns A2 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A2;
+
+                /**
+                 * Encodes the specified A2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A2.verify|verify} messages.
+                 * @param message A2 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified A2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A2.verify|verify} messages.
+                 * @param message A2 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a A2 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape} A2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape;
+
+                /**
+                 * Decodes a A2 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape} A2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A2 & protobuf_test_messages.proto2.TestLargeOneof.A2.$Shape;
+
+                /**
+                 * Verifies a A2 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a A2 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns A2
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A2;
+
+                /**
+                 * Creates a plain object from a A2 message. Also converts values to other types if specified.
+                 * @param message A2
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this A2 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for A2
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace A2 {
+
+                /** Properties of a A2. */
+                interface $Properties {
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a A2. */
+                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A2.$Properties;
+            }
+
+            /**
+             * Properties of a A3.
+             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties instead.
+             */
+            interface IA3 extends protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties {
+            }
+
+            /** Represents a A3. */
+            class A3 {
+
+                /** Reflection-backed declarations are not constructable. Use A3.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /**
+                 * Creates a new A3 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns A3 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A3;
+
+                /**
+                 * Encodes the specified A3 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A3.verify|verify} messages.
+                 * @param message A3 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified A3 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A3.verify|verify} messages.
+                 * @param message A3 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a A3 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape} A3
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape;
+
+                /**
+                 * Decodes a A3 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape} A3
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A3 & protobuf_test_messages.proto2.TestLargeOneof.A3.$Shape;
+
+                /**
+                 * Verifies a A3 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a A3 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns A3
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A3;
+
+                /**
+                 * Creates a plain object from a A3 message. Also converts values to other types if specified.
+                 * @param message A3
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A3, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this A3 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for A3
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace A3 {
+
+                /** Properties of a A3. */
+                interface $Properties {
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a A3. */
+                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A3.$Properties;
+            }
+
+            /**
+             * Properties of a A4.
+             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties instead.
+             */
+            interface IA4 extends protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties {
+            }
+
+            /** Represents a A4. */
+            class A4 {
+
+                /** Reflection-backed declarations are not constructable. Use A4.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /**
+                 * Creates a new A4 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns A4 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A4;
+
+                /**
+                 * Encodes the specified A4 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A4.verify|verify} messages.
+                 * @param message A4 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified A4 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A4.verify|verify} messages.
+                 * @param message A4 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a A4 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape} A4
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape;
+
+                /**
+                 * Decodes a A4 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape} A4
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A4 & protobuf_test_messages.proto2.TestLargeOneof.A4.$Shape;
+
+                /**
+                 * Verifies a A4 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a A4 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns A4
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A4;
+
+                /**
+                 * Creates a plain object from a A4 message. Also converts values to other types if specified.
+                 * @param message A4
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A4, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this A4 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for A4
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace A4 {
+
+                /** Properties of a A4. */
+                interface $Properties {
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a A4. */
+                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A4.$Properties;
+            }
+
+            /**
+             * Properties of a A5.
+             * @deprecated Use protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties instead.
+             */
+            interface IA5 extends protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties {
+            }
+
+            /** Represents a A5. */
+            class A5 {
+
+                /** Reflection-backed declarations are not constructable. Use A5.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /**
+                 * Creates a new A5 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns A5 instance
+                 */
+                static create(properties: protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape): protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape;
+                static create(properties?: protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties): protobuf_test_messages.proto2.TestLargeOneof.A5;
+
+                /**
+                 * Encodes the specified A5 message. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A5.verify|verify} messages.
+                 * @param message A5 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified A5 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestLargeOneof.A5.verify|verify} messages.
+                 * @param message A5 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a A5 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape} A5
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape;
+
+                /**
+                 * Decodes a A5 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape} A5
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestLargeOneof.A5 & protobuf_test_messages.proto2.TestLargeOneof.A5.$Shape;
+
+                /**
+                 * Verifies a A5 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a A5 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns A5
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestLargeOneof.A5;
+
+                /**
+                 * Creates a plain object from a A5 message. Also converts values to other types if specified.
+                 * @param message A5
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto2.TestLargeOneof.A5, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this A5 to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for A5
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace A5 {
+
+                /** Properties of a A5. */
+                interface $Properties {
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a A5. */
+                type $Shape = protobuf_test_messages.proto2.TestLargeOneof.A5.$Properties;
+            }
+        }
+
+        /** ForeignEnumProto2 enum. */
+        enum ForeignEnumProto2 {
+
+            /** FOREIGN_FOO value */
+            FOREIGN_FOO = 0,
+
+            /** FOREIGN_BAR value */
+            FOREIGN_BAR = 1,
+
+            /** FOREIGN_BAZ value */
+            FOREIGN_BAZ = 2
+        }
+    }
+
+    /** Namespace proto3. */
+    namespace proto3 {
+
+        /**
+         * Properties of a TestAllTypesProto3.
+         * @deprecated Use protobuf_test_messages.proto3.TestAllTypesProto3.$Properties instead.
+         */
+        interface ITestAllTypesProto3 extends protobuf_test_messages.proto3.TestAllTypesProto3.$Properties {
+        }
+
+        /** Represents a TestAllTypesProto3. */
+        class TestAllTypesProto3 {
+
+            /** Reflection-backed declarations are not constructable. Use TestAllTypesProto3.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** TestAllTypesProto3 optionalInt32. */
+            optionalInt32: number;
+
+            /** TestAllTypesProto3 optionalInt64. */
+            optionalInt64: (number|Long);
+
+            /** TestAllTypesProto3 optionalUint32. */
+            optionalUint32: number;
+
+            /** TestAllTypesProto3 optionalUint64. */
+            optionalUint64: (number|Long);
+
+            /** TestAllTypesProto3 optionalSint32. */
+            optionalSint32: number;
+
+            /** TestAllTypesProto3 optionalSint64. */
+            optionalSint64: (number|Long);
+
+            /** TestAllTypesProto3 optionalFixed32. */
+            optionalFixed32: number;
+
+            /** TestAllTypesProto3 optionalFixed64. */
+            optionalFixed64: (number|Long);
+
+            /** TestAllTypesProto3 optionalSfixed32. */
+            optionalSfixed32: number;
+
+            /** TestAllTypesProto3 optionalSfixed64. */
+            optionalSfixed64: (number|Long);
+
+            /** TestAllTypesProto3 optionalFloat. */
+            optionalFloat: number;
+
+            /** TestAllTypesProto3 optionalDouble. */
+            optionalDouble: number;
+
+            /** TestAllTypesProto3 optionalBool. */
+            optionalBool: boolean;
+
+            /** TestAllTypesProto3 optionalString. */
+            optionalString: string;
+
+            /** TestAllTypesProto3 optionalBytes. */
+            optionalBytes: Uint8Array;
+
+            /** TestAllTypesProto3 optionalNestedMessage. */
+            optionalNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties|null);
+
+            /** TestAllTypesProto3 optionalForeignMessage. */
+            optionalForeignMessage?: (protobuf_test_messages.proto3.ForeignMessage.$Properties|null);
+
+            /** TestAllTypesProto3 optionalNestedEnum. */
+            optionalNestedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum;
+
+            /** TestAllTypesProto3 optionalForeignEnum. */
+            optionalForeignEnum: protobuf_test_messages.proto3.ForeignEnum;
+
+            /** TestAllTypesProto3 optionalAliasedEnum. */
+            optionalAliasedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum;
+
+            /** TestAllTypesProto3 optionalStringPiece. */
+            optionalStringPiece: string;
+
+            /** TestAllTypesProto3 optionalCord. */
+            optionalCord: string;
+
+            /** TestAllTypesProto3 recursiveMessage. */
+            recursiveMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
+
+            /** TestAllTypesProto3 repeatedInt32. */
+            repeatedInt32: number[];
+
+            /** TestAllTypesProto3 repeatedInt64. */
+            repeatedInt64: (number|Long)[];
+
+            /** TestAllTypesProto3 repeatedUint32. */
+            repeatedUint32: number[];
+
+            /** TestAllTypesProto3 repeatedUint64. */
+            repeatedUint64: (number|Long)[];
+
+            /** TestAllTypesProto3 repeatedSint32. */
+            repeatedSint32: number[];
+
+            /** TestAllTypesProto3 repeatedSint64. */
+            repeatedSint64: (number|Long)[];
+
+            /** TestAllTypesProto3 repeatedFixed32. */
+            repeatedFixed32: number[];
+
+            /** TestAllTypesProto3 repeatedFixed64. */
+            repeatedFixed64: (number|Long)[];
+
+            /** TestAllTypesProto3 repeatedSfixed32. */
+            repeatedSfixed32: number[];
+
+            /** TestAllTypesProto3 repeatedSfixed64. */
+            repeatedSfixed64: (number|Long)[];
+
+            /** TestAllTypesProto3 repeatedFloat. */
+            repeatedFloat: number[];
+
+            /** TestAllTypesProto3 repeatedDouble. */
+            repeatedDouble: number[];
+
+            /** TestAllTypesProto3 repeatedBool. */
+            repeatedBool: boolean[];
+
+            /** TestAllTypesProto3 repeatedString. */
+            repeatedString: string[];
+
+            /** TestAllTypesProto3 repeatedBytes. */
+            repeatedBytes: Uint8Array[];
+
+            /** TestAllTypesProto3 repeatedNestedMessage. */
+            repeatedNestedMessage: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties[];
+
+            /** TestAllTypesProto3 repeatedForeignMessage. */
+            repeatedForeignMessage: protobuf_test_messages.proto3.ForeignMessage.$Properties[];
+
+            /** TestAllTypesProto3 repeatedNestedEnum. */
+            repeatedNestedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[];
+
+            /** TestAllTypesProto3 repeatedForeignEnum. */
+            repeatedForeignEnum: protobuf_test_messages.proto3.ForeignEnum[];
+
+            /** TestAllTypesProto3 repeatedStringPiece. */
+            repeatedStringPiece: string[];
+
+            /** TestAllTypesProto3 repeatedCord. */
+            repeatedCord: string[];
+
+            /** TestAllTypesProto3 packedInt32. */
+            packedInt32: number[];
+
+            /** TestAllTypesProto3 packedInt64. */
+            packedInt64: (number|Long)[];
+
+            /** TestAllTypesProto3 packedUint32. */
+            packedUint32: number[];
+
+            /** TestAllTypesProto3 packedUint64. */
+            packedUint64: (number|Long)[];
+
+            /** TestAllTypesProto3 packedSint32. */
+            packedSint32: number[];
+
+            /** TestAllTypesProto3 packedSint64. */
+            packedSint64: (number|Long)[];
+
+            /** TestAllTypesProto3 packedFixed32. */
+            packedFixed32: number[];
+
+            /** TestAllTypesProto3 packedFixed64. */
+            packedFixed64: (number|Long)[];
+
+            /** TestAllTypesProto3 packedSfixed32. */
+            packedSfixed32: number[];
+
+            /** TestAllTypesProto3 packedSfixed64. */
+            packedSfixed64: (number|Long)[];
+
+            /** TestAllTypesProto3 packedFloat. */
+            packedFloat: number[];
+
+            /** TestAllTypesProto3 packedDouble. */
+            packedDouble: number[];
+
+            /** TestAllTypesProto3 packedBool. */
+            packedBool: boolean[];
+
+            /** TestAllTypesProto3 packedNestedEnum. */
+            packedNestedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[];
+
+            /** TestAllTypesProto3 unpackedInt32. */
+            unpackedInt32: number[];
+
+            /** TestAllTypesProto3 unpackedInt64. */
+            unpackedInt64: (number|Long)[];
+
+            /** TestAllTypesProto3 unpackedUint32. */
+            unpackedUint32: number[];
+
+            /** TestAllTypesProto3 unpackedUint64. */
+            unpackedUint64: (number|Long)[];
+
+            /** TestAllTypesProto3 unpackedSint32. */
+            unpackedSint32: number[];
+
+            /** TestAllTypesProto3 unpackedSint64. */
+            unpackedSint64: (number|Long)[];
+
+            /** TestAllTypesProto3 unpackedFixed32. */
+            unpackedFixed32: number[];
+
+            /** TestAllTypesProto3 unpackedFixed64. */
+            unpackedFixed64: (number|Long)[];
+
+            /** TestAllTypesProto3 unpackedSfixed32. */
+            unpackedSfixed32: number[];
+
+            /** TestAllTypesProto3 unpackedSfixed64. */
+            unpackedSfixed64: (number|Long)[];
+
+            /** TestAllTypesProto3 unpackedFloat. */
+            unpackedFloat: number[];
+
+            /** TestAllTypesProto3 unpackedDouble. */
+            unpackedDouble: number[];
+
+            /** TestAllTypesProto3 unpackedBool. */
+            unpackedBool: boolean[];
+
+            /** TestAllTypesProto3 unpackedNestedEnum. */
+            unpackedNestedEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[];
+
+            /** TestAllTypesProto3 mapInt32Int32. */
+            mapInt32Int32: { [k: string]: number };
+
+            /** TestAllTypesProto3 mapInt64Int64. */
+            mapInt64Int64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto3 mapUint32Uint32. */
+            mapUint32Uint32: { [k: string]: number };
+
+            /** TestAllTypesProto3 mapUint64Uint64. */
+            mapUint64Uint64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto3 mapSint32Sint32. */
+            mapSint32Sint32: { [k: string]: number };
+
+            /** TestAllTypesProto3 mapSint64Sint64. */
+            mapSint64Sint64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto3 mapFixed32Fixed32. */
+            mapFixed32Fixed32: { [k: string]: number };
+
+            /** TestAllTypesProto3 mapFixed64Fixed64. */
+            mapFixed64Fixed64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto3 mapSfixed32Sfixed32. */
+            mapSfixed32Sfixed32: { [k: string]: number };
+
+            /** TestAllTypesProto3 mapSfixed64Sfixed64. */
+            mapSfixed64Sfixed64: { [k: string]: (number|Long) };
+
+            /** TestAllTypesProto3 mapInt32Float. */
+            mapInt32Float: { [k: string]: number };
+
+            /** TestAllTypesProto3 mapInt32Double. */
+            mapInt32Double: { [k: string]: number };
+
+            /** TestAllTypesProto3 mapBoolBool. */
+            mapBoolBool: { [k: string]: boolean };
+
+            /** TestAllTypesProto3 mapStringString. */
+            mapStringString: { [k: string]: string };
+
+            /** TestAllTypesProto3 mapStringBytes. */
+            mapStringBytes: { [k: string]: Uint8Array };
+
+            /** TestAllTypesProto3 mapStringNestedMessage. */
+            mapStringNestedMessage: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties };
+
+            /** TestAllTypesProto3 mapStringForeignMessage. */
+            mapStringForeignMessage: { [k: string]: protobuf_test_messages.proto3.ForeignMessage.$Properties };
+
+            /** TestAllTypesProto3 mapStringNestedEnum. */
+            mapStringNestedEnum: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum };
+
+            /** TestAllTypesProto3 mapStringForeignEnum. */
+            mapStringForeignEnum: { [k: string]: protobuf_test_messages.proto3.ForeignEnum };
+
+            /** TestAllTypesProto3 oneofUint32. */
+            oneofUint32?: (number|null);
+
+            /** TestAllTypesProto3 oneofNestedMessage. */
+            oneofNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties|null);
+
+            /** TestAllTypesProto3 oneofString. */
+            oneofString?: (string|null);
+
+            /** TestAllTypesProto3 oneofBytes. */
+            oneofBytes?: (Uint8Array|null);
+
+            /** TestAllTypesProto3 oneofBool. */
+            oneofBool?: (boolean|null);
+
+            /** TestAllTypesProto3 oneofUint64. */
+            oneofUint64?: (number|Long|null);
+
+            /** TestAllTypesProto3 oneofFloat. */
+            oneofFloat?: (number|null);
+
+            /** TestAllTypesProto3 oneofDouble. */
+            oneofDouble?: (number|null);
+
+            /** TestAllTypesProto3 oneofEnum. */
+            oneofEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null);
+
+            /** TestAllTypesProto3 oneofNullValue. */
+            oneofNullValue?: (google.protobuf.NullValue|null);
+
+            /** TestAllTypesProto3 optionalBoolWrapper. */
+            optionalBoolWrapper?: (google.protobuf.BoolValue.$Properties|null);
+
+            /** TestAllTypesProto3 optionalInt32Wrapper. */
+            optionalInt32Wrapper?: (google.protobuf.Int32Value.$Properties|null);
+
+            /** TestAllTypesProto3 optionalInt64Wrapper. */
+            optionalInt64Wrapper?: (google.protobuf.Int64Value.$Properties|null);
+
+            /** TestAllTypesProto3 optionalUint32Wrapper. */
+            optionalUint32Wrapper?: (google.protobuf.UInt32Value.$Properties|null);
+
+            /** TestAllTypesProto3 optionalUint64Wrapper. */
+            optionalUint64Wrapper?: (google.protobuf.UInt64Value.$Properties|null);
+
+            /** TestAllTypesProto3 optionalFloatWrapper. */
+            optionalFloatWrapper?: (google.protobuf.FloatValue.$Properties|null);
+
+            /** TestAllTypesProto3 optionalDoubleWrapper. */
+            optionalDoubleWrapper?: (google.protobuf.DoubleValue.$Properties|null);
+
+            /** TestAllTypesProto3 optionalStringWrapper. */
+            optionalStringWrapper?: (google.protobuf.StringValue.$Properties|null);
+
+            /** TestAllTypesProto3 optionalBytesWrapper. */
+            optionalBytesWrapper?: (google.protobuf.BytesValue.$Properties|null);
+
+            /** TestAllTypesProto3 repeatedBoolWrapper. */
+            repeatedBoolWrapper: google.protobuf.BoolValue.$Properties[];
+
+            /** TestAllTypesProto3 repeatedInt32Wrapper. */
+            repeatedInt32Wrapper: google.protobuf.Int32Value.$Properties[];
+
+            /** TestAllTypesProto3 repeatedInt64Wrapper. */
+            repeatedInt64Wrapper: google.protobuf.Int64Value.$Properties[];
+
+            /** TestAllTypesProto3 repeatedUint32Wrapper. */
+            repeatedUint32Wrapper: google.protobuf.UInt32Value.$Properties[];
+
+            /** TestAllTypesProto3 repeatedUint64Wrapper. */
+            repeatedUint64Wrapper: google.protobuf.UInt64Value.$Properties[];
+
+            /** TestAllTypesProto3 repeatedFloatWrapper. */
+            repeatedFloatWrapper: google.protobuf.FloatValue.$Properties[];
+
+            /** TestAllTypesProto3 repeatedDoubleWrapper. */
+            repeatedDoubleWrapper: google.protobuf.DoubleValue.$Properties[];
+
+            /** TestAllTypesProto3 repeatedStringWrapper. */
+            repeatedStringWrapper: google.protobuf.StringValue.$Properties[];
+
+            /** TestAllTypesProto3 repeatedBytesWrapper. */
+            repeatedBytesWrapper: google.protobuf.BytesValue.$Properties[];
+
+            /** TestAllTypesProto3 optionalDuration. */
+            optionalDuration?: (google.protobuf.Duration.$Properties|null);
+
+            /** TestAllTypesProto3 optionalTimestamp. */
+            optionalTimestamp?: (google.protobuf.Timestamp.$Properties|null);
+
+            /** TestAllTypesProto3 optionalFieldMask. */
+            optionalFieldMask?: (google.protobuf.FieldMask.$Properties|null);
+
+            /** TestAllTypesProto3 optionalStruct. */
+            optionalStruct?: (google.protobuf.Struct.$Properties|null);
+
+            /** TestAllTypesProto3 optionalAny. */
+            optionalAny?: (google.protobuf.Any.$Properties|null);
+
+            /** TestAllTypesProto3 optionalValue. */
+            optionalValue?: (google.protobuf.Value.$Properties|null);
+
+            /** TestAllTypesProto3 optionalNullValue. */
+            optionalNullValue: google.protobuf.NullValue;
+
+            /** TestAllTypesProto3 repeatedDuration. */
+            repeatedDuration: google.protobuf.Duration.$Properties[];
+
+            /** TestAllTypesProto3 repeatedTimestamp. */
+            repeatedTimestamp: google.protobuf.Timestamp.$Properties[];
+
+            /** TestAllTypesProto3 repeatedFieldmask. */
+            repeatedFieldmask: google.protobuf.FieldMask.$Properties[];
+
+            /** TestAllTypesProto3 repeatedStruct. */
+            repeatedStruct: google.protobuf.Struct.$Properties[];
+
+            /** TestAllTypesProto3 repeatedAny. */
+            repeatedAny: google.protobuf.Any.$Properties[];
+
+            /** TestAllTypesProto3 repeatedValue. */
+            repeatedValue: google.protobuf.Value.$Properties[];
+
+            /** TestAllTypesProto3 repeatedListValue. */
+            repeatedListValue: google.protobuf.ListValue.$Properties[];
+
+            /** TestAllTypesProto3 fieldname1. */
+            fieldname1: number;
+
+            /** TestAllTypesProto3 fieldName2. */
+            fieldName2: number;
+
+            /** TestAllTypesProto3 FieldName3. */
+            FieldName3: number;
+
+            /** TestAllTypesProto3 fieldName4. */
+            fieldName4: number;
+
+            /** TestAllTypesProto3 field0name5. */
+            field0name5: number;
+
+            /** TestAllTypesProto3 field0Name6. */
+            field0Name6: number;
+
+            /** TestAllTypesProto3 fieldName7. */
+            fieldName7: number;
+
+            /** TestAllTypesProto3 FieldName8. */
+            FieldName8: number;
+
+            /** TestAllTypesProto3 fieldName9. */
+            fieldName9: number;
+
+            /** TestAllTypesProto3 FieldName10. */
+            FieldName10: number;
+
+            /** TestAllTypesProto3 FIELDNAME11. */
+            FIELDNAME11: number;
+
+            /** TestAllTypesProto3 FIELDName12. */
+            FIELDName12: number;
+
+            /** TestAllTypesProto3 FieldName13. */
+            FieldName13: number;
+
+            /** TestAllTypesProto3 FieldName14. */
+            FieldName14: number;
+
+            /** TestAllTypesProto3 fieldName15. */
+            fieldName15: number;
+
+            /** TestAllTypesProto3 fieldName16. */
+            fieldName16: number;
+
+            /** TestAllTypesProto3 fieldName17. */
+            fieldName17: number;
+
+            /** TestAllTypesProto3 FieldName18. */
+            FieldName18: number;
+
+            /** TestAllTypesProto3 oneofField. */
+            oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum"|"oneofNullValue");
+
+            /**
+             * Creates a new TestAllTypesProto3 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns TestAllTypesProto3 instance
+             */
+            static create(properties: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape): protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape;
+            static create(properties?: protobuf_test_messages.proto3.TestAllTypesProto3.$Properties): protobuf_test_messages.proto3.TestAllTypesProto3;
+
+            /**
+             * Encodes the specified TestAllTypesProto3 message. Does not implicitly {@link protobuf_test_messages.proto3.TestAllTypesProto3.verify|verify} messages.
+             * @param message TestAllTypesProto3 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto3.TestAllTypesProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified TestAllTypesProto3 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.TestAllTypesProto3.verify|verify} messages.
+             * @param message TestAllTypesProto3 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto3.TestAllTypesProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a TestAllTypesProto3 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape} TestAllTypesProto3
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape;
+
+            /**
+             * Decodes a TestAllTypesProto3 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape} TestAllTypesProto3
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.TestAllTypesProto3 & protobuf_test_messages.proto3.TestAllTypesProto3.$Shape;
+
+            /**
+             * Verifies a TestAllTypesProto3 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a TestAllTypesProto3 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns TestAllTypesProto3
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.TestAllTypesProto3;
+
+            /**
+             * Creates a plain object from a TestAllTypesProto3 message. Also converts values to other types if specified.
+             * @param message TestAllTypesProto3
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto3.TestAllTypesProto3, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this TestAllTypesProto3 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for TestAllTypesProto3
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace TestAllTypesProto3 {
+
+            /** Properties of a TestAllTypesProto3. */
+            interface $Properties {
+
+                /** TestAllTypesProto3 optionalInt32 */
+                optionalInt32?: (number|null);
+
+                /** TestAllTypesProto3 optionalInt64 */
+                optionalInt64?: (number|Long|null);
+
+                /** TestAllTypesProto3 optionalUint32 */
+                optionalUint32?: (number|null);
+
+                /** TestAllTypesProto3 optionalUint64 */
+                optionalUint64?: (number|Long|null);
+
+                /** TestAllTypesProto3 optionalSint32 */
+                optionalSint32?: (number|null);
+
+                /** TestAllTypesProto3 optionalSint64 */
+                optionalSint64?: (number|Long|null);
+
+                /** TestAllTypesProto3 optionalFixed32 */
+                optionalFixed32?: (number|null);
+
+                /** TestAllTypesProto3 optionalFixed64 */
+                optionalFixed64?: (number|Long|null);
+
+                /** TestAllTypesProto3 optionalSfixed32 */
+                optionalSfixed32?: (number|null);
+
+                /** TestAllTypesProto3 optionalSfixed64 */
+                optionalSfixed64?: (number|Long|null);
+
+                /** TestAllTypesProto3 optionalFloat */
+                optionalFloat?: (number|null);
+
+                /** TestAllTypesProto3 optionalDouble */
+                optionalDouble?: (number|null);
+
+                /** TestAllTypesProto3 optionalBool */
+                optionalBool?: (boolean|null);
+
+                /** TestAllTypesProto3 optionalString */
+                optionalString?: (string|null);
+
+                /** TestAllTypesProto3 optionalBytes */
+                optionalBytes?: (Uint8Array|null);
+
+                /** TestAllTypesProto3 optionalNestedMessage */
+                optionalNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties|null);
+
+                /** TestAllTypesProto3 optionalForeignMessage */
+                optionalForeignMessage?: (protobuf_test_messages.proto3.ForeignMessage.$Properties|null);
+
+                /** TestAllTypesProto3 optionalNestedEnum */
+                optionalNestedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null);
+
+                /** TestAllTypesProto3 optionalForeignEnum */
+                optionalForeignEnum?: (protobuf_test_messages.proto3.ForeignEnum|null);
+
+                /** TestAllTypesProto3 optionalAliasedEnum */
+                optionalAliasedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum|null);
+
+                /** TestAllTypesProto3 optionalStringPiece */
+                optionalStringPiece?: (string|null);
+
+                /** TestAllTypesProto3 optionalCord */
+                optionalCord?: (string|null);
+
+                /** TestAllTypesProto3 recursiveMessage */
+                recursiveMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
+
+                /** TestAllTypesProto3 repeatedInt32 */
+                repeatedInt32?: (number[]|null);
+
+                /** TestAllTypesProto3 repeatedInt64 */
+                repeatedInt64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 repeatedUint32 */
+                repeatedUint32?: (number[]|null);
+
+                /** TestAllTypesProto3 repeatedUint64 */
+                repeatedUint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 repeatedSint32 */
+                repeatedSint32?: (number[]|null);
+
+                /** TestAllTypesProto3 repeatedSint64 */
+                repeatedSint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 repeatedFixed32 */
+                repeatedFixed32?: (number[]|null);
+
+                /** TestAllTypesProto3 repeatedFixed64 */
+                repeatedFixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 repeatedSfixed32 */
+                repeatedSfixed32?: (number[]|null);
+
+                /** TestAllTypesProto3 repeatedSfixed64 */
+                repeatedSfixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 repeatedFloat */
+                repeatedFloat?: (number[]|null);
+
+                /** TestAllTypesProto3 repeatedDouble */
+                repeatedDouble?: (number[]|null);
+
+                /** TestAllTypesProto3 repeatedBool */
+                repeatedBool?: (boolean[]|null);
+
+                /** TestAllTypesProto3 repeatedString */
+                repeatedString?: (string[]|null);
+
+                /** TestAllTypesProto3 repeatedBytes */
+                repeatedBytes?: (Uint8Array[]|null);
+
+                /** TestAllTypesProto3 repeatedNestedMessage */
+                repeatedNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedForeignMessage */
+                repeatedForeignMessage?: (protobuf_test_messages.proto3.ForeignMessage.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedNestedEnum */
+                repeatedNestedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null);
+
+                /** TestAllTypesProto3 repeatedForeignEnum */
+                repeatedForeignEnum?: (protobuf_test_messages.proto3.ForeignEnum[]|null);
+
+                /** TestAllTypesProto3 repeatedStringPiece */
+                repeatedStringPiece?: (string[]|null);
+
+                /** TestAllTypesProto3 repeatedCord */
+                repeatedCord?: (string[]|null);
+
+                /** TestAllTypesProto3 packedInt32 */
+                packedInt32?: (number[]|null);
+
+                /** TestAllTypesProto3 packedInt64 */
+                packedInt64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 packedUint32 */
+                packedUint32?: (number[]|null);
+
+                /** TestAllTypesProto3 packedUint64 */
+                packedUint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 packedSint32 */
+                packedSint32?: (number[]|null);
+
+                /** TestAllTypesProto3 packedSint64 */
+                packedSint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 packedFixed32 */
+                packedFixed32?: (number[]|null);
+
+                /** TestAllTypesProto3 packedFixed64 */
+                packedFixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 packedSfixed32 */
+                packedSfixed32?: (number[]|null);
+
+                /** TestAllTypesProto3 packedSfixed64 */
+                packedSfixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 packedFloat */
+                packedFloat?: (number[]|null);
+
+                /** TestAllTypesProto3 packedDouble */
+                packedDouble?: (number[]|null);
+
+                /** TestAllTypesProto3 packedBool */
+                packedBool?: (boolean[]|null);
+
+                /** TestAllTypesProto3 packedNestedEnum */
+                packedNestedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null);
+
+                /** TestAllTypesProto3 unpackedInt32 */
+                unpackedInt32?: (number[]|null);
+
+                /** TestAllTypesProto3 unpackedInt64 */
+                unpackedInt64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 unpackedUint32 */
+                unpackedUint32?: (number[]|null);
+
+                /** TestAllTypesProto3 unpackedUint64 */
+                unpackedUint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 unpackedSint32 */
+                unpackedSint32?: (number[]|null);
+
+                /** TestAllTypesProto3 unpackedSint64 */
+                unpackedSint64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 unpackedFixed32 */
+                unpackedFixed32?: (number[]|null);
+
+                /** TestAllTypesProto3 unpackedFixed64 */
+                unpackedFixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 unpackedSfixed32 */
+                unpackedSfixed32?: (number[]|null);
+
+                /** TestAllTypesProto3 unpackedSfixed64 */
+                unpackedSfixed64?: ((number|Long)[]|null);
+
+                /** TestAllTypesProto3 unpackedFloat */
+                unpackedFloat?: (number[]|null);
+
+                /** TestAllTypesProto3 unpackedDouble */
+                unpackedDouble?: (number[]|null);
+
+                /** TestAllTypesProto3 unpackedBool */
+                unpackedBool?: (boolean[]|null);
+
+                /** TestAllTypesProto3 unpackedNestedEnum */
+                unpackedNestedEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null);
+
+                /** TestAllTypesProto3 mapInt32Int32 */
+                mapInt32Int32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto3 mapInt64Int64 */
+                mapInt64Int64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto3 mapUint32Uint32 */
+                mapUint32Uint32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto3 mapUint64Uint64 */
+                mapUint64Uint64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto3 mapSint32Sint32 */
+                mapSint32Sint32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto3 mapSint64Sint64 */
+                mapSint64Sint64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto3 mapFixed32Fixed32 */
+                mapFixed32Fixed32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto3 mapFixed64Fixed64 */
+                mapFixed64Fixed64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto3 mapSfixed32Sfixed32 */
+                mapSfixed32Sfixed32?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto3 mapSfixed64Sfixed64 */
+                mapSfixed64Sfixed64?: ({ [k: string]: (number|Long) }|null);
+
+                /** TestAllTypesProto3 mapInt32Float */
+                mapInt32Float?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto3 mapInt32Double */
+                mapInt32Double?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto3 mapBoolBool */
+                mapBoolBool?: ({ [k: string]: boolean }|null);
+
+                /** TestAllTypesProto3 mapStringString */
+                mapStringString?: ({ [k: string]: string }|null);
+
+                /** TestAllTypesProto3 mapStringBytes */
+                mapStringBytes?: ({ [k: string]: Uint8Array }|null);
+
+                /** TestAllTypesProto3 mapStringNestedMessage */
+                mapStringNestedMessage?: ({ [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties }|null);
+
+                /** TestAllTypesProto3 mapStringForeignMessage */
+                mapStringForeignMessage?: ({ [k: string]: protobuf_test_messages.proto3.ForeignMessage.$Properties }|null);
+
+                /** TestAllTypesProto3 mapStringNestedEnum */
+                mapStringNestedEnum?: ({ [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum }|null);
+
+                /** TestAllTypesProto3 mapStringForeignEnum */
+                mapStringForeignEnum?: ({ [k: string]: protobuf_test_messages.proto3.ForeignEnum }|null);
+
+                /** TestAllTypesProto3 oneofUint32 */
+                oneofUint32?: (number|null);
+
+                /** TestAllTypesProto3 oneofNestedMessage */
+                oneofNestedMessage?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties|null);
+
+                /** TestAllTypesProto3 oneofString */
+                oneofString?: (string|null);
+
+                /** TestAllTypesProto3 oneofBytes */
+                oneofBytes?: (Uint8Array|null);
+
+                /** TestAllTypesProto3 oneofBool */
+                oneofBool?: (boolean|null);
+
+                /** TestAllTypesProto3 oneofUint64 */
+                oneofUint64?: (number|Long|null);
+
+                /** TestAllTypesProto3 oneofFloat */
+                oneofFloat?: (number|null);
+
+                /** TestAllTypesProto3 oneofDouble */
+                oneofDouble?: (number|null);
+
+                /** TestAllTypesProto3 oneofEnum */
+                oneofEnum?: (protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null);
+
+                /** TestAllTypesProto3 oneofNullValue */
+                oneofNullValue?: (google.protobuf.NullValue|null);
+
+                /** TestAllTypesProto3 optionalBoolWrapper */
+                optionalBoolWrapper?: (google.protobuf.BoolValue.$Properties|null);
+
+                /** TestAllTypesProto3 optionalInt32Wrapper */
+                optionalInt32Wrapper?: (google.protobuf.Int32Value.$Properties|null);
+
+                /** TestAllTypesProto3 optionalInt64Wrapper */
+                optionalInt64Wrapper?: (google.protobuf.Int64Value.$Properties|null);
+
+                /** TestAllTypesProto3 optionalUint32Wrapper */
+                optionalUint32Wrapper?: (google.protobuf.UInt32Value.$Properties|null);
+
+                /** TestAllTypesProto3 optionalUint64Wrapper */
+                optionalUint64Wrapper?: (google.protobuf.UInt64Value.$Properties|null);
+
+                /** TestAllTypesProto3 optionalFloatWrapper */
+                optionalFloatWrapper?: (google.protobuf.FloatValue.$Properties|null);
+
+                /** TestAllTypesProto3 optionalDoubleWrapper */
+                optionalDoubleWrapper?: (google.protobuf.DoubleValue.$Properties|null);
+
+                /** TestAllTypesProto3 optionalStringWrapper */
+                optionalStringWrapper?: (google.protobuf.StringValue.$Properties|null);
+
+                /** TestAllTypesProto3 optionalBytesWrapper */
+                optionalBytesWrapper?: (google.protobuf.BytesValue.$Properties|null);
+
+                /** TestAllTypesProto3 repeatedBoolWrapper */
+                repeatedBoolWrapper?: (google.protobuf.BoolValue.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedInt32Wrapper */
+                repeatedInt32Wrapper?: (google.protobuf.Int32Value.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedInt64Wrapper */
+                repeatedInt64Wrapper?: (google.protobuf.Int64Value.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedUint32Wrapper */
+                repeatedUint32Wrapper?: (google.protobuf.UInt32Value.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedUint64Wrapper */
+                repeatedUint64Wrapper?: (google.protobuf.UInt64Value.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedFloatWrapper */
+                repeatedFloatWrapper?: (google.protobuf.FloatValue.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedDoubleWrapper */
+                repeatedDoubleWrapper?: (google.protobuf.DoubleValue.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedStringWrapper */
+                repeatedStringWrapper?: (google.protobuf.StringValue.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedBytesWrapper */
+                repeatedBytesWrapper?: (google.protobuf.BytesValue.$Properties[]|null);
+
+                /** TestAllTypesProto3 optionalDuration */
+                optionalDuration?: (google.protobuf.Duration.$Properties|null);
+
+                /** TestAllTypesProto3 optionalTimestamp */
+                optionalTimestamp?: (google.protobuf.Timestamp.$Properties|null);
+
+                /** TestAllTypesProto3 optionalFieldMask */
+                optionalFieldMask?: (google.protobuf.FieldMask.$Properties|null);
+
+                /** TestAllTypesProto3 optionalStruct */
+                optionalStruct?: (google.protobuf.Struct.$Properties|null);
+
+                /** TestAllTypesProto3 optionalAny */
+                optionalAny?: (google.protobuf.Any.$Properties|null);
+
+                /** TestAllTypesProto3 optionalValue */
+                optionalValue?: (google.protobuf.Value.$Properties|null);
+
+                /** TestAllTypesProto3 optionalNullValue */
+                optionalNullValue?: (google.protobuf.NullValue|null);
+
+                /** TestAllTypesProto3 repeatedDuration */
+                repeatedDuration?: (google.protobuf.Duration.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedTimestamp */
+                repeatedTimestamp?: (google.protobuf.Timestamp.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedFieldmask */
+                repeatedFieldmask?: (google.protobuf.FieldMask.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedStruct */
+                repeatedStruct?: (google.protobuf.Struct.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedAny */
+                repeatedAny?: (google.protobuf.Any.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedValue */
+                repeatedValue?: (google.protobuf.Value.$Properties[]|null);
+
+                /** TestAllTypesProto3 repeatedListValue */
+                repeatedListValue?: (google.protobuf.ListValue.$Properties[]|null);
+
+                /** TestAllTypesProto3 fieldname1 */
+                fieldname1?: (number|null);
+
+                /** TestAllTypesProto3 fieldName2 */
+                fieldName2?: (number|null);
+
+                /** TestAllTypesProto3 FieldName3 */
+                FieldName3?: (number|null);
+
+                /** TestAllTypesProto3 fieldName4 */
+                fieldName4?: (number|null);
+
+                /** TestAllTypesProto3 field0name5 */
+                field0name5?: (number|null);
+
+                /** TestAllTypesProto3 field0Name6 */
+                field0Name6?: (number|null);
+
+                /** TestAllTypesProto3 fieldName7 */
+                fieldName7?: (number|null);
+
+                /** TestAllTypesProto3 FieldName8 */
+                FieldName8?: (number|null);
+
+                /** TestAllTypesProto3 fieldName9 */
+                fieldName9?: (number|null);
+
+                /** TestAllTypesProto3 FieldName10 */
+                FieldName10?: (number|null);
+
+                /** TestAllTypesProto3 FIELDNAME11 */
+                FIELDNAME11?: (number|null);
+
+                /** TestAllTypesProto3 FIELDName12 */
+                FIELDName12?: (number|null);
+
+                /** TestAllTypesProto3 FieldName13 */
+                FieldName13?: (number|null);
+
+                /** TestAllTypesProto3 FieldName14 */
+                FieldName14?: (number|null);
+
+                /** TestAllTypesProto3 fieldName15 */
+                fieldName15?: (number|null);
+
+                /** TestAllTypesProto3 fieldName16 */
+                fieldName16?: (number|null);
+
+                /** TestAllTypesProto3 fieldName17 */
+                fieldName17?: (number|null);
+
+                /** TestAllTypesProto3 FieldName18 */
+                FieldName18?: (number|null);
+
+                /** TestAllTypesProto3 oneofField */
+                oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum"|"oneofNullValue");
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Narrowed shape of a TestAllTypesProto3. */
+            type $Shape = {
+              optionalInt32?: number|null;
+              optionalInt64?: number|Long|null;
+              optionalUint32?: number|null;
+              optionalUint64?: number|Long|null;
+              optionalSint32?: number|null;
+              optionalSint64?: number|Long|null;
+              optionalFixed32?: number|null;
+              optionalFixed64?: number|Long|null;
+              optionalSfixed32?: number|null;
+              optionalSfixed64?: number|Long|null;
+              optionalFloat?: number|null;
+              optionalDouble?: number|null;
+              optionalBool?: boolean|null;
+              optionalString?: string|null;
+              optionalBytes?: Uint8Array|null;
+              optionalNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
+              optionalForeignMessage?: protobuf_test_messages.proto3.ForeignMessage.$Shape|null;
+              optionalNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null;
+              optionalForeignEnum?: protobuf_test_messages.proto3.ForeignEnum|null;
+              optionalAliasedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum|null;
+              optionalStringPiece?: string|null;
+              optionalCord?: string|null;
+              recursiveMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape|null;
+              repeatedInt32?: number[]|null;
+              repeatedInt64?: (number|Long)[]|null;
+              repeatedUint32?: number[]|null;
+              repeatedUint64?: (number|Long)[]|null;
+              repeatedSint32?: number[]|null;
+              repeatedSint64?: (number|Long)[]|null;
+              repeatedFixed32?: number[]|null;
+              repeatedFixed64?: (number|Long)[]|null;
+              repeatedSfixed32?: number[]|null;
+              repeatedSfixed64?: (number|Long)[]|null;
+              repeatedFloat?: number[]|null;
+              repeatedDouble?: number[]|null;
+              repeatedBool?: boolean[]|null;
+              repeatedString?: string[]|null;
+              repeatedBytes?: Uint8Array[]|null;
+              repeatedNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape[]|null;
+              repeatedForeignMessage?: protobuf_test_messages.proto3.ForeignMessage.$Shape[]|null;
+              repeatedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
+              repeatedForeignEnum?: protobuf_test_messages.proto3.ForeignEnum[]|null;
+              repeatedStringPiece?: string[]|null;
+              repeatedCord?: string[]|null;
+              packedInt32?: number[]|null;
+              packedInt64?: (number|Long)[]|null;
+              packedUint32?: number[]|null;
+              packedUint64?: (number|Long)[]|null;
+              packedSint32?: number[]|null;
+              packedSint64?: (number|Long)[]|null;
+              packedFixed32?: number[]|null;
+              packedFixed64?: (number|Long)[]|null;
+              packedSfixed32?: number[]|null;
+              packedSfixed64?: (number|Long)[]|null;
+              packedFloat?: number[]|null;
+              packedDouble?: number[]|null;
+              packedBool?: boolean[]|null;
+              packedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
+              unpackedInt32?: number[]|null;
+              unpackedInt64?: (number|Long)[]|null;
+              unpackedUint32?: number[]|null;
+              unpackedUint64?: (number|Long)[]|null;
+              unpackedSint32?: number[]|null;
+              unpackedSint64?: (number|Long)[]|null;
+              unpackedFixed32?: number[]|null;
+              unpackedFixed64?: (number|Long)[]|null;
+              unpackedSfixed32?: number[]|null;
+              unpackedSfixed64?: (number|Long)[]|null;
+              unpackedFloat?: number[]|null;
+              unpackedDouble?: number[]|null;
+              unpackedBool?: boolean[]|null;
+              unpackedNestedEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum[]|null;
+              mapInt32Int32?: { [k: string]: number }|null;
+              mapInt64Int64?: { [k: string]: number|Long }|null;
+              mapUint32Uint32?: { [k: string]: number }|null;
+              mapUint64Uint64?: { [k: string]: number|Long }|null;
+              mapSint32Sint32?: { [k: string]: number }|null;
+              mapSint64Sint64?: { [k: string]: number|Long }|null;
+              mapFixed32Fixed32?: { [k: string]: number }|null;
+              mapFixed64Fixed64?: { [k: string]: number|Long }|null;
+              mapSfixed32Sfixed32?: { [k: string]: number }|null;
+              mapSfixed64Sfixed64?: { [k: string]: number|Long }|null;
+              mapInt32Float?: { [k: string]: number }|null;
+              mapInt32Double?: { [k: string]: number }|null;
+              mapBoolBool?: { [k: string]: boolean }|null;
+              mapStringString?: { [k: string]: string }|null;
+              mapStringBytes?: { [k: string]: Uint8Array }|null;
+              mapStringNestedMessage?: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape }|null;
+              mapStringForeignMessage?: { [k: string]: protobuf_test_messages.proto3.ForeignMessage.$Shape }|null;
+              mapStringNestedEnum?: { [k: string]: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum }|null;
+              mapStringForeignEnum?: { [k: string]: protobuf_test_messages.proto3.ForeignEnum }|null;
+              oneofUint32?: number|null;
+              oneofNestedMessage?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape|null;
+              oneofString?: string|null;
+              oneofBytes?: Uint8Array|null;
+              oneofBool?: boolean|null;
+              oneofUint64?: number|Long|null;
+              oneofFloat?: number|null;
+              oneofDouble?: number|null;
+              oneofEnum?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum|null;
+              oneofNullValue?: google.protobuf.NullValue|null;
+              optionalBoolWrapper?: google.protobuf.BoolValue.$Shape|null;
+              optionalInt32Wrapper?: google.protobuf.Int32Value.$Shape|null;
+              optionalInt64Wrapper?: google.protobuf.Int64Value.$Shape|null;
+              optionalUint32Wrapper?: google.protobuf.UInt32Value.$Shape|null;
+              optionalUint64Wrapper?: google.protobuf.UInt64Value.$Shape|null;
+              optionalFloatWrapper?: google.protobuf.FloatValue.$Shape|null;
+              optionalDoubleWrapper?: google.protobuf.DoubleValue.$Shape|null;
+              optionalStringWrapper?: google.protobuf.StringValue.$Shape|null;
+              optionalBytesWrapper?: google.protobuf.BytesValue.$Shape|null;
+              repeatedBoolWrapper?: google.protobuf.BoolValue.$Shape[]|null;
+              repeatedInt32Wrapper?: google.protobuf.Int32Value.$Shape[]|null;
+              repeatedInt64Wrapper?: google.protobuf.Int64Value.$Shape[]|null;
+              repeatedUint32Wrapper?: google.protobuf.UInt32Value.$Shape[]|null;
+              repeatedUint64Wrapper?: google.protobuf.UInt64Value.$Shape[]|null;
+              repeatedFloatWrapper?: google.protobuf.FloatValue.$Shape[]|null;
+              repeatedDoubleWrapper?: google.protobuf.DoubleValue.$Shape[]|null;
+              repeatedStringWrapper?: google.protobuf.StringValue.$Shape[]|null;
+              repeatedBytesWrapper?: google.protobuf.BytesValue.$Shape[]|null;
+              optionalDuration?: google.protobuf.Duration.$Shape|null;
+              optionalTimestamp?: google.protobuf.Timestamp.$Shape|null;
+              optionalFieldMask?: google.protobuf.FieldMask.$Shape|null;
+              optionalStruct?: google.protobuf.Struct.$Shape|null;
+              optionalAny?: google.protobuf.Any.$Shape|null;
+              optionalValue?: google.protobuf.Value.$Shape|null;
+              optionalNullValue?: google.protobuf.NullValue|null;
+              repeatedDuration?: google.protobuf.Duration.$Shape[]|null;
+              repeatedTimestamp?: google.protobuf.Timestamp.$Shape[]|null;
+              repeatedFieldmask?: google.protobuf.FieldMask.$Shape[]|null;
+              repeatedStruct?: google.protobuf.Struct.$Shape[]|null;
+              repeatedAny?: google.protobuf.Any.$Shape[]|null;
+              repeatedValue?: google.protobuf.Value.$Shape[]|null;
+              repeatedListValue?: google.protobuf.ListValue.$Shape[]|null;
+              fieldname1?: number|null;
+              fieldName2?: number|null;
+              FieldName3?: number|null;
+              fieldName4?: number|null;
+              field0name5?: number|null;
+              field0Name6?: number|null;
+              fieldName7?: number|null;
+              FieldName8?: number|null;
+              fieldName9?: number|null;
+              FieldName10?: number|null;
+              FIELDNAME11?: number|null;
+              FIELDName12?: number|null;
+              FieldName13?: number|null;
+              FieldName14?: number|null;
+              fieldName15?: number|null;
+              fieldName16?: number|null;
+              fieldName17?: number|null;
+              FieldName18?: number|null;
+              $unknowns?: Uint8Array[];
+            } & (
+              ({ oneofField?: undefined; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint32"; oneofUint32: number; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofNestedMessage"; oneofUint32?: null; oneofNestedMessage: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofString"; oneofUint32?: null; oneofNestedMessage?: null; oneofString: string; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBytes"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes: Uint8Array; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofBool"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool: boolean; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofUint64"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64: number|Long; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofFloat"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat: number; oneofDouble?: null; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofDouble"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble: number; oneofEnum?: null; oneofNullValue?: null }|{ oneofField?: "oneofEnum"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum; oneofNullValue?: null }|{ oneofField?: "oneofNullValue"; oneofUint32?: null; oneofNestedMessage?: null; oneofString?: null; oneofBytes?: null; oneofBool?: null; oneofUint64?: null; oneofFloat?: null; oneofDouble?: null; oneofEnum?: null; oneofNullValue: google.protobuf.NullValue })
+            );
+
+            /**
+             * Properties of a NestedMessage.
+             * @deprecated Use protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties instead.
+             */
+            interface INestedMessage extends protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties {
+            }
+
+            /** Represents a NestedMessage. */
+            class NestedMessage {
+
+                /** Reflection-backed declarations are not constructable. Use NestedMessage.create(...) instead. */
+                private constructor();
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+
+                /** NestedMessage a. */
+                a: number;
+
+                /** NestedMessage corecursive. */
+                corecursive?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
+
+                /**
+                 * Creates a new NestedMessage instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns NestedMessage instance
+                 */
+                static create(properties: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape;
+                static create(properties?: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage;
+
+                /**
+                 * Encodes the specified NestedMessage message. Does not implicitly {@link protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.verify|verify} messages.
+                 * @param message NestedMessage message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encode(message: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified NestedMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.verify|verify} messages.
+                 * @param message NestedMessage message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                static encodeDelimited(message: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape} NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape;
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape} NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage & protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage.$Shape;
+
+                /**
+                 * Verifies a NestedMessage message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a NestedMessage message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns NestedMessage
+                 */
+                static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage;
+
+                /**
+                 * Creates a plain object from a NestedMessage message. Also converts values to other types if specified.
+                 * @param message NestedMessage
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                static toObject(message: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this NestedMessage to JSON.
+                 * @returns JSON object
+                 */
+                toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the type url for NestedMessage
+                 * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+                 * @returns The type url
+                 */
+                static getTypeUrl(prefix?: string): string;
+            }
+
+            namespace NestedMessage {
+
+                /** Properties of a NestedMessage. */
+                interface $Properties {
+
+                    /** NestedMessage a */
+                    a?: (number|null);
+
+                    /** NestedMessage corecursive */
+                    corecursive?: (protobuf_test_messages.proto3.TestAllTypesProto3.$Properties|null);
+
+                    /** Unknown fields preserved while decoding when enabled */
+                    $unknowns?: Uint8Array[];
+                }
+
+                /** Shape of a NestedMessage. */
+                type $Shape = {
+                  a?: number|null;
+                  corecursive?: protobuf_test_messages.proto3.TestAllTypesProto3.$Shape|null;
+                  $unknowns?: Uint8Array[];
+                };
+            }
+
+            /** NestedEnum enum. */
+            enum NestedEnum {
+
+                /** FOO value */
+                FOO = 0,
+
+                /** BAR value */
+                BAR = 1,
+
+                /** BAZ value */
+                BAZ = 2,
+
+                /** NEG value */
+                NEG = -1
+            }
+
+            /** AliasedEnum enum. */
+            enum AliasedEnum {
+
+                /** ALIAS_FOO value */
+                ALIAS_FOO = 0,
+
+                /** ALIAS_BAR value */
+                ALIAS_BAR = 1,
+
+                /** ALIAS_BAZ value */
+                ALIAS_BAZ = 2,
+
+                /** MOO value */
+                MOO = 2,
+
+                /** moo value */
+                moo = 2,
+
+                /** bAz value */
+                bAz = 2
+            }
+        }
+
+        /**
+         * Properties of a ForeignMessage.
+         * @deprecated Use protobuf_test_messages.proto3.ForeignMessage.$Properties instead.
+         */
+        interface IForeignMessage extends protobuf_test_messages.proto3.ForeignMessage.$Properties {
+        }
+
+        /** Represents a ForeignMessage. */
+        class ForeignMessage {
+
+            /** Reflection-backed declarations are not constructable. Use ForeignMessage.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /** ForeignMessage c. */
+            c: number;
+
+            /**
+             * Creates a new ForeignMessage instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ForeignMessage instance
+             */
+            static create(properties: protobuf_test_messages.proto3.ForeignMessage.$Shape): protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape;
+            static create(properties?: protobuf_test_messages.proto3.ForeignMessage.$Properties): protobuf_test_messages.proto3.ForeignMessage;
+
+            /**
+             * Encodes the specified ForeignMessage message. Does not implicitly {@link protobuf_test_messages.proto3.ForeignMessage.verify|verify} messages.
+             * @param message ForeignMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto3.ForeignMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ForeignMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.ForeignMessage.verify|verify} messages.
+             * @param message ForeignMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto3.ForeignMessage.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ForeignMessage message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape} ForeignMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape;
+
+            /**
+             * Decodes a ForeignMessage message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape} ForeignMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.ForeignMessage & protobuf_test_messages.proto3.ForeignMessage.$Shape;
+
+            /**
+             * Verifies a ForeignMessage message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ForeignMessage message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ForeignMessage
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.ForeignMessage;
+
+            /**
+             * Creates a plain object from a ForeignMessage message. Also converts values to other types if specified.
+             * @param message ForeignMessage
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto3.ForeignMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ForeignMessage to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for ForeignMessage
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace ForeignMessage {
+
+            /** Properties of a ForeignMessage. */
+            interface $Properties {
+
+                /** ForeignMessage c */
+                c?: (number|null);
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of a ForeignMessage. */
+            type $Shape = protobuf_test_messages.proto3.ForeignMessage.$Properties;
+        }
+
+        /**
+         * Properties of a NullHypothesisProto3.
+         * @deprecated Use protobuf_test_messages.proto3.NullHypothesisProto3.$Properties instead.
+         */
+        interface INullHypothesisProto3 extends protobuf_test_messages.proto3.NullHypothesisProto3.$Properties {
+        }
+
+        /** Represents a NullHypothesisProto3. */
+        class NullHypothesisProto3 {
+
+            /** Reflection-backed declarations are not constructable. Use NullHypothesisProto3.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /**
+             * Creates a new NullHypothesisProto3 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns NullHypothesisProto3 instance
+             */
+            static create(properties: protobuf_test_messages.proto3.NullHypothesisProto3.$Shape): protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape;
+            static create(properties?: protobuf_test_messages.proto3.NullHypothesisProto3.$Properties): protobuf_test_messages.proto3.NullHypothesisProto3;
+
+            /**
+             * Encodes the specified NullHypothesisProto3 message. Does not implicitly {@link protobuf_test_messages.proto3.NullHypothesisProto3.verify|verify} messages.
+             * @param message NullHypothesisProto3 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto3.NullHypothesisProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified NullHypothesisProto3 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.NullHypothesisProto3.verify|verify} messages.
+             * @param message NullHypothesisProto3 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto3.NullHypothesisProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a NullHypothesisProto3 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape} NullHypothesisProto3
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape;
+
+            /**
+             * Decodes a NullHypothesisProto3 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape} NullHypothesisProto3
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.NullHypothesisProto3 & protobuf_test_messages.proto3.NullHypothesisProto3.$Shape;
+
+            /**
+             * Verifies a NullHypothesisProto3 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a NullHypothesisProto3 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns NullHypothesisProto3
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.NullHypothesisProto3;
+
+            /**
+             * Creates a plain object from a NullHypothesisProto3 message. Also converts values to other types if specified.
+             * @param message NullHypothesisProto3
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto3.NullHypothesisProto3, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this NullHypothesisProto3 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for NullHypothesisProto3
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace NullHypothesisProto3 {
+
+            /** Properties of a NullHypothesisProto3. */
+            interface $Properties {
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of a NullHypothesisProto3. */
+            type $Shape = protobuf_test_messages.proto3.NullHypothesisProto3.$Properties;
+        }
+
+        /**
+         * Properties of an EnumOnlyProto3.
+         * @deprecated Use protobuf_test_messages.proto3.EnumOnlyProto3.$Properties instead.
+         */
+        interface IEnumOnlyProto3 extends protobuf_test_messages.proto3.EnumOnlyProto3.$Properties {
+        }
+
+        /** Represents an EnumOnlyProto3. */
+        class EnumOnlyProto3 {
+
+            /** Reflection-backed declarations are not constructable. Use EnumOnlyProto3.create(...) instead. */
+            private constructor();
+
+            /** Unknown fields preserved while decoding when enabled */
+            $unknowns?: Uint8Array[];
+
+            /**
+             * Creates a new EnumOnlyProto3 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns EnumOnlyProto3 instance
+             */
+            static create(properties: protobuf_test_messages.proto3.EnumOnlyProto3.$Shape): protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape;
+            static create(properties?: protobuf_test_messages.proto3.EnumOnlyProto3.$Properties): protobuf_test_messages.proto3.EnumOnlyProto3;
+
+            /**
+             * Encodes the specified EnumOnlyProto3 message. Does not implicitly {@link protobuf_test_messages.proto3.EnumOnlyProto3.verify|verify} messages.
+             * @param message EnumOnlyProto3 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encode(message: protobuf_test_messages.proto3.EnumOnlyProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified EnumOnlyProto3 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto3.EnumOnlyProto3.verify|verify} messages.
+             * @param message EnumOnlyProto3 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            static encodeDelimited(message: protobuf_test_messages.proto3.EnumOnlyProto3.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an EnumOnlyProto3 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape} EnumOnlyProto3
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape;
+
+            /**
+             * Decodes an EnumOnlyProto3 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape} EnumOnlyProto3
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto3.EnumOnlyProto3 & protobuf_test_messages.proto3.EnumOnlyProto3.$Shape;
+
+            /**
+             * Verifies an EnumOnlyProto3 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an EnumOnlyProto3 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns EnumOnlyProto3
+             */
+            static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto3.EnumOnlyProto3;
+
+            /**
+             * Creates a plain object from an EnumOnlyProto3 message. Also converts values to other types if specified.
+             * @param message EnumOnlyProto3
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            static toObject(message: protobuf_test_messages.proto3.EnumOnlyProto3, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this EnumOnlyProto3 to JSON.
+             * @returns JSON object
+             */
+            toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the type url for EnumOnlyProto3
+             * @param [prefix] Custom type url prefix, defaults to `"type.googleapis.com"`
+             * @returns The type url
+             */
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace EnumOnlyProto3 {
+
+            /** Properties of an EnumOnlyProto3. */
+            interface $Properties {
+
+                /** Unknown fields preserved while decoding when enabled */
+                $unknowns?: Uint8Array[];
+            }
+
+            /** Shape of an EnumOnlyProto3. */
+            type $Shape = protobuf_test_messages.proto3.EnumOnlyProto3.$Properties;
+
+            /** Bool enum. */
+            enum Bool {
+
+                /** kFalse value */
+                kFalse = 0,
+
+                /** kTrue value */
+                kTrue = 1
+            }
+        }
+
+        /** ForeignEnum enum. */
+        enum ForeignEnum {
+
+            /** FOREIGN_FOO value */
+            FOREIGN_FOO = 0,
+
+            /** FOREIGN_BAR value */
+            FOREIGN_BAR = 1,
+
+            /** FOREIGN_BAZ value */
+            FOREIGN_BAZ = 2
         }
     }
 }
@@ -14805,8 +14805,8 @@ export namespace google {
             /** Unknown fields preserved while decoding when enabled */
             $unknowns?: Uint8Array[];
 
-            /** Any type_url. */
-            type_url: string;
+            /** Any typeUrl. */
+            typeUrl: string;
 
             /** Any value. */
             value: Uint8Array;
@@ -14895,8 +14895,8 @@ export namespace google {
             /** Properties of an Any. */
             interface $Properties {
 
-                /** Any type_url */
-                type_url?: (string|null);
+                /** Any typeUrl */
+                typeUrl?: (string|null);
 
                 /** Any value */
                 value?: (Uint8Array|null);
@@ -15420,13 +15420,6 @@ export namespace google {
             );
         }
 
-        /** NullValue enum. */
-        enum NullValue {
-
-            /** NULL_VALUE value */
-            NULL_VALUE = 0
-        }
-
         /**
          * Properties of a ListValue.
          * @deprecated Use google.protobuf.ListValue.$Properties instead.
@@ -15542,6 +15535,13 @@ export namespace google {
               values?: google.protobuf.Value.$Shape[]|null;
               $unknowns?: Uint8Array[];
             };
+        }
+
+        /** NullValue enum. */
+        enum NullValue {
+
+            /** NULL_VALUE value */
+            NULL_VALUE = 0
         }
 
         /**
